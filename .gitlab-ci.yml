@@ -1,0 +1,11 @@
+stages:
+    - deploy
+
+deploy_production:
+    stage: deploy
+    only:
+        - main
+    before_script:
+        - chmod 400 $SSH_PRIVATE_KEY_ED25519
+    script:
+        - ssh -o StrictHostKeyChecking=no -i $SSH_PRIVATE_KEY_ED25519 $SERVER_USER@$SERVER_HOST "source ~/.nvm/nvm.sh && cd $PROJECT_PATH && git pull origin main && npm install && npm run build && pm2 restart $NEXTJS_APP_NAME"
