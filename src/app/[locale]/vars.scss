@@ -1,0 +1,273 @@
+@utility container {
+    margin-inline: auto;
+    padding-inline: 1rem;
+}
+
+@theme {
+    --color-black: #000;
+    --color-black-5: rgba(0, 0, 0, 0.05);
+    --color-black-10: rgba(0, 0, 0, 0.1);
+    --color-black-20: rgba(0, 0, 0, 0.2);
+    --color-black-40: rgba(0, 0, 0, 0.4);
+    --color-black-50: rgba(0, 0, 0, 0.5);
+    --color-black-80: rgba(0, 0, 0, 0.8);
+
+    --color-white: #fff;
+    --color-white-20: rgba(255, 255, 255, 0.2);
+    --color-white-40: rgba(255, 255, 255, 0.4);
+    --color-white-60: rgba(255, 255, 255, 0.6);
+    --color-white-70: rgba(255, 255, 255, 0.7);
+    --color-white-80: rgba(255, 255, 255, 0.8);
+
+    --color-primary: #222;
+
+    --color-secondary: #868686;
+    --color-secondary2: #5e5e5e;
+    --color-secondary3: #9499a5;
+
+    --color-placeholder: #c0c0c0;
+
+    --color-gray: #f5f5f8;
+    --color-gray2: #d7d7d7;
+    --color-gray3: #f2f2f2;
+    --color-gray4: #e1e1e4;
+
+    // #e0e0e0
+    --color-gray-milky: #faf7f0;
+
+    --color-main: #a50034;
+    --color-main-dark: #910020;
+    --color-main-5: rgba(165, 0, 52, 0.05);
+    --color-main-20: rgba(165, 0, 52, 0.2);
+    --color-main-40: rgba(165, 0, 52, 0.4);
+    --color-main-50: rgba(165, 0, 52, 0.5);
+    --color-main-90: rgba(165, 0, 52, 0.9);
+
+    --color-red: #db1a00;
+
+    --leading-100: 100%;
+    --leading-110: 110%;
+    --leading-120: 120%;
+    --leading-125: 125%;
+    --leading-130: 130%;
+    --leading-140: 140%;
+    --leading-150: 150%;
+    --leading-160: 160%;
+    --leading-170: 170%;
+    --leading-180: 180%;
+    --leading-190: 190%;
+    --leading-200: 200%;
+
+    --radius-main: 0.5rem;
+    --radius-card: 1.5rem;
+    --radius-card2: 2rem;
+    --radius-btn: 0.75rem;
+    --radius-round-btn: 6.25rem;
+}
+
+:root {
+    --input-height: 2.75rem;
+    --btn-height: 2.75rem;
+}
+
+@utility products-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    row-gap: 1.5rem;
+    column-gap: 1rem;
+    @media (max-width: 1535px) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    @media (max-width: 1023px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: 767px) {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 0.5rem;
+    }
+    @media (max-width: 360px) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+@utility flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@utility transition-300 {
+    transition: all 0.3s ease;
+}
+@utility transition-500 {
+    transition: all 0.5s ease;
+}
+@utility swiper-with-grid {
+    width: 100%;
+    max-width: 100%;
+    max-height: 100vh;
+    min-height: 0;
+    min-width: 0;
+}
+@utility absolute-center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+@utility absolute-center-y {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+@utility absolute-center-x {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+@utility bg-img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+@utility section-padding {
+    padding-top: 3.75rem;
+}
+@utility products-grid-wrapper {
+    display: grid;
+    // grid-template-columns: 23.75rem 1fr;
+    grid-template-columns: 21.25rem 1fr;
+    gap: 2.5rem;
+    @media (max-width: 1279px) {
+        grid-template-columns: 20rem 1fr;
+    }
+    @media (max-width: 1023px) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@utility cart-wrapper-grid {
+    display: grid;
+    grid-template-columns: 1fr 26.25rem;
+    row-gap: 2.5rem;
+    column-gap: 1.25rem;
+
+    @media (max-width: 1279px) {
+        grid-template-columns: 1fr 23.75rem;
+    }
+    @media (max-width: 1023px) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@utility custom-block {
+    background-color: var(--color-white);
+    border-radius: var(--radius-card2);
+    display: flex;
+}
+@utility custom-block-with-padding {
+    @apply custom-block;
+    padding: 1.5rem;
+    @media (max-width: 639px) {
+        padding: 1.25rem 1rem;
+    }
+}
+
+@utility custom-btn {
+    @apply flex-center;
+    gap: 0.5rem;
+    height: var(--btn-height);
+    width: fit-content;
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-align: center;
+    border-radius: var(--radius-btn);
+    color: var(--btn-text-color);
+    background: var(--btn-bg-color);
+    padding: 0.5rem 1rem;
+    border: 0.125rem solid var(--btn-border-color);
+}
+
+@utility disabled-btn {
+    --btn-bg-color: var(--color-gray3) !important;
+    --btn-text-color: var(--color-placeholder) !important;
+    --btn-border-color: var(--color-gray) !important;
+    pointer-events: none;
+}
+
+@utility gray-btn {
+    @apply custom-btn;
+    --btn-text-color: var(--color-primary);
+    --btn-bg-color: var(--color-gray);
+    --btn-border-color: var(--color-gray);
+}
+.gray-btn {
+    &:hover {
+        --btn-bg-color: var(--color-gray4);
+        --btn-border-color: var(--color-gray4);
+    }
+    &:disabled {
+        @apply disabled-btn;
+    }
+}
+
+@utility main-btn {
+    @apply custom-btn;
+    --btn-text-color: var(--color-white);
+    --btn-bg-color: var(--color-main);
+    --btn-border-color: var(--color-main);
+}
+.main-btn {
+    &:hover {
+        --btn-bg-color: var(--color-main-dark);
+        --btn-border-color: var(--color-main-dark);
+    }
+    &:disabled {
+        @apply disabled-btn;
+    }
+}
+
+@utility main-transparent-btn {
+    @apply custom-btn;
+    --btn-text-color: var(--color-main);
+    --btn-bg-color: transparent;
+    --btn-border-color: var(--color-main);
+}
+.main-transparent-btn {
+    &:hover {
+        --btn-text-color: var(--color-white);
+        --btn-bg-color: var(--color-main);
+        --btn-border-color: var(--color-main);
+    }
+    &:disabled {
+        @apply disabled-btn;
+    }
+}
+
+@utility white-btn {
+    @apply custom-btn;
+    --btn-text-color: var(--color-primary);
+    --btn-bg-color: var(--color-white);
+    --btn-border-color: var(--color-white);
+}
+.white-btn {
+    &:hover {
+        --btn-bg-color: var(--color-gray);
+        --btn-border-color: var(--color-gray);
+    }
+    &:disabled {
+        @apply disabled-btn;
+    }
+}
+
+@mixin minMaxSize($size) {
+    min-height: $size;
+    max-height: $size;
+    min-width: $size;
+    max-width: $size;
+}
+@mixin minMaxHeight($size) {
+    min-height: $size;
+    max-height: $size;
+}

@@ -1,0 +1,48 @@
+{
+    "name": "lg",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev --turbopack -p 8080",
+        "build": "next build",
+        "start": "next start -p 8080",
+        "lint": "next lint"
+    },
+    "dependencies": {
+        "@bprogress/next": "^3.2.12",
+        "@fancyapps/ui": "^5.0.36",
+        "@headlessui/react": "^2.2.0",
+        "@react-input/mask": "^2.0.4",
+        "classnames": "^2.5.1",
+        "cookies-next": "^5.1.0",
+        "formik": "^2.4.6",
+        "lodash": "^4.17.21",
+        "next": "^15.2.6",
+        "next-client-cookies": "^2.0.1",
+        "next-intl": "^3.26.5",
+        "rc-slider": "^11.1.8",
+        "react": "^19.0.0",
+        "react-dom": "^19.0.0",
+        "react-hot-toast": "^2.5.2",
+        "react-responsive": "^10.0.1",
+        "react-spinners": "^0.15.0",
+        "react-verification-input": "^4.2.2",
+        "sharp": "^0.33.5",
+        "swiper": "^11.2.5",
+        "yup": "^1.6.1"
+    },
+    "devDependencies": {
+        "@eslint/eslintrc": "^3",
+        "@tailwindcss/postcss": "^4.0.10",
+        "@types/lodash": "^4.17.16",
+        "@types/node": "^20",
+        "@types/react": "^19",
+        "@types/react-dom": "^19",
+        "eslint": "^9",
+        "eslint-config-next": "15.2.1",
+        "postcss": "^8.5.3",
+        "sass": "^1.85.1",
+        "tailwindcss": "^4.0.10",
+        "typescript": "^5"
+    }
+}
