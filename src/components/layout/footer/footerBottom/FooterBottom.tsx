@@ -10,7 +10,7 @@ export default function FooterBottom() {
         <div className="py-4 bg-gray text-sm">
             <div className="container flex sm:flex-row flex-col items-center justify-between gap-4">
                 <p className="sm:text-start text-center">
-                    {new Date().getFullYear()} © «{text("LG - интернет-магазин")}».
+                    {new Date().getFullYear()} © «{text("copyright")}».
                 </p>
 
                 <Link

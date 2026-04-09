@@ -64,11 +64,11 @@ export default function Checkout({ apiInstallments }: ICheckoutProps) {
                         <div className="flex flex-col gap-5">
                             <CheckoutForm isSubmitting={isSubmitting} />
 
-                            <CheckoutPaymentMethod<ICheckoutForm>
+                            {/* <CheckoutPaymentMethod<ICheckoutForm>
                                 isSubmitting={isSubmitting}
                                 setFieldValue={setFieldValue}
                                 apiInstallments={apiInstallments}
-                            />
+                            /> */}
                         </div>
 
                         <CheckoutSidebar installments={installments} isSubmitting={isSubmitting} />

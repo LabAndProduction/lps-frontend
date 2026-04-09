@@ -32,16 +32,16 @@
     --color-gray3: #f2f2f2;
     --color-gray4: #e1e1e4;
 
-    // #e0e0e0
-    --color-gray-milky: #faf7f0;
+    --color-gray-milky: #f7f9fc;
 
-    --color-main: #a50034;
-    --color-main-dark: #910020;
-    --color-main-5: rgba(165, 0, 52, 0.05);
-    --color-main-20: rgba(165, 0, 52, 0.2);
-    --color-main-40: rgba(165, 0, 52, 0.4);
-    --color-main-50: rgba(165, 0, 52, 0.5);
-    --color-main-90: rgba(165, 0, 52, 0.9);
+    --color-main: #00569d;
+
+    --color-main-dark: #242c4f;
+    --color-main-5: color-mix(in oklab, var(--color-main) 5%, transparent);
+    --color-main-20: color-mix(in oklab, var(--color-main) 20%, transparent);
+    --color-main-40: color-mix(in oklab, var(--color-main) 40%, transparent);
+    --color-main-50: color-mix(in oklab, var(--color-main) 50%, transparent);
+    --color-main-90: color-mix(in oklab, var(--color-main) 90%, transparent);
 
     --color-red: #db1a00;
 

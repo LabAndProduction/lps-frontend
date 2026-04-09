@@ -38,7 +38,8 @@ export default function CheckoutSidebar({ installments, isSubmitting }: ICheckou
 
                 <button type="submit" className="main-btn w-full">
                     {isSubmitting && <OvalSpinner size={16} color="var(--color-white)" />}
-                    {text("Оформить заказ")}
+
+                    {text("Отправить")}
                 </button>
             </div>
 

@@ -41,7 +41,7 @@ export async function generateMetadata({ searchParams }: ISearchPageParams): Pro
     const { text } = await getTexts();
 
     const pageUrl = await getFullUrl(`/search/?keyword=${keyword}`);
-    const imageUrl = await getFullUrl("/images/lg.svg", false);
+    const imageUrl = await getFullUrl("/images/logo.png", false);
     return {
         title: text("Поиск"),
         description: text("Поиск"),

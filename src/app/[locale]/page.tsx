@@ -46,7 +46,7 @@ export async function generateMetadata(): Promise<Metadata> {
     const page = await getPage({ pageId: 1 });
 
     const pageUrl = await getFullUrl();
-    const imageUrl = await getFullUrl("/images/lg.svg", false);
+    const imageUrl = await getFullUrl("/images/logo.png", false);
     return {
         title: page.data.seo_title,
         description: page.data.meta_description,

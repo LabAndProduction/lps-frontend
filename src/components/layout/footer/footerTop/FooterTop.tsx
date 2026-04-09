@@ -20,11 +20,12 @@ export default async function FooterTop() {
                 <div className="flex flex-col sm:items-start items-center gap-6">
                     <Link href={"/"} className="py-3">
                         <NextImage
-                            src={"/images/logo.svg"}
-                            alt="LG"
+                            src={"/images/logo.png"}
+                            alt="LPS"
                             width={120}
                             height={56}
-                            className="w-[7.5rem] h-auto object-contain"
+                            className="lg:w-50 w-40 h-auto object-contain"
+                            unoptimized
                         />
                     </Link>
 

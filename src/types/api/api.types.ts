@@ -2,7 +2,7 @@ export interface ILocalization {
     ru: {
         slug: string;
     };
-    uz: {
+    en: {
         slug: string;
     };
 }
@@ -68,8 +68,7 @@ interface IMetaLink {
     active: boolean;
 }
 
-// export type Locale = "ru" | "uz" | "en";
-export type Locale = "ru" | "uz";
+export type Locale = "ru" | "en";
 
 export type Tag =
     | "Auth"

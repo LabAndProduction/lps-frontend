@@ -7,7 +7,7 @@ export default function ProductSidebar({ product }: IProductSidebarProps) {
         <div className="flex flex-col gap-5">
             <ProductCartSidebar product={product} />
 
-            {product.data.in_stock !== 0 && <ProductInstallment product={product} />}
+            {/* {product.data.in_stock !== 0 && <ProductInstallment product={product} />} */}
         </div>
     );
 }
