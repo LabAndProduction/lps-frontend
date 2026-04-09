@@ -12,7 +12,7 @@ import classNames from "classnames";
 
 const langs: ILangOption[] = [
     { id: 0, locale: "ru", label: "Ru", src: "/images/ru.svg" },
-    { id: 1, locale: "uz", label: "Uz", src: "/images/uz.svg" },
+    { id: 1, locale: "en", label: "En", src: "/images/en.svg" },
 ];
 
 export default function LangSelect() {
@@ -31,7 +31,7 @@ export default function LangSelect() {
             className="relative z-92 h-full">
             <ListboxButton
                 type="button"
-                className="relative group flex-center gap-1 hover:text-main min-h-6 font-medium leading-100 h-full lg:px-0 px-2">
+                className="relative group flex-center gap-1 hover:text-main min-h-6 font-medium leading-100 h-full lg:px-0 px-2 outline-none">
                 {({ open }) => (
                     <>
                         <span className="border-2 border-gray2 rounded-full flex-center">
@@ -55,7 +55,7 @@ export default function LangSelect() {
                 modal={false}
                 as="div"
                 transition
-                className="absolute-center-x bg-white shadow-[0_0_0.25rem_var(--color-black-50)] rounded-main lg:top-[calc(100%+0.625rem)] top-[calc(100%-0.625rem)] origin-top transition-300 data-[closed]:translate-y-[0.625rem] data-[closed]:opacity-0 overflow-hidden w-auto">
+                className="absolute-center-x bg-white shadow-[0_0_0.25rem_var(--color-black-50)] rounded-main lg:top-[calc(100%+0.625rem)] top-[calc(100%-0.625rem)] origin-top transition-300 data-[closed]:translate-y-[0.625rem] data-[closed]:opacity-0 overflow-hidden w-auto outline-none">
                 {langs.map((locale) => (
                     <ListboxOption key={locale.id} value={locale} as={Fragment}>
                         {({ selected }) =>

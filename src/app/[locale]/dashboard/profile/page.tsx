@@ -28,7 +28,7 @@ export default async function ProfilePage() {
 export async function generateMetadata(): Promise<Metadata> {
     const { text } = await getTexts();
     const pageUrl = await getFullUrl("/dashboard/profile");
-    const imageUrl = await getFullUrl("/images/lg.svg", false);
+    const imageUrl = await getFullUrl("/images/logo.png", false);
     return {
         title: text("Профиль"),
         description: text("Профиль"),

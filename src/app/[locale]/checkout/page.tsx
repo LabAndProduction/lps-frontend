@@ -27,7 +27,7 @@ export async function generateMetadata(): Promise<Metadata> {
     const { text } = await getTexts();
 
     const pageUrl = await getFullUrl("/checkout");
-    const imageUrl = await getFullUrl("/images/lg.svg", false);
+    const imageUrl = await getFullUrl("/images/logo.png", false);
     return {
         title: text("Оформление заказа"),
         description: text("Оформление заказа"),

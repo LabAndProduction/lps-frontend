@@ -12,8 +12,8 @@ export default function LocalizationComponent({ startPath, localization, id }: I
     useEffect(() => {
         setTimeout(() => {
             if (locale === "ru") {
-                setLangUrl(`${startPath}/${id}-${localization["uz"].slug}`);
-            } else if (locale === "uz") {
+                setLangUrl(`${startPath}/${id}-${localization["en"].slug}`);
+            } else if (locale === "en") {
                 setLangUrl(`${startPath}/${id}-${localization["ru"].slug}`);
             }
         }, 0);

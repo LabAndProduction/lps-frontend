@@ -84,7 +84,7 @@ export async function generateMetadata({ params }: IPageParamsWithId): Promise<M
     if (!page || page.data.slug !== slug) notFound();
 
     const pageUrl = await getFullUrl(`/pages/${id}`);
-    const imageUrl = await getFullUrl("/images/lg.svg", false);
+    const imageUrl = await getFullUrl("/images/logo.png", false);
     return {
         title: page.data.seo_title,
         description: page.data.meta_description,
