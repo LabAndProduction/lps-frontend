@@ -67,7 +67,7 @@ function OtpModal<T>({ isOpen, formPhone, fulfillAfterOtp, setIsOpen, otpTarget,
 
                 <p className="font-medium leading-120 text-center mx-auto max-w-[18.75rem]">
                     {text("Код подтверждения отправлен на {number}").replace("{number}", "")}
-                    <span className="text-main">{formatPhoneWithSpaces(formPhone)}</span>
+                    <span className="text-main">{formPhone}</span>
                 </p>
                 <OtpForm
                     handleSubmit={handleSubmit}

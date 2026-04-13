@@ -16,10 +16,7 @@ export default function OrderInfo() {
                         title={text("Имя и Фамилия")}
                         info={`${orderInfo.name} ${orderInfo.surname ? orderInfo.surname : ""}`}
                     />
-                    <OrderInfoCard
-                        title={text("Номер телефона")}
-                        info={formatPhoneWithSpaces(orderInfo.phone_number)}
-                    />
+                    <OrderInfoCard title={text("Номер телефона")} info={orderInfo.phone_number} />
                     {!!orderInfo.email && <OrderInfoCard title={"Email"} info={orderInfo.email} />}
 
                     {!!orderInfo.installment_duration && !!orderInfo.installment && (

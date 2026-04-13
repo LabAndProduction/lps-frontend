@@ -38,9 +38,7 @@ export default function Orders({ orders }: IOrdersProps) {
                                         <td>{order.id}</td>
                                         <td>{order.name}</td>
                                         <td>{order.created_at}</td>
-                                        <td className="whitespace-nowrap">
-                                            {formatPhoneWithSpaces(order.phone_number)}
-                                        </td>
+                                        <td className="whitespace-nowrap">{order.phone_number}</td>
                                         <td>{order.shipping_method_title}</td>
                                         <td>{order.payment_method_title}</td>
                                         <td>
