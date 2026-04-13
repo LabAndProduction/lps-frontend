@@ -29,7 +29,7 @@ export default function PhoneDropdown({ settings }: IPhoneDropdownProps) {
                         key={item.id}
                         href={`tel:${item.phone}`}
                         className="group flex items-center font-semibold text-sm hover:text-main py-2 px-2 whitespace-nowrap">
-                        {formatPhoneWithSpaces(item.phone)}
+                        {item.phone}
                     </Link>
                 ))}
             </ListboxOptions>

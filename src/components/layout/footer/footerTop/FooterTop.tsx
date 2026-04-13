@@ -45,10 +45,10 @@ export default async function FooterTop() {
                                     {text("Телефон")}:{" "}
                                     <div className="flex flex-col gap-x-2 gap-y-3">
                                         <Link href={`tel:${settings.phone}`} className="link !p-0">
-                                            {formatPhoneWithSpaces(settings.phone)}
+                                            {settings.phone}
                                         </Link>
                                         <Link href={`tel:${settings.phone2}`} className="link !p-0">
-                                            {formatPhoneWithSpaces(settings.phone2)}
+                                            {settings.phone2}
                                         </Link>
                                     </div>
                                 </div>

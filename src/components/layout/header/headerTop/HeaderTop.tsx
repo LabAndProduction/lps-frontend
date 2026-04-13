@@ -21,28 +21,15 @@ export default async function HeaderTop() {
                         <Icon name="phone" className="size-[1.125rem] group-hover:text-main" />
                         <div className="flex items-center gap-4">
                             <Link href={`tel:${settings.phone}`} className="flex font-semibold text-sm hover:text-main">
-                                {formatPhoneWithSpaces(settings.phone)}
+                                {settings.phone}
                             </Link>
                             <Link
                                 href={`tel:${settings.phone2}`}
                                 className="flex font-semibold text-sm hover:text-main">
-                                {formatPhoneWithSpaces(settings.phone2)}
+                                {settings.phone2}
                             </Link>
                         </div>
                     </div>
-                    {/* <Link
-                        href={`tel:${settings.phone}`}
-                        className="group flex items-center gap-2 font-semibold text-sm hover:text-main">
-                        <Icon name="phone" className="size-[1.125rem] group-hover:text-main" />
-                        {formatPhoneWithSpaces(settings.phone)}
-                    </Link>
-
-                    <Link
-                        href={`tel:${settings.phone2}`}
-                        className="group flex items-center gap-2 font-semibold text-sm hover:text-main">
-                        <Icon name="phone" className="size-[1.125rem] group-hover:text-main" />
-                        {formatPhoneWithSpaces(settings.phone2)}
-                    </Link> */}
                 </div>
             </div>
         </div>
