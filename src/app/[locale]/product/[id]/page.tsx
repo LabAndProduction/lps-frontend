@@ -14,12 +14,17 @@ import { getFullUrl } from "@/utils/getFullUrl";
 export default async function CategoryPage({ params }: IProductPageParams) {
     const { id } = await params;
     const productId = Number(id.split("-")[0]);
+    const slug = id.split("-").slice(1).join("-");
 
     const { text } = await getTexts();
 
     const product = await getProduct({
         productId: productId,
     });
+
+    if (!Number.isFinite(productId) || !slug) notFound();
+
+    if (!product || !product.data || product.data.slug !== slug) notFound();
 
     const productGroup = await getProductGroup({
         productGroupId: product.data.product_group_id,
@@ -68,7 +73,9 @@ export async function generateMetadata({ params }: IProductPageParams): Promise<
         productId,
     });
 
-    if (!product || product.data.slug !== slug) notFound();
+    if (!Number.isFinite(productId) || !slug) notFound();
+
+    if (!product || !product.data || product.data.slug !== slug) notFound();
 
     const pageUrl = await getFullUrl(`/product/${id}`);
 

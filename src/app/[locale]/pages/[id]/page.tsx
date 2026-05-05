@@ -11,11 +11,16 @@ import { getFullUrl } from "@/utils/getFullUrl";
 export default async function TextPage({ params }: IPageParamsWithId) {
     const { id } = await params;
 
+    const slug = id.split("-").slice(1).join("-");
     const pageId = Number(id.split("-")[0]);
     const page = await getPage({
         pageId: pageId,
     });
     const { text } = await getTexts();
+
+    if (!Number.isFinite(pageId) || !slug) notFound();
+
+    if (!page || !page.data || page.data.slug !== slug) notFound();
 
     return (
         <>
@@ -35,38 +40,6 @@ export default async function TextPage({ params }: IPageParamsWithId) {
                             dangerouslySetInnerHTML={{
                                 __html: page.data.body,
                             }}></div>
-
-                        {/* <div className="text-block">
-                            <div className="period-card">
-                                <div>
-                                    <h4>Кондиционер</h4>
-                                </div>
-                                <div>
-                                    <p>Гарантийный период*</p>
-                                    <h5>12 месяцев</h5>
-                                </div>
-                                <div>
-                                    <p>Бесплатное сервисное обслуживание*</p>
-                                    <h5>24 месяца</h5>
-                                </div>
-
-                                <div>
-                                    <p>Dual Inverter Compressor</p>
-                                    <h5>10 лет</h5>
-                                </div>
-                            </div>
-
-                            <div className="info-block">
-                                <p>
-                                    Подробную информацию о предоставлении и ограничении гарантийного и бесплатного
-                                    сервисного обслуживания, вы можете найти в гарантийном талоне, прилагаемом к вашему
-                                    продукту.
-                                </p>
-                                <p>
-                                    <small>Телефонный номер</small> <span>8 8000 805 805 или 2255</span>
-                                </p>
-                            </div>
-                        </div> */}
                     </div>
                 </div>
             </SectionWrapper>
@@ -79,9 +52,12 @@ export default async function TextPage({ params }: IPageParamsWithId) {
 export async function generateMetadata({ params }: IPageParamsWithId): Promise<Metadata> {
     const { id } = await params;
     const slug = id.split("-").slice(1).join("-");
+    const pageId = Number(id.split("-")[0]);
     const page = await getPage({ pageId: Number(id.split("-")[0]) });
 
-    if (!page || page.data.slug !== slug) notFound();
+    if (!Number.isFinite(pageId) || !slug) notFound();
+
+    if (!page || !page.data || page.data.slug !== slug) notFound();
 
     const pageUrl = await getFullUrl(`/pages/${id}`);
     const imageUrl = await getFullUrl("/images/logo.png", false);

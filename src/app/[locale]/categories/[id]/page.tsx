@@ -19,8 +19,14 @@ export default async function CategoryPage({ params, searchParams }: ICategoryPa
     } = await searchParams;
 
     const categoryId = Number(id.split("-")[0]);
+    const slug = id.split("-").slice(1).join("-");
     // const brandsArr: number[] | null = brands ? brands.split(",").map((el) => Number(el.split("-")[0])) : null;
     const category = await getCategory({ categoryId });
+
+    if (!Number.isFinite(categoryId) || !slug) notFound();
+
+    if (!category || !category.data || category.data.slug !== slug) notFound();
+
     const attrsArr:
         | {
               attrId: number;
@@ -59,16 +65,19 @@ export default async function CategoryPage({ params, searchParams }: ICategoryPa
 
 export async function generateMetadata({ params }: ICategoryPageParams): Promise<Metadata> {
     const { id } = await params;
-    const categoryId = id.split("-")[0];
+    const categoryId = Number(id.split("-")[0]);
     const slug = id.split("-").slice(1).join("-");
 
     const pageUrl = await getFullUrl(`/categories/${id}`);
 
     const category = await getCategory({
-        categoryId: Number(categoryId),
+        categoryId: categoryId,
     });
 
-    if (!category || category.data.slug !== slug) notFound();
+    if (!Number.isFinite(categoryId) || !slug) notFound();
+
+    if (!category || !category.data || category.data.slug !== slug) notFound();
+
     return {
         title: category.data.seo_title,
         description: category.data.meta_description,
