@@ -7,21 +7,25 @@ import { TextProvider } from "@/context/text.context";
 import { ViewedProvider } from "@/context/viewed.context";
 import { WishlistProvider } from "@/context/wishlist.context";
 import { IContextProvidersProps } from "@/types/props/types";
+import { SettingsProvider } from "../../context/settings.context";
 
 export async function ContextProviders({ children }: IContextProvidersProps) {
     const texts = await fetchTexts();
+
     return (
         <LangProvider>
             <TextProvider texts={texts}>
-                <CartProvider>
-                    <WishlistProvider>
-                        <CompareProvider>
-                            <OrderProvider>
-                                <ViewedProvider>{children}</ViewedProvider>
-                            </OrderProvider>
-                        </CompareProvider>
-                    </WishlistProvider>
-                </CartProvider>
+                <SettingsProvider>
+                    <CartProvider>
+                        <WishlistProvider>
+                            <CompareProvider>
+                                <OrderProvider>
+                                    <ViewedProvider>{children}</ViewedProvider>
+                                </OrderProvider>
+                            </CompareProvider>
+                        </WishlistProvider>
+                    </CartProvider>
+                </SettingsProvider>
             </TextProvider>
         </LangProvider>
     );

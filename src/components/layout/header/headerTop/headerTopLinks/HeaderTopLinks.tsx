@@ -1,9 +1,7 @@
-import { getMenu } from "@/api/menusApi";
 import { Link } from "@/i18n/routing";
+import { ISingleMenu } from "@/types/api/menus.types";
 
-export default async function HeaderTopLinks() {
-    const menu = await getMenu({ menuId: 2 });
-
+export default function HeaderTopLinks({ menu }: { menu: ISingleMenu }) {
     return (
         <>
             {menu && menu.data && (

@@ -17,7 +17,7 @@
         "cookies-next": "^5.1.0",
         "formik": "^2.4.6",
         "lodash": "^4.17.21",
-        "next": "^15.2.6",
+        "next": "^15.5.18",
         "next-client-cookies": "^2.0.1",
         "next-intl": "^3.26.5",
         "rc-slider": "^11.1.8",
@@ -28,6 +28,7 @@
         "react-spinners": "^0.15.0",
         "react-verification-input": "^4.2.2",
         "sharp": "^0.33.5",
+        "simplebar-react": "^3.3.2",
         "swiper": "^11.2.5",
         "yup": "^1.6.1"
     },
