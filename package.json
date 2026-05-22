@@ -17,7 +17,7 @@
         "cookies-next": "^5.1.0",
         "formik": "^2.4.6",
         "lodash": "^4.17.21",
-        "next": "^15.2.6",
+        "next": "^15.5.18",
         "next-client-cookies": "^2.0.1",
         "next-intl": "^3.26.5",
         "rc-slider": "^11.1.8",
