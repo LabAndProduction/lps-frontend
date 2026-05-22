@@ -26,9 +26,9 @@ export default function HeaderIcons({ setIsSearchOpen, isSearchOpen, menu, categ
             )} */}
 
             <HeaderQuantityIcons />
-            <div className="xl:hidden">
+            {/* <div className="xl:hidden">
                 <HeaderMenu categoriesTree={categoriesTree} menu={menu} isBtnWithText={false} />
-            </div>
+            </div> */}
         </div>
     );
 }

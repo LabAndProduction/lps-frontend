@@ -11,7 +11,7 @@ import Icon from "../Icon";
 export default function ProductsSwiper({ label, products, id }: IProductsSwiperProps) {
     return (
         <>
-            {products.data.length > 0 && (
+            {products && products.data && products.data.length > 0 && (
                 <SectionWrapper className="section-padding">
                     <SectionHeading label={label} />
 

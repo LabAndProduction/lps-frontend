@@ -18,12 +18,14 @@ export default function HeaderMenuCategory({ category, closeModal }: IHeaderMenu
                     {category.name}
                 </Link>
 
-                <button
-                    onClick={() => setIsOpen((prev) => !prev)}
-                    type="button"
-                    className="flex-center size-[var(--btn-height)]">
-                    <Icon name="chevron" className={classNames("size-3 text-primary", isOpen && "rotate-90")} />
-                </button>
+                {category.children && category.children.length > 0 && (
+                    <button
+                        onClick={() => setIsOpen((prev) => !prev)}
+                        type="button"
+                        className="flex-center size-[var(--btn-height)]">
+                        <Icon name="chevron" className={classNames("size-3 text-primary", isOpen && "rotate-90")} />
+                    </button>
+                )}
             </div>
 
             {isOpen && (

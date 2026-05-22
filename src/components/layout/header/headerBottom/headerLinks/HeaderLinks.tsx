@@ -8,14 +8,14 @@ export default function HeaderLinks({ categoriesTree }: IHeaderLinksProps) {
 
     return (
         <div className="xl:flex hidden justify-center h-auto">
-            {categoriesTree.data.map((category) => (
+            {/* {categoriesTree.data.map((category) => (
                 <HeaderCategorySubmenu
                     key={category.id}
                     category={category}
                     btnClassname={linkClassname}
                     spanClassname={spanClassname}
                 />
-            ))}
+            ))} */}
         </div>
     );
 }

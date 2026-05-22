@@ -1,18 +1,26 @@
+"use client";
+
 import { Link } from "@/i18n/routing";
 
 import Icon from "@/components/ui/Icon";
 import HeaderTopLinks from "./headerTopLinks/HeaderTopLinks";
-import { getSettings } from "@/api/settingsApi";
 import LangSelect from "../langSelect/LangSelect";
-import { formatPhoneWithSpaces } from "@/utils/formatPhoneWithSpaces";
+import { ISettings } from "@/types/api/settings.types";
+import { useRef } from "react";
+import { useSettings } from "@/context/settings.context";
+import useElementHeight from "@/hooks/useElementHeight";
+import { ISingleMenu } from "@/types/api/menus.types";
 
-export default async function HeaderTop() {
-    const settings = await getSettings();
+export default function HeaderTop({ settings, menu }: { settings: ISettings; menu: ISingleMenu }) {
+    const headerTopRef = useRef<HTMLDivElement>(null);
+    const { setHeaderTopHeight } = useSettings();
+
+    useElementHeight({ element: headerTopRef, setHeight: setHeaderTopHeight });
 
     return (
-        <div className="header-top lg:block hidden sticky top-0 bg-gray py-[0.625rem] z-91">
+        <div ref={headerTopRef} className="header-top lg:block hidden sticky top-0 bg-gray py-[0.625rem] z-91">
             <div className="container flex justify-between">
-                <HeaderTopLinks />
+                <HeaderTopLinks menu={menu} />
 
                 <div className="flex items-center gap-10">
                     <LangSelect />

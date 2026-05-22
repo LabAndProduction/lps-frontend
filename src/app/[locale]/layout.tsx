@@ -8,6 +8,7 @@ import "swiper/css/autoplay";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import "rc-slider/assets/index.css";
+import "simplebar-react/dist/simplebar.min.css";
 import "./globals.scss";
 import { notFound } from "next/navigation";
 import ScrollUp from "@/components/ui/buttons/ScrollUp";
