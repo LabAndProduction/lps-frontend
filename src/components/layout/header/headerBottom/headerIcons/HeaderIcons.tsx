@@ -9,13 +9,13 @@ import HeaderSearchBtn from "./headerSearchBtn/HeaderSearchBtn";
 import { IHeaderIconsProps } from "@/types/props/types";
 import HeaderMenu from "../../headerMenu/HeaderMenu";
 
-export default function HeaderIcons({ setIsSearchOpen, isSearchOpen, menu, categoriesTree }: IHeaderIconsProps) {
+export default function HeaderIcons({ menu, categoriesTree }: IHeaderIconsProps) {
     // const cookies = useCookies();
     // const token = cookies.get("token");
 
     return (
         <div className="lg:flex hidden items-center xl:gap-5 gap-4 py-3">
-            <HeaderSearchBtn setIsSearchOpen={setIsSearchOpen} isSearchOpen={isSearchOpen} />
+            {/* <HeaderSearchBtn setIsSearchOpen={setIsSearchOpen} isSearchOpen={isSearchOpen} /> */}
 
             {/* {token ? (
                 <Link href="/dashboard/profile" className={`relative flex-center group group`}>

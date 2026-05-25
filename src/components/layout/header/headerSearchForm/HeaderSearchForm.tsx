@@ -4,15 +4,19 @@ import Icon from "@/components/ui/Icon";
 import { useText } from "@/context/text.context";
 import classNames from "classnames";
 import { useRouter } from "@/i18n/routing";
-import { FormEventHandler, useEffect, useRef, useState } from "react";
+import { SubmitEventHandler, useEffect, useRef, useState } from "react";
 import SearchResults from "./HeaderSearchResults";
 import { getProducts } from "@/api/productsApi";
 import { IProducts } from "@/types/api/products.types";
 import lodash from "lodash";
-import { IHeaderSearchFormProps } from "@/types/props/types";
 import { useLocaleTS } from "@/hooks/useLocaleTS";
 
-export default function HeaderSearchForm({ className, keyword = "", setIsSearchOpen }: IHeaderSearchFormProps) {
+export interface IHeaderSearchFormProps {
+    className?: string;
+    keyword?: string;
+}
+
+export default function HeaderSearchForm({ className, keyword = "" }: IHeaderSearchFormProps) {
     const { push } = useRouter();
     const params = new URLSearchParams("");
     const [value, setValue] = useState<string>(keyword);
@@ -22,7 +26,7 @@ export default function HeaderSearchForm({ className, keyword = "", setIsSearchO
     const ref = useRef<HTMLDivElement>(null);
     const locale = useLocaleTS();
 
-    const handleSubmit: FormEventHandler<HTMLFormElement> = (e) => {
+    const handleSubmit: SubmitEventHandler<HTMLFormElement> = (e) => {
         e.preventDefault();
 
         params.set("keyword", value);
@@ -30,7 +34,6 @@ export default function HeaderSearchForm({ className, keyword = "", setIsSearchO
         push(`/search?${params.toString()}`, { scroll: false });
         setValue("");
         setIsResultsShow(false);
-        setIsSearchOpen(false);
     };
 
     const fetchResults = async (searchKeyword: string) => {
@@ -51,7 +54,6 @@ export default function HeaderSearchForm({ className, keyword = "", setIsSearchO
         const handleClickOutside = (event: MouseEvent) => {
             if (ref.current && !ref.current.contains(event.target as Node)) {
                 setIsResultsShow(false);
-                setIsSearchOpen(false);
             }
         };
 
@@ -85,7 +87,6 @@ export default function HeaderSearchForm({ className, keyword = "", setIsSearchO
                     type="search"
                     placeholder={text("Поиск товаров")}
                     className="pl-4 lg:!min-h-[var(--input-height)] lg:!h-[var(--input-height)] !min-h-10 !h-10 !pr-[4.5rem]"
-                    autoFocus
                 />
                 <button
                     type="submit"

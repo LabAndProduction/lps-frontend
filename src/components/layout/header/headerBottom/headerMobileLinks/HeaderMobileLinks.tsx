@@ -1,13 +1,17 @@
 import Icon from "@/components/ui/Icon";
 import classNames from "classnames";
-import { IHeaderMobileLinksProps } from "@/types/props/types";
 import LangSelect from "../../langSelect/LangSelect";
 import PhoneDropdown from "../../phoneDropdown/PhoneDropdown";
+import { ISettings } from "@/types/api/settings.types";
 
-export default function HeaderMobileLinks({ settings, setIsSearchOpen, isSearchOpen }: IHeaderMobileLinksProps) {
+export interface IHeaderMobileLinksProps {
+    settings: ISettings;
+}
+
+export default function HeaderMobileLinks({ settings }: IHeaderMobileLinksProps) {
     return (
         <div className="lg:hidden flex items-center gap-1">
-            <button
+            {/* <button
                 type="button"
                 className={classNames(
                     `flex text-secondary3 p-[0.625rem] rounded-main bg-gray`,
@@ -19,7 +23,7 @@ export default function HeaderMobileLinks({ settings, setIsSearchOpen, isSearchO
                     setIsSearchOpen((prev) => !prev);
                 }}>
                 <Icon name="search" className="size-5" />
-            </button>
+            </button> */}
 
             <PhoneDropdown settings={settings} />
             {/* <Link
