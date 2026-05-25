@@ -15,7 +15,6 @@ import useElementHeight from "@/hooks/useElementHeight";
 import HeaderCategoriesMenu from "./headerCategoriesMenu/HeaderCategoriesMenu";
 
 export default function HeaderBottom({ settings, menu, categoriesTree }: IHeaderBottomProps) {
-    const [isSearchOpen, setIsSearchOpen] = useState<boolean>(false);
     const { text } = useText();
     const headerRef = useRef<HTMLDivElement>(null);
 
@@ -45,21 +44,16 @@ export default function HeaderBottom({ settings, menu, categoriesTree }: IHeader
                     </div>
                 </div>
 
-                {isSearchOpen && <HeaderSearchForm setIsSearchOpen={setIsSearchOpen} />}
+                <HeaderSearchForm />
                 {/* {isSearchOpen ? (
                     <HeaderSearchForm setIsSearchOpen={setIsSearchOpen} />
                 ) : (
                     <HeaderLinks categoriesTree={categoriesTree} />
                 )} */}
 
-                <HeaderMobileLinks settings={settings} setIsSearchOpen={setIsSearchOpen} isSearchOpen={isSearchOpen} />
+                <HeaderMobileLinks settings={settings} />
 
-                <HeaderIcons
-                    setIsSearchOpen={setIsSearchOpen}
-                    isSearchOpen={isSearchOpen}
-                    menu={menu}
-                    categoriesTree={categoriesTree}
-                />
+                <HeaderIcons menu={menu} categoriesTree={categoriesTree} />
             </div>
         </header>
     );

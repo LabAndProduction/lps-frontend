@@ -29,11 +29,7 @@ export interface IHeaderSearchResultsProps {
     value: string;
     setValue: SetState<string>;
 }
-export interface IHeaderSearchFormProps {
-    className?: string;
-    keyword?: string;
-    setIsSearchOpen: SetState<boolean>;
-}
+
 export interface ISectionWrapperProps {
     children: React.ReactNode;
     className?: string;
@@ -51,11 +47,7 @@ export interface IHeaderBottomProps {
     menu: ISingleMenu;
     categoriesTree: ICategoriesTree;
 }
-export interface IHeaderMobileLinksProps {
-    settings: ISettings;
-    setIsSearchOpen: SetState<boolean>;
-    isSearchOpen: boolean;
-}
+
 export interface IHeaderLinksProps {
     categoriesTree: ICategoriesTree;
 }
@@ -66,8 +58,6 @@ export interface IHeaderCategorySubmenuProps {
     spanClassname: string;
 }
 export interface IHeaderIconsProps {
-    setIsSearchOpen: SetState<boolean>;
-    isSearchOpen: boolean;
     menu: ISingleMenu;
     categoriesTree: ICategoriesTree;
 }
