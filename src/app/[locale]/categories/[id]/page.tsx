@@ -4,23 +4,15 @@ import { getProducts } from "@/api/productsApi";
 import { notFound } from "next/navigation";
 import { ICategoryPageParams } from "@/types/pageParams.types";
 import CategoryPageWrapper from "@/components/pages/categories/CategoryPageWrapper";
-import { headers } from "next/headers";
 import { getFullUrl } from "@/utils/getFullUrl";
 
 export default async function CategoryPage({ params, searchParams }: ICategoryPageParams) {
     const { id } = await params;
-    const {
-        price,
-        // brands,
-        attributes,
-        sort,
-        direction,
-        page,
-    } = await searchParams;
+    const { price, brands, attributes, sort, direction, page } = await searchParams;
 
     const categoryId = Number(id.split("-")[0]);
     const slug = id.split("-").slice(1).join("-");
-    // const brandsArr: number[] | null = brands ? brands.split(",").map((el) => Number(el.split("-")[0])) : null;
+    const brandsArr: number[] | null = brands ? brands.split(",").map((el) => Number(el.split("-")[0])) : null;
     const category = await getCategory({ categoryId });
 
     if (!Number.isFinite(categoryId) || !slug) notFound();
@@ -50,7 +42,7 @@ export default async function CategoryPage({ params, searchParams }: ICategoryPa
         category_id: categoryId,
         price_from: price ? Number(price.split("-")[0]) : null,
         price_to: price ? Number(price.split("-")[1]) : null,
-        // brands: brandsArr,
+        brands: brandsArr,
         attributes: attrsArr,
         order_by: sort,
         order_direction: direction,

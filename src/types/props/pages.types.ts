@@ -1,6 +1,12 @@
 import { FieldAttributes } from "formik";
 import { SingleBrand } from "../api/brand.types";
-import { ICategoryAttribute, ICategoryAttributes, IPrices, ISingleCategory } from "../api/categories.types";
+import {
+    ICategoryAttribute,
+    ICategoryAttributes,
+    ICategoryBrands,
+    IPrices,
+    ISingleCategory,
+} from "../api/categories.types";
 import { IProduct, IProductAttribute, IProductAttributes, IProducts, ISingleProduct } from "../api/products.types";
 import { IProfile } from "../api/profile.types";
 import { IUpdatePhoneForm } from "../form.types";
@@ -49,6 +55,7 @@ export interface ICategoriesFiltersProps {
     attributes: ICategoryAttributes;
     price: IPrices;
     closeModal?: () => void;
+    brands: ICategoryBrands;
 }
 export interface ICategoriesFiltersMenuProps {
     attributes: ICategoryAttributes;
@@ -59,6 +66,7 @@ export interface IFilterBrandsProps {
     brands: SingleBrand[];
     isDisabled: boolean;
     setIsDisabled: SetState<boolean>;
+    closeModal?: () => void;
 }
 export interface IBrandCheckboxProps {
     brand: SingleBrand;
