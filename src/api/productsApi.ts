@@ -22,7 +22,7 @@ export const getProducts = async ({
     is_popular,
     is_promotion,
     is_special,
-    order_direction = "asc",
+    order_direction = "desc",
     price_from,
     price_to,
     search,
