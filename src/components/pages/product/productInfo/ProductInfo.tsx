@@ -21,7 +21,7 @@ export default function ProductInfo({ product, attributes, productGroup }: IProd
 
                     {brand && (
                         <div>
-                            {text("Бренд")}:{" "}
+                            {text("Производитель")}:{" "}
                             <Link href={"/"} className="text-main hover:text-main-dark font-medium">
                                 {brand.name}
                             </Link>
