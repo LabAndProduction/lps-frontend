@@ -54,6 +54,11 @@ export interface IProduct {
     localization: ILocalization;
     wholesale_price: string;
     wholesale_price_formatted: string;
+
+    stock_info: string | null;
+    video_link: string | null;
+    banner_img: string | null;
+    banner_link: string | null;
 }
 
 export interface IInstallment {
@@ -149,7 +154,21 @@ export interface ISingleProduct {
         meta_keywords: string;
         book: string;
         body2: string;
+
+        documents: IProductDocument[];
     };
+}
+
+export interface IProductDocument {
+    id: number;
+    name: string | null;
+    url: string | null;
+    path: string | null;
+    type: string | null;
+    mime: string | null;
+    size: number;
+    created_at: string | null;
+    updated_at: string | null;
 }
 
 export interface IProductAttributes {

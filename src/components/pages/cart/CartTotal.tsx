@@ -6,7 +6,6 @@ import { useCart } from "@/context/cart.context";
 import { useText } from "@/context/text.context";
 import { useState } from "react";
 import OvalSpinner from "@/components/ui/OvalSpinner";
-// import AuthMenu from "@/components/ui/modals/authMenu/AuthMenu";
 
 export default function CartTotal() {
     const cookies = useCookies();
@@ -23,8 +22,7 @@ export default function CartTotal() {
                 <div className="text-sm flex items-center justify-between gap-4">
                     <h4>{text("Количество товаров")}:</h4>
                     <p>
-                        {token ? apiCart.quantity : localCartQuantity}
-                        {text("шт.")}
+                        {token ? apiCart.quantity : localCartQuantity} {text("шт.")}
                     </p>
                 </div>
                 <div className="text-sm font-semibold flex items-center justify-between gap-4 border-t border-gray4 pt-3">
@@ -44,15 +42,6 @@ export default function CartTotal() {
                         {text("Оформить заказ")}
                     </Link>
                 )}
-                {/* {token ? (
-                    apiCart.quantity > 0 && (
-                        <Link href="/checkout" className={`main-btn w-full`}>
-                            {text("Оформить заказ")}
-                        </Link>
-                    )
-                ) : (
-                    <AuthMenu isBtn={true} />
-                )} */}
 
                 <button
                     disabled={isClearLoading}

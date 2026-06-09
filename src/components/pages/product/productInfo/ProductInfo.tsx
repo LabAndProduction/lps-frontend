@@ -6,11 +6,10 @@ import { IProductInfoProps } from "@/types/props/pages.types";
 import ProductGroups from "./productGroups/ProductGroups";
 import { useText } from "@/context/text.context";
 import ProductArticleNumber from "../../../ui/ProductArticleNumber";
-import { Link } from "@/i18n/routing";
 
 export default function ProductInfo({ product, attributes, productGroup }: IProductInfoProps) {
     const { text } = useText();
-    const { h1_name, brand, sku, name, product_group_id, description } = product.data;
+    const { h1_name, brand, sku, name, product_group_id, description, stock_info } = product.data;
     return (
         <div className="flex flex-col gap-6">
             <div className="flex flex-col gap-6">
@@ -21,10 +20,13 @@ export default function ProductInfo({ product, attributes, productGroup }: IProd
 
                     {brand && (
                         <div>
-                            {text("Производитель")}:{" "}
-                            <Link href={"/"} className="text-main hover:text-main-dark font-medium">
-                                {brand.name}
-                            </Link>
+                            {text("Производитель")}: <span className="font-medium">{brand.name}</span>
+                        </div>
+                    )}
+
+                    {stock_info && stock_info.length > 0 && (
+                        <div>
+                            {text("Наличие")}: <span className="font-medium">{stock_info}</span>
                         </div>
                     )}
                 </div>
