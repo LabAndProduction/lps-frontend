@@ -1,6 +1,6 @@
 import SectionWrapper from "@/components/layout/SectionWrapper";
 import CategoriesSwiper from "@/components/ui/swipers/CategoriesSwiper";
-import { getCategoryAttributes, getCategoryPrices, getSubCategories } from "@/api/categoriesApi";
+import { getCategoryAttributes, getCategoryBrands, getCategoryPrices, getSubCategories } from "@/api/categoriesApi";
 import CategoriesFilters from "./categoriesFilters/CategoriesFilters";
 import CategoryProductsWrapper from "./categoryProductsWrapper/CategoryProductsWrapper";
 import { ICategoryProps } from "@/types/props/pages.types";
@@ -10,6 +10,7 @@ export default async function Category({ category, products }: ICategoryProps) {
     const subCategories = await getSubCategories({ categoryId });
     const price = await getCategoryPrices({ categoryId });
     const attributes = await getCategoryAttributes({ categoryId });
+    const brands = await getCategoryBrands({ categoryId });
 
     return (
         <SectionWrapper className="section-padding">
@@ -25,10 +26,15 @@ export default async function Category({ category, products }: ICategoryProps) {
 
                     <div className="products-grid-wrapper">
                         <div className="lg:block hidden">
-                            <CategoriesFilters attributes={attributes} price={price} />
+                            <CategoriesFilters attributes={attributes} price={price} brands={brands} />
                         </div>
 
-                        <CategoryProductsWrapper products={products} attributes={attributes} price={price} />
+                        <CategoryProductsWrapper
+                            products={products}
+                            attributes={attributes}
+                            price={price}
+                            brands={brands}
+                        />
                     </div>
                 </div>
             </div>

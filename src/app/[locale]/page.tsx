@@ -27,7 +27,7 @@ export default async function HomePage() {
 
     return (
         <>
-            {homeBanners1 && homeBanners1.data && <HomeBanner banners={homeBanners1} />}
+            {/* {homeBanners1 && homeBanners1.data && <HomeBanner banners={homeBanners1} />} */}
 
             <ProductsSwiper id="discounted" label={text("Со скидкой")} products={discountedProducts} />
 

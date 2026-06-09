@@ -4,6 +4,7 @@ import { Link } from "@/i18n/routing";
 import { ISettings } from "@/types/api/settings.types";
 import { SpritesName } from "@/types/types";
 import { formatPhoneWithSpaces } from "@/utils/formatPhoneWithSpaces";
+import { phoneFormatter } from "../../../../utils/phoneFormatter";
 
 export default function ContactsInfo({ settings }: { settings: ISettings }) {
     const { text } = useText();
@@ -21,9 +22,9 @@ export default function ContactsInfo({ settings }: { settings: ISettings }) {
             id: 0,
             title: text("Номер телефона"),
             icon: "phone",
-            text: settings.phone,
+            text: phoneFormatter(settings.phone),
             link: `tel:${settings.phone}`,
-            text2: settings.phone2,
+            text2: phoneFormatter(settings.phone2),
             link2: `tel:${settings.phone2}`,
         },
         // { id: 1, title: text("E-mail"), icon: "email", text: settings.email, link: `mailto:${settings.email}` },

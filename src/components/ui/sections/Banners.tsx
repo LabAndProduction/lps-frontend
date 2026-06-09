@@ -8,7 +8,8 @@ export default async function Banners() {
     return (
         <>
             {banners && banners.data && banners.data.length > 0 && (
-                <SectionWrapper className="section-padding">
+                // <SectionWrapper className="section-padding">
+                <SectionWrapper className="sm:pt-5 pt-18">
                     <div className="sm:grid flex flex-col lg:grid-cols-3 grid-cols-2 gap-5">
                         {banners.data.map((banner) => (
                             <Link

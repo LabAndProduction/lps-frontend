@@ -9,7 +9,12 @@ import { ICategoryProductsWrapperProps } from "@/types/props/pages.types";
 import ProductsViewButtons from "@/components/ui/ProductsViewButtons";
 import CategoriesFiltersMenu from "../categoriesFiltersMenu/CategoriesFiltersMenu";
 
-export default function CategoryProductsWrapper({ products, attributes, price }: ICategoryProductsWrapperProps) {
+export default function CategoryProductsWrapper({
+    products,
+    attributes,
+    price,
+    brands,
+}: ICategoryProductsWrapperProps) {
     const [productsView, setProductsView] = useState<ProductsViewType>("column");
     const { text } = useText();
 
@@ -18,7 +23,7 @@ export default function CategoryProductsWrapper({ products, attributes, price }:
             <div className="flex flex-col gap-3">
                 <div className="lg:hidden flex items-center flex-wrap justify-between gap-3">
                     {products.data.length > 0 && <ProductsSort />}
-                    <CategoriesFiltersMenu attributes={attributes} price={price} />
+                    <CategoriesFiltersMenu attributes={attributes} price={price} brands={brands} />
                 </div>
 
                 <div className="flex items-center gap-3 flex-wrap justify-between">

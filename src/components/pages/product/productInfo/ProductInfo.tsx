@@ -6,19 +6,30 @@ import { IProductInfoProps } from "@/types/props/pages.types";
 import ProductGroups from "./productGroups/ProductGroups";
 import { useText } from "@/context/text.context";
 import ProductArticleNumber from "../../../ui/ProductArticleNumber";
+import { Link } from "@/i18n/routing";
 
 export default function ProductInfo({ product, attributes, productGroup }: IProductInfoProps) {
     const { text } = useText();
+    const { h1_name, brand, sku, name, product_group_id, description } = product.data;
     return (
         <div className="flex flex-col gap-6">
-            <div className="flex flex-col gap-4">
-                <h1 className="font-medium leading-140 2xl:text-[1.75rem] md:text-2xl text-xl">
-                    {product.data.h1_name.length > 0 ? product.data.h1_name : product.data.name}
-                </h1>
+            <div className="flex flex-col gap-6">
+                <div className="flex flex-col gap-4">
+                    <h1 className="font-medium leading-140 2xl:text-[1.75rem] md:text-2xl text-xl">
+                        {h1_name.length > 0 ? h1_name : name}
+                    </h1>
 
-                {product.data.sku && product.data.sku.length > 0 && (
-                    <ProductArticleNumber articleNumber={product.data.sku} isBig={true} />
-                )}
+                    {brand && (
+                        <div>
+                            {text("Производитель")}:{" "}
+                            <Link href={"/"} className="text-main hover:text-main-dark font-medium">
+                                {brand.name}
+                            </Link>
+                        </div>
+                    )}
+                </div>
+
+                {sku && sku.length > 0 && <ProductArticleNumber articleNumber={sku} isBig={true} />}
 
                 <div className="flex gap-6 flex-wrap">
                     <CompareButton product={product.data} type="text" />
@@ -26,13 +37,13 @@ export default function ProductInfo({ product, attributes, productGroup }: IProd
                 </div>
             </div>
 
-            {product.data.product_group_id && <ProductGroups attributes={attributes} productGroup={productGroup} />}
+            {product_group_id && <ProductGroups attributes={attributes} productGroup={productGroup} />}
 
-            {product.data.description.length > 0 && (
+            {description.length > 0 && (
                 <div className="flex flex-col gap-4">
                     <h4 className="font-semibold">{text("Короткое описание")}</h4>
 
-                    <p>{product.data.description}</p>
+                    <p>{description}</p>
                 </div>
             )}
         </div>
