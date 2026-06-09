@@ -10,6 +10,7 @@ import { useRef } from "react";
 import { useSettings } from "@/context/settings.context";
 import useElementHeight from "@/hooks/useElementHeight";
 import { ISingleMenu } from "@/types/api/menus.types";
+import { phoneFormatter } from "@/utils/phoneFormatter";
 
 export default function HeaderTop({ settings, menu }: { settings: ISettings; menu: ISingleMenu }) {
     const headerTopRef = useRef<HTMLDivElement>(null);
@@ -29,12 +30,12 @@ export default function HeaderTop({ settings, menu }: { settings: ISettings; men
                         <Icon name="phone" className="size-[1.125rem] group-hover:text-main" />
                         <div className="flex items-center gap-4">
                             <Link href={`tel:${settings.phone}`} className="flex font-semibold text-sm hover:text-main">
-                                {settings.phone}
+                                {phoneFormatter(settings.phone)}
                             </Link>
                             <Link
                                 href={`tel:${settings.phone2}`}
                                 className="flex font-semibold text-sm hover:text-main">
-                                {settings.phone2}
+                                {phoneFormatter(settings.phone2)}
                             </Link>
                         </div>
                     </div>

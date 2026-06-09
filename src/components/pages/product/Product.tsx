@@ -1,3 +1,5 @@
+"use client";
+
 import SectionWrapper from "@/components/layout/SectionWrapper";
 import { IProductProps } from "@/types/props/pages.types";
 import ProductGallery from "./productGallery/ProductGallery";
@@ -5,8 +7,11 @@ import ProductInfo from "./productInfo/ProductInfo";
 import ProductTabs from "./productTabs/ProductTabs";
 import ProductSidebar from "./productSidebar/ProductSidebar";
 import ProductBanners from "./productBanners/ProductBanners";
+import { useSettings } from "@/context/settings.context";
 
 export default function Product({ product, attributes, productGroup }: IProductProps) {
+    const { headerTopHeight, headerHeight } = useSettings();
+
     return (
         <SectionWrapper className="md:pt-0 pt-5">
             <div className="xl:grid flex flex-col gap-5 grid-cols-[1fr_26.25rem]">
@@ -22,7 +27,9 @@ export default function Product({ product, attributes, productGroup }: IProductP
 
                     <ProductTabs product={product} attributes={attributes} />
                 </div>
-                <div className="xl:block hidden">
+                <div
+                    className="xl:block hidden h-fit sticky top-0"
+                    style={{ top: `${headerTopHeight + headerHeight + 20}px` }}>
                     <ProductSidebar product={product} />
                 </div>
             </div>

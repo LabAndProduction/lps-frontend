@@ -5,11 +5,12 @@ import { Link } from "@/i18n/routing";
 import { IPhoneDropdownProps } from "@/types/props/types";
 import { formatPhoneWithSpaces } from "@/utils/formatPhoneWithSpaces";
 import { Listbox, ListboxButton, ListboxOptions } from "@headlessui/react";
+import { phoneFormatter } from "../../../../utils/phoneFormatter";
 
 export default function PhoneDropdown({ settings }: IPhoneDropdownProps) {
     const phones = [
-        { id: 0, phone: settings.phone },
-        { id: 1, phone: settings.phone2 },
+        { id: 0, phone: phoneFormatter(settings.phone) },
+        { id: 1, phone: phoneFormatter(settings.phone2) },
     ];
 
     return (

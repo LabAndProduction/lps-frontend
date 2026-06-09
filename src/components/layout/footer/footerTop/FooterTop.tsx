@@ -6,6 +6,7 @@ import Link from "next/link";
 import NextImage from "@/components/ui/NextImage";
 import Socials from "@/components/ui/Socials";
 import { formatPhoneWithSpaces } from "@/utils/formatPhoneWithSpaces";
+import { phoneFormatter } from "@/utils/phoneFormatter";
 
 export default async function FooterTop() {
     const menu5 = await getMenu({ menuId: 5 });
@@ -45,10 +46,10 @@ export default async function FooterTop() {
                                     {text("Телефон")}:{" "}
                                     <div className="flex flex-col gap-x-2 gap-y-3">
                                         <Link href={`tel:${settings.phone}`} className="link !p-0">
-                                            {settings.phone}
+                                            {phoneFormatter(settings.phone)}
                                         </Link>
                                         <Link href={`tel:${settings.phone2}`} className="link !p-0">
-                                            {settings.phone2}
+                                            {phoneFormatter(settings.phone2)}
                                         </Link>
                                     </div>
                                 </div>
