@@ -60,6 +60,7 @@ export interface ICategoriesFiltersProps {
 export interface ICategoriesFiltersMenuProps {
     attributes: ICategoryAttributes;
     price: IPrices;
+    brands: ICategoryBrands;
 }
 
 export interface IFilterBrandsProps {
@@ -210,6 +211,7 @@ export interface ICategoryProductsWrapperProps {
     products: IProducts;
     attributes: ICategoryAttributes;
     price: IPrices;
+    brands: ICategoryBrands;
 }
 export interface ICheckoutInstallmentDurationsProps {
     installments: ICalculatedInstallments;

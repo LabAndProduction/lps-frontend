@@ -29,7 +29,12 @@ export default async function Category({ category, products }: ICategoryProps) {
                             <CategoriesFilters attributes={attributes} price={price} brands={brands} />
                         </div>
 
-                        <CategoryProductsWrapper products={products} attributes={attributes} price={price} />
+                        <CategoryProductsWrapper
+                            products={products}
+                            attributes={attributes}
+                            price={price}
+                            brands={brands}
+                        />
                     </div>
                 </div>
             </div>
