@@ -7,9 +7,7 @@ export default async function SpecialSwiper() {
     const { text } = await getTexts();
     const cookies = await getCookies();
     const categoryId = cookies.get("last_category");
-    const specialProducts = await getProducts(
-        categoryId ? { category_id: Number(categoryId) } : { is_new: 1, order_direction: "desc" },
-    );
+    const specialProducts = await getProducts(categoryId ? { category_id: Number(categoryId) } : {});
 
     return (
         <>

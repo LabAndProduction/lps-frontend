@@ -19,7 +19,7 @@ export default function useCheckoutSubmit({ installments }: { installments?: ICa
     const cookies = useCookies();
     const token = cookies.get("token");
     const { localCartTotal, apiCart, clearCart, cart } = useCart();
-    // console.log();
+
     const handleSubmit = ({ values, resetForm }: ISubmitFormFuncParams<ICheckoutForm>) => {
         const {
             name,

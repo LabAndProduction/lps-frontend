@@ -5,13 +5,18 @@ import { Fragment } from "react";
 import classNames from "classnames";
 import { useText } from "@/context/text.context";
 import { IProductTabsProps } from "@/types/props/pages.types";
+import { Link } from "@/i18n/routing";
+import NextImage from "@/components/ui/NextImage";
+import { formatFileSize } from "@/utils/formatFileSize";
 
 export default function ProductTabs({ product, attributes }: IProductTabsProps) {
     const { text } = useText();
     const tabs = [
         { id: 0, title: text("О товаре") },
         { id: 1, title: text("Характеристики") },
+        { id: 2, title: text("Документы") },
     ];
+
     return (
         <div className="custom-block-with-padding pb-9">
             <TabGroup className="flex flex-col gap-6 w-full">
@@ -39,7 +44,6 @@ export default function ProductTabs({ product, attributes }: IProductTabsProps) 
                                 __html: product.data.body,
                             }}></div>
                     </TabPanel>
-
                     <TabPanel>
                         <div className="flex flex-col gap-2">
                             {/* max-w-[540px] */}
@@ -56,6 +60,27 @@ export default function ProductTabs({ product, attributes }: IProductTabsProps) 
                             })}
                         </div>
                         {/* </div> */}
+                    </TabPanel>
+                    <TabPanel>
+                        <div className="flex flex-col gap-3">
+                            {product.data.documents.map(({ id, url, name, size, type }) => {
+                                return (
+                                    <Link
+                                        href={url || "#"}
+                                        key={id}
+                                        target="_blank"
+                                        rel="nofollow"
+                                        className="flex items-center gap-4 p-4 border border-gray3 hover:border-main rounded-main">
+                                        <NextImage alt="" src={`/images/formats/${type}.svg`} height={64} width={64} />
+
+                                        <div className="flex flex-col gap-3">
+                                            <div className="font-medium text-lg">{name}</div>
+                                            <div className="text-secondary text-sm">{formatFileSize(size)}</div>
+                                        </div>
+                                    </Link>
+                                );
+                            })}
+                        </div>
                     </TabPanel>
                 </TabPanels>
             </TabGroup>
