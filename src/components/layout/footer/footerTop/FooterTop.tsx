@@ -5,8 +5,8 @@ import { getTexts } from "@/api/textsApi";
 import Link from "next/link";
 import NextImage from "@/components/ui/NextImage";
 import Socials from "@/components/ui/Socials";
-import { formatPhoneWithSpaces } from "@/utils/formatPhoneWithSpaces";
 import { phoneFormatter } from "@/utils/phoneFormatter";
+import { getLocaleTs } from "@/utils/getLocaleTs";
 
 export default async function FooterTop() {
     const menu5 = await getMenu({ menuId: 5 });
@@ -14,6 +14,7 @@ export default async function FooterTop() {
     const menu4 = await getMenu({ menuId: 4 });
     const settings = await getSettings();
     const { text } = await getTexts();
+    const locale = await getLocaleTs();
 
     return (
         <div className="bg-white py-[3.75rem]">
@@ -64,7 +65,9 @@ export default async function FooterTop() {
                     <div className="footer-menu">
                         <h4 className="title">{text("Обратная связь")}</h4>
                         <div className="list">
-                            <Link href="/contacts" className="main-transparent-btn rounded-btn">
+                            <Link
+                                href={`${locale == "ru" ? "" : `/${locale}`}/contacts`}
+                                className="main-transparent-btn rounded-btn">
                                 {text("Оставить сообщение")}
                             </Link>
                         </div>
