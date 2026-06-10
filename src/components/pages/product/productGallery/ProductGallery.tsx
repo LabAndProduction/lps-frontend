@@ -7,36 +7,59 @@ import { useState } from "react";
 import { Link } from "@/i18n/routing";
 import Fancybox from "@/components/ui/fancybox/Fancybox";
 import { IProductGalleryProps } from "@/types/props/pages.types";
+import Icon from "@/components/ui/Icon";
 
 export default function ProductGallery({ product }: IProductGalleryProps) {
     const [thumbsSwiper, setThumbsSwiper] = useState<SwiperClass | null>(null);
+    const { gallery, name, video_link, img } = product.data;
     return (
         <div className="lg:grid flex flex-col-reverse grid-cols-[5rem_1fr] gap-5 product-gallery-wrapper relative overflow-hidden">
-            <Swiper
-                onSwiper={setThumbsSwiper}
-                spaceBetween={10}
-                slidesPerView="auto"
-                modules={[Thumbs]}
-                watchSlidesProgress={true}
-                direction="horizontal"
-                breakpoints={{
-                    1024: {
-                        direction: "vertical",
-                    },
-                }}
-                className="lg:min-w-[5rem] thumbs min-w-full">
-                {product.data.gallery.map((item, id) => (
-                    <SwiperSlide key={id} className="transition-300 flex-center">
+            <div className="min-w-0 flex flex-col gap-2.5">
+                <Swiper
+                    onSwiper={setThumbsSwiper}
+                    spaceBetween={10}
+                    slidesPerView="auto"
+                    modules={[Thumbs]}
+                    watchSlidesProgress={true}
+                    direction="horizontal"
+                    breakpoints={{
+                        1024: {
+                            direction: "vertical",
+                        },
+                    }}
+                    className="lg:min-w-[5rem] thumbs min-w-full min-h-0!">
+                    {gallery.map((item, id) => (
+                        <SwiperSlide key={id} className="transition-300 flex-center">
+                            <NextImage
+                                width={100}
+                                height={100}
+                                src={item.small}
+                                alt={name}
+                                className="size-full object-contain"
+                            />
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
+
+                {video_link && video_link.length > 0 && (
+                    <Link
+                        href={video_link}
+                        className="transition-300 flex-center relative rounded-main overflow-hidden"
+                        target="_blank"
+                        rel="nofollow">
+                        <div className="bg-black/20 absolute inset-0 flex-center">
+                            <Icon name="play" className="text-white" />
+                        </div>
                         <NextImage
                             width={100}
                             height={100}
-                            src={item.small}
-                            alt={product.data.name}
-                            className="size-full object-contain"
+                            src={img}
+                            alt={name}
+                            className="size-full object-contain aspect-square"
                         />
-                    </SwiperSlide>
-                ))}
-            </Swiper>
+                    </Link>
+                )}
+            </div>
 
             <Fancybox
                 options={{
@@ -52,7 +75,7 @@ export default function ProductGallery({ product }: IProductGalleryProps) {
                     }}
                     modules={[Navigation, Thumbs]}
                     className="swiper-with-grid product-gallery bg-white">
-                    {product.data.gallery.map((item, id) => (
+                    {gallery.map((item, id) => (
                         <SwiperSlide key={id} className="h-auto flex">
                             <Link
                                 data-fancybox="gallery"
@@ -62,7 +85,7 @@ export default function ProductGallery({ product }: IProductGalleryProps) {
                                     width={480}
                                     height={480}
                                     src={item.original}
-                                    alt={product.data.name}
+                                    alt={name}
                                     className="size-full object-contain"
                                 />
                             </Link>

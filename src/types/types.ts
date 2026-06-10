@@ -11,6 +11,7 @@ export type SpritesName =
     | "filter"
     | "phone"
     | "search"
+    | "play"
     | "compare"
     | "cart"
     | "time"
