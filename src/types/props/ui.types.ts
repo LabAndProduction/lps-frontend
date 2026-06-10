@@ -24,8 +24,6 @@ export interface IProductCardSmallProps {
 }
 export interface INextImageProps extends ImageProps {
     src: string;
-    width: number;
-    height: number;
     alt: string;
 }
 export interface ISectionHeadingProps {

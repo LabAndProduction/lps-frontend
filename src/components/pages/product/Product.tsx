@@ -8,6 +8,7 @@ import ProductTabs from "./productTabs/ProductTabs";
 import ProductSidebar from "./productSidebar/ProductSidebar";
 import ProductBanners from "./productBanners/ProductBanners";
 import { useSettings } from "@/context/settings.context";
+import ProductBanner from "./ProductBanner";
 
 export default function Product({ product, attributes, productGroup }: IProductProps) {
     const { headerTopHeight, headerHeight } = useSettings();
@@ -26,6 +27,8 @@ export default function Product({ product, attributes, productGroup }: IProductP
                     </div>
 
                     <ProductTabs product={product} attributes={attributes} />
+
+                    <ProductBanner product={product} />
                 </div>
                 <div
                     className="xl:block hidden h-fit sticky top-0"
@@ -33,9 +36,8 @@ export default function Product({ product, attributes, productGroup }: IProductP
                     <ProductSidebar product={product} />
                 </div>
             </div>
-            <div className="section-padding">
-                <ProductBanners product={product} />
-            </div>
+
+            <ProductBanners product={product} />
         </SectionWrapper>
     );
 }
