@@ -30,16 +30,7 @@ export default function ProductCardSmall({ product }: IProductCardSmallProps) {
                         style={{ overflowWrap: "anywhere" }}>
                         {product.name}
                     </h4>
-                    <div>
-                        <p className="font-bold leading-120 lg:text-base text-sm">{product.current_price_formatted}</p>
-
-                        <p className="font-semibold lg:text-sm text-xs">
-                            {product.min_price_per_month_formatted} x{" "}
-                            <span className="font-medium text-xs">
-                                {product.min_price_per_month_duration} {text("мес.")}
-                            </span>
-                        </p>
-                    </div>
+                    <p className="font-bold leading-120 lg:text-base text-sm">{product.current_price_formatted}</p>
                 </div>
             </div>
         </Link>
