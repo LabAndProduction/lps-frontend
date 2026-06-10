@@ -10,23 +10,23 @@ export default function ProductBanner({ product }: { product: ISingleProduct }) 
             {banner_img && banner_img.length > 0 && (
                 <>
                     {banner_link && banner_link.length > 0 ? (
-                        <Link href={banner_link} className="block">
+                        <Link href={banner_link} className="block rounded-card2">
                             <NextImage
                                 src={banner_img}
                                 alt={`${name} banner`}
                                 width={1064}
                                 height={300}
-                                className="object-contain w-full h-auto"
+                                className="object-contain w-full h-auto rounded-card2"
                             />
                         </Link>
                     ) : (
-                        <div>
+                        <div className="rounded-card2">
                             <NextImage
                                 src={banner_img}
                                 alt={`${name} banner`}
                                 width={1064}
                                 height={300}
-                                className="object-contain w-full h-auto"
+                                className="object-contain w-full h-auto rounded-card2"
                             />
                         </div>
                     )}
