@@ -3,15 +3,34 @@ import { Link } from "@/i18n/routing";
 import { ISingleProduct } from "@/types/api/products.types";
 
 export default function ProductBanner({ product }: { product: ISingleProduct }) {
-    const { banner_link } = product.data;
+    const { banner_link, banner_img, name } = product.data;
 
-    let banner_img = "https://labapi.inweb.uz/products/June2026/XmbPzmKp0z0QtYUcc1YN.png";
     return (
         <>
             {banner_img && banner_img.length > 0 && (
-                <Link href={banner_link || "#"} className="flex w-full h-100 relative">
-                    <NextImage src={banner_img} alt="" fill className="object-cover size-full" />
-                </Link>
+                <>
+                    {banner_link && banner_link.length > 0 ? (
+                        <Link href={banner_link} className="block">
+                            <NextImage
+                                src={banner_img}
+                                alt={`${name} banner`}
+                                width={1064}
+                                height={300}
+                                className="object-contain w-full h-auto"
+                            />
+                        </Link>
+                    ) : (
+                        <div>
+                            <NextImage
+                                src={banner_img}
+                                alt={`${name} banner`}
+                                width={1064}
+                                height={300}
+                                className="object-contain w-full h-auto"
+                            />
+                        </div>
+                    )}
+                </>
             )}
         </>
     );
