@@ -45,7 +45,7 @@ export default function ContactsInfo({ settings }: { settings: ISettings }) {
 
     return (
         <div className="custom-block py-6 sm:px-6 px-4 flex-col gap-6">
-            <h3 className="text-lg font-semibold">{text("Связатья с нами")}</h3>
+            <h3 className="text-lg font-semibold">{text("Связатьcя с нами")}</h3>
 
             <div className="flex flex-col gap-6">
                 {contacts.map((item) => (

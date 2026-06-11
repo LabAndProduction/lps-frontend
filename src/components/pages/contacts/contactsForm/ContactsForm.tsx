@@ -40,7 +40,7 @@ export default function ContactsForm() {
     return (
         <div className="custom-block flex-col gap-6 py-6 sm:px-6 px-4">
             <div className="flex flex-col gap-2">
-                <h3 className="text-lg font-semibold">{text("Связатья с нами")}</h3>
+                <h3 className="text-lg font-semibold">{text("Связатьcя с нами")}</h3>
 
                 <p className="font-medium text-secondary2">
                     {text("Напишите нам. Мы будем рады получить ваше сообщение.")}
