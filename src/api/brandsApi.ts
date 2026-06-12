@@ -9,9 +9,9 @@ import {
 
 import { fetchGET } from "./fetch";
 
-export const getBrands = async ({ page = 1, quantity = 20 }: IGetBrandsParams) => {
+export const getBrands = async ({ page = 1, quantity }: IGetBrandsParams) => {
     return await fetchGET({
-        url: `brands/?page=${page}&quantity=${quantity}`,
+        url: `brands/?page=${page}${quantity ? `&quantity=${quantity}` : ""}`,
         tag: "Brands",
     }).then((data: IBrands) => data);
 };

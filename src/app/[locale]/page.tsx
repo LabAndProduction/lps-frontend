@@ -9,6 +9,10 @@ import Banners from "@/components/ui/sections/Banners";
 import { getBanners } from "@/api/bannersApi";
 import SpecialSwiper from "@/components/ui/swipers/SpecialSwiper";
 import { getFullUrl } from "@/utils/getFullUrl";
+import { getBrands } from "@/api/brandsApi";
+import BrandsSwiper from "@/components/pages/home/BrandsSwiper";
+import { getPublications } from "@/api/publicationsApi";
+import NewsSwiper from "@/components/pages/home/NewsSwiper";
 
 export default async function HomePage() {
     const { text } = await getTexts();
@@ -25,6 +29,10 @@ export default async function HomePage() {
 
     const homeBanners1 = await getBanners({ type: "home_1" });
 
+    const brands = await getBrands({});
+
+    const news = await getPublications({ type: 2, quantity: 12, page: 1 });
+
     return (
         <>
             {/* {homeBanners1 && homeBanners1.data && <HomeBanner banners={homeBanners1} />} */}
@@ -36,6 +44,10 @@ export default async function HomePage() {
             <Banners />
 
             <SpecialSwiper />
+
+            <BrandsSwiper brands={brands} />
+
+            <NewsSwiper news={news} />
 
             <Advantages />
         </>
