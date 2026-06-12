@@ -37,3 +37,9 @@ export interface ISearchPageParams {
         direction?: SortDirectionType;
     }>;
 }
+
+export interface INewsPageParams {
+    searchParams: Promise<{
+        page?: string;
+    }>;
+}
