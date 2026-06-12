@@ -41,17 +41,19 @@ export default async function SingleNewsPage({ params }: IPageParamsWithId) {
             />
 
             <SectionWrapper>
-                <div className="custom-block xl:py-[3.75rem] lg:py-10 py-6 xl:px-[6.25rem] lg:px-10 sm:px-6 px-4">
-                    <div className="flex flex-col lg:gap-10 gap-6">
-                        {img && img.length > 0 && (
-                            <NextImage
-                                src={img}
-                                alt={title}
-                                width={1304}
-                                height={400}
-                                className="w-full h-auto object-cover rounded-main md:max-h-100 max-h-80"
-                            />
-                        )}
+                <div className="custom-block xl:py-[3.75rem] lg:py-10 py-6 xl:px-[6.25rem] lg:px-10 sm:px-6 px-4 w-full">
+                    <div className="flex flex-col lg:gap-10 gap-6 w-full">
+                        <div className="w-full">
+                            {img && img.length > 0 && (
+                                <NextImage
+                                    src={img}
+                                    alt={title}
+                                    width={1304}
+                                    height={400}
+                                    className="w-full h-auto object-cover rounded-main md:max-h-100 max-h-80"
+                                />
+                            )}
+                        </div>
 
                         <div
                             className="text-block"
