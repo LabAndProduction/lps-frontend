@@ -22,7 +22,7 @@ export default function BrandsSwiper({ brands }: { brands: IBrands }) {
                             slidesPerView={"auto"}
                             speed={600}
                             resistanceRatio={0}
-                            spaceBetween={8}
+                            spaceBetween={16}
                             autoplay={{ delay: 15000 }}
                             navigation={{
                                 nextEl: `.brands-swiper .swiper-next`,
@@ -33,7 +33,7 @@ export default function BrandsSwiper({ brands }: { brands: IBrands }) {
                             {brands.data.map(({ id, name, img }) => (
                                 <SwiperSlide
                                     key={id}
-                                    className="!h-auto 2xl:w-52! xl:w-50! lg:w-48! md:w-44.5! w-36.5!">
+                                    className="!h-auto 2xl:w-50! xl:w-48.5! lg:w-46! md:w-43! w-34.5!">
                                     <NextImage
                                         src={img}
                                         alt={name}

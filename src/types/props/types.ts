@@ -44,7 +44,6 @@ export interface IFooterMenuProps {
 }
 export interface IHeaderBottomProps {
     settings: ISettings;
-    menu: ISingleMenu;
     categoriesTree: ICategoriesTree;
 }
 
@@ -73,10 +72,7 @@ export interface IGroupAttribute {
 export interface IHeaderBannerProps {
     item: IBanner;
 }
-export interface IHeaderProps {
-    categoriesTree: ICategoriesTree;
-    menu: ISingleMenu;
-}
+
 export interface IFixedFooterMenuProps {
     categoriesTree: ICategoriesTree;
     menu: ISingleMenu;
