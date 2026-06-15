@@ -55,7 +55,7 @@ export default async function RootLayout({ children, params }: Readonly<IRootLay
                         <ContextProviders>
                             <Providers>
                                 <div className="min-h-screen h-full flex flex-col justify-between">
-                                    <Header categoriesTree={categoriesTree} menu={headerMenu} />
+                                    <Header categoriesTree={categoriesTree} />
 
                                     <main className="grow h-full transition-all duration-500">{children}</main>
 

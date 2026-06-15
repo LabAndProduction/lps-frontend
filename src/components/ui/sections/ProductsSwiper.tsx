@@ -20,6 +20,7 @@ export default function ProductsSwiper({ label, products, id }: IProductsSwiperP
                             slidesPerView={1}
                             speed={600}
                             spaceBetween={8}
+                            resistanceRatio={0}
                             autoplay={{ delay: 15000 }}
                             navigation={{
                                 nextEl: `.products-swiper-${id} .swiper-next`,

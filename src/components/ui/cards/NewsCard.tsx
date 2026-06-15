@@ -22,7 +22,9 @@ export default function NewsCard({ item }: { item: IPublicationsPublication }) {
                     {name}
                 </h4>
 
-                <p className="text-secondary line-clamp-3 max-sm:text-sm">{description}</p>
+                {description && description.length > 0 && (
+                    <p className="text-secondary line-clamp-3 max-sm:text-sm">{description}</p>
+                )}
             </div>
         </Link>
     );

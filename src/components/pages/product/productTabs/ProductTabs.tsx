@@ -11,10 +11,11 @@ import { formatFileSize } from "@/utils/formatFileSize";
 
 export default function ProductTabs({ product, attributes }: IProductTabsProps) {
     const { text } = useText();
+    const { body, documents } = product.data;
     const tabs = [
         { id: 0, title: text("О товаре") },
         { id: 1, title: text("Характеристики") },
-        { id: 2, title: text("Документы") },
+        ...(documents && documents.length > 0 ? [{ id: 2, title: text("Документы") }] : []),
     ];
 
     return (
@@ -41,7 +42,7 @@ export default function ProductTabs({ product, attributes }: IProductTabsProps) 
                         <div
                             className="text-block"
                             dangerouslySetInnerHTML={{
-                                __html: product.data.body,
+                                __html: body,
                             }}></div>
                     </TabPanel>
                     <TabPanel>
@@ -63,7 +64,7 @@ export default function ProductTabs({ product, attributes }: IProductTabsProps) 
                     </TabPanel>
                     <TabPanel>
                         <div className="flex flex-col gap-3">
-                            {product.data.documents.map(({ id, url, name, size, type }) => {
+                            {documents.map(({ id, url, name, size, type }) => {
                                 return (
                                     <Link
                                         href={url || "#"}

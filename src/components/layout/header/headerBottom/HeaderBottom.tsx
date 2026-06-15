@@ -5,16 +5,14 @@ import HeaderIcons from "./headerIcons/HeaderIcons";
 import NextImage from "@/components/ui/NextImage";
 import HeaderMobileLinks from "./headerMobileLinks/HeaderMobileLinks";
 import HeaderSearchForm from "../headerSearchForm/HeaderSearchForm";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { IHeaderBottomProps } from "@/types/props/types";
 import { useText } from "@/context/text.context";
-import classNames from "classnames";
-import Icon from "@/components/ui/Icon";
 import { useSettings } from "@/context/settings.context";
 import useElementHeight from "@/hooks/useElementHeight";
 import HeaderCategoriesMenu from "./headerCategoriesMenu/HeaderCategoriesMenu";
 
-export default function HeaderBottom({ settings, menu, categoriesTree }: IHeaderBottomProps) {
+export default function HeaderBottom({ settings, categoriesTree }: IHeaderBottomProps) {
     const { text } = useText();
     const headerRef = useRef<HTMLDivElement>(null);
 
@@ -53,7 +51,7 @@ export default function HeaderBottom({ settings, menu, categoriesTree }: IHeader
 
                 <HeaderMobileLinks settings={settings} />
 
-                <HeaderIcons menu={menu} categoriesTree={categoriesTree} />
+                <HeaderIcons />
             </div>
         </header>
     );

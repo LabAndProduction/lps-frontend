@@ -4,9 +4,12 @@ import { Link } from "@/i18n/routing";
 import { useText } from "@/context/text.context";
 import { IProductCardSmallProps } from "@/types/props/ui.types";
 import NextImage from "../NextImage";
+import { useCookies } from "next-client-cookies";
 
 export default function ProductCardSmall({ product }: IProductCardSmallProps) {
     const { text } = useText();
+    const cookies = useCookies();
+    const token = cookies.get("token");
 
     return (
         <Link
@@ -30,7 +33,9 @@ export default function ProductCardSmall({ product }: IProductCardSmallProps) {
                         style={{ overflowWrap: "anywhere" }}>
                         {product.name}
                     </h4>
-                    <p className="font-bold leading-120 lg:text-base text-sm">{product.current_price_formatted}</p>
+                    {token && token.length > 0 && (
+                        <p className="font-bold leading-120 lg:text-base text-sm">{product.current_price_formatted}</p>
+                    )}
                 </div>
             </div>
         </Link>
