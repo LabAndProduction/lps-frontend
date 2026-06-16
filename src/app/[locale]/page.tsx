@@ -29,7 +29,7 @@ export default async function HomePage() {
 
     const homeBanners1 = await getBanners({ type: "home_1" });
 
-    const brands = await getBrands({});
+    const brands = await getBrands({ is_featured: true });
 
     const news = await getPublications({ type: 2, quantity: 12, page: 1 });
 

@@ -33,13 +33,14 @@ export default function BrandsSwiper({ brands }: { brands: IBrands }) {
                             {brands.data.map(({ id, name, img }) => (
                                 <SwiperSlide
                                     key={id}
-                                    className="!h-auto 2xl:w-50! xl:w-48.5! lg:w-46! md:w-43! w-34.5!">
+                                    title={name || ""}
+                                    className="h-auto! aspect-square 2xl:w-50! xl:w-48.5! lg:w-46! md:w-43! w-34.5!">
                                     <NextImage
                                         src={img}
-                                        alt={name}
+                                        alt={name || ""}
                                         width={200}
                                         height={50}
-                                        className="object-contain w-full h-auto rounded-main!"
+                                        className="object-contain size-full aspect-square rounded-main!"
                                     />
                                 </SwiperSlide>
                             ))}
