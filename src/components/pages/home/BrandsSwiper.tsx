@@ -34,7 +34,7 @@ export default function BrandsSwiper({ brands }: { brands: IBrands }) {
                                 <SwiperSlide
                                     key={id}
                                     title={name || ""}
-                                    className="h-auto! aspect-square 2xl:w-50! xl:w-48.5! lg:w-46! md:w-43! w-34.5!">
+                                    className="h-auto! aspect-square 2xl:w-50! xl:w-48.5! lg:w-46! md:w-43! w-34.5! rounded-main! bg-white! sm:p-6! p-4!">
                                     <NextImage
                                         src={img}
                                         alt={name || ""}
