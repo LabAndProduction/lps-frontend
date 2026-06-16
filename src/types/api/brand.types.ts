@@ -32,8 +32,10 @@ export interface ISingleBrand {
     data: IBrand;
 }
 
-export interface IBrandCategory
-    extends Omit<ICategory, "h1_name" | "body" | "seo_title" | "meta_description" | "meta_keywords"> {
+export interface IBrandCategory extends Omit<
+    ICategory,
+    "h1_name" | "body" | "seo_title" | "meta_description" | "meta_keywords"
+> {
     children: IBrandCategory[];
 }
 export interface IBrandCategories {
@@ -43,6 +45,7 @@ export interface IBrandCategories {
 export interface IGetBrandsParams {
     page?: number;
     quantity?: number;
+    is_featured?: boolean;
 }
 
 export interface IGetBrandParams {
