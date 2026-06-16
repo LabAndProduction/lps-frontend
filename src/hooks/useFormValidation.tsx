@@ -16,24 +16,27 @@ export default function useFormValidation() {
     const maxLength50000Text = text("Нужно ввести не более :number символов").replace(":number", "50000");
     const maxLength25Text = text("Нужно ввести не более :number символов").replace(":number", "25");
 
-    const minLengthText = text("Нужно ввести минимум :number символа").replace(":number", "3");
+    const minLengthText = (quantity: number) =>
+        text("Нужно ввести минимум :number символа").replace(":number", quantity.toString());
 
     const nameValidation = Yup.string()
         .required(requiredText)
-        .min(MIN_LENGTH, minLengthText)
+        .min(MIN_LENGTH, minLengthText(MIN_LENGTH))
         .max(MAX_LENGTH, maxLength25Text);
-    const surnameValidation = Yup.string().min(MIN_LENGTH, minLengthText).max(MAX_LENGTH, maxLength25Text);
+    const surnameValidation = Yup.string().min(MIN_LENGTH, minLengthText(MIN_LENGTH)).max(MAX_LENGTH, maxLength25Text);
 
     const addressValidation = Yup.string()
         .required(requiredText)
-        .min(MIN_LENGTH, minLengthText)
+        .min(MIN_LENGTH, minLengthText(MIN_LENGTH))
         .max(50000, maxLength50000Text);
 
     const messageValidation = Yup.string()
         .required(requiredText)
-        .min(MIN_LENGTH, minLengthText)
+        .min(MIN_LENGTH, minLengthText(MIN_LENGTH))
         .max(50000, maxLength50000Text);
-    const messageNotRequiredValidation = Yup.string().min(MIN_LENGTH, minLengthText).max(50000, maxLength50000Text);
+    const messageNotRequiredValidation = Yup.string()
+        .min(MIN_LENGTH, minLengthText(MIN_LENGTH))
+        .max(50000, maxLength50000Text);
 
     const phoneValidation = Yup.string()
         .required(requiredText)
@@ -46,18 +49,18 @@ export default function useFormValidation() {
 
     const passwordValidation = Yup.string()
         .required(requiredText)
-        .min(MIN_LENGTH, minLengthText)
+        .min(8, minLengthText(8))
         .max(MAX_LENGTH, maxLength25Text);
 
     const registerConfirmPasswordValidation = Yup.string()
         .required(requiredText)
-        .min(MIN_LENGTH, minLengthText)
+        .min(8, minLengthText(8))
         .max(MAX_LENGTH, maxLength25Text)
         .oneOf([Yup.ref("password")], passwordMatchText);
 
     const confirmPasswordValidation = Yup.string()
         .required(requiredText)
-        .min(MIN_LENGTH, minLengthText)
+        .min(8, minLengthText(8))
         .max(MAX_LENGTH, maxLength25Text)
         .oneOf([Yup.ref("new_password")], passwordMatchText);
 
