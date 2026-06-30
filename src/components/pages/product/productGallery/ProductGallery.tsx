@@ -11,7 +11,7 @@ import Icon from "@/components/ui/Icon";
 
 export default function ProductGallery({ product }: IProductGalleryProps) {
     const [thumbsSwiper, setThumbsSwiper] = useState<SwiperClass | null>(null);
-    const { gallery, name, video_link, img } = product.data;
+    const { gallery, name, video_links } = product.data;
     return (
         <div className="lg:grid flex flex-col-reverse grid-cols-[5rem_1fr] gap-5 product-gallery-wrapper relative overflow-hidden">
             <div className="min-w-0 flex flex-col gap-2.5">
@@ -39,26 +39,24 @@ export default function ProductGallery({ product }: IProductGalleryProps) {
                             />
                         </SwiperSlide>
                     ))}
+                    {video_links &&
+                        video_links.length > 0 &&
+                        video_links.map(
+                            (link, id) =>
+                                link &&
+                                link.length > 0 && (
+                                    <SwiperSlide key={id} className="transition-300 flex-center p-0!">
+                                        <Link
+                                            href={link || "#"}
+                                            className="transition-300 flex-center relative rounded-[1rem] overflow-hidden bg-placeholder aspect-square"
+                                            target="_blank"
+                                            rel="nofollow">
+                                            <Icon name="play" className="text-white size-5!" />
+                                        </Link>
+                                    </SwiperSlide>
+                                ),
+                        )}
                 </Swiper>
-
-                {video_link && video_link.length > 0 && (
-                    <Link
-                        href={video_link}
-                        className="transition-300 flex-center relative rounded-main overflow-hidden"
-                        target="_blank"
-                        rel="nofollow">
-                        <div className="bg-black/20 absolute inset-0 flex-center">
-                            <Icon name="play" className="text-white" />
-                        </div>
-                        <NextImage
-                            width={100}
-                            height={100}
-                            src={img}
-                            alt={name}
-                            className="size-full object-contain aspect-square"
-                        />
-                    </Link>
-                )}
             </div>
 
             <Fancybox

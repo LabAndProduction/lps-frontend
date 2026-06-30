@@ -7,7 +7,6 @@ import { useText } from "@/context/text.context";
 import { ISortBtn } from "@/types/types";
 import { useEffect, useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-// import { useRouter } from "@/i18n/routing";
 
 export default function ProductsSort() {
     const { text } = useText();
@@ -81,7 +80,10 @@ export default function ProductsSort() {
         <Menu as="div" className="relative">
             {({ open }) => (
                 <>
-                    <MenuButton as="button" type="button" className={"group flex text-sm items-center gap-2"}>
+                    <MenuButton
+                        as="button"
+                        type="button"
+                        className={"group flex text-sm items-center gap-2 text-start!"}>
                         <span className={"group-hover:text-main"}>
                             {selected ? selected.title : text("Сортировать по")}
                         </span>

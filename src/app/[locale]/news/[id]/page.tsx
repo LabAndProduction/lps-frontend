@@ -64,7 +64,7 @@ export default async function SingleNewsPage({ params }: IPageParamsWithId) {
                 </div>
             </SectionWrapper>
 
-            <LocalizationComponent id={newsId} localization={localization} startPath="/pages" />
+            <LocalizationComponent id={newsId} localization={localization} startPath="/news" />
         </>
     );
 }

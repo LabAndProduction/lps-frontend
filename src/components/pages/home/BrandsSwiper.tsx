@@ -1,8 +1,8 @@
 "use client";
 
 import SectionWrapper from "@/components/layout/SectionWrapper";
+import BrandCard from "@/components/ui/cards/BrandCard";
 import Icon from "@/components/ui/Icon";
-import NextImage from "@/components/ui/NextImage";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { useText } from "@/context/text.context";
 import { IBrands } from "@/types/api/brand.types";
@@ -15,7 +15,7 @@ export default function BrandsSwiper({ brands }: { brands: IBrands }) {
         <>
             {brands && brands.data && brands.data.length > 0 && (
                 <SectionWrapper className="section-padding">
-                    <SectionHeading label={text("Бренды")} />
+                    <SectionHeading label={text("Бренды")} link="/brands" />
 
                     <div className={`relative swiper-with-navigation brands-swiper`}>
                         <Swiper
@@ -30,18 +30,9 @@ export default function BrandsSwiper({ brands }: { brands: IBrands }) {
                             }}
                             className="swiper-with-grid max-sm:overflow-visible!"
                             modules={[Autoplay, Navigation]}>
-                            {brands.data.map(({ id, name, img }) => (
-                                <SwiperSlide
-                                    key={id}
-                                    title={name || ""}
-                                    className="h-auto! rounded-main! bg-white! sm:p-6! p-4! w-fit!">
-                                    <NextImage
-                                        src={img}
-                                        alt={name || ""}
-                                        width={150}
-                                        height={80}
-                                        className="object-contain w-37.5 h-20 rounded-main!"
-                                    />
+                            {brands.data.map((brand) => (
+                                <SwiperSlide key={brand.id} className="h-auto! w-fit!">
+                                    <BrandCard brand={brand} className="" />
                                 </SwiperSlide>
                             ))}
                         </Swiper>

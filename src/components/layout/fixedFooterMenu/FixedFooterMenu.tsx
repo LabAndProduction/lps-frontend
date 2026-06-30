@@ -10,18 +10,18 @@ import { useCookies } from "next-client-cookies";
 import { Link } from "@/i18n/routing";
 import { useEffect, useState } from "react";
 import classNames from "classnames";
-// import AuthMenu from "@/components/ui/modals/authMenu/AuthMenu";
+import AuthMenu from "@/components/ui/modals/authMenu/AuthMenu";
 import { IFixedFooterMenuProps } from "@/types/props/types";
 import HeaderMenu from "../header/headerMenu/HeaderMenu";
 
 export default function FixedFooterMenu({ categoriesTree, menu }: IFixedFooterMenuProps) {
     const { apiWishlist, wishlist } = useWishlist();
     const { apiCart, localCartQuantity } = useCart();
-    const { apiCompareList, compareList } = useCompare();
+    // const { apiCompareList, compareList } = useCompare();
     const cookies = useCookies();
     const token = cookies.get("token");
     const [wishlistQuantity, setWishlistQuantity] = useState<number>(0);
-    const [compareQuantity, setCompareQuantity] = useState<number>(0);
+    // const [compareQuantity, setCompareQuantity] = useState<number>(0);
     const [cartQuantity, setCartQuantity] = useState<number>(0);
     const { text } = useText();
 
@@ -40,13 +40,13 @@ export default function FixedFooterMenu({ categoriesTree, menu }: IFixedFooterMe
             quantity: cartQuantity,
             label: text("Корзина"),
         },
-        {
-            id: 2,
-            href: "/compare",
-            icon: "compare",
-            label: text("Сравнение"),
-            quantity: compareQuantity,
-        },
+        // {
+        //     id: 2,
+        //     href: "/compare",
+        //     icon: "compare",
+        //     label: text("Сравнение"),
+        //     quantity: compareQuantity,
+        // },
     ];
 
     useEffect(() => {
@@ -65,20 +65,20 @@ export default function FixedFooterMenu({ categoriesTree, menu }: IFixedFooterMe
         }
     }, [apiCart, localCartQuantity, token]);
 
-    useEffect(() => {
-        if (token) {
-            setCompareQuantity(apiCompareList.quantity);
-        } else {
-            setCompareQuantity(compareList.length);
-        }
-    }, [compareList, apiCompareList, token]);
+    // useEffect(() => {
+    //     if (token) {
+    //         setCompareQuantity(apiCompareList.quantity);
+    //     } else {
+    //         setCompareQuantity(compareList.length);
+    //     }
+    // }, [compareList, apiCompareList, token]);
 
     return (
         <div className="lg:hidden flex-center fixed bottom-0 left-0 w-full bg-white shadow-[0_0_0.5rem_var(--black-10)] z-[79] h-[3.5rem] p-1 @container">
             <div className="grid grid-cols-4 w-full">
                 <HeaderMenu categoriesTree={categoriesTree} menu={menu} />
 
-                {/* {token ? (
+                {token ? (
                     <Link
                         href={"/dashboard/profile"}
                         className="flex-center @[400px]:px-2 px-[0.375rem] flex-col gap-1 leading-120 @[400px]:text-xs text-[0.625rem]">
@@ -89,7 +89,7 @@ export default function FixedFooterMenu({ categoriesTree, menu }: IFixedFooterMe
                     </Link>
                 ) : (
                     <AuthMenu withLabel={true} />
-                )} */}
+                )}
 
                 {icons.map((item) => (
                     <Link

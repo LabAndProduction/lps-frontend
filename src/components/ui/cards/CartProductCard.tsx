@@ -44,7 +44,7 @@ export default function CartProductCard({ product, quantity }: ICartProductCardP
                         {quantity && <Quantity productQuantity={quantity} product={product} />}
                         <div className="flex items-center gap-4">
                             <WishlistButton product={product} />
-                            <CompareButton product={product} />
+                            {/* <CompareButton product={product} /> */}
                             <RemoveFromCart product={product} />
                         </div>
                     </div>

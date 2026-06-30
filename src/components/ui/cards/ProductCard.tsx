@@ -52,9 +52,9 @@ export default function ProductCard({ product }: IProductCardProps) {
             </div>
             <div className="absolute right-3 top-3 flex flex-col gap-1">
                 <WishlistButton product={product} />
-                <div className="group-hover:opacity-100 group-hover:translate-x-0 group-hover:visible group-hover:pointer-events-auto lg:opacity-0 lg:translate-x-2 lg:invisible lg:pointer-events-none transition-300">
+                {/* <div className="group-hover:opacity-100 group-hover:translate-x-0 group-hover:visible group-hover:pointer-events-auto lg:opacity-0 lg:translate-x-2 lg:invisible lg:pointer-events-none transition-300">
                     <CompareButton product={product} />
-                </div>
+                </div> */}
             </div>
         </div>
     );

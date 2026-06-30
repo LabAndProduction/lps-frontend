@@ -32,7 +32,7 @@ export default async function NewsPage({ searchParams }: INewsPageParams) {
 
             <SectionWrapper>
                 <div className="flex flex-col items-center gap-6">
-                    <div className="min-[31.25rem]:grid flex flex-col xl:grid-cols-4 lg:grid-cols-3 grid-cols-2 gap-x-4 gap-y-6">
+                    <div className="min-[31.25rem]:grid flex flex-col xl:grid-cols-4 lg:grid-cols-3 grid-cols-2 gap-x-4 gap-y-6 w-full">
                         {news.data.map((item) => (
                             <NewsCard key={item.id} item={item} />
                         ))}
