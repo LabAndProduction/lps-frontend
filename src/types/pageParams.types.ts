@@ -52,5 +52,9 @@ export interface IBrandsPageParams {
 
 export interface IBrandPageParams {
     params: Promise<{ id: string }>;
-    searchParams: Promise<{ page?: string }>;
+    searchParams: Promise<{
+        page?: string;
+        sort?: OrderBy;
+        direction?: SortDirectionType;
+    }>;
 }
