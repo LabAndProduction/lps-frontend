@@ -11,7 +11,8 @@ import { formatFileSize } from "@/utils/formatFileSize";
 
 export default function ProductTabs({ product, attributes }: IProductTabsProps) {
     const { text } = useText();
-    const { body, documents } = product.data;
+    const { body, documents, specifications } = product.data;
+    console.log(product);
     const tabs = [
         { id: 0, title: text("О товаре") },
         { id: 1, title: text("Характеристики") },
@@ -46,21 +47,25 @@ export default function ProductTabs({ product, attributes }: IProductTabsProps) 
                             }}></div>
                     </TabPanel>
                     <TabPanel>
-                        <div className="flex flex-col gap-2">
-                            {/* max-w-[540px] */}
-                            {attributes.data.map((attribute) => {
-                                return (
-                                    <div key={attribute.id} className="flex items-end">
-                                        <h4 className="w-max leading-130 text-sm">{attribute.name}</h4>
-                                        <div className="border-b border-dotted grow border-placeholder min-w-[1.25rem]"></div>
-                                        <p className="leading-120 text-sm text-end">
-                                            {attribute.attribute_values.map((attr) => attr.name).join(", ")}
-                                        </p>
-                                    </div>
-                                );
-                            })}
+                        <div className="flex flex-col gap-6">
+                            {specifications && specifications.length > 0 && (
+                                <div className="text-block" dangerouslySetInnerHTML={{ __html: specifications }}></div>
+                            )}
+
+                            <div className="flex flex-col gap-2">
+                                {attributes.data.map((attribute) => {
+                                    return (
+                                        <div key={attribute.id} className="flex items-end">
+                                            <h4 className="w-max leading-130 text-sm">{attribute.name}</h4>
+                                            <div className="border-b border-dotted grow border-placeholder min-w-[1.25rem]"></div>
+                                            <p className="leading-120 text-sm text-end">
+                                                {attribute.attribute_values.map((attr) => attr.name).join(", ")}
+                                            </p>
+                                        </div>
+                                    );
+                                })}
+                            </div>
                         </div>
-                        {/* </div> */}
                     </TabPanel>
                     <TabPanel>
                         <div className="flex flex-col gap-3">

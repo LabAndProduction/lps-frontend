@@ -34,7 +34,7 @@ export default function ProductInfo({ product, attributes, productGroup }: IProd
                 {sku && sku.length > 0 && <ProductArticleNumber articleNumber={sku} isBig={true} />}
 
                 <div className="flex gap-6 flex-wrap">
-                    <CompareButton product={product.data} type="text" />
+                    {/* <CompareButton product={product.data} type="text" /> */}
                     <WishlistButton product={product.data} type="text" />
                 </div>
             </div>

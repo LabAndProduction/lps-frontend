@@ -33,6 +33,7 @@ export default async function CategoryPage({ params }: IProductPageParams) {
     const productAttributes = await getProductAttributes({
         productId: productId,
     });
+
     return (
         <>
             <div className="md:block hidden">

@@ -43,3 +43,14 @@ export interface INewsPageParams {
         page?: string;
     }>;
 }
+
+export interface IBrandsPageParams {
+    searchParams: Promise<{
+        page?: string;
+    }>;
+}
+
+export interface IBrandPageParams {
+    params: Promise<{ id: string }>;
+    searchParams: Promise<{ page?: string }>;
+}

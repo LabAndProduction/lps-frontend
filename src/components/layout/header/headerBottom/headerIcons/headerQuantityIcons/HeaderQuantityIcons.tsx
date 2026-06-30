@@ -14,10 +14,10 @@ export default function HeaderQuantityIcons() {
     const cookies = useCookies();
     const token = cookies.get("token");
     const { apiWishlist, wishlist } = useWishlist();
-    const { apiCompareList, compareList } = useCompare();
+    // const { apiCompareList, compareList } = useCompare();
     const { apiCart, localCartQuantity } = useCart();
     const [wishlistQuantity, setWishlistQuantity] = useState<number>(0);
-    const [compareQuantity, setCompareQuantity] = useState<number>(0);
+    // const [compareQuantity, setCompareQuantity] = useState<number>(0);
     const [cartQuantity, setCartQuantity] = useState<number>(0);
 
     const icons: {
@@ -26,12 +26,12 @@ export default function HeaderQuantityIcons() {
         icon: SpritesName;
         quantity?: number;
     }[] = [
-        {
-            id: 1,
-            href: "/compare",
-            icon: "compare",
-            quantity: compareQuantity,
-        },
+        // {
+        //     id: 1,
+        //     href: "/compare",
+        //     icon: "compare",
+        //     quantity: compareQuantity,
+        // },
         {
             id: 2,
             href: "/wishlist",
@@ -62,13 +62,13 @@ export default function HeaderQuantityIcons() {
         }
     }, [apiCart, localCartQuantity, token]);
 
-    useEffect(() => {
-        if (token) {
-            setCompareQuantity(apiCompareList.quantity);
-        } else {
-            setCompareQuantity(compareList.length);
-        }
-    }, [compareList, apiCompareList, token]);
+    // useEffect(() => {
+    //     if (token) {
+    //         setCompareQuantity(apiCompareList.quantity);
+    //     } else {
+    //         setCompareQuantity(compareList.length);
+    //     }
+    // }, [compareList, apiCompareList, token]);
 
     return (
         <>

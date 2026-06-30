@@ -44,7 +44,7 @@ export default function RowProductCard({ product }: IRowProductCardProps) {
                         <div className="flex sm:static absolute right-0 top-0 sm:flex-row flex-col sm:gap-3">
                             <WishlistButton product={product} />
 
-                            <CompareButton product={product} />
+                            {/* <CompareButton product={product} /> */}
                         </div>
                     </div>
                     {product.sku && product.sku.length > 0 && (

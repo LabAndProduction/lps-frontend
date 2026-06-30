@@ -156,6 +156,8 @@ export interface ISingleProduct {
         body2: string;
 
         documents: IProductDocument[];
+        specifications: string | null;
+        video_links: string[];
     };
 }
 
