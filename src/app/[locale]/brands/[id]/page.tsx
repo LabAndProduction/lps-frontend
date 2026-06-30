@@ -11,7 +11,9 @@ import { getProducts } from "@/api/productsApi";
 
 export default async function BrandPage({ params, searchParams }: IBrandPageParams) {
     const { id } = await params;
-    const { page } = await searchParams;
+
+    const { sort, direction, page } = await searchParams;
+
     const brandId = Number(id.split("-")[0]);
     const slug = id.split("-").slice(1).join("-");
 
@@ -28,6 +30,8 @@ export default async function BrandPage({ params, searchParams }: IBrandPagePara
         page: Number(page),
         quantity: 20,
         brands: [brandId],
+        order_by: sort,
+        order_direction: direction,
     });
 
     const { localization, h1_name, name } = brand.data;

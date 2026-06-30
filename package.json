@@ -29,7 +29,7 @@
         "react-verification-input": "^4.2.2",
         "sharp": "^0.33.5",
         "simplebar-react": "^3.3.2",
-        "swiper": "^11.2.5",
+        "swiper": "^14.0.1",
         "yup": "^1.6.1"
     },
     "devDependencies": {
