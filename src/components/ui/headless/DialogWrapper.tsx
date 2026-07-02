@@ -8,7 +8,7 @@ import classNames from "classnames";
 export default function DialogWrapper({ btn, content, isOpen, closeModal, className = "" }: IDialogWrapperProps) {
     return (
         <>
-            {btn}
+            {btn || null}
 
             <Dialog open={isOpen} onClose={closeModal} className="fixed inset-0 flex-center w-screen z-[99]">
                 <DialogBackdrop className="fixed inset-0 bg-black opacity-50" />

@@ -134,7 +134,7 @@ export interface ISideMenuWrapperProps {
     position?: "right" | "left";
 }
 export interface IDialogWrapperProps {
-    btn: React.ReactNode;
+    btn?: React.ReactNode;
     content: React.ReactNode;
     isOpen: boolean;
     closeModal: () => void;
@@ -248,9 +248,7 @@ export interface IBuyModalContentProps {
     closeModal: () => void;
     product: IProduct;
 }
-export interface IBuyModalProps {
-    product: IProduct;
-}
+
 export interface IProductArticleNumberProps {
     articleNumber: string;
     isBig?: boolean;

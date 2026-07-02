@@ -33,12 +33,14 @@ export default function ProductCard({ product }: IProductCardProps) {
             <div className={`flex flex-col md:gap-3 gap-2 grow justify-between`}>
                 <div className="flex flex-col gap-2 grow">
                     {sku && sku.length > 0 && <ProductArticleNumber articleNumber={sku} />}
-                    <Link
-                        href={`/product/${id}-${slug}`}
-                        className="leading-125 hover:text-main text-sm line-clamp-2 h-[2.25rem]">
-                        {name}
-                    </Link>
-                    <ProductPrice product={product} />
+                    <div className="flex flex-col gap-2 grow justify-between">
+                        <Link
+                            href={`/product/${id}-${slug}`}
+                            className="leading-125 hover:text-main text-sm line-clamp-2 h-[2.25rem]">
+                            {name}
+                        </Link>
+                        <ProductPrice product={product} />
+                    </div>
                 </div>
                 <div className="flex gap-1">
                     <Link

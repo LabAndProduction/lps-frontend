@@ -26,6 +26,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { CookiesProvider } from "next-client-cookies/server";
 import { ContextProviders } from "@/components/layout/ContextProviders";
 import { Locale } from "@/types/api/api.types";
+import BuyModal from "../../components/ui/modals/buyModal/BuyModal";
 
 const montserrat = Montserrat({
     subsets: ["latin"],
@@ -62,6 +63,8 @@ export default async function RootLayout({ children, params }: Readonly<IRootLay
                                     <Footer />
 
                                     <ScrollUp />
+
+                                    <BuyModal />
 
                                     <FixedFooterMenu categoriesTree={categoriesTree} menu={headerMenu} />
                                 </div>
