@@ -34,7 +34,9 @@ export default function ProductCardSmall({ product }: IProductCardSmallProps) {
                         {product.name}
                     </h4>
                     {token && token.length > 0 && (
-                        <p className="font-bold leading-120 lg:text-base text-sm">{product.current_price_formatted}</p>
+                        <p className="font-bold leading-120 lg:text-base text-sm">
+                            {product.current_price > 0 ? product.current_price_formatted : text("Цена по запросу")}
+                        </p>
                     )}
                 </div>
             </div>
