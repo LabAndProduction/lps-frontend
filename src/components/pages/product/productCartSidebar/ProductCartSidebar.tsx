@@ -21,15 +21,17 @@ export default function ProductCartSidebar({ product }: IProductCartSidebarProps
         <div className="custom-block-with-padding flex-col gap-6">
             {token && token.length > 0 && (
                 <div className="flex flex-col gap-3">
-                    <h4 className="text-lg font-semibold">{text("Цена")}</h4>
+                    <h4 className="text-lg font-semibold">{text("Цена")}:</h4>
                     <div className="flex items-center justify-between gap-4">
                         <div className="flex flex-col">
-                            <p className="font-semibold xl:text-2xl text-xl text-main">{current_price_formatted}</p>
-                            {old_price > current_price && old_price_formatted && (
+                            <p className="font-semibold xl:text-2xl text-xl text-main">
+                                {current_price > 0 ? current_price_formatted : text("Цена по запросу")}
+                            </p>
+                            {/* {old_price > current_price && old_price_formatted && (
                                 <p className="xl:text-base text-sm text-placeholder line-through">
                                     {old_price_formatted}
                                 </p>
-                            )}
+                            )} */}
                         </div>
                         {Number(discount) > 0 && <ProductBadge text={`-${Number(discount).toFixed(0)}%`} />}
                     </div>

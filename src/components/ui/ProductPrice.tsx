@@ -13,7 +13,7 @@ export default function ProductPrice({ product, isWithBadge = false }: IProductP
     return (
         <>
             {token && token.length > 0 && (
-                <p className="font-semibold !leading-110 lg:text-lg sm:text-base text-sm">
+                <p className="font-semibold !leading-110 xl:text-lg sm:text-base text-sm">
                     {in_stock > 0
                         ? current_price > 0
                             ? current_price_formatted
