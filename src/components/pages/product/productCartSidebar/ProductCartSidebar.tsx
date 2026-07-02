@@ -4,7 +4,6 @@ import { IProductCartSidebarProps } from "@/types/props/pages.types";
 import ProductBadge from "@/components/ui/badges/ProductBadge";
 import { useText } from "@/context/text.context";
 import CartButton from "@/components/ui/buttons/CartButton";
-import BuyModal from "@/components/ui/modals/buyModal/BuyModal";
 import { useCookies } from "next-client-cookies";
 import { useSettings } from "@/context/settings.context";
 
@@ -13,7 +12,7 @@ export default function ProductCartSidebar({ product }: IProductCartSidebarProps
     const { text } = useText();
     const cookies = useCookies();
     const token = cookies.get("token");
-    const { current_price, current_price_formatted, old_price_formatted, old_price, discount } = productItem;
+    const { current_price, current_price_formatted, discount } = productItem;
 
     const { setIsBuyModalOpen, setBuyModalProduct } = useSettings();
 
