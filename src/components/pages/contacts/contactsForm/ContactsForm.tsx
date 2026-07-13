@@ -52,22 +52,24 @@ export default function ContactsForm() {
                 validationSchema={contactsValidationSchema}
                 onSubmit={(values, { resetForm }) => handleSubmit({ values, resetForm })}>
                 {({ isSubmitting }) => (
-                    <Form className="flex flex-col items-end gap-6">
+                    <Form className="flex flex-col sm:items-start items-end gap-6">
                         <div className="flex flex-col gap-4 w-full">
-                            <OverlapInput
-                                id="contacts-name"
-                                name="name"
-                                placeholder={text("Ваше имя")}
-                                disabled={isSubmitting}
-                                className="input-white"
-                            />
-                            <OverlapInput
-                                id="contacts-phone"
-                                name="phone_number"
-                                placeholder={text("Номер телефона")}
-                                disabled={isSubmitting}
-                                className="input-white"
-                            />
+                            <fieldset className="sm:grid flex flex-col grid-cols-2 gap-4">
+                                <OverlapInput
+                                    id="contacts-name"
+                                    name="name"
+                                    placeholder={text("Ваше имя")}
+                                    disabled={isSubmitting}
+                                    className="input-white"
+                                />
+                                <OverlapInput
+                                    id="contacts-phone"
+                                    name="phone_number"
+                                    placeholder={text("Номер телефона")}
+                                    disabled={isSubmitting}
+                                    className="input-white"
+                                />
+                            </fieldset>
                             <OverlapInput
                                 id="contacts-message"
                                 name="message"
@@ -77,7 +79,7 @@ export default function ContactsForm() {
                                 className="input-white"
                             />
                         </div>
-                        <button className="main-btn w-full" disabled={isSubmitting} type="submit">
+                        <button className="main-btn w-full lg:max-w-1/2" disabled={isSubmitting} type="submit">
                             {isSubmitting && <OvalSpinner size={16} color="var(--color-white)" />}
                             {text("Отправить")}
                         </button>
