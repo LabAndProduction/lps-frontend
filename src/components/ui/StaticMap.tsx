@@ -1,21 +1,17 @@
 "use client";
 
-import { IStaticMapProps } from "@/types/props/ui.types";
-import classNames from "classnames";
-import { useEffect, useRef } from "react";
+export interface IStaticMapProps {
+    iframe: string | null;
+}
 
-export default function StaticMap({ iframe, wrapperClassname = "" }: IStaticMapProps) {
-    const mapRef = useRef<HTMLDivElement>(null);
-
-    useEffect(() => {
-        if (mapRef && mapRef.current) {
-            mapRef.current.innerHTML = iframe;
-        }
-    }, [iframe]);
-
+export default function StaticMap({ iframe }: IStaticMapProps) {
     return (
-        <div className={classNames("custom-block w-full relative overflow-hidden", wrapperClassname)} ref={mapRef}>
-            <div className="absolute -top-[5.625rem]" id="map"></div>
-        </div>
+        <>
+            {!!iframe && iframe.length > 0 && (
+                <div
+                    className="custom-block w-full relative overflow-hidden [&_iframe]:w-full [&_iframe]:min-h-[400px] [&_iframe]:h-auto"
+                    dangerouslySetInnerHTML={{ __html: iframe }}></div>
+            )}
+        </>
     );
 }

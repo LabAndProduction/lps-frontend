@@ -9,8 +9,11 @@ export interface ISettings {
     phone2: string;
     phone3: string;
     address: string | null;
+    address2: string | null;
     work_hours: string | null;
-    map: string;
+    work_hours2: string | null;
+    map: string | null;
+    map2: string | null;
     telegram: string;
     facebook: string;
     instagram: string;

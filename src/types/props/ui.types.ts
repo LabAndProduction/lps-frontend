@@ -69,10 +69,7 @@ export interface IPageHeaderProps {
 export interface IBreadcrumbsProps {
     breadcrumbs: BreadcrumbsType;
 }
-export interface IStaticMapProps {
-    iframe: string;
-    wrapperClassname?: string;
-}
+
 export interface IOverlapInputProps {
     id: string;
     placeholder: string;
