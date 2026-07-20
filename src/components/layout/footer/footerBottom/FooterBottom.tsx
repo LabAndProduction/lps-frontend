@@ -13,12 +13,12 @@ export default function FooterBottom() {
                     {new Date().getFullYear()} © «{text("copyright")}».
                 </p>
 
-                <Link
+                {/* <Link
                     target="_blank"
                     href="https://inweb.uz/"
                     className="flex items-center gap-2 hover:opacity-60 py-2">
                     {text("Разработка")} - <NextImage src={"/images/inweb.svg"} alt="Inweb" width={13} height={16} />
-                </Link>
+                </Link> */}
             </div>
         </div>
     );
