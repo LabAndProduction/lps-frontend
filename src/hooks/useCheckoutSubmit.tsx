@@ -20,7 +20,6 @@ export default function useCheckoutSubmit() {
             const formattedPhone = formatPhone(phone_number);
 
             if (token) {
-                console.log({ message, name: `${name} ${surname}`, phone_number: formattedPhone, email });
                 createOrder({
                     body: { message, name: `${name} ${surname}`, phone_number: formattedPhone, email },
                     token,
