@@ -40,7 +40,7 @@ const CartContext = createContext<ICartContextProps>({
     clearCart: () => null,
     localCartTotal: 0,
     localCartQuantity: 0,
-    checkout: () => null,
+    // checkout: () => null,
     isCartEmpty: true,
 });
 
@@ -263,30 +263,30 @@ export const CartProvider = ({ children }: ICartProvideProps) => {
         }
     };
 
-    const checkout = ({ body }: ICartCheckout) => {
-        const { address_id, name, payment_method_id, phone_number, shipping_method_id, message } = body;
-        if (token) {
-            createOrder({
-                token,
-                body: {
-                    address_id,
-                    name,
-                    payment_method_id,
-                    phone_number,
-                    shipping_method_id,
-                    message,
-                },
-            }).then(() => {
-                getCart({ token, clientLocale: locale }).then((data) => {
-                    if (typeof data !== "string") {
-                        setApiCart(data);
-                    }
-                });
-                replace(`/dashboard/orders`);
-                toast.success(text("Заказ оформлен успешно"));
-            });
-        }
-    };
+    // const checkout = ({ body }: ICartCheckout) => {
+    //     const { address_id, name, payment_method_id, phone_number, shipping_method_id, message } = body;
+    //     if (token) {
+    //         createOrder({
+    //             token,
+    //             body: {
+    //                 address_id,
+    //                 name,
+    //                 payment_method_id,
+    //                 phone_number,
+    //                 shipping_method_id,
+    //                 message,
+    //             },
+    //         }).then(() => {
+    //             getCart({ token, clientLocale: locale }).then((data) => {
+    //                 if (typeof data !== "string") {
+    //                     setApiCart(data);
+    //                 }
+    //             });
+    //             replace(`/dashboard/orders`);
+    //             toast.success(text("Заказ оформлен успешно"));
+    //         });
+    //     }
+    // };
 
     useEffect(() => {
         localStorage.setItem("cart", JSON.stringify(cart));
@@ -303,7 +303,7 @@ export const CartProvider = ({ children }: ICartProvideProps) => {
         updateProduct,
         localCartTotal,
         localCartQuantity,
-        checkout,
+        // checkout,
         isCartEmpty,
     };
 

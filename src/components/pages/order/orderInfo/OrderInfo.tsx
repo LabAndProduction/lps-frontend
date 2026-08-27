@@ -1,32 +1,21 @@
-import { useOrder } from "@/context/order.context";
 import OrderInfoCard from "./OrderInfoCard";
 import { useText } from "@/context/text.context";
-import { formatPhoneWithSpaces } from "../../../../utils/formatPhoneWithSpaces";
+import { ISingleOrder } from "@/types/api/orders.types";
+import { phoneFormatter } from "@/utils/phoneFormatter";
 
-export default function OrderInfo() {
-    const { orderInfo } = useOrder();
+export default function OrderInfo({ order }: { order: ISingleOrder }) {
     const { text } = useText();
+    const { created_at, name, phone_number, email } = order.data;
 
     return (
         <div className="flex flex-col gap-4 h-fit">
-            {orderInfo ? (
-                <>
-                    <OrderInfoCard title={text("Дата заказа")} info={orderInfo.date} />
-                    <OrderInfoCard
-                        title={text("Имя и Фамилия")}
-                        info={`${orderInfo.name} ${orderInfo.surname ? orderInfo.surname : ""}`}
-                    />
-                    <OrderInfoCard title={text("Номер телефона")} info={orderInfo.phone_number} />
-                    {!!orderInfo.email && <OrderInfoCard title={"Email"} info={orderInfo.email} />}
+            <OrderInfoCard title={text("Дата заказа")} info={created_at} />
 
-                    {!!orderInfo.installment_duration && !!orderInfo.installment && (
-                        <OrderInfoCard
-                            title={text("Рассрочка")}
-                            info={`${orderInfo.installment}(${orderInfo.installment_duration}${text("мес.")})`}
-                        />
-                    )}
-                </>
-            ) : null}
+            <OrderInfoCard title={text("Имя и Фамилия")} info={name} />
+
+            <OrderInfoCard title={text("Номер телефона")} info={phoneFormatter(phone_number)} />
+
+            {!!email && email.length > 0 && <OrderInfoCard title={"Email"} info={email} />}
         </div>
     );
 }

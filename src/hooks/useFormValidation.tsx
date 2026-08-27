@@ -94,11 +94,11 @@ export default function useFormValidation() {
         email: emailNotRequiredValidation,
         message: messageNotRequiredValidation,
 
-        payment_method: paymentMethodRadioValidation,
+        // payment_method: paymentMethodRadioValidation,
 
-        installment: installmentNameRadioValidation,
-        installment_name: installmentNameRadioValidation,
-        installment_duration: installmentDurationRadioValidation,
+        // installment: installmentNameRadioValidation,
+        // installment_name: installmentNameRadioValidation,
+        // installment_duration: installmentDurationRadioValidation,
     });
 
     const registerValidationSchema = Yup.object({

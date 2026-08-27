@@ -2,9 +2,20 @@ import { Metadata } from "next";
 import { getTexts } from "@/api/textsApi";
 import Order from "@/components/pages/order/Order";
 import PageHeader from "@/components/ui/PageHeader";
+import { getOrder } from "@/api/orderApi";
+import { getCookies } from "next-client-cookies/server";
+import { IPageParamsWithId } from "@/types/pageParams.types";
 
-export default async function HomePage() {
+export default async function HomePage({ params }: IPageParamsWithId) {
+    const { id } = await params;
+
+    const orderId = Number(id);
+    const cookies = await getCookies();
+    const token = cookies.get("token");
+
     const { text } = await getTexts();
+    const order = await getOrder({ orderId, token });
+
     return (
         <>
             <PageHeader
@@ -15,7 +26,7 @@ export default async function HomePage() {
                 title={text("Ваш заказ")}
             />
 
-            <Order />
+            {typeof order !== "string" && <Order order={order} />}
         </>
     );
 }

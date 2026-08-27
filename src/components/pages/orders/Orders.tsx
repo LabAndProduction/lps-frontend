@@ -2,8 +2,9 @@
 
 import Empty from "@/components/ui/Empty";
 import { useText } from "@/context/text.context";
+import { Link } from "@/i18n/routing";
 import { IOrdersProps } from "@/types/props/pages.types";
-import { formatPhoneWithSpaces } from "../../../utils/formatPhoneWithSpaces";
+import { phoneFormatter } from "@/utils/phoneFormatter";
 
 export default function Orders({ orders }: IOrdersProps) {
     const { text } = useText();
@@ -12,9 +13,8 @@ export default function Orders({ orders }: IOrdersProps) {
         text("Имя и Фамилия"),
         text("Дата заказа"),
         text("Телефон"),
-        text("Метод доставки"),
-        text("Метод оплаты"),
         text("Итого"),
+        "",
     ];
     return (
         <section className="custom-block custom-block-padding w-full">
@@ -32,17 +32,20 @@ export default function Orders({ orders }: IOrdersProps) {
                             </tr>
                         </thead>
                         <tbody>
-                            {orders.data.map((order) => {
+                            {orders.data.map(({ id, name, created_at, phone_number, total }) => {
                                 return (
-                                    <tr key={order.id}>
-                                        <td>{order.id}</td>
-                                        <td>{order.name}</td>
-                                        <td>{order.created_at}</td>
-                                        <td className="whitespace-nowrap">{order.phone_number}</td>
-                                        <td>{order.shipping_method_title}</td>
-                                        <td>{order.payment_method_title}</td>
+                                    <tr key={id} className="border-b border-gray">
+                                        <td>{id}</td>
+                                        <td>{name}</td>
+                                        <td>{created_at}</td>
+                                        <td className="whitespace-nowrap">{phoneFormatter(phone_number)}</td>
                                         <td>
-                                            {new Intl.NumberFormat("fr-FR").format(order.total)} {text("сум")}
+                                            {new Intl.NumberFormat("fr-FR").format(total)} {text("сум")}
+                                        </td>
+                                        <td>
+                                            <Link href={`/order/${id}`} className="main-btn">
+                                                {text("Подробнее")}
+                                            </Link>
                                         </td>
                                     </tr>
                                 );

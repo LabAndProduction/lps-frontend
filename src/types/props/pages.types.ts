@@ -182,9 +182,6 @@ export interface ICheckoutPaymentMethodProps<Form> {
     apiInstallments: { data: IPartner[] };
 }
 
-export interface ICheckoutProps {
-    apiInstallments: { data: IPartner[] };
-}
 export interface IPaymentMethodInputProps extends Omit<FieldAttributes<any>, "value"> {
     methodValue: PaymentMethodType;
     title: string;

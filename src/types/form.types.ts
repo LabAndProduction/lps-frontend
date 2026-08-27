@@ -42,11 +42,11 @@ export interface ICheckoutForm {
     email?: string;
     message?: string;
 
-    payment_method: PaymentMethodType;
+    // payment_method: PaymentMethodType;
 
-    installment: string;
-    installment_name: string;
-    installment_duration: number;
+    // installment: string;
+    // installment_name: string;
+    // installment_duration: number;
 }
 export interface IBuyForm {
     name: string;
