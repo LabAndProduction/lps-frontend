@@ -1,4 +1,4 @@
-import { ILinks, IMeta } from "./api.types";
+import { ILinks, IMeta, Locale } from "./api.types";
 import { IProduct } from "./products.types";
 
 export interface IOrders {
@@ -62,16 +62,17 @@ export interface IGetOrdersParams {
 export interface ICreateOrderParams {
     token: string;
     body: ICreateOrderBody;
+    clientLocale?: Locale;
 }
 
 export interface ICreateOrderBody {
     name: string;
     phone_number: string;
-    // email?: string;
-    address_id: number;
-    payment_method_id: number;
-    shipping_method_id: number;
-    message: string;
+    email?: string;
+    // address_id: number;
+    // payment_method_id: number;
+    // shipping_method_id: number;
+    message?: string;
 }
 
 export interface IGetOrderParams {

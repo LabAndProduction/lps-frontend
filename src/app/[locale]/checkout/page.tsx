@@ -2,12 +2,10 @@ import { getTexts } from "@/api/textsApi";
 import PageHeader from "@/components/ui/PageHeader";
 import { Metadata } from "next";
 import Checkout from "@/components/pages/checkout/Checkout";
-import { getPartners } from "@/api/partnersApi";
 import { getFullUrl } from "@/utils/getFullUrl";
 
 export default async function CheckoutPage() {
     const { text } = await getTexts();
-    const installments = await getPartners();
     return (
         <>
             <PageHeader
@@ -18,7 +16,7 @@ export default async function CheckoutPage() {
                 }}
             />
 
-            <Checkout apiInstallments={installments} />
+            <Checkout />
         </>
     );
 }

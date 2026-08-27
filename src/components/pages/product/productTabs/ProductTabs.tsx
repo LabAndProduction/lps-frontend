@@ -12,7 +12,7 @@ import { formatFileSize } from "@/utils/formatFileSize";
 export default function ProductTabs({ product, attributes }: IProductTabsProps) {
     const { text } = useText();
     const { body, documents, specifications } = product.data;
-    console.log(product);
+
     const tabs = [
         { id: 0, title: text("О товаре") },
         { id: 1, title: text("Характеристики") },

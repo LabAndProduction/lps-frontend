@@ -15,7 +15,7 @@ export default function CheckoutInstallments({ installments }: ICheckoutInstallm
 
     return (
         <div>
-            <div className="flex flex-col gap-3">
+            {/* <div className="flex flex-col gap-3">
                 {installments.installment_prices.map((instl) => {
                     return instl.prices.map((price) => {
                         if (price.duration == values.installment_duration) {
@@ -61,7 +61,7 @@ export default function CheckoutInstallments({ installments }: ICheckoutInstallm
                     });
                 })}
             </div>
-            <ErrorMessage name="installment">{(msg) => <p className="pl-1 text-xs text-red">{msg}</p>}</ErrorMessage>
+            <ErrorMessage name="installment">{(msg) => <p className="pl-1 text-xs text-red">{msg}</p>}</ErrorMessage> */}
         </div>
     );
 }

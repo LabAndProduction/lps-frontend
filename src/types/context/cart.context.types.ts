@@ -24,7 +24,7 @@ export interface ICartContextProps {
     }) => void | null;
     localCartTotal: number;
     localCartQuantity: number;
-    checkout: ({ body }: ICartCheckout) => void | null;
+    // checkout: ({ body }: ICartCheckout) => void | null;
     isCartEmpty: boolean;
 }
 

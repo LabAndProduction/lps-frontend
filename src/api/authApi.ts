@@ -21,11 +21,15 @@ export const register = async ({ body, clientLocale }: IRegisterParams) => {
         method: "POST",
         tag: "Auth",
         clientLocale: clientLocale,
-    }).then((data: { token: string }) => {
-        setCookie("token", data.token, {
-            maxAge: 30 * 24 * 60 * 60,
-        });
-        toast.success(text("Регистрация прошла успешно"));
+    }).then((data: { token: string } | { message: string }) => {
+        if ("token" in data && !!data.token) {
+            setCookie("token", data.token, {
+                maxAge: 30 * 24 * 60 * 60,
+            });
+            toast.success(text("Регистрация прошла успешно"));
+        } else {
+            // if ("message" in data) toast.error(data.message);
+        }
     });
 };
 
@@ -36,8 +40,8 @@ export const login = async ({ body, clientLocale }: ILoginParams) => {
         method: "POST",
         tag: "Auth",
         clientLocale: clientLocale,
-    }).then((data: { message?: string; token?: string }) => {
-        if (data.message) {
+    }).then((data: { message: string } | { token: string }) => {
+        if ("message" in data) {
             toast.error(data.message);
             return false;
         } else if (data.token) {
@@ -69,8 +73,12 @@ export const sendOtp = async ({ body, clientLocale }: ISendOtpParams) => {
         method: "POST",
         tag: "Auth",
         clientLocale: clientLocale,
-    }).then((data: { message: string }) => {
-        toast.success(data.message);
+    }).then((data: { message: string; errors?: unknown }) => {
+        if ("errors" in data) {
+            toast.success(data.message);
+        } else {
+            toast.error(data.message);
+        }
     });
 };
 

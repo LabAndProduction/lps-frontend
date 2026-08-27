@@ -19,12 +19,12 @@ export default function DashboardWrapper({ children, activeRoute }: IDashboardTa
             iconName: "user",
             route: "profile",
         },
-        // {
-        //     id: 2,
-        //     title: text("Заказы"),
-        //     iconName: "cart",
-        //     route: "orders",
-        // },
+        {
+            id: 2,
+            title: text("Заказы"),
+            iconName: "cart",
+            route: "orders",
+        },
     ];
 
     return (

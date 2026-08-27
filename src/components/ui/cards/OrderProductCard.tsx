@@ -10,22 +10,9 @@ import { IOrderProductCardProps } from "@/types/props/ui.types";
 
 export default function OrderProductCard({ product, quantity }: IOrderProductCardProps) {
     const { text } = useText();
-    const { orderInfo } = useOrder();
 
-    const [installment, setInstallment] = useState<IInstallmentPrice>();
-    useEffect(() => {
-        if (orderInfo) {
-            const currentInstl = product.installment_prices.find((instl) => instl.code === orderInfo.installment);
-            if (currentInstl) {
-                const currentInstlDuration = currentInstl.prices.find(
-                    (el) => el.duration == orderInfo.installment_duration,
-                );
-                if (currentInstlDuration) setInstallment(currentInstlDuration);
-            }
-        }
-    }, [product, orderInfo]);
     return (
-        <div className="flex gap-5 border-b border-form-color-10 pb-5">
+        <div className="flex gap-5 border-b border-gray2 pb-5">
             <Link href={`/product/${product.id}-${product.slug}`} className="flex">
                 <NextImage
                     width={100}
@@ -52,18 +39,7 @@ export default function OrderProductCard({ product, quantity }: IOrderProductCar
                             </p>
                         )}
 
-                        {!!installment && (
-                            <p className="sm:text-sm text-xs font-semibold">
-                                {installment?.price_per_month_formatted} x {orderInfo?.installment_duration}{" "}
-                                {text("мес.")}
-                            </p>
-                        )}
-
-                        <p className="sm:text-base text-sm font-semibold">
-                            {orderInfo?.payment_method === "installment"
-                                ? installment?.price_formatted
-                                : product.current_price_formatted}
-                        </p>
+                        <p className="sm:text-base text-sm font-semibold">{product.current_price_formatted}</p>
                     </div>
                 </div>
             </div>

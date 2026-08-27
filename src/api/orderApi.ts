@@ -14,13 +14,14 @@ export const getOrders = async ({ token, page = 1, quantity = 20 }: IGetOrdersPa
     }
 };
 
-export const createOrder = async ({ token, body }: ICreateOrderParams) => {
+export const createOrder = async ({ token, body, clientLocale }: ICreateOrderParams) => {
     return await fetchMutate({
         url: "orders",
         method: "POST",
         body,
         tag: "Orders",
         token,
+        clientLocale,
     }).then((data: ICreateOrderRes) => {
         return data;
     });
