@@ -8,7 +8,7 @@ import classNames from "classnames";
 import { IOverlapInputProps } from "@/types/props/ui.types";
 
 export const phoneMaskOptions = {
-    mask: "+998(__)___-__-__",
+    mask: "+___(__)___-__-__",
     replacement: { _: /\d/ },
 };
 
