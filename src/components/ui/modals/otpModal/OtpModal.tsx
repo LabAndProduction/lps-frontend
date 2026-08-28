@@ -22,7 +22,7 @@ function OtpModal<T>({ isOpen, formPhone, fulfillAfterOtp, setIsOpen, otpTarget,
         const formattedPhone = formatPhone(formPhone);
         try {
             e.preventDefault();
-            if (!/^998\d{9}/.test(formattedPhone)) {
+            if (!/^998\d{9}$/.test(formattedPhone)) {
                 toast.error(text("Неправильный формат номера телефона"));
                 return;
             }

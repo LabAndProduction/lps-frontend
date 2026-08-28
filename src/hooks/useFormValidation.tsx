@@ -41,11 +41,7 @@ export default function useFormValidation() {
     const phoneValidation = Yup.string()
         .required(requiredText)
         .transform((value) => formatPhone(value))
-        .test("is-phone", isPhoneText, (value) => {
-            if (value && value.length === 12 && /^998\d{9}/.test(value)) {
-                return true;
-            } else return false;
-        });
+        .matches(/^998\d{9}$/, isPhoneText);
 
     const passwordValidation = Yup.string()
         .required(requiredText)

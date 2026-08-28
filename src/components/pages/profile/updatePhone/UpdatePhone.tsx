@@ -20,7 +20,7 @@ import { format } from "@react-input/mask";
 import { phoneMaskOptions } from "@/components/ui/OverlapInput";
 
 export default function UpdatePhone({ profile }: IUpdatePhoneProps) {
-    const phoneValue = format(profile.data.phone_number.slice(3), phoneMaskOptions);
+    const phoneValue = format(profile.data.phone_number, phoneMaskOptions);
     const initialValues: IUpdatePhoneForm = {
         phone_number: phoneValue,
     };
