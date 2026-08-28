@@ -7,7 +7,7 @@ export default function OrderProducts({ order }: { order: ISingleOrder }) {
     const { text } = useText();
     const { orderItems } = order.data;
     return (
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 custom-block-with-padding w-full">
             <h3 className="lg:text-xl text-lg font-semibold">{text("Товары")}</h3>
 
             {/* {!!orderInfo && ( */}
