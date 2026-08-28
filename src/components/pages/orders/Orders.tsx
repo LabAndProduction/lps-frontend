@@ -17,7 +17,7 @@ export default function Orders({ orders }: IOrdersProps) {
         "",
     ];
     return (
-        <section className="custom-block custom-block-padding w-full overflow-hidden">
+        <section className="custom-block w-full overflow-hidden">
             <div className="custom-table-wrapper">
                 {(!orders.data || (orders.data && orders.data.length == 0)) && (
                     <Empty img="/images/cart-empty.png" title={text("Ничего не найдено")} />
