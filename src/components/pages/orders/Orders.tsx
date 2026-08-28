@@ -17,7 +17,7 @@ export default function Orders({ orders }: IOrdersProps) {
         "",
     ];
     return (
-        <section className="custom-block custom-block-padding w-full">
+        <section className="custom-block custom-block-padding w-full overflow-hidden">
             <div className="custom-table-wrapper">
                 {(!orders.data || (orders.data && orders.data.length == 0)) && (
                     <Empty img="/images/cart-empty.png" title={text("Ничего не найдено")} />
@@ -27,7 +27,11 @@ export default function Orders({ orders }: IOrdersProps) {
                         <thead>
                             <tr>
                                 {thead.map((el, id) => {
-                                    return <th key={id}>{el}</th>;
+                                    return (
+                                        <th className="first:pl-6! bg-main/10" key={id}>
+                                            {el}
+                                        </th>
+                                    );
                                 })}
                             </tr>
                         </thead>
@@ -35,7 +39,7 @@ export default function Orders({ orders }: IOrdersProps) {
                             {orders.data.map(({ id, name, created_at, phone_number, total }) => {
                                 return (
                                     <tr key={id} className="border-b border-gray">
-                                        <td>{id}</td>
+                                        <td className="pl-6!">{id}</td>
                                         <td>{name}</td>
                                         <td>{created_at}</td>
                                         <td className="whitespace-nowrap">{phoneFormatter(phone_number)}</td>
