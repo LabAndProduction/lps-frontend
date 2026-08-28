@@ -39,10 +39,11 @@ export default function ProductCartSidebar({ product }: IProductCartSidebarProps
 
             <div className="xl:flex md:grid flex grid-cols-2 flex-col gap-2">
                 {current_price > 0 && (
-                    <CartButton product={productItem} type="text" className="!w-full" isGray={true} />
+                    // <CartButton product={productItem} type="text" className="!w-full" isGray={true} />
+                    <CartButton product={productItem} type="text" className="!w-full" />
                 )}
 
-                <button
+                {/* <button
                     onClick={() => {
                         setIsBuyModalOpen(true);
                         setBuyModalProduct(productItem);
@@ -50,7 +51,7 @@ export default function ProductCartSidebar({ product }: IProductCartSidebarProps
                     type="button"
                     className="main-btn w-full">
                     {text("Заказать")}
-                </button>
+                </button> */}
             </div>
         </div>
     );
