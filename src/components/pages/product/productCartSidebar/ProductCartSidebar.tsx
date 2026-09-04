@@ -5,7 +5,6 @@ import ProductBadge from "@/components/ui/badges/ProductBadge";
 import { useText } from "@/context/text.context";
 import CartButton from "@/components/ui/buttons/CartButton";
 import { useCookies } from "next-client-cookies";
-import { useSettings } from "@/context/settings.context";
 
 export default function ProductCartSidebar({ product }: IProductCartSidebarProps) {
     const { h1_name, body, seo_title, meta_description, meta_keywords, book, ...productItem } = product.data;
@@ -13,8 +12,6 @@ export default function ProductCartSidebar({ product }: IProductCartSidebarProps
     const cookies = useCookies();
     const token = cookies.get("token");
     const { current_price, current_price_formatted, discount } = productItem;
-
-    const { setIsBuyModalOpen, setBuyModalProduct } = useSettings();
 
     return (
         <div className="custom-block-with-padding flex-col gap-6">
@@ -38,20 +35,7 @@ export default function ProductCartSidebar({ product }: IProductCartSidebarProps
             )}
 
             <div className="xl:flex md:grid flex grid-cols-2 flex-col gap-2">
-                {current_price > 0 && (
-                    // <CartButton product={productItem} type="text" className="!w-full" isGray={true} />
-                    <CartButton product={productItem} type="text" className="!w-full" />
-                )}
-
-                {/* <button
-                    onClick={() => {
-                        setIsBuyModalOpen(true);
-                        setBuyModalProduct(productItem);
-                    }}
-                    type="button"
-                    className="main-btn w-full">
-                    {text("Заказать")}
-                </button> */}
+                <CartButton product={productItem} type="text" className="!w-full" />
             </div>
         </div>
     );

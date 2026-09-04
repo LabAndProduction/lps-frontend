@@ -55,6 +55,7 @@ export interface IProduct {
     wholesale_price: string;
     wholesale_price_formatted: string;
 
+    stock_info_code: string;
     stock_info: string | null;
     video_link: string | null;
     banner_img: string | null;
