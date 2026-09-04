@@ -3,6 +3,7 @@ import HeaderBottom from "./headerBottom/HeaderBottom";
 import HeaderTop from "./headerTop/HeaderTop";
 import { getMenu } from "@/api/menusApi";
 import { ICategoriesTree } from "@/types/api/categories.types";
+import AuthMenu from "@/components/ui/modals/authMenu/AuthMenu";
 
 export interface IHeaderProps {
     categoriesTree: ICategoriesTree;
@@ -16,6 +17,7 @@ export default async function Header({ categoriesTree }: IHeaderProps) {
         <>
             <HeaderTop settings={settings} menu={menu2} />
             <HeaderBottom settings={settings} categoriesTree={categoriesTree} />
+            <AuthMenu />
         </>
     );
 }

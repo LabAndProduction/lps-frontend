@@ -2,7 +2,7 @@
 
 import { IProduct } from "@/types/api/products.types";
 import { ISettingsContextProps, ISettingsProviderProps } from "@/types/context/settings.context.types";
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useState } from "react";
 
 const SettingsContext = createContext<ISettingsContextProps>({
     headerHeight: 0,
@@ -14,6 +14,9 @@ const SettingsContext = createContext<ISettingsContextProps>({
     isBuyModalOpen: false,
     setIsBuyModalOpen: () => undefined,
 
+    isAuthMenuOpen: false,
+    setIsAuthMenuOpen: () => undefined,
+
     buyModalProduct: null,
     setBuyModalProduct: () => undefined,
 });
@@ -24,6 +27,8 @@ export const SettingsProvider = ({ children }: ISettingsProviderProps) => {
 
     const [isBuyModalOpen, setIsBuyModalOpen] = useState<boolean>(false);
     const [buyModalProduct, setBuyModalProduct] = useState<IProduct | null>(null);
+
+    const [isAuthMenuOpen, setIsAuthMenuOpen] = useState<boolean>(false);
 
     const values = {
         headerHeight,
@@ -37,6 +42,9 @@ export const SettingsProvider = ({ children }: ISettingsProviderProps) => {
 
         buyModalProduct,
         setBuyModalProduct,
+
+        isAuthMenuOpen,
+        setIsAuthMenuOpen,
     };
 
     return <SettingsContext.Provider value={values}>{children}</SettingsContext.Provider>;

@@ -1,51 +1,32 @@
 "use client";
 
 import Icon from "@/components/ui/Icon";
-import { useState } from "react";
 import AuthMenuContent from "./authMenuContent/AuthMenuContent";
-import { useText } from "@/context/text.context";
-import { IAuthMenuProps } from "@/types/props/ui.types";
-import DialogWrapper from "../../headless/DialogWrapper";
+import { useSettings } from "@/context/settings.context";
+import { Dialog, DialogBackdrop, DialogPanel } from "@headlessui/react";
 
-export default function AuthMenu({ defaultAuthTab, withLabel = false, btnLabel, isBtn }: IAuthMenuProps) {
-    const [isOpen, setIsOpen] = useState(false);
+export default function AuthMenu() {
+    const { setIsAuthMenuOpen, isAuthMenuOpen } = useSettings();
 
-    const { text } = useText();
     function closeModal() {
-        setIsOpen(false);
+        setIsAuthMenuOpen(false);
     }
 
-    function openModal() {
-        setIsOpen(true);
-    }
     return (
-        <>
-            <DialogWrapper
-                closeModal={closeModal}
-                btn={
-                    isBtn ? (
-                        <button onClick={openModal} type="button" className="main-btn w-full">
-                            {btnLabel && btnLabel.length > 0 ? btnLabel : text("Войти")}
-                        </button>
-                    ) : withLabel ? (
-                        <button
-                            onClick={openModal}
-                            type="button"
-                            className="flex-center @[25rem]:px-2 px-[0.375rem] flex-col gap-1 leading-120 @[25rem]:text-xs text-[0.625rem]">
-                            <div className="relative">
-                                <Icon name="user" className="size-6 group-hover:opacity-60 text-primary" />
-                            </div>
-                            {text("Профиль")}
-                        </button>
-                    ) : (
-                        <button onClick={openModal} type="button" className="relative flex-center group group">
-                            <Icon name="user" className="size-8 text-primary group-hover:text-main" />
-                        </button>
-                    )
-                }
-                isOpen={isOpen}
-                content={<AuthMenuContent closeModal={closeModal} defaultAuthTab={defaultAuthTab} />}
-            />
-        </>
+        <Dialog open={isAuthMenuOpen} onClose={closeModal} className="fixed inset-0 flex-center w-screen z-[99]">
+            <DialogBackdrop className="fixed inset-0 bg-black opacity-50" />
+
+            <DialogPanel
+                transition
+                className="relative bg-white shadow-lg flex min-h-[16.25rem] max-h-[37.5rem] w-[30rem] z-[1] transition-300 ease-out data-[closed]:-translate-y-5 data-[closed]:opacity-0 lg:!py-8 lg:!px-8 sm:!px-6 !py-6 !px-4 overflow-y-auto rounded-lg">
+                <button
+                    onClick={() => closeModal()}
+                    type="button"
+                    className="absolute size-8 flex-center hover:opacity-60 lg:top-6 top-4 lg:right-6 right-4">
+                    <Icon name="x" className="text-primary size-6" />
+                </button>
+                <AuthMenuContent closeModal={closeModal} />
+            </DialogPanel>
+        </Dialog>
     );
 }

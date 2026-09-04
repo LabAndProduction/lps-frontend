@@ -137,10 +137,7 @@ export interface IDialogWrapperProps {
     closeModal: () => void;
     className?: string;
 }
-export interface IAuthMenuContentProps {
-    closeModal: () => void;
-    defaultAuthTab?: AuthTab;
-}
+
 export interface ILoginFormProps {
     isSubmitting: boolean;
     setAuthTab: SetState<AuthTab>;
@@ -211,12 +208,7 @@ export interface IRegisterProps {
     setAuthTab: SetState<AuthTab>;
     closeModal: () => void;
 }
-export interface IAuthMenuProps {
-    defaultAuthTab?: AuthTab;
-    withLabel?: boolean;
-    isBtn?: boolean;
-    btnLabel?: string;
-}
+
 export interface ISeoSectionProps {
     body: string;
     link?: string;

@@ -13,6 +13,7 @@ import classNames from "classnames";
 import AuthMenu from "@/components/ui/modals/authMenu/AuthMenu";
 import { IFixedFooterMenuProps } from "@/types/props/types";
 import HeaderMenu from "../header/headerMenu/HeaderMenu";
+import { useSettings } from "@/context/settings.context";
 
 export default function FixedFooterMenu({ categoriesTree, menu }: IFixedFooterMenuProps) {
     const { apiWishlist, wishlist } = useWishlist();
@@ -24,6 +25,7 @@ export default function FixedFooterMenu({ categoriesTree, menu }: IFixedFooterMe
     // const [compareQuantity, setCompareQuantity] = useState<number>(0);
     const [cartQuantity, setCartQuantity] = useState<number>(0);
     const { text } = useText();
+    const { setIsAuthMenuOpen } = useSettings();
 
     const icons: IFooterMenuIcon[] = [
         {
@@ -88,7 +90,15 @@ export default function FixedFooterMenu({ categoriesTree, menu }: IFixedFooterMe
                         {text("Профиль")}
                     </Link>
                 ) : (
-                    <AuthMenu withLabel={true} />
+                    <button
+                        onClick={() => setIsAuthMenuOpen(true)}
+                        type="button"
+                        className="flex-center @[25rem]:px-2 px-[0.375rem] flex-col gap-1 leading-120 @[25rem]:text-xs text-[0.625rem]">
+                        <div className="relative">
+                            <Icon name="user" className="size-6 group-hover:opacity-60 text-primary" />
+                        </div>
+                        {text("Профиль")}
+                    </button>
                 )}
 
                 {icons.map((item) => (

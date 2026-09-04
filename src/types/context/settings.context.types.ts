@@ -15,6 +15,9 @@ export interface ISettingsContextProps {
 
     buyModalProduct: IProduct | null;
     setBuyModalProduct: SetState<IProduct | null>;
+
+    isAuthMenuOpen: boolean;
+    setIsAuthMenuOpen: SetState<boolean>;
 }
 export interface ISettingsProviderProps {
     children: ReactNode;

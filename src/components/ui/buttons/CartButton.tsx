@@ -7,6 +7,7 @@ import { useText } from "@/context/text.context";
 import { ICartButtonProps } from "@/types/props/ui.types";
 import OvalSpinner from "../OvalSpinner";
 import Icon from "../Icon";
+import { useCookies } from "next-client-cookies";
 import { useSettings } from "@/context/settings.context";
 
 export default function CartButton({
@@ -19,23 +20,25 @@ export default function CartButton({
     const { checkExist: checkCartExist, toggleCart } = useCart();
     const [isLoading, setIsLoading] = useState<boolean>(false);
     const { text } = useText();
-    const { id, in_stock, current_price } = product;
-    const { setBuyModalProduct, setIsBuyModalOpen } = useSettings();
+    const { id, in_stock, stock_info_code } = product;
     const [isExist, setIsExist] = useState<boolean>(false);
+    const { setIsAuthMenuOpen } = useSettings();
+
+    const cookies = useCookies();
+    const token = cookies.get("token");
 
     useEffect(() => {
         setIsExist(checkCartExist(id));
     }, [checkCartExist]);
     return (
         <button
-            title={current_price > 0 ? text("Добавить в корзину") : text("Заказать")}
-            disabled={isLoading || (current_price > 0 && in_stock === 0)}
+            title={text("Добавить в корзину")}
+            disabled={isLoading || (stock_info_code == "0" && in_stock === 0)}
             onClick={() => {
-                if (current_price > 0) {
-                    toggleCart({ product, quantity, setIsLoading });
+                if (!token && stock_info_code != "0") {
+                    setIsAuthMenuOpen(true);
                 } else {
-                    setIsBuyModalOpen(true);
-                    setBuyModalProduct(product);
+                    toggleCart({ product, quantity, setIsLoading });
                 }
             }}
             className={classNames(
