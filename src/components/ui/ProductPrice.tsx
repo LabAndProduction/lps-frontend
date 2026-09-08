@@ -8,17 +8,13 @@ export default function ProductPrice({ product, isWithBadge = false }: IProductP
     const { text } = useText();
     const cookies = useCookies();
     const token = cookies.get("token");
-    const { current_price, current_price_formatted, in_stock } = product;
+    const { current_price, current_price_formatted } = product;
 
     return (
         <>
             {token && token.length > 0 && (
                 <p className="font-semibold !leading-110 xl:text-lg sm:text-base text-sm">
-                    {in_stock > 0
-                        ? current_price > 0
-                            ? current_price_formatted
-                            : text("Цена по запросу")
-                        : text("Нет в наличии")}
+                    {current_price > 0 ? current_price_formatted : text("Цена по запросу")}
                 </p>
             )}
         </>
