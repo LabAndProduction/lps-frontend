@@ -45,12 +45,10 @@ export default function CartButton({
                 "flex-center size-[var(--btn-height)] rounded-full",
                 `${
                     type === "icon"
-                        ? in_stock === 0
-                            ? "pointer-events-none bg-secondary text-white"
-                            : isGray
-                              ? "bg-gray hover:bg-gray4 text-primary"
-                              : "bg-main hover:bg-main-dark text-white"
-                        : `${isGray ? "gray-btn !rounded-btn" : "main-btn rounded-round-btn"}`
+                        ? `disabled:pointer-events-none disabled:bg-secondary disabled:text-white ${isGray ? "bg-gray hover:bg-gray4 text-primary" : "bg-main hover:bg-main-dark text-white"}`
+                        : isGray
+                          ? "gray-btn !rounded-btn"
+                          : "main-btn rounded-round-btn"
                 }`,
                 className,
             )}

@@ -34,7 +34,6 @@ export default async function CategoryPage({ params }: IProductPageParams) {
         productId: productId,
     });
 
-    console.log({ product });
     return (
         <>
             <div className="md:block hidden">
