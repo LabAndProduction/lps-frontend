@@ -58,7 +58,7 @@ export default function CartButton({
             {isLoading ? (
                 <OvalSpinner size={16} color={isGray ? "var(--color-main)" : "var(--color-white)"} />
             ) : type == "text" ? (
-                in_stock === 0 ? (
+                in_stock === 0 && stock_info_code == "0" ? (
                     <span>{text("нет в наличии")}</span>
                 ) : isExist ? (
                     <span>{text("В корзине")}</span>

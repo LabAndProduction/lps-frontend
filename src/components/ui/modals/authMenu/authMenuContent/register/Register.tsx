@@ -67,11 +67,13 @@ export default function Register({ setAuthTab, closeModal }: IRegisterProps) {
                         password,
                         phone_number: formatPhone(phone_number),
                     },
-                }).then(() => {
-                    push("/");
-                    refresh();
-                    setIsOtpModalOpen(false);
-                    closeModal();
+                }).then((data) => {
+                    if ("token" in data) {
+                        push("/");
+                        refresh();
+                        setIsOtpModalOpen(false);
+                        closeModal();
+                    }
                 });
             } catch (err) {
                 throw err;
