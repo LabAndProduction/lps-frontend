@@ -45,12 +45,10 @@ export default function CartButton({
                 "flex-center size-[var(--btn-height)] rounded-full",
                 `${
                     type === "icon"
-                        ? in_stock === 0
-                            ? "pointer-events-none bg-secondary text-white"
-                            : isGray
-                              ? "bg-gray hover:bg-gray4 text-primary"
-                              : "bg-main hover:bg-main-dark text-white"
-                        : `${isGray ? "gray-btn !rounded-btn" : "main-btn rounded-round-btn"}`
+                        ? `disabled:pointer-events-none disabled:bg-secondary disabled:text-white ${isGray ? "bg-gray hover:bg-gray4 text-primary" : "bg-main hover:bg-main-dark text-white"}`
+                        : isGray
+                          ? "gray-btn !rounded-btn"
+                          : "main-btn rounded-round-btn"
                 }`,
                 className,
             )}
@@ -58,7 +56,7 @@ export default function CartButton({
             {isLoading ? (
                 <OvalSpinner size={16} color={isGray ? "var(--color-main)" : "var(--color-white)"} />
             ) : type == "text" ? (
-                in_stock === 0 ? (
+                in_stock === 0 && stock_info_code == "0" ? (
                     <span>{text("нет в наличии")}</span>
                 ) : isExist ? (
                     <span>{text("В корзине")}</span>

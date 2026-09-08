@@ -6,6 +6,7 @@ const nextConfig: NextConfig = {
     reactStrictMode: true,
     images: {
         remotePatterns: [{ protocol: "https", hostname: process.env.PATTERN ? process.env.PATTERN : "" }],
+        qualities: [100, 75],
     },
     env: {
         API: process.env.API_URL,

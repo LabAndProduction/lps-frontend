@@ -27,9 +27,9 @@ export const register = async ({ body, clientLocale }: IRegisterParams) => {
                 maxAge: 30 * 24 * 60 * 60,
             });
             toast.success(text("Регистрация прошла успешно"));
-        } else {
-            // if ("message" in data) toast.error(data.message);
         }
+
+        return data;
     });
 };
 
@@ -75,9 +75,9 @@ export const sendOtp = async ({ body, clientLocale }: ISendOtpParams) => {
         clientLocale: clientLocale,
     }).then((data: { message: string; errors?: unknown }) => {
         if ("errors" in data) {
-            toast.success(data.message);
-        } else {
             toast.error(data.message);
+        } else {
+            toast.success(data.message);
         }
     });
 };
