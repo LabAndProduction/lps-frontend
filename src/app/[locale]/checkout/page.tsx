@@ -3,9 +3,14 @@ import PageHeader from "@/components/ui/PageHeader";
 import { Metadata } from "next";
 import Checkout from "@/components/pages/checkout/Checkout";
 import { getFullUrl } from "@/utils/getFullUrl";
+import { getCookies } from "next-client-cookies/server";
+import { getProfile } from "@/api/profileApi";
 
 export default async function CheckoutPage() {
     const { text } = await getTexts();
+    const cookies = await getCookies();
+    const profile = await getProfile({ token: cookies.get("token") });
+
     return (
         <>
             <PageHeader
@@ -15,8 +20,7 @@ export default async function CheckoutPage() {
                     current: text("Оформление заказа"),
                 }}
             />
-
-            <Checkout />
+            {typeof profile !== "string" && <Checkout profile={profile} />}
         </>
     );
 }

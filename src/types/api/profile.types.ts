@@ -6,7 +6,7 @@ export interface IProfile {
         name: string;
         phone_number: string;
         phone_number_verified_at: string;
-        email: string;
+        email: string | null;
         created_at: string;
         updated_at: string;
         image: {

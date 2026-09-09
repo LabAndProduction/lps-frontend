@@ -11,22 +11,23 @@ export default function CheckoutForm({ isSubmitting }: ICheckoutFormProps) {
         <div className="custom-block-with-padding flex-col gap-5">
             <h4 className="text-lg leading-120 font-bold">{text("Личные данные")}</h4>
             <div className="flex flex-col gap-3">
-                <fieldset className="grid lg:grid-cols-2 gap-4 w-full">
-                    <OverlapInput
-                        id="checkout-name"
-                        name="name"
-                        placeholder={text("Ваше имя")}
-                        disabled={isSubmitting || isCartEmpty}
-                        className="input-white"
-                    />
-                    <OverlapInput
+                {/* <fieldset className="grid lg:grid-cols-2 gap-4 w-full"> */}
+                <OverlapInput
+                    id="checkout-name"
+                    name="name"
+                    // placeholder={text("Ваше имя")}
+                    placeholder={text("Имя и фамилия")}
+                    disabled={isSubmitting || isCartEmpty}
+                    className="input-white"
+                />
+                {/* <OverlapInput
                         id="checkout-surname"
                         name="surname"
                         placeholder={text("Фамилия")}
                         disabled={isSubmitting || isCartEmpty}
                         className="input-white"
-                    />
-                </fieldset>
+                    /> */}
+                {/* </fieldset> */}
                 <fieldset className="grid lg:grid-cols-2 gap-4 w-full">
                     <OverlapInput
                         id="checkout-phone"

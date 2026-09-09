@@ -8,18 +8,24 @@ import { ICheckoutForm } from "@/types/form.types";
 import useFormValidation from "@/hooks/useFormValidation";
 import useCheckoutSubmit from "@/hooks/useCheckoutSubmit";
 import CheckoutSidebar from "./checkoutSidebar/CheckoutSidebar";
+import { IProfile } from "@/types/api/profile.types";
+import { format } from "@react-input/mask";
+import { phoneMaskOptions } from "@/components/ui/OverlapInput";
 
-const initialValues: ICheckoutForm = {
-    name: "",
-    surname: "",
-    phone_number: "",
-    email: "",
-    message: "",
-};
-
-export default function Checkout() {
+export default function Checkout({ profile }: { profile: IProfile }) {
     const { checkoutValidationSchema } = useFormValidation();
     const { handleSubmit } = useCheckoutSubmit();
+
+    const { name, phone_number, email } = profile.data;
+    const phoneValue = format(phone_number, phoneMaskOptions);
+
+    const initialValues: ICheckoutForm = {
+        name: name,
+        // surname: "",
+        phone_number: phoneValue,
+        email: "",
+        message: "",
+    };
 
     return (
         <SectionWrapper>

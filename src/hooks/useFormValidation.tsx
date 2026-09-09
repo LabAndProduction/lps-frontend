@@ -85,7 +85,7 @@ export default function useFormValidation() {
 
     const checkoutValidationSchema = Yup.object({
         name: nameValidation,
-        surname: surnameValidation,
+        // surname: surnameValidation,
         phone_number: phoneValidation,
         email: emailNotRequiredValidation,
         message: messageNotRequiredValidation,
