@@ -15,6 +15,7 @@ import { getPublications } from "@/api/publicationsApi";
 import NewsSwiper from "@/components/pages/home/NewsSwiper";
 import { pageAlternates, samePaths } from "@/lib/seo";
 import { getLocaleTs } from "@/utils/getLocaleTs";
+import { filled, seoTexts } from "@/lib/seoTexts";
 
 export default async function HomePage() {
     const { text } = await getTexts();
@@ -35,8 +36,14 @@ export default async function HomePage() {
 
     const news = await getPublications({ type: 2, quantity: 12, page: 1 });
 
+    const locale = await getLocaleTs();
+
     return (
         <>
+            {/* the page heading for search engines and screen readers; the page opens with
+                product sliders, so it is not shown on screen */}
+            <h1 className="sr-only">{seoTexts(locale).homeHeading}</h1>
+
             {/* {homeBanners1 && homeBanners1.data && <HomeBanner banners={homeBanners1} />} */}
 
             <ProductsSwiper id="discounted" label={text("Со скидкой")} products={discountedProducts} />
@@ -62,14 +69,19 @@ export async function generateMetadata(): Promise<Metadata> {
 
     const pageUrl = await getFullUrl();
     const imageUrl = await getFullUrl("/images/logo.png", false);
+    const tx = seoTexts(locale);
+    // the full title: the layout's " - LPS" would repeat the brand
+    const title = filled(page.data.seo_title, page.data.name) || tx.homeTitle;
+    const description = filled(page.data.meta_description) || tx.homeDescription;
+
     return {
         alternates: pageAlternates(locale, samePaths("/")),
-        title: page.data.seo_title,
-        description: page.data.meta_description,
+        title: { absolute: title },
+        description,
         keywords: page.data.meta_keywords,
         openGraph: {
-            title: page.data.seo_title,
-            description: page.data.meta_description,
+            title,
+            description,
             url: pageUrl,
             images: [
                 {

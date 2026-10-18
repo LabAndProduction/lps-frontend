@@ -7,6 +7,7 @@ import CategoryPageWrapper from "@/components/pages/categories/CategoryPageWrapp
 import { getFullUrl } from "@/utils/getFullUrl";
 import { pageAlternates, entityPaths } from "@/lib/seo";
 import { getLocaleTs } from "@/utils/getLocaleTs";
+import { filled, seoTexts } from "@/lib/seoTexts";
 
 export default async function CategoryPage({ params, searchParams }: ICategoryPageParams) {
     const { id } = await params;
@@ -73,14 +74,19 @@ export async function generateMetadata({ params }: ICategoryPageParams): Promise
 
     if (!category || !category.data || category.data.slug !== slug) notFound();
 
+    const { name, seo_title, meta_description } = category.data;
+    const tx = seoTexts(locale);
+    const title = filled(seo_title, name) || tx.category(name);
+    const description = filled(meta_description) || tx.categoryDescription(name);
+
     return {
         alternates: pageAlternates(locale, entityPaths("/categories", categoryId, category.data.localization)),
-        title: category.data.seo_title || category.data.name,
-        description: category.data.meta_description,
+        title,
+        description,
         keywords: category.data.meta_keywords,
         openGraph: {
-            title: category.data.seo_title || category.data.name,
-            description: category.data.meta_description,
+            title,
+            description,
             url: pageUrl,
             images: [
                 {
