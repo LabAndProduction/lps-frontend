@@ -10,10 +10,11 @@ import Product from "@/components/pages/product/Product";
 import PageHeader from "@/components/ui/PageHeader";
 import SpecialSwiper from "@/components/ui/swipers/SpecialSwiper";
 import { getFullUrl } from "@/utils/getFullUrl";
-import { pageAlternates, entityPaths, productLanguages, NOINDEX } from "@/lib/seo";
+import { pageAlternates, entityPaths, productLanguages, NOINDEX, absoluteUrl } from "@/lib/seo";
 import { Locale } from "@/types/api/api.types";
 import { filled, seoTexts } from "@/lib/seoTexts";
 import { getLocaleTs } from "@/utils/getLocaleTs";
+import { JsonLd, breadcrumbJsonLd, productJsonLd } from "@/lib/jsonLd";
 
 export default async function CategoryPage({ params }: IProductPageParams) {
     const { id } = await params;
@@ -38,8 +39,24 @@ export default async function CategoryPage({ params }: IProductPageParams) {
         productId: productId,
     });
 
+    const locale = await getLocaleTs();
+    const { name, meta_description, categories } = product.data;
+    const structuredData = [
+        productJsonLd(
+            product.data,
+            absoluteUrl(locale, `/product/${productId}-${product.data.slug}`),
+            filled(meta_description) || seoTexts(locale).productDescription(name),
+        ),
+        breadcrumbJsonLd(locale, [
+            { name: text("Главная"), path: "/" },
+            ...categories.map((c) => ({ name: c.name, path: `/categories/${c.id}-${c.slug}` })),
+            { name, path: `/product/${productId}-${product.data.slug}` },
+        ]),
+    ];
+
     return (
         <>
+            <JsonLd data={structuredData} />
             <div className="md:block hidden">
                 <PageHeader
                     breadcrumbs={{

@@ -29,6 +29,8 @@ import { Locale } from "@/types/api/api.types";
 import BuyModal from "../../components/ui/modals/buyModal/BuyModal";
 import { Metadata } from "next";
 import { SITE_NAME } from "@/lib/seoTexts";
+import { getSettings } from "@/api/settingsApi";
+import { JsonLd, organizationJsonLd } from "@/lib/jsonLd";
 
 // every page's title ends with " - LPS" (the home page sets its full title itself)
 export const metadata: Metadata = {
@@ -52,11 +54,13 @@ export default async function RootLayout({ children, params }: Readonly<IRootLay
     const messages = await getMessages();
     const categoriesTree = await getCategoriesTree();
     const headerMenu = await getMenu({ menuId: 2 });
+    const settings = await getSettings().catch(() => null);
 
     return (
         <html className={classNames(montserrat.className)} lang={locale}>
             <Head />
             <body>
+                <JsonLd data={organizationJsonLd(settings)} />
                 <Toaster position="top-right" />
                 <NextIntlClientProvider messages={messages}>
                     <CookiesProvider>
