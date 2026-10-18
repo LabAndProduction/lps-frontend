@@ -10,6 +10,7 @@ import Brand from "@/components/pages/brands/Brand";
 import { getProducts } from "@/api/productsApi";
 import { pageAlternates, entityPaths } from "@/lib/seo";
 import { getLocaleTs } from "@/utils/getLocaleTs";
+import { filled, seoTexts } from "@/lib/seoTexts";
 
 export default async function BrandPage({ params, searchParams }: IBrandPageParams) {
     const { id } = await params;
@@ -76,8 +77,9 @@ export async function generateMetadata({ params }: IBrandPageParams): Promise<Me
 
     const { seo_title, name, meta_description } = brand.data;
 
-    const title = seo_title || name;
-    const description = meta_description || title;
+    const tx = seoTexts(locale);
+    const title = filled(seo_title, name) || tx.brand(name);
+    const description = filled(meta_description) || tx.brandDescription(name);
 
     return {
         alternates: pageAlternates(locale, entityPaths("/brands", brandId, brand.data.localization)),

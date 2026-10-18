@@ -12,6 +12,7 @@ import SpecialSwiper from "@/components/ui/swipers/SpecialSwiper";
 import { getFullUrl } from "@/utils/getFullUrl";
 import { pageAlternates, entityPaths, productLanguages, NOINDEX } from "@/lib/seo";
 import { Locale } from "@/types/api/api.types";
+import { filled, seoTexts } from "@/lib/seoTexts";
 import { getLocaleTs } from "@/utils/getLocaleTs";
 
 export default async function CategoryPage({ params }: IProductPageParams) {
@@ -83,16 +84,20 @@ export async function generateMetadata({ params }: IProductPageParams): Promise<
     if (!product || !product.data || product.data.slug !== slug) notFound();
 
     const pageUrl = await getFullUrl(`/product/${id}`);
+    const { name, seo_title, meta_description } = product.data;
+    const tx = seoTexts(locale);
+    const title = filled(seo_title, name) || tx.product(name);
+    const description = filled(meta_description) || tx.productDescription(name);
 
     return {
         alternates: pageAlternates(locale, entityPaths("/product", productId, product.data.localization), productLanguages),
         ...(productLanguages.includes(locale as Locale) ? {} : { robots: NOINDEX }),
-        title: product.data.seo_title || product.data.name,
-        description: product.data.meta_description,
+        title,
+        description,
         keywords: product.data.meta_keywords,
         openGraph: {
-            title: product.data.seo_title || product.data.name,
-            description: product.data.meta_description,
+            title,
+            description,
             url: pageUrl,
             images: [
                 {

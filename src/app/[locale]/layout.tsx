@@ -27,6 +27,13 @@ import { CookiesProvider } from "next-client-cookies/server";
 import { ContextProviders } from "@/components/layout/ContextProviders";
 import { Locale } from "@/types/api/api.types";
 import BuyModal from "../../components/ui/modals/buyModal/BuyModal";
+import { Metadata } from "next";
+import { SITE_NAME } from "@/lib/seoTexts";
+
+// every page's title ends with " - LPS" (the home page sets its full title itself)
+export const metadata: Metadata = {
+    title: { template: `%s - ${SITE_NAME}`, default: SITE_NAME },
+};
 
 const montserrat = Montserrat({
     subsets: ["latin"],
