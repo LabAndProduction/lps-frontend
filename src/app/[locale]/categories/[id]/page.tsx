@@ -8,6 +8,8 @@ import { getFullUrl } from "@/utils/getFullUrl";
 import { pageAlternates, entityPaths } from "@/lib/seo";
 import { getLocaleTs } from "@/utils/getLocaleTs";
 import { filled, seoTexts } from "@/lib/seoTexts";
+import { JsonLd, breadcrumbJsonLd } from "@/lib/jsonLd";
+import { getTexts } from "@/api/textsApi";
 
 export default async function CategoryPage({ params, searchParams }: ICategoryPageParams) {
     const { id } = await params;
@@ -51,8 +53,17 @@ export default async function CategoryPage({ params, searchParams }: ICategoryPa
         order_direction: direction,
     });
 
+    const locale = await getLocaleTs();
+    const { text } = await getTexts();
+
     return (
         <>
+            <JsonLd
+                data={breadcrumbJsonLd(locale, [
+                    { name: text("Главная"), path: "/" },
+                    { name: category.data.name, path: `/categories/${categoryId}-${category.data.slug}` },
+                ])}
+            />
             <CategoryPageWrapper products={products} category={category} />
         </>
     );
