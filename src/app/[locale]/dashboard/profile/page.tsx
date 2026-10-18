@@ -4,6 +4,7 @@ import PageHeader from "@/components/ui/PageHeader";
 import DashboardWrapper from "@/components/pages/dashboard/DashboardWrapper";
 import Profile from "@/components/pages/profile/Profile";
 import { getFullUrl } from "@/utils/getFullUrl";
+import { NOINDEX } from "@/lib/seo";
 
 export default async function ProfilePage() {
     const { text } = await getTexts();
@@ -30,6 +31,7 @@ export async function generateMetadata(): Promise<Metadata> {
     const pageUrl = await getFullUrl("/dashboard/profile");
     const imageUrl = await getFullUrl("/images/logo.png", false);
     return {
+        robots: NOINDEX,
         title: text("Профиль"),
         description: text("Профиль"),
         keywords: text("Профиль"),

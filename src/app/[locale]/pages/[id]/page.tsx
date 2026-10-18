@@ -7,6 +7,8 @@ import LocalizationComponent from "@/components/layout/LocalizationComponent";
 import { notFound } from "next/navigation";
 import SectionWrapper from "@/components/layout/SectionWrapper";
 import { getFullUrl } from "@/utils/getFullUrl";
+import { pageAlternates, entityPaths } from "@/lib/seo";
+import { getLocaleTs } from "@/utils/getLocaleTs";
 
 export default async function TextPage({ params }: IPageParamsWithId) {
     const { id } = await params;
@@ -50,6 +52,7 @@ export default async function TextPage({ params }: IPageParamsWithId) {
 }
 
 export async function generateMetadata({ params }: IPageParamsWithId): Promise<Metadata> {
+    const locale = await getLocaleTs();
     const { id } = await params;
     const slug = id.split("-").slice(1).join("-");
     const pageId = Number(id.split("-")[0]);
@@ -62,11 +65,12 @@ export async function generateMetadata({ params }: IPageParamsWithId): Promise<M
     const pageUrl = await getFullUrl(`/pages/${id}`);
     const imageUrl = await getFullUrl("/images/logo.png", false);
     return {
-        title: page.data.seo_title,
+        alternates: pageAlternates(locale, entityPaths("/pages", pageId, page.data.localization)),
+        title: page.data.seo_title || page.data.name,
         description: page.data.meta_description,
         keywords: page.data.meta_keywords,
         openGraph: {
-            title: page.data.seo_title,
+            title: page.data.seo_title || page.data.name,
             description: page.data.meta_description,
             url: pageUrl,
             images: [

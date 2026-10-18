@@ -6,6 +6,7 @@ import Orders from "@/components/pages/orders/Orders";
 import { getCookies } from "next-client-cookies/server";
 import { getOrders } from "@/api/orderApi";
 import { getFullUrl } from "@/utils/getFullUrl";
+import { NOINDEX } from "@/lib/seo";
 
 export default async function ProfilePage() {
     const { text } = await getTexts();
@@ -35,6 +36,7 @@ export async function generateMetadata(): Promise<Metadata> {
     const pageUrl = await getFullUrl("/dashboard/orders");
     const imageUrl = await getFullUrl("/images/logo.png", false);
     return {
+        robots: NOINDEX,
         title: text("Мои заказы"),
         description: text("Мои заказы"),
         keywords: text("Мои заказы"),

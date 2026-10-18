@@ -8,6 +8,8 @@ import SectionWrapper from "@/components/layout/SectionWrapper";
 import { getFullUrl } from "@/utils/getFullUrl";
 import { getPublication } from "@/api/publicationsApi";
 import NextImage from "@/components/ui/NextImage";
+import { pageAlternates, entityPaths } from "@/lib/seo";
+import { getLocaleTs } from "@/utils/getLocaleTs";
 
 export default async function SingleNewsPage({ params }: IPageParamsWithId) {
     const { id } = await params;
@@ -70,6 +72,7 @@ export default async function SingleNewsPage({ params }: IPageParamsWithId) {
 }
 
 export async function generateMetadata({ params }: IPageParamsWithId): Promise<Metadata> {
+    const locale = await getLocaleTs();
     const { id } = await params;
     const slug = id.split("-").slice(1).join("-");
     const newsId = Number(id.split("-")[0]);
@@ -88,6 +91,7 @@ export async function generateMetadata({ params }: IPageParamsWithId): Promise<M
     const description = meta_description || title;
 
     return {
+        alternates: pageAlternates(locale, entityPaths("/news", newsId, publication.data.localization)),
         title: title,
         description: description,
 

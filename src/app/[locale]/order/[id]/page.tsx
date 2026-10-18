@@ -5,6 +5,7 @@ import PageHeader from "@/components/ui/PageHeader";
 import { getOrder } from "@/api/orderApi";
 import { getCookies } from "next-client-cookies/server";
 import { IPageParamsWithId } from "@/types/pageParams.types";
+import { NOINDEX } from "@/lib/seo";
 
 export default async function HomePage({ params }: IPageParamsWithId) {
     const { id } = await params;
@@ -35,6 +36,7 @@ export async function generateMetadata(): Promise<Metadata> {
     const { text } = await getTexts();
 
     return {
+        robots: NOINDEX,
         title: text("Ваш заказ"),
         description: text("Ваш заказ"),
         keywords: text("Ваш заказ"),

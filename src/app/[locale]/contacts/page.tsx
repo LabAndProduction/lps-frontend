@@ -5,6 +5,8 @@ import { getPage } from "@/api/pagesApi";
 import Contacts from "@/components/pages/contacts/Contacts";
 import { getSettings } from "@/api/settingsApi";
 import { getFullUrl } from "@/utils/getFullUrl";
+import { pageAlternates, samePaths } from "@/lib/seo";
+import { getLocaleTs } from "@/utils/getLocaleTs";
 
 export default async function ContactsPage() {
     const { text } = await getTexts();
@@ -27,11 +29,13 @@ export default async function ContactsPage() {
 }
 
 export async function generateMetadata(): Promise<Metadata> {
+    const locale = await getLocaleTs();
     const page = await getPage({ pageId: 2 });
 
     const pageUrl = await getFullUrl("/contacts");
     const imageUrl = await getFullUrl("/images/logo.png", false);
     return {
+        alternates: pageAlternates(locale, samePaths("/contacts")),
         title: page.data.seo_title,
         description: page.data.meta_description,
         keywords: page.data.meta_keywords,

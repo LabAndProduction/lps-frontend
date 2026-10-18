@@ -5,6 +5,7 @@ import Wishlist from "@/components/pages/wishlist/Wishlist";
 import { getProducts } from "@/api/productsApi";
 import ProductsSwiper from "@/components/ui/sections/ProductsSwiper";
 import { getFullUrl } from "@/utils/getFullUrl";
+import { NOINDEX } from "@/lib/seo";
 
 export default async function WishlistPage() {
     const { text } = await getTexts();
@@ -36,6 +37,7 @@ export async function generateMetadata(): Promise<Metadata> {
     const pageUrl = await getFullUrl("/wishlist");
     const imageUrl = await getFullUrl("/images/logo.png", false);
     return {
+        robots: NOINDEX,
         title: text("Избранное"),
         description: text("Избранное"),
         keywords: text("Избранное"),

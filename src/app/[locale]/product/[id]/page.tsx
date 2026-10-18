@@ -10,6 +10,8 @@ import Product from "@/components/pages/product/Product";
 import PageHeader from "@/components/ui/PageHeader";
 import SpecialSwiper from "@/components/ui/swipers/SpecialSwiper";
 import { getFullUrl } from "@/utils/getFullUrl";
+import { pageAlternates, entityPaths } from "@/lib/seo";
+import { getLocaleTs } from "@/utils/getLocaleTs";
 
 export default async function CategoryPage({ params }: IProductPageParams) {
     const { id } = await params;
@@ -66,6 +68,7 @@ export default async function CategoryPage({ params }: IProductPageParams) {
 }
 
 export async function generateMetadata({ params }: IProductPageParams): Promise<Metadata> {
+    const locale = await getLocaleTs();
     const { id } = await params;
     const productId = Number(id.split("-")[0]);
     const slug = id.split("-").slice(1).join("-");
@@ -81,11 +84,12 @@ export async function generateMetadata({ params }: IProductPageParams): Promise<
     const pageUrl = await getFullUrl(`/product/${id}`);
 
     return {
-        title: product.data.seo_title,
+        alternates: pageAlternates(locale, entityPaths("/product", productId, product.data.localization)),
+        title: product.data.seo_title || product.data.name,
         description: product.data.meta_description,
         keywords: product.data.meta_keywords,
         openGraph: {
-            title: product.data.seo_title,
+            title: product.data.seo_title || product.data.name,
             description: product.data.meta_description,
             url: pageUrl,
             images: [
