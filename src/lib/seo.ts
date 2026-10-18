@@ -28,16 +28,26 @@ export const entityPaths = (base: string, id: number, localization: ILocalizatio
 });
 
 // canonical to the page itself and hreflang to both versions; x-default is Russian.
-export function pageAlternates(locale: string, paths: LocalePaths): NonNullable<Metadata["alternates"]> {
+// `languages`: the versions to link (an unindexed one must not be named).
+export function pageAlternates(
+    locale: string,
+    paths: LocalePaths,
+    languages: readonly Locale[] = ["ru", "en"],
+): NonNullable<Metadata["alternates"]> {
     return {
         canonical: absoluteUrl(locale, paths[locale as Locale] ?? paths.ru),
         languages: {
-            ru: absoluteUrl("ru", paths.ru),
-            en: absoluteUrl("en", paths.en),
+            ...Object.fromEntries(languages.map((l) => [l, absoluteUrl(l, paths[l])])),
             "x-default": absoluteUrl("ru", paths.ru),
         },
     };
 }
+
+// Product names and descriptions are not translated into English yet: the /en product
+// pages repeat the Russian ones, so they stay out of the index and the sitemap and no
+// page links them as the English version. Set to true once the products are translated.
+export const EN_PRODUCTS_INDEXED = false;
+export const productLanguages: readonly Locale[] = EN_PRODUCTS_INDEXED ? ["ru", "en"] : ["ru"];
 
 // Cart, checkout, account, compare, wishlist, search, order: per visitor, nothing to index.
 export const NOINDEX: Metadata["robots"] = { index: false, follow: true };
