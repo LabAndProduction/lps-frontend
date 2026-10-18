@@ -5,6 +5,7 @@ import Search from "@/components/pages/search/Search";
 import { getProducts } from "@/api/productsApi";
 import { ISearchPageParams } from "@/types/pageParams.types";
 import { getFullUrl } from "@/utils/getFullUrl";
+import { NOINDEX } from "@/lib/seo";
 
 export default async function SearchPage({ searchParams }: ISearchPageParams) {
     const { price, brands, sort, direction, page, keyword } = await searchParams;
@@ -43,6 +44,7 @@ export async function generateMetadata({ searchParams }: ISearchPageParams): Pro
     const pageUrl = await getFullUrl(`/search/?keyword=${keyword}`);
     const imageUrl = await getFullUrl("/images/logo.png", false);
     return {
+        robots: NOINDEX,
         title: text("Поиск"),
         description: text("Поиск"),
         keywords: text("Поиск"),

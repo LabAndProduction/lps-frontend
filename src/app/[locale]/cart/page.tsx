@@ -7,6 +7,7 @@ import Cart from "@/components/pages/cart/Cart";
 import CartWrapper from "@/components/pages/cart/CartWrapper";
 import ProductsSwiper from "@/components/ui/sections/ProductsSwiper";
 import { getFullUrl } from "@/utils/getFullUrl";
+import { NOINDEX } from "@/lib/seo";
 
 export default async function CartPage() {
     const { text } = await getTexts();
@@ -39,6 +40,7 @@ export async function generateMetadata(): Promise<Metadata> {
     const pageUrl = await getFullUrl("/cart");
     const imageUrl = await getFullUrl("/images/logo.png", false);
     return {
+        robots: NOINDEX,
         title: text("Корзина"),
         description: text("Корзина"),
         keywords: text("Корзина"),

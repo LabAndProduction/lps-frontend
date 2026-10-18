@@ -13,6 +13,8 @@ import { getBrands } from "@/api/brandsApi";
 import BrandsSwiper from "@/components/pages/home/BrandsSwiper";
 import { getPublications } from "@/api/publicationsApi";
 import NewsSwiper from "@/components/pages/home/NewsSwiper";
+import { pageAlternates, samePaths } from "@/lib/seo";
+import { getLocaleTs } from "@/utils/getLocaleTs";
 
 export default async function HomePage() {
     const { text } = await getTexts();
@@ -55,11 +57,13 @@ export default async function HomePage() {
 }
 
 export async function generateMetadata(): Promise<Metadata> {
+    const locale = await getLocaleTs();
     const page = await getPage({ pageId: 1 });
 
     const pageUrl = await getFullUrl();
     const imageUrl = await getFullUrl("/images/logo.png", false);
     return {
+        alternates: pageAlternates(locale, samePaths("/")),
         title: page.data.seo_title,
         description: page.data.meta_description,
         keywords: page.data.meta_keywords,

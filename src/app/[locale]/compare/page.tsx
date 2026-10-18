@@ -3,6 +3,7 @@ import { getTexts } from "@/api/textsApi";
 import PageHeader from "@/components/ui/PageHeader";
 import Compare from "@/components/pages/compare/Compare";
 import { getFullUrl } from "@/utils/getFullUrl";
+import { NOINDEX } from "@/lib/seo";
 
 export default async function ComparePage() {
     const { text } = await getTexts();
@@ -28,6 +29,7 @@ export async function generateMetadata(): Promise<Metadata> {
     const pageUrl = await getFullUrl("/compare");
     const imageUrl = await getFullUrl("/images/logo.png", false);
     return {
+        robots: NOINDEX,
         title: text("Сравнение"),
         description: text("Сравнение"),
         keywords: text("Сравнение"),

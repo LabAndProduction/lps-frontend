@@ -8,6 +8,8 @@ import { getFullUrl } from "@/utils/getFullUrl";
 import { getBrand } from "@/api/brandsApi";
 import Brand from "@/components/pages/brands/Brand";
 import { getProducts } from "@/api/productsApi";
+import { pageAlternates, entityPaths } from "@/lib/seo";
+import { getLocaleTs } from "@/utils/getLocaleTs";
 
 export default async function BrandPage({ params, searchParams }: IBrandPageParams) {
     const { id } = await params;
@@ -59,6 +61,7 @@ export default async function BrandPage({ params, searchParams }: IBrandPagePara
 }
 
 export async function generateMetadata({ params }: IBrandPageParams): Promise<Metadata> {
+    const locale = await getLocaleTs();
     const { id } = await params;
     const slug = id.split("-").slice(1).join("-");
     const brandId = Number(id.split("-")[0]);
@@ -77,6 +80,7 @@ export async function generateMetadata({ params }: IBrandPageParams): Promise<Me
     const description = meta_description || title;
 
     return {
+        alternates: pageAlternates(locale, entityPaths("/brands", brandId, brand.data.localization)),
         title: title,
         description: description,
 

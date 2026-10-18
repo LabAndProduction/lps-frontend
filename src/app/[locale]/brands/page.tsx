@@ -7,6 +7,8 @@ import { getFullUrl } from "@/utils/getFullUrl";
 import Pagination from "@/components/ui/pagination/Pagination";
 import { getBrands } from "@/api/brandsApi";
 import BrandCard from "@/components/ui/cards/BrandCard";
+import { pageAlternates, samePaths } from "@/lib/seo";
+import { getLocaleTs } from "@/utils/getLocaleTs";
 
 export default async function BrandsPage({ searchParams }: IBrandsPageParams) {
     const { page } = await searchParams;
@@ -45,15 +47,17 @@ export default async function BrandsPage({ searchParams }: IBrandsPageParams) {
 }
 
 export async function generateMetadata(): Promise<Metadata> {
+    const locale = await getLocaleTs();
     const { text } = await getTexts();
 
-    const pageUrl = await getFullUrl(`/pages`);
+    const pageUrl = await getFullUrl(`/brands`);
     const imageUrl = await getFullUrl("/images/logo.png", false);
 
-    const title = text("Новости");
-    const description = text("Новости");
+    const title = text("Бренды");
+    const description = text("Бренды");
 
     return {
+        alternates: pageAlternates(locale, samePaths("/brands")),
         title: title,
         description: description,
 

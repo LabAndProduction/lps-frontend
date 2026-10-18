@@ -5,6 +5,7 @@ import Checkout from "@/components/pages/checkout/Checkout";
 import { getFullUrl } from "@/utils/getFullUrl";
 import { getCookies } from "next-client-cookies/server";
 import { getProfile } from "@/api/profileApi";
+import { NOINDEX } from "@/lib/seo";
 
 export default async function CheckoutPage() {
     const { text } = await getTexts();
@@ -31,6 +32,7 @@ export async function generateMetadata(): Promise<Metadata> {
     const pageUrl = await getFullUrl("/checkout");
     const imageUrl = await getFullUrl("/images/logo.png", false);
     return {
+        robots: NOINDEX,
         title: text("Оформление заказа"),
         description: text("Оформление заказа"),
         keywords: text("Оформление заказа"),

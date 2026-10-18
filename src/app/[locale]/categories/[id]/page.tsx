@@ -5,6 +5,8 @@ import { notFound } from "next/navigation";
 import { ICategoryPageParams } from "@/types/pageParams.types";
 import CategoryPageWrapper from "@/components/pages/categories/CategoryPageWrapper";
 import { getFullUrl } from "@/utils/getFullUrl";
+import { pageAlternates, entityPaths } from "@/lib/seo";
+import { getLocaleTs } from "@/utils/getLocaleTs";
 
 export default async function CategoryPage({ params, searchParams }: ICategoryPageParams) {
     const { id } = await params;
@@ -56,6 +58,7 @@ export default async function CategoryPage({ params, searchParams }: ICategoryPa
 }
 
 export async function generateMetadata({ params }: ICategoryPageParams): Promise<Metadata> {
+    const locale = await getLocaleTs();
     const { id } = await params;
     const categoryId = Number(id.split("-")[0]);
     const slug = id.split("-").slice(1).join("-");
@@ -71,11 +74,12 @@ export async function generateMetadata({ params }: ICategoryPageParams): Promise
     if (!category || !category.data || category.data.slug !== slug) notFound();
 
     return {
-        title: category.data.seo_title,
+        alternates: pageAlternates(locale, entityPaths("/categories", categoryId, category.data.localization)),
+        title: category.data.seo_title || category.data.name,
         description: category.data.meta_description,
         keywords: category.data.meta_keywords,
         openGraph: {
-            title: category.data.seo_title,
+            title: category.data.seo_title || category.data.name,
             description: category.data.meta_description,
             url: pageUrl,
             images: [

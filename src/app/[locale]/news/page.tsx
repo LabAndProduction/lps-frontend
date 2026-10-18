@@ -7,6 +7,8 @@ import { getFullUrl } from "@/utils/getFullUrl";
 import { getPublications } from "@/api/publicationsApi";
 import NewsCard from "@/components/ui/cards/NewsCard";
 import Pagination from "@/components/ui/pagination/Pagination";
+import { pageAlternates, samePaths } from "@/lib/seo";
+import { getLocaleTs } from "@/utils/getLocaleTs";
 
 export default async function NewsPage({ searchParams }: INewsPageParams) {
     const { page } = await searchParams;
@@ -46,15 +48,17 @@ export default async function NewsPage({ searchParams }: INewsPageParams) {
 }
 
 export async function generateMetadata(): Promise<Metadata> {
+    const locale = await getLocaleTs();
     const { text } = await getTexts();
 
-    const pageUrl = await getFullUrl(`/pages`);
+    const pageUrl = await getFullUrl(`/news`);
     const imageUrl = await getFullUrl("/images/logo.png", false);
 
     const title = text("Новости");
     const description = text("Новости");
 
     return {
+        alternates: pageAlternates(locale, samePaths("/news")),
         title: title,
         description: description,
 
