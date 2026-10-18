@@ -5,7 +5,8 @@ const withNextIntl = createNextIntlPlugin();
 const nextConfig: NextConfig = {
     reactStrictMode: true,
     images: {
-        remotePatterns: [{ protocol: "https", hostname: process.env.PATTERN ? process.env.PATTERN : "" }],
+        // the API's image host; without PATTERN (a build outside the server) there is none
+        remotePatterns: process.env.PATTERN ? [{ protocol: "https", hostname: process.env.PATTERN }] : [],
         qualities: [100, 75],
     },
     env: {
