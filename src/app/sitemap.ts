@@ -17,11 +17,15 @@ interface IEntity {
 
 const API = process.env.API;
 
+// Without the API address (a build outside the server, e.g. in CI) or when the API
+// stalls, the sitemap keeps the fixed pages instead of holding up the build.
 async function api<T>(path: string): Promise<T | null> {
+    if (!API) return null;
     try {
         const response = await fetch(`${API}${path}`, {
             headers: { Accept: "application/json", "Accept-Language": routing.defaultLocale },
             next: { revalidate },
+            signal: AbortSignal.timeout(15000),
         });
         return response.ok ? ((await response.json()) as T) : null;
     } catch {
