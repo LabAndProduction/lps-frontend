@@ -1,0 +1,31 @@
+# Deploys lps.uz on every push to main (and by hand from the Actions tab).
+# The server runs /home/ubuntu/bin/lps-deploy.sh for this key and nothing else:
+# it builds the new version next to the live one, checks it, swaps it in and
+# restarts pm2, and rolls back if the site does not come back.
+name: Deploy to lps.uz
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-lps
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - name: Deploy over SSH
+        env:
+          DEPLOY_KEY: ${{ secrets.LPS_DEPLOY_KEY }}
+          # a manual run rebuilds even when the commit is already live
+          MODE: ${{ github.event_name == 'workflow_dispatch' && 'force' || 'deploy' }}
+        run: |
+          mkdir -p ~/.ssh
+          printf '%s\n' "$DEPLOY_KEY" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          echo "176.96.241.43 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOrQjUyS0OmPuYlzCRMu6YreYgZkNxQIWYSfKfHlb5Q+" > ~/.ssh/known_hosts
+          ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=yes -o ServerAliveInterval=30 ubuntu@176.96.241.43 "$MODE"
