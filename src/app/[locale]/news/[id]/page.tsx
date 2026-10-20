@@ -1,3 +1,4 @@
+import { seoMeta } from "@webnumseoagent/next";
 import { Metadata } from "next";
 import { getTexts } from "@/api/textsApi";
 import PageHeader from "@/components/ui/PageHeader";
@@ -90,21 +91,26 @@ export async function generateMetadata({ params }: IPageParamsWithId): Promise<M
     const title = seo_title || name;
     const description = meta_description || title;
 
-    return {
-        alternates: pageAlternates(locale, entityPaths("/news", newsId, publication.data.localization)),
-        title: title,
-        description: description,
+    return seoMeta({
+        route: `/news/${(await params).id}`,
+        locale,
 
-        openGraph: {
+        fallback: {
+            alternates: pageAlternates(locale, entityPaths("/news", newsId, publication.data.localization)),
             title: title,
             description: description,
-            url: pageUrl,
-            images: [
-                {
-                    url: imageUrl,
-                },
-            ],
-            type: "website",
-        },
-    };
+
+            openGraph: {
+                title: title,
+                description: description,
+                url: pageUrl,
+                images: [
+                    {
+                        url: imageUrl,
+                    },
+                ],
+                type: "website",
+            },
+        }
+    });
 }

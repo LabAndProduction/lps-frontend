@@ -1,3 +1,4 @@
+import { seoMeta } from "@webnumseoagent/next";
 import { Metadata } from "next";
 import { getProduct, getProductAttributes } from "@/api/productsApi";
 import { notFound } from "next/navigation";
@@ -106,22 +107,27 @@ export async function generateMetadata({ params }: IProductPageParams): Promise<
     const title = filled(seo_title, name) || tx.product(name);
     const description = filled(meta_description) || tx.productDescription(name);
 
-    return {
-        alternates: pageAlternates(locale, entityPaths("/product", productId, product.data.localization), productLanguages),
-        ...(productLanguages.includes(locale as Locale) ? {} : { robots: NOINDEX }),
-        title,
-        description,
-        keywords: product.data.meta_keywords,
-        openGraph: {
+    return seoMeta({
+        route: `/product/${(await params).id}`,
+        locale,
+
+        fallback: {
+            alternates: pageAlternates(locale, entityPaths("/product", productId, product.data.localization), productLanguages),
+            ...(productLanguages.includes(locale as Locale) ? {} : { robots: NOINDEX }),
             title,
             description,
-            url: pageUrl,
-            images: [
-                {
-                    url: product.data.img,
-                },
-            ],
-            type: "website",
-        },
-    };
+            keywords: product.data.meta_keywords,
+            openGraph: {
+                title,
+                description,
+                url: pageUrl,
+                images: [
+                    {
+                        url: product.data.img,
+                    },
+                ],
+                type: "website",
+            },
+        }
+    });
 }

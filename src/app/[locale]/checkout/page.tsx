@@ -1,3 +1,4 @@
+import { seoMeta } from "@webnumseoagent/next";
 import { getTexts } from "@/api/textsApi";
 import PageHeader from "@/components/ui/PageHeader";
 import { Metadata } from "next";
@@ -26,25 +27,30 @@ export default async function CheckoutPage() {
     );
 }
 
-export async function generateMetadata(): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
     const { text } = await getTexts();
 
     const pageUrl = await getFullUrl("/checkout");
     const imageUrl = await getFullUrl("/images/logo.png", false);
-    return {
-        robots: NOINDEX,
-        title: text("Оформление заказа"),
-        description: text("Оформление заказа"),
-        keywords: text("Оформление заказа"),
-        openGraph: {
+    return seoMeta({
+        route: "/checkout",
+        locale: (await params).locale,
+
+        fallback: {
+            robots: NOINDEX,
             title: text("Оформление заказа"),
-            url: pageUrl,
-            images: [
-                {
-                    url: imageUrl,
-                },
-            ],
-            type: "website",
-        },
-    };
+            description: text("Оформление заказа"),
+            keywords: text("Оформление заказа"),
+            openGraph: {
+                title: text("Оформление заказа"),
+                url: pageUrl,
+                images: [
+                    {
+                        url: imageUrl,
+                    },
+                ],
+                type: "website",
+            },
+        }
+    });
 }

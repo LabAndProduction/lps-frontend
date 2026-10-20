@@ -1,3 +1,4 @@
+import { seoMeta } from "@webnumseoagent/next";
 import { Metadata } from "next";
 import { getTexts } from "@/api/textsApi";
 import Order from "@/components/pages/order/Order";
@@ -32,13 +33,18 @@ export default async function HomePage({ params }: IPageParamsWithId) {
     );
 }
 
-export async function generateMetadata(): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string; id: string }> }): Promise<Metadata> {
     const { text } = await getTexts();
 
-    return {
-        robots: NOINDEX,
-        title: text("Ваш заказ"),
-        description: text("Ваш заказ"),
-        keywords: text("Ваш заказ"),
-    };
+    return seoMeta({
+        route: `/order/${(await params).id}`,
+        locale: (await params).locale,
+
+        fallback: {
+            robots: NOINDEX,
+            title: text("Ваш заказ"),
+            description: text("Ваш заказ"),
+            keywords: text("Ваш заказ"),
+        }
+    });
 }
