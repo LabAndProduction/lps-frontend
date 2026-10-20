@@ -41,6 +41,8 @@ export interface ILocalizationComponentProps {
 }
 export interface IFooterMenuProps {
     menu: ISingleMenu;
+    // links added after the admin's items (in the page's language)
+    extraLinks?: { href: string; title: string }[];
 }
 export interface IHeaderBottomProps {
     settings: ISettings;

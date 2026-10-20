@@ -5,11 +5,15 @@ import { useState } from "react";
 import HeaderMenuCategory from "./headerMenuCategory/HeaderMenuCategory";
 import { IHeaderMenuProps } from "@/types/props/types";
 import Link from "next/link";
+import { Link as LocaleLink } from "@/i18n/routing";
+import { useLocale } from "next-intl";
+import { BLOG_PATH, blogLabel } from "@/lib/blogLink";
 import classNames from "classnames";
 
 export default function HeaderMenu({ categoriesTree, menu, isBtnWithText = true }: IHeaderMenuProps) {
     const [isOpen, setIsOpen] = useState<boolean>(false);
     const { text } = useText();
+    const locale = useLocale();
 
     function closeModal() {
         setIsOpen(false);
@@ -65,6 +69,12 @@ export default function HeaderMenu({ categoriesTree, menu, isBtnWithText = true 
                                         {menuItem.title}
                                     </Link>
                                 ))}
+                                <LocaleLink
+                                    href={BLOG_PATH}
+                                    onClick={() => closeModal()}
+                                    className="h-[var(--btn-height)] flex items-center">
+                                    {blogLabel(locale)}
+                                </LocaleLink>
                             </div>
                         )}
                     </div>
