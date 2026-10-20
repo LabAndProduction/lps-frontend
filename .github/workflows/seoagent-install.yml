@@ -1,0 +1,207 @@
+name: SEO Agent — install adapter
+# Автогенерировано платформой SEO Agent. Задачи (client_payload.task):
+#   install     — пакет @webnumseoagent/next + init --wrap в ветке seoagent/install;
+#   blog-bridge — статьи платформы в собственном блоге сайта (команда blog-bridge) в ветке seoagent/blog-bridge;
+#   update      — новая версия @webnumseoagent/next + обновление блог-роутов и счётчиков в ветке seoagent/update.
+# Дальше: проверка типов (новых ошибок быть не должно) → prebuild + next build. Если всё прошло — пушит ветку,
+# а платформа открывает Pull Request. Запускается только с платформы (repository_dispatch).
+on:
+  repository_dispatch:
+    types: [seoagent-install]
+permissions:
+  contents: write
+concurrency:
+  group: seoagent-${{ github.event.client_payload.task || 'install' }}
+  cancel-in-progress: true
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    env:
+      SA_BASE: "main"
+      SA_RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+    defaults:
+      run:
+        shell: bash
+        working-directory: .
+    steps:
+      - name: Parameters
+        working-directory: .
+        run: |
+          set -euo pipefail
+          P="$GITHUB_EVENT_PATH"
+          get() { jq -r --arg k "$1" '.client_payload[$k] // ""' "$P" | tr -d '\r\n'; }
+          KEY=$(get key); REV=$(get rev); API=$(get api); SITE=$(get site); ATTEMPT=$(get attempt); VER=$(get version); TASK=$(get task)
+          case "$TASK" in
+            blog-bridge) BRANCH="seoagent/blog-bridge" ;;
+            update) BRANCH="seoagent/update" ;;
+            *) TASK=install; BRANCH="seoagent/install" ;;
+          esac
+          [ -n "$KEY" ] && echo "::add-mask::$KEY"
+          [ -n "$REV" ] && echo "::add-mask::$REV"
+          [[ "$API" =~ ^https?://[A-Za-z0-9.:-]+(/[A-Za-z0-9._/-]*)?$ ]] || { echo "Неверный адрес платформы"; exit 1; }
+          [[ "$SITE" =~ ^[0-9a-f-]{36}$ ]] || { echo "Неверный id сайта"; exit 1; }
+          [[ "$ATTEMPT" =~ ^[A-Za-z0-9_-]{1,64}$ ]] || { echo "Неверный id попытки"; exit 1; }
+          [[ "$VER" =~ ^(latest|[0-9]+\.[0-9]+\.[0-9]+([.-][A-Za-z0-9.]+)?)$ ]] || VER=latest
+          [[ "$KEY" =~ ^[A-Za-z0-9_-]+$ && "$REV" =~ ^[A-Za-z0-9_-]*$ ]] || { echo "Неверный ключ сайта"; exit 1; }
+          { echo "SA_KEY=$KEY"; echo "SA_REV=$REV"; echo "SA_API=$API"; echo "SA_SITE=$SITE"
+            echo "SA_ATTEMPT=$ATTEMPT"; echo "SA_VER=$VER"; echo "SA_TASK=$TASK"; echo "SA_BRANCH=$BRANCH"; echo "SA_LOG=$RUNNER_TEMP/sa.log"; echo "SA_STEP_FILE=$RUNNER_TEMP/sa-step"
+            echo "SA_REPORT=$RUNNER_TEMP/sa-report.sh"; } >> "$GITHUB_ENV"
+          cat > "$RUNNER_TEMP/sa-report.sh" <<'SH'
+          #!/usr/bin/env bash
+          # sa-report <status> [json] — сообщить платформе статус установки (ошибка связи не роняет установку).
+          extra="${2:-}"; [ -n "$extra" ] || extra='{}'
+          body=$(jq -n --arg s "$1" --arg a "$SA_ATTEMPT" --arg t "${SA_TASK:-install}" --arg r "$SA_RUN_URL" --argjson x "$extra" '{status:$s, attempt:$a, task:$t, runUrl:$r} + $x')
+          curl -fsS -m 20 --retry 3 -X POST "$SA_API/api/seo/$SA_SITE/install-status" \
+            -H "x-seo-agent-key: $SA_KEY" -H "content-type: application/json" --data "$body" >/dev/null \
+            || echo "::warning::Платформа не приняла статус $1"
+          SH
+          chmod +x "$RUNNER_TEMP/sa-report.sh"
+          echo parameters > "$RUNNER_TEMP/sa-step"
+          SA_KEY=$KEY SA_API=$API SA_SITE=$SITE SA_ATTEMPT=$ATTEMPT SA_TASK=$TASK "$RUNNER_TEMP/sa-report.sh" started
+      - uses: actions/checkout@v4
+        with:
+          ref: "main"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install dependencies
+        run: |
+          set -euo pipefail
+          echo deps > "$SA_STEP_FILE"
+          git rev-parse HEAD > "$RUNNER_TEMP/sa-base-sha"
+          if [ -f pnpm-lock.yaml ]; then PM=pnpm; elif [ -f yarn.lock ]; then PM=yarn; else PM=npm; fi
+          echo "SA_PM=$PM" >> "$GITHUB_ENV"
+          {
+            case "$PM" in
+              pnpm) corepack enable; pnpm install --frozen-lockfile ;;
+              yarn) corepack enable; yarn install --frozen-lockfile ;;
+              *) npm ci ;;
+            esac
+          } 2>&1 | tee -a "$SA_LOG"
+      - name: Typecheck before
+        run: |
+          set -uo pipefail
+          echo typecheck_before > "$SA_STEP_FILE"
+          : > "$RUNNER_TEMP/tsc-before.txt"
+          # Next 15.5+: глобальные PageProps/LayoutProps создаёт next typegen — без него tsc сыплет ложными ошибками.
+          # Номера строк убираем: обёртка сдвигает строки, и старые ошибки не должны считаться новыми (Turnik).
+          if [ -f tsconfig.json ]; then npx --no-install next typegen >/dev/null 2>&1 || true; npx --no-install tsc --noEmit -p . 2>&1 | grep -E 'error TS' | sed -E 's/\([0-9]+,[0-9]+\)//' | sort -u > "$RUNNER_TEMP/tsc-before.txt" || true; fi
+          echo "Ошибок типов до установки: $(wc -l < "$RUNNER_TEMP/tsc-before.txt")"
+      - name: Add package
+        run: |
+          set -euo pipefail
+          echo add_package > "$SA_STEP_FILE"
+          git config user.name "LabAndProduction"
+          git config user.email "342966953+LabAndProduction@users.noreply.github.com"
+          git checkout -B "$SA_BRANCH"
+          {
+            case "$SA_PM" in
+              pnpm) pnpm add "@webnumseoagent/next@$SA_VER" ;;
+              yarn) yarn add "@webnumseoagent/next@$SA_VER" ;;
+              *) npm install "@webnumseoagent/next@$SA_VER" ;;
+            esac
+          } 2>&1 | tee -a "$SA_LOG"
+          git add -A
+          git diff --cached --quiet || git commit -q -m "chore(seo): пакет @webnumseoagent/next@$SA_VER"
+      - name: Run installer
+        run: |
+          set -euo pipefail
+          echo installer > "$SA_STEP_FILE"
+          if [ "$SA_TASK" = "blog-bridge" ]; then
+            set +e
+            npx --no-install @webnumseoagent/next blog-bridge 2>&1 | tee -a "$SA_LOG"
+            RC=${PIPESTATUS[0]}
+            set -e
+            [ "$RC" = "3" ] && echo bridge_unsupported > "$SA_STEP_FILE"
+            [ "$RC" = "0" ] || exit 1
+            MSG="feat(blog): статьи SEO Agent во вкладке «Блог» + оглавление и таблицы в статьях"
+          elif [ "$SA_TASK" = "update" ]; then
+            # Блог-роуты под новую версию (сайту со своим блогом наши страницы не ставятся — адаптер 0.14.1+)
+            # и счётчики (0.12+) без правки CSP — CSP меняет только установка.
+            npx --no-install @webnumseoagent/next blog --force 2>&1 | tee -a "$SA_LOG"
+            if npx --no-install @webnumseoagent/next 2>&1 | grep -q "analytics"; then npx --no-install @webnumseoagent/next analytics --no-csp 2>&1 | tee -a "$SA_LOG"; fi
+            # 0.14.2+: обновить сгенерированные при установке файлы (роут 404 — адрес платформы по умолчанию).
+            if npx --no-install @webnumseoagent/next 2>&1 | grep -q "refresh"; then npx --no-install @webnumseoagent/next refresh 2>&1 | tee -a "$SA_LOG"; fi
+            MSG="chore(seo): блог-роуты под @webnumseoagent/next@$SA_VER"
+          else
+            npx --no-install @webnumseoagent/next init --wrap --site "$SA_SITE" --token "$SA_KEY" --api "$SA_API" --revalidate-secret "$SA_REV" 2>&1 | tee -a "$SA_LOG"
+            MSG="feat(seo): подключение SEO Agent (@webnumseoagent/next init --wrap)"
+          fi
+          git add -A
+          git reset -q -- .env.local 2>/dev/null || true
+          if [ "$SA_TASK" = "update" ]; then
+            # Новая версия пакета уже закоммичена шагом выше — «менять нечего», только если с базы не изменилось ничего.
+            git diff --cached --quiet || git commit -q -m "$MSG"
+            if git diff --quiet "$(cat "$RUNNER_TEMP/sa-base-sha")" HEAD; then echo "SA_NOOP=1" >> "$GITHUB_ENV"; fi
+            exit 0
+          fi
+          if git diff --cached --quiet; then echo "SA_NOOP=1" >> "$GITHUB_ENV"; exit 0; fi
+          git commit -q -m "$MSG"
+      - name: Typecheck after
+        if: env.SA_NOOP != '1'
+        run: |
+          set -uo pipefail
+          echo typecheck_after > "$SA_STEP_FILE"
+          : > "$RUNNER_TEMP/tsc-after.txt"
+          # Next 15.5+: глобальные PageProps/LayoutProps создаёт next typegen — без него tsc сыплет ложными ошибками.
+          # Номера строк убираем: обёртка сдвигает строки, и старые ошибки не должны считаться новыми (Turnik).
+          if [ -f tsconfig.json ]; then npx --no-install next typegen >/dev/null 2>&1 || true; npx --no-install tsc --noEmit -p . 2>&1 | grep -E 'error TS' | sed -E 's/\([0-9]+,[0-9]+\)//' | sort -u > "$RUNNER_TEMP/tsc-after.txt" || true; fi
+          comm -13 "$RUNNER_TEMP/tsc-before.txt" "$RUNNER_TEMP/tsc-after.txt" > "$RUNNER_TEMP/tsc-new.txt"
+          if [ -s "$RUNNER_TEMP/tsc-new.txt" ]; then
+            echo "Установка добавила ошибки типов:" | tee -a "$SA_LOG"
+            head -n 40 "$RUNNER_TEMP/tsc-new.txt" | tee -a "$SA_LOG"
+            exit 1
+          fi
+          echo "Новых ошибок типов нет."
+      - name: Build
+        if: env.SA_NOOP != '1'
+        run: |
+          set -uo pipefail
+          echo build > "$SA_STEP_FILE"
+          # prebuild — как на настоящей сборке сайта (blog-bridge собирает в нём статьи в JSON).
+          sa_build() { npm run --if-present prebuild && npx --no-install next build; }
+          if sa_build 2>&1 | tee -a "$SA_LOG"; then exit 0; fi
+          # Сборка упала. Падает ли она и без установки (например, нет переменных окружения в CI)?
+          git stash -u -q || true
+          git checkout -q "$(cat "$RUNNER_TEMP/sa-base-sha")"
+          if sa_build > "$RUNNER_TEMP/base-build.log" 2>&1; then
+            echo build_regression > "$SA_STEP_FILE"
+          elif [ "$SA_TASK" = "update" ]; then
+            # Сайт не собирается в Actions и без обновления (обычно нет переменных окружения) — проверить здесь
+            # нельзя. Ветку всё равно отправляем: решают проверки PR (сборка Vercel/Cloudflare), без них не сливаем.
+            git checkout -q -f "$SA_BRANCH"
+            echo "SA_UNVERIFIED=1" >> "$GITHUB_ENV"
+            echo "::warning::Сборка в Actions не проверена (падает и без обновления) — решают проверки Pull Request."
+            exit 0
+          else
+            echo build_broken_base > "$SA_STEP_FILE"
+            echo "Сборка падает и без установки адаптера:" | tee -a "$SA_LOG"
+            tail -n 30 "$RUNNER_TEMP/base-build.log" | tee -a "$SA_LOG"
+          fi
+          exit 1
+      - name: Push branch
+        if: env.SA_NOOP != '1'
+        run: |
+          set -euo pipefail
+          echo push > "$SA_STEP_FILE"
+          BASE_SHA=$(cat "$RUNNER_TEMP/sa-base-sha")
+          git push -f origin "HEAD:refs/heads/$SA_BRANCH" 2>&1 | tee -a "$SA_LOG"
+          FILES=$(git diff --name-status "$BASE_SHA" HEAD | head -n 300 | jq -R -s 'split("\n") | map(select(length > 0) | split("\t") | {status: .[0], path: .[-1]})')
+          VERIFIED=true; [ "${SA_UNVERIFIED:-}" = "1" ] && VERIFIED=false
+          "$SA_REPORT" pushed "$(jq -n --arg b "$SA_BRANCH" --arg c "$(git rev-parse HEAD)" --arg base "$BASE_SHA" --argjson f "$FILES" --argjson v "$VERIFIED" '{branch:$b, commit:$c, baseSha:$base, files:$f, buildVerified:$v}')"
+      - name: Report no changes
+        if: env.SA_NOOP == '1'
+        run: '"$SA_REPORT" noop'
+      - name: Report failure
+        if: failure() || cancelled()
+        working-directory: .
+        run: |
+          set -uo pipefail
+          [ -x "${SA_REPORT:-}" ] || exit 0
+          STEP=$(cat "$SA_STEP_FILE" 2>/dev/null || echo unknown)
+          LOG=$(tail -n 80 "$SA_LOG" 2>/dev/null | sed 's/\x1b\[[0-9;]*m//g' | tail -c 6000 || true)
+          [ -n "${SA_KEY:-}" ] && LOG=${LOG//"$SA_KEY"/***}
+          [ -n "${SA_REV:-}" ] && LOG=${LOG//"$SA_REV"/***}
+          CODE=failed; [ "${{ job.status }}" = "cancelled" ] && CODE=cancelled
+          "$SA_REPORT" failed "$(jq -n --arg s "$STEP" --arg c "$CODE" --arg l "$LOG" '{step:$s, code:$c, log:$l}')"
