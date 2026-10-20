@@ -1,3 +1,4 @@
+import { seoMeta } from "@webnumseoagent/next";
 import { getTexts } from "@/api/textsApi";
 import PageHeader from "@/components/ui/PageHeader";
 import { Metadata } from "next";
@@ -34,25 +35,30 @@ export default async function CartPage() {
     );
 }
 
-export async function generateMetadata(): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
     const { text } = await getTexts();
 
     const pageUrl = await getFullUrl("/cart");
     const imageUrl = await getFullUrl("/images/logo.png", false);
-    return {
-        robots: NOINDEX,
-        title: text("Корзина"),
-        description: text("Корзина"),
-        keywords: text("Корзина"),
-        openGraph: {
+    return seoMeta({
+        route: "/cart",
+        locale: (await params).locale,
+
+        fallback: {
+            robots: NOINDEX,
             title: text("Корзина"),
-            url: pageUrl,
-            images: [
-                {
-                    url: imageUrl,
-                },
-            ],
-            type: "website",
-        },
-    };
+            description: text("Корзина"),
+            keywords: text("Корзина"),
+            openGraph: {
+                title: text("Корзина"),
+                url: pageUrl,
+                images: [
+                    {
+                        url: imageUrl,
+                    },
+                ],
+                type: "website",
+            },
+        }
+    });
 }

@@ -28,6 +28,7 @@ export interface ICategoryPageSearchParams {
 }
 
 export interface ISearchPageParams {
+    params: Promise<{ locale: string }>;
     searchParams: Promise<{
         keyword: string;
         page?: string;

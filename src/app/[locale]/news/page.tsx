@@ -1,3 +1,4 @@
+import { seoMeta } from "@webnumseoagent/next";
 import { Metadata } from "next";
 import { getTexts } from "@/api/textsApi";
 import PageHeader from "@/components/ui/PageHeader";
@@ -57,21 +58,26 @@ export async function generateMetadata(): Promise<Metadata> {
     const title = text("Новости");
     const description = text("Новости");
 
-    return {
-        alternates: pageAlternates(locale, samePaths("/news")),
-        title: title,
-        description: description,
+    return seoMeta({
+        route: "/news",
+        locale,
 
-        openGraph: {
+        fallback: {
+            alternates: pageAlternates(locale, samePaths("/news")),
             title: title,
             description: description,
-            url: pageUrl,
-            images: [
-                {
-                    url: imageUrl,
-                },
-            ],
-            type: "website",
-        },
-    };
+
+            openGraph: {
+                title: title,
+                description: description,
+                url: pageUrl,
+                images: [
+                    {
+                        url: imageUrl,
+                    },
+                ],
+                type: "website",
+            },
+        }
+    });
 }

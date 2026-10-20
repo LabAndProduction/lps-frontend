@@ -1,3 +1,4 @@
+import { seoMeta } from "@webnumseoagent/next";
 import { Metadata } from "next";
 import { getTexts } from "@/api/textsApi";
 import PageHeader from "@/components/ui/PageHeader";
@@ -37,26 +38,34 @@ export default async function SearchPage({ searchParams }: ISearchPageParams) {
     );
 }
 
-export async function generateMetadata({ searchParams }: ISearchPageParams): Promise<Metadata> {
+export async function generateMetadata({
+    params,
+    searchParams
+}: ISearchPageParams): Promise<Metadata> {
     const { keyword } = await searchParams;
     const { text } = await getTexts();
 
     const pageUrl = await getFullUrl(`/search/?keyword=${keyword}`);
     const imageUrl = await getFullUrl("/images/logo.png", false);
-    return {
-        robots: NOINDEX,
-        title: text("Поиск"),
-        description: text("Поиск"),
-        keywords: text("Поиск"),
-        openGraph: {
+    return seoMeta({
+        route: "/search",
+        locale: (await params).locale,
+
+        fallback: {
+            robots: NOINDEX,
             title: text("Поиск"),
-            url: pageUrl,
-            images: [
-                {
-                    url: imageUrl,
-                },
-            ],
-            type: "website",
-        },
-    };
+            description: text("Поиск"),
+            keywords: text("Поиск"),
+            openGraph: {
+                title: text("Поиск"),
+                url: pageUrl,
+                images: [
+                    {
+                        url: imageUrl,
+                    },
+                ],
+                type: "website",
+            },
+        }
+    });
 }

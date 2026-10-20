@@ -1,3 +1,6 @@
+import { SeoAnalytics } from "@webnumseoagent/next/analytics";
+import { SeoJsonLd } from "@webnumseoagent/next/jsonld";
+import { seoMeta } from "@webnumseoagent/next";
 import { getMessages } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { Montserrat } from "next/font/google";
@@ -27,15 +30,22 @@ import { CookiesProvider } from "next-client-cookies/server";
 import { ContextProviders } from "@/components/layout/ContextProviders";
 import { Locale } from "@/types/api/api.types";
 import BuyModal from "../../components/ui/modals/buyModal/BuyModal";
-import { Metadata } from "next";
 import { SITE_NAME } from "@/lib/seoTexts";
 import { getSettings } from "@/api/settingsApi";
 import { JsonLd, organizationJsonLd } from "@/lib/jsonLd";
+import { SITE_URL } from "@/lib/seo";
 
-// every page's title ends with " - LPS" (the home page sets its full title itself)
-export const metadata: Metadata = {
-    title: { template: `%s - ${SITE_NAME}`, default: SITE_NAME },
-};
+export async function generateMetadata() {
+    return seoMeta({
+        route: "/",
+
+        fallback: {
+            // relative addresses in metadata (the blog's canonical) resolve against the site
+            metadataBase: new URL(SITE_URL),
+            title: { template: `%s - ${SITE_NAME}`, default: SITE_NAME },
+        }
+    });
+}
 
 const montserrat = Montserrat({
     subsets: ["latin"],
@@ -84,7 +94,7 @@ export default async function RootLayout({ children, params }: Readonly<IRootLay
                     </CookiesProvider>
                 </NextIntlClientProvider>
                 <Scripts />
-            </body>
+                <SeoJsonLd route="/" analytics={false} /><SeoAnalytics loader /></body>
         </html>
     );
 }

@@ -1,3 +1,4 @@
+import { seoMeta } from "@webnumseoagent/next";
 import { Metadata } from "next";
 import { getCategory } from "@/api/categoriesApi";
 import { getProducts } from "@/api/productsApi";
@@ -90,21 +91,26 @@ export async function generateMetadata({ params }: ICategoryPageParams): Promise
     const title = filled(seo_title, name) || tx.category(name);
     const description = filled(meta_description) || tx.categoryDescription(name);
 
-    return {
-        alternates: pageAlternates(locale, entityPaths("/categories", categoryId, category.data.localization)),
-        title,
-        description,
-        keywords: category.data.meta_keywords,
-        openGraph: {
+    return seoMeta({
+        route: `/categories/${(await params).id}`,
+        locale,
+
+        fallback: {
+            alternates: pageAlternates(locale, entityPaths("/categories", categoryId, category.data.localization)),
             title,
             description,
-            url: pageUrl,
-            images: [
-                {
-                    url: category.data.img,
-                },
-            ],
-            type: "website",
-        },
-    };
+            keywords: category.data.meta_keywords,
+            openGraph: {
+                title,
+                description,
+                url: pageUrl,
+                images: [
+                    {
+                        url: category.data.img,
+                    },
+                ],
+                type: "website",
+            },
+        }
+    });
 }
