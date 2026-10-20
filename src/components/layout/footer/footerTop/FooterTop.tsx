@@ -7,6 +7,7 @@ import NextImage from "@/components/ui/NextImage";
 import Socials from "@/components/ui/Socials";
 import { phoneFormatter } from "@/utils/phoneFormatter";
 import { getLocaleTs } from "@/utils/getLocaleTs";
+import { BLOG_PATH, blogLabel } from "@/lib/blogLink";
 
 export default async function FooterTop() {
     const menu5 = await getMenu({ menuId: 5 });
@@ -36,7 +37,7 @@ export default async function FooterTop() {
 
                 {/* <div className="grid grid-cols-5 gap-4"> */}
                 <div className="flex sm:flex-row flex-col sm:items-start items-center flex-wrap justify-between gap-6 w-full">
-                    <FooterMenu menu={menu3} />
+                    <FooterMenu menu={menu3} extraLinks={[{ href: BLOG_PATH, title: blogLabel(locale) }]} />
                     <FooterMenu menu={menu4} />
                     <FooterMenu menu={menu5} />
                     <div className="footer-menu">
