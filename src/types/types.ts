@@ -36,6 +36,7 @@ export type SpritesName =
     | "facebook"
     | "youtube"
     | "instagram"
+    | "linkedin"
     | "column"
     | "row"
     | "trash"
