@@ -1,0 +1,18 @@
+{
+  "assets": [
+    "public/seoagent-blog/mernaya-posuda-klassa-a-i-b/c24831c78f000bfd.webp"
+  ],
+  "contentHash": "sha256:29e0f34aa0692e0672a0a59e92f173c8f2e35980c8ef81703abaeed4ffceb922",
+  "criticScore": 79,
+  "deliveredRef": "mernaya-posuda-klassa-a-i-b",
+  "firstDeliveredAt": "2026-10-21T07:07:11.549Z",
+  "generatedAt": "2026-10-21T07:07:11.549Z",
+  "id": "d92de36e-20db-4804-b407-ba7f71d58705",
+  "modifiedAt": "2026-10-21T07:07:11.549Z",
+  "planId": "b5ba4b1e-3ea1-4fcc-b1ef-811beb447c7a",
+  "revisionCount": 1,
+  "schema": "seoagent.blog/v1",
+  "serializer": "blogfs@1.0.0",
+  "source": "auto",
+  "textHash": "sha256:5c1675248a87e2aad91ce368fff861d8691bbf17203d80d4bc242f79fae516a5"
+}

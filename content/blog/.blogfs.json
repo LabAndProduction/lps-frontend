@@ -1,0 +1,134 @@
+{
+  "authors": [
+    {
+      "bio": "Lab & Production Solutions поставляет аналитическое и лабораторное оборудование, посуду, реактивы и расходные материалы ведущих европейских производителей. Оснащает лаборатории промышленных предприятий, нефтегазового комплекса, здравоохранения, пищевой и фармацевтической отрасли, научных и образовательных учреждений. Берёт на себя монтаж, пусконаладку, обучение персонала и сервисное обслуживание.",
+      "experience": "Поставщик аналитического и лабораторного оборудования в Центральной Азии и СНГ: подбор, поставка, монтаж, пусконаладка, гарантийный и постгарантийный сервис.",
+      "i18n": {
+        "en": {
+          "bio": "Lab & Production Solutions supplies analytical and laboratory equipment, glassware, reagents and consumables from leading European manufacturers. The company equips laboratories in industry, oil and gas, healthcare, food and pharmaceutical production, research and education, and takes care of installation, commissioning, staff training and service.",
+          "experience": "Supplier of analytical and laboratory equipment across Central Asia and the CIS: selection, supply, installation, commissioning, warranty and post-warranty service.",
+          "name": "Lab & Production Solutions"
+        }
+      },
+      "image": "https://lps.uz/seoagent-blog/_authors/lab-production-solutions-46f636ccd916.png",
+      "kind": "organization",
+      "name": "Lab & Production Solutions",
+      "sameAs": [
+        "https://t.me/lpsuzbekistan",
+        "https://www.facebook.com/LabandProductionSolutions/",
+        "https://linkedin.com/company/lab-production-solutions/"
+      ],
+      "slug": "lab-production-solutions",
+      "url": "https://lps.uz/about/"
+    }
+  ],
+  "bodyFormat": "html",
+  "categories": [
+    {
+      "description": "Как выбрать мерную и химическую посуду из боросиликатного стекла: колбы, пипетки, бюретки, цилиндры. Классы точности, уход и правильное использование в лаборатории.",
+      "i18n": {
+        "en": {
+          "description": "How to choose volumetric and borosilicate glassware: flasks, pipettes, burettes and cylinders, accuracy classes and care.",
+          "name": "Labware"
+        }
+      },
+      "name": "Лабораторная посуда",
+      "position": 0,
+      "slug": "laboratornaya-posuda"
+    },
+    {
+      "description": "Аналитические, прецизионные и лабораторные весы: как выбрать по точности и задаче, где установить, как калибровать и поверять, чтобы результаты были точными.",
+      "i18n": {
+        "en": {
+          "description": "Analytical, precision and laboratory balances: choosing by readability and task, installation, calibration and verification.",
+          "name": "Weighing"
+        }
+      },
+      "name": "Весы и взвешивание",
+      "position": 1,
+      "slug": "vesy"
+    },
+    {
+      "description": "Жидкостная и газовая хроматография на практике: выбор колонок и расходных материалов, подготовка проб, обслуживание хроматографов и типичные ошибки анализа.",
+      "i18n": {
+        "en": {
+          "description": "HPLC and GC in practice: columns and consumables, sample preparation, instrument care and common analysis errors.",
+          "name": "Chromatography"
+        }
+      },
+      "name": "Хроматография",
+      "position": 2,
+      "slug": "hromatografiya"
+    },
+    {
+      "description": "Какая вода нужна лаборатории: дистиллированная, деионизированная, ультрачистая. Системы очистки воды, картриджи и контроль качества воды для анализов.",
+      "i18n": {
+        "en": {
+          "description": "Which water a laboratory needs: distilled, deionised, ultrapure. Water purification systems, cartridges and quality control.",
+          "name": "Lab water"
+        }
+      },
+      "name": "Очистка воды",
+      "position": 3,
+      "slug": "ochistka-vody"
+    },
+    {
+      "description": "Как оснастить лабораторию с нуля или обновить её: какое общелабораторное и аналитическое оборудование нужно, как составить перечень закупки и рассчитать бюджет.",
+      "i18n": {
+        "en": {
+          "description": "Equipping a laboratory from scratch or upgrading it: the general and analytical equipment you need, the purchase list and the budget.",
+          "name": "Lab setup"
+        }
+      },
+      "name": "Оснащение лаборатории",
+      "position": 4,
+      "slug": "osnashchenie-laboratorii"
+    },
+    {
+      "description": "Стандартные образцы, буферные растворы и реактивы: как выбрать, хранить и применять, чтобы результаты анализов были достоверными и прослеживаемыми.",
+      "i18n": {
+        "en": {
+          "description": "Reference materials, buffer solutions and reagents: choosing, storing and using them for reliable, traceable results.",
+          "name": "Standards and reagents"
+        }
+      },
+      "name": "Стандарты и реактивы",
+      "position": 5,
+      "slug": "standarty-i-reaktivy"
+    },
+    {
+      "description": "Обслуживание, ремонт и калибровка лабораторного оборудования: как продлить срок службы приборов, когда нужна поверка и что делать, если оборудование работает неточно.",
+      "i18n": {
+        "en": {
+          "description": "Maintenance, repair and calibration of laboratory equipment: how to extend instrument life, when verification is due and what to do when results drift.",
+          "name": "Service and calibration"
+        }
+      },
+      "name": "Сервис и калибровка",
+      "position": 6,
+      "slug": "servis"
+    }
+  ],
+  "defaultLocale": "ru",
+  "locales": [
+    "ru",
+    "en"
+  ],
+  "publisher": {
+    "name": "LPS UZ",
+    "url": "https://lps.uz"
+  },
+  "schema": "seoagent.blog/v1",
+  "siteUrl": "https://lps.uz",
+  "theme": {
+    "accent": "#00569d",
+    "border": "rgb(255, 255, 255)",
+    "muted": "rgb(134, 134, 134)",
+    "relatedTitle": {
+      "en": "Related articles",
+      "ru": "Читайте также"
+    }
+  },
+  "updatedAt": "2026-10-21T07:07:11.549Z",
+  "urlPrefix": ""
+}
