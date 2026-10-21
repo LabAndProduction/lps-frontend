@@ -46,10 +46,24 @@ export const fetchMutate = async ({
         });
 };
 
+// A network failure (DNS "EAI_AGAIN", a dropped connection) is retried a couple of times:
+// while pages are prerendered at build the server sends many requests to the API at once
+// and its resolver can answer "try again", which used to fail the whole build.
+const fetchWithRetry = async (input: string, init: RequestInit, tries = 3): Promise<Response> => {
+    for (let attempt = 1; ; attempt++) {
+        try {
+            return await fetch(input, init);
+        } catch (err) {
+            if (attempt >= tries) throw err;
+            await new Promise((resolve) => setTimeout(resolve, 500 * attempt));
+        }
+    }
+};
+
 export const fetchGET = async ({ url, tag, token, clientLocale }: IFetchGetParams) => {
     const locale = clientLocale ? clientLocale : await getLocaleTs();
 
-    return await fetch(`${API_URL}${url}`, {
+    return await fetchWithRetry(`${API_URL}${url}`, {
         next: { tags: [tag] },
         cache: "no-cache",
         headers: token
