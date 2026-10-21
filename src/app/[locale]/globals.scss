@@ -805,3 +805,72 @@ textarea {
 .sa-article-wrap {
     --sa-border: #f5f5f8 !important;
 }
+
+/* SEO Agent blog list in the site's style: the header's container, the page title of the
+   catalog, button-like category chips and white cards like the product cards (24px
+   corners, no frame, no shadow, no lift), three a row on desktops. Scoped under
+   .sa-blog-wrap / .sa-article-wrap so it wins over the adapter's own <style>. */
+body .sa-blog-wrap {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: none;
+    padding: 1.25rem 1rem 3.75rem;
+    color: var(--color-primary);
+}
+// phones: the fixed header covers the top, as on the catalog's page header (max-sm:pt-18)
+@media (width < 40rem) { body .sa-blog-wrap { padding-top: 4.5rem; } }
+@media (width >= 40rem) { body .sa-blog-wrap { max-width: 40rem; } }
+@media (width >= 48rem) { body .sa-blog-wrap { max-width: 48rem; } }
+@media (width >= 64rem) { body .sa-blog-wrap { max-width: 64rem; } }
+@media (width >= 80rem) { body .sa-blog-wrap { max-width: 80rem; } }
+@media (width >= 96rem) { body .sa-blog-wrap { max-width: 96rem; } }
+
+.sa-blog-wrap .sa-blog-h1 {
+    margin: 0 0 1.25rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--color-primary);
+}
+@media (width >= 64rem) { .sa-blog-wrap .sa-blog-h1 { font-size: 2rem; } }
+
+.sa-blog-wrap .sa-cats { gap: 0.5rem; margin: 0 0 1.5rem; }
+.sa-blog-wrap .sa-cats a {
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--color-white);
+    border-radius: 12px;
+    background: var(--color-white);
+    color: var(--color-primary);
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: color 0.3s, background-color 0.3s, border-color 0.3s;
+}
+.sa-blog-wrap .sa-cats a:hover { color: var(--color-main); }
+.sa-blog-wrap .sa-cats a.sa-cat-on {
+    border-color: var(--color-main);
+    background: var(--color-main);
+    color: var(--color-white);
+}
+
+.sa-blog-wrap .sa-blog-grid { gap: 1.25rem; grid-template-columns: 1fr; }
+@media (width >= 40rem) { .sa-blog-wrap .sa-blog-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (width >= 64rem) { .sa-blog-wrap .sa-blog-grid { grid-template-columns: repeat(3, 1fr); } }
+
+:is(.sa-blog-wrap, .sa-article-wrap) .sa-blog-card {
+    border: 0;
+    border-radius: 24px;
+    background: var(--color-white);
+    transition: none;
+}
+:is(.sa-blog-wrap, .sa-article-wrap) .sa-blog-card:hover { transform: none; box-shadow: none; }
+:is(.sa-blog-wrap, .sa-article-wrap) .sa-blog-card .sa-cb { padding: 1.25rem 1.25rem 1.5rem; gap: 0.5rem; }
+:is(.sa-blog-wrap, .sa-article-wrap) .sa-blog-card :is(h2, h3) {
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.35;
+    color: var(--color-primary);
+    transition: color 0.3s;
+}
+:is(.sa-blog-wrap, .sa-article-wrap) .sa-blog-card:hover :is(h2, h3) { color: var(--color-main); }
+:is(.sa-blog-wrap, .sa-article-wrap) .sa-blog-card p { font-size: 0.875rem; color: var(--color-secondary); }
+:is(.sa-blog-wrap, .sa-article-wrap) .sa-card-cat { color: var(--color-main); }
