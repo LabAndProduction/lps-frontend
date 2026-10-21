@@ -798,12 +798,12 @@ textarea {
     }
 }
 
-/* SEO Agent blog: table borders and other lines (contents, related posts, dividers) in the
-   site's light grey. The platform's theme sets --sa-border inline (white), so it is
+/* SEO Agent blog: table borders and other lines (contents, related posts, dividers) in
+   #E6E8EB. The platform's theme sets --sa-border inline (white), so it is
    overridden here with !important. */
 .sa-blog-wrap,
 .sa-article-wrap {
-    --sa-border: #f5f5f8 !important;
+    --sa-border: #e6e8eb !important;
 }
 
 /* SEO Agent blog list in the site's style: the header's container, the page title of the
