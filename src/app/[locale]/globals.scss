@@ -797,3 +797,11 @@ textarea {
         }
     }
 }
+
+/* SEO Agent blog: table borders and other lines (contents, related posts, dividers) in the
+   site's light grey. The platform's theme sets --sa-border inline (white), so it is
+   overridden here with !important. */
+.sa-blog-wrap,
+.sa-article-wrap {
+    --sa-border: #f5f5f8 !important;
+}
