@@ -5,6 +5,7 @@ import { getTexts } from "@/api/textsApi";
 import Link from "next/link";
 import NextImage from "@/components/ui/NextImage";
 import Socials from "@/components/ui/Socials";
+import RatingCard from "@/components/reviews/RatingCard";
 import { phoneFormatter } from "@/utils/phoneFormatter";
 import { getLocaleTs } from "@/utils/getLocaleTs";
 import { BLOG_PATH, blogLabel } from "@/lib/blogLink";
@@ -33,6 +34,8 @@ export default async function FooterTop() {
                     </Link>
 
                     <Socials settings={settings} />
+
+                    <RatingCard locale={locale} />
                 </div>
 
                 {/* <div className="grid grid-cols-5 gap-4"> */}
