@@ -1,0 +1,46 @@
+{
+  "author": "lab-production-solutions",
+  "bodyFormat": "html",
+  "category": "laboratornaya-posuda",
+  "coverImage": "/seoagent-blog/borosilikatnoe-steklo-3-3/932e78340c879ea5.webp",
+  "defaultLocale": "ru",
+  "features": [
+    "local-assets"
+  ],
+  "focusKeyword": "боросиликатное стекло 3.3",
+  "focusKeywords": [
+    "боросиликатное стекло 3.3",
+    "лабораторная посуда из боросиликатного стекла",
+    "термостойкость боросиликатного стекла",
+    "маркировка стекла 3.3",
+    "проверка боросиликатного стекла при приёмке",
+    "отжиг стеклянной посуды",
+    "химическая посуда",
+    "натрий-кальциевое стекло",
+    "автоклавирование стеклянной посуды",
+    "уход за лабораторной посудой",
+    "шлифы стеклянной посуды",
+    "термошок стекла",
+    "сколько посуды нужно лаборатории",
+    "мерная посуда точность измерений"
+  ],
+  "locales": {
+    "en": {
+      "body": "body.en.html",
+      "excerpt": "Borosilicate glass 3.3: composition, markings, receiving inspection, comparison with soda-lime glass, calculating your glassware inventory, and care rules for laboratory glassware.",
+      "metaTitle": "Borosilicate Glass 3.3 – Properties, Verification, and Care",
+      "title": "Borosilicate Glass 3.3 – Why Labware Is Made From It"
+    },
+    "ru": {
+      "body": "body.ru.html",
+      "excerpt": "Боросиликатное стекло 3.3: состав, маркировка, проверка при приёмке, сравнение с натрий-кальциевым, расчёт парка посуды и правила ухода за лабораторной посудой.",
+      "metaTitle": "Боросиликатное стекло 3.3 - Свойства, проверка и уход",
+      "title": "Боросиликатное стекло 3.3 - Почему лабораторная посуда делается из него"
+    }
+  },
+  "modifiedAt": "2026-10-22T08:45:35.616Z",
+  "publishedAt": "2026-10-22T08:45:35.616Z",
+  "schema": "seoagent.blog/v1",
+  "slug": "borosilikatnoe-steklo-3-3",
+  "status": "published"
+}

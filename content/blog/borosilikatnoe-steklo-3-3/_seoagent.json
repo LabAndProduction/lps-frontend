@@ -1,0 +1,19 @@
+{
+  "assets": [
+    "public/seoagent-blog/borosilikatnoe-steklo-3-3/932e78340c879ea5.webp",
+    "public/seoagent-blog/borosilikatnoe-steklo-3-3/2f2194fc907fba80.webp"
+  ],
+  "contentHash": "sha256:c0b3bce058898ec088b88ef0015390a7299babdca4e817a01f9fd1c966babad8",
+  "criticScore": 80,
+  "deliveredRef": "borosilikatnoe-steklo-3-3",
+  "firstDeliveredAt": "2026-10-22T08:45:35.616Z",
+  "generatedAt": "2026-10-22T08:45:35.616Z",
+  "id": "e19f43d0-c80d-441a-9ce1-386212c14edb",
+  "modifiedAt": "2026-10-22T08:45:35.616Z",
+  "planId": "22dd67e9-34bc-4bc3-a5a3-4e008d961ab4",
+  "revisionCount": 1,
+  "schema": "seoagent.blog/v1",
+  "serializer": "blogfs@1.0.0",
+  "source": "auto",
+  "textHash": "sha256:c230276383b146b0016ce188754865d8b56648faba22fcd0dda9ab42be1331aa"
+}
