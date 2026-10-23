@@ -1,0 +1,52 @@
+{
+  "author": "lab-production-solutions",
+  "bodyFormat": "html",
+  "category": "vesy",
+  "coverImage": "/seoagent-blog/ezhednevnaya-proverka-laboratornyh-vesov/b54732eceb815747.webp",
+  "defaultLocale": "ru",
+  "features": [
+    "local-assets"
+  ],
+  "focusKeyword": "ежедневная проверка лабораторных весов",
+  "focusKeywords": [
+    "ежедневная проверка лабораторных весов",
+    "контроль весов",
+    "проверка аналитических весов",
+    "проверка прецизионных весов",
+    "калибровка весов",
+    "поверка лабораторных весов",
+    "журнал проверки весов",
+    "контрольная гиря для весов",
+    "дрейф нуля весов",
+    "чувствительность весов",
+    "работоспособность весов",
+    "внутренний контроль весов",
+    "оператор лаборатории",
+    "внеплановая калибровка весов",
+    "сервисный инженер весов",
+    "метрологические характеристики весов",
+    "повторяемость взвешивания",
+    "допуск к работе на весах",
+    "ежедневный контроль оборудования",
+    "проверка технических весов"
+  ],
+  "locales": {
+    "en": {
+      "body": "body.en.html",
+      "excerpt": "Daily verification of laboratory balances takes 5–10 minutes: checking zero, repeatability, and sensitivity, keeping a balance log, granting work approval, and actions on deviation.",
+      "metaTitle": "Daily Verification of Laboratory Balances - How to Maintain Control",
+      "title": "Daily Verification of Laboratory Balances"
+    },
+    "ru": {
+      "body": "body.ru.html",
+      "excerpt": "Ежедневная проверка лабораторных весов занимает 5–10 минут: контроль нуля, повторяемости и чувствительности, журнал проверки весов, допуск к работе и действия при отклоне",
+      "metaTitle": "Ежедневная проверка лабораторных весов - Как вести контроль",
+      "title": "Ежедневная проверка лабораторных весов"
+    }
+  },
+  "modifiedAt": "2026-10-23T10:49:13.291Z",
+  "publishedAt": "2026-10-23T10:49:13.291Z",
+  "schema": "seoagent.blog/v1",
+  "slug": "ezhednevnaya-proverka-laboratornyh-vesov",
+  "status": "published"
+}

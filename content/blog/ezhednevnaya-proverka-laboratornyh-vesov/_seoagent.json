@@ -1,0 +1,19 @@
+{
+  "assets": [
+    "public/seoagent-blog/ezhednevnaya-proverka-laboratornyh-vesov/b54732eceb815747.webp",
+    "public/seoagent-blog/ezhednevnaya-proverka-laboratornyh-vesov/8c20e913ebf43f6a.webp"
+  ],
+  "contentHash": "sha256:fd0bc8d398308ff758f79aec8de43c76b7b4e26b16a13403a82ea659b887d2a4",
+  "criticScore": 76,
+  "deliveredRef": "ezhednevnaya-proverka-laboratornyh-vesov",
+  "firstDeliveredAt": "2026-10-23T10:49:13.291Z",
+  "generatedAt": "2026-10-23T10:49:13.291Z",
+  "id": "32606eb7-d4fd-4f5e-9652-1478c3aea1db",
+  "modifiedAt": "2026-10-23T10:49:13.291Z",
+  "planId": "9b717682-5dff-4a1a-b827-f371088d712c",
+  "revisionCount": 0,
+  "schema": "seoagent.blog/v1",
+  "serializer": "blogfs@1.0.0",
+  "source": "auto",
+  "textHash": "sha256:f8eb26b6d99681147e5b7f453498b1e2d5bc6b0c2cbbf421b627906aaf1ca793"
+}
