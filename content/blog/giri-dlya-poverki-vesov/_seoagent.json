@@ -1,0 +1,19 @@
+{
+  "assets": [
+    "public/seoagent-blog/giri-dlya-poverki-vesov/24a3de906ba40dde.webp",
+    "public/seoagent-blog/giri-dlya-poverki-vesov/fff15dfd8141d201.webp"
+  ],
+  "contentHash": "sha256:0d417763dd289c07bc5358ec15c623df18aef4397867e512aa295b435d046ed8",
+  "criticScore": 83,
+  "deliveredRef": "giri-dlya-poverki-vesov",
+  "firstDeliveredAt": "2026-10-23T11:33:12.975Z",
+  "generatedAt": "2026-10-23T11:33:12.975Z",
+  "id": "746daf1d-4fbf-438c-875e-8ab47406d0ef",
+  "modifiedAt": "2026-10-23T11:33:12.975Z",
+  "planId": "c4281462-3b1d-4ed9-8acf-508af4cbbe3a",
+  "revisionCount": 0,
+  "schema": "seoagent.blog/v1",
+  "serializer": "blogfs@1.0.0",
+  "source": "auto",
+  "textHash": "sha256:81a2d22692b4a4985ed1d4062a35abea2c5c9ef132b2ea38725617f5d1ab00e1"
+}

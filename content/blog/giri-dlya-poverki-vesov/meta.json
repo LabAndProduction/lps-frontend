@@ -1,0 +1,47 @@
+{
+  "author": "lab-production-solutions",
+  "bodyFormat": "html",
+  "category": "vesy",
+  "coverImage": "/seoagent-blog/giri-dlya-poverki-vesov/24a3de906ba40dde.webp",
+  "defaultLocale": "ru",
+  "features": [
+    "local-assets"
+  ],
+  "focusKeyword": "гири для поверки весов",
+  "focusKeywords": [
+    "гири для поверки весов",
+    "классы точности гирь",
+    "поверочные гири",
+    "калибровочные гири",
+    "OIML R 111",
+    "ГОСТ OIML R 111",
+    "гири E1 E2 F1 F2 M1 M2 M3",
+    "поверка лабораторных весов",
+    "эталонные меры массы",
+    "подбор гирь по классу точности",
+    "допускаемая погрешность гири",
+    "гири для аналитических весов",
+    "гири для технических весов",
+    "свидетельство о поверке гирь",
+    "рабочие гири"
+  ],
+  "locales": {
+    "en": {
+      "body": "body.en.html",
+      "excerpt": "Calibration weights for scales: OIML R 111 and GOST accuracy classes, how to choose a weight for analytical, precision, and industrial scales based on maximum permissible error.",
+      "metaTitle": "Calibration Weights for Scales - Accuracy Classes and Selection",
+      "title": "Calibration Weights for Scales and Their Accuracy Classes"
+    },
+    "ru": {
+      "body": "body.ru.html",
+      "excerpt": "Гири для поверки весов: классы точности OIML R 111 и ГОСТ, как подобрать гирю под аналитические, прецизионные и технические весы по допускаемой погрешности.",
+      "metaTitle": "Гири для поверки весов - Классы точности и подбор",
+      "title": "Гири для поверки весов и их классы точности"
+    }
+  },
+  "modifiedAt": "2026-10-23T11:33:12.975Z",
+  "publishedAt": "2026-10-23T11:33:12.975Z",
+  "schema": "seoagent.blog/v1",
+  "slug": "giri-dlya-poverki-vesov",
+  "status": "published"
+}
