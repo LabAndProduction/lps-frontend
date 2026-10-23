@@ -1,0 +1,19 @@
+{
+  "assets": [
+    "public/seoagent-blog/kak-vybrat-pipetku-dlya-laboratorii/6f3b40fccef6ff71.webp",
+    "public/seoagent-blog/kak-vybrat-pipetku-dlya-laboratorii/182563645c8032ea.webp"
+  ],
+  "contentHash": "sha256:8df0ead449b23b4acc134d7da1c23971f41e8e96028046957d2f001fc435e400",
+  "criticScore": 75,
+  "deliveredRef": "kak-vybrat-pipetku-dlya-laboratorii",
+  "firstDeliveredAt": "2026-10-23T19:08:10.123Z",
+  "generatedAt": "2026-10-23T19:08:10.123Z",
+  "id": "05d8d6f2-0074-4c8a-8ca2-5da6ac77aa94",
+  "modifiedAt": "2026-10-23T19:08:10.123Z",
+  "planId": "ef92c6a5-e554-4178-bf95-62e4d33822ee",
+  "revisionCount": 1,
+  "schema": "seoagent.blog/v1",
+  "serializer": "blogfs@1.0.0",
+  "source": "auto",
+  "textHash": "sha256:44317b5b4091a2536ce2d534f5d09512ef3ff77c6f6f428cc265a3269b48b64c"
+}

@@ -1,0 +1,46 @@
+{
+  "author": "lab-production-solutions",
+  "bodyFormat": "html",
+  "coverImage": "/seoagent-blog/kak-vybrat-pipetku-dlya-laboratorii/6f3b40fccef6ff71.webp",
+  "defaultLocale": "ru",
+  "features": [
+    "local-assets"
+  ],
+  "focusKeyword": "как выбрать пипетку для лаборатории",
+  "focusKeywords": [
+    "как выбрать пипетку для лаборатории",
+    "мерная пипетка",
+    "градуированная пипетка",
+    "серологическая пипетка",
+    "класс точности пипетки",
+    "лабораторная посуда",
+    "пипетка на полный объём",
+    "титрование пипеткой",
+    "стерильные посевы",
+    "серийные разведения",
+    "выбор лабораторной пипетки",
+    "точность дозирования",
+    "ГОСТ ISO 648",
+    "покупка пипеток для лаборатории",
+    "микробиология пипетки"
+  ],
+  "locales": {
+    "en": {
+      "body": "body.en.html",
+      "excerpt": "How to choose a pipette for your lab: we break down volumetric, graduated, and serological pipettes, accuracy classes, materials, and handling rules for a smart purchase.",
+      "metaTitle": "How to Choose a Laboratory Pipette: Guide to Types and Accuracy",
+      "title": "How to Choose a Laboratory Pipette: Volumetric, Graduated, or Serological"
+    },
+    "ru": {
+      "body": "body.ru.html",
+      "excerpt": "Как выбрать пипетку для лаборатории: разбираем мерные, градуированные и серологические пипетки, классы точности, материал и правила работы для верной закупки.",
+      "metaTitle": "Как выбрать пипетку для лаборатории - Гид по типам и точност",
+      "title": "Как выбрать пипетку для лаборатории — мерную, градуированную или серологическую"
+    }
+  },
+  "modifiedAt": "2026-10-23T19:08:10.123Z",
+  "publishedAt": "2026-10-23T19:08:10.123Z",
+  "schema": "seoagent.blog/v1",
+  "slug": "kak-vybrat-pipetku-dlya-laboratorii",
+  "status": "published"
+}
