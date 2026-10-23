@@ -1,0 +1,19 @@
+{
+  "assets": [
+    "public/seoagent-blog/dlya-chego-nuzhny-kolba-erlenmeyera/7050cdaa4b9bff7a.webp",
+    "public/seoagent-blog/dlya-chego-nuzhny-kolba-erlenmeyera/d58b0fd94bfe69b6.webp"
+  ],
+  "contentHash": "sha256:dda041d1141c6388474b48fe4183ea5a2f64a7ca1c3f26506d8ef2cd3d5d7c5a",
+  "criticScore": 82,
+  "deliveredRef": "dlya-chego-nuzhny-kolba-erlenmeyera",
+  "firstDeliveredAt": "2026-10-23T19:07:51.425Z",
+  "generatedAt": "2026-10-23T19:07:51.425Z",
+  "id": "1db277be-7c9a-4b2f-8a94-f5007192c9d8",
+  "modifiedAt": "2026-10-23T19:07:51.425Z",
+  "planId": "f990c85d-e659-4f2d-9bdb-35331117b2e8",
+  "revisionCount": 0,
+  "schema": "seoagent.blog/v1",
+  "serializer": "blogfs@1.0.0",
+  "source": "auto",
+  "textHash": "sha256:b73b2bac7e50c1b440fe6a4edb8b11304a21de1360607b658031b9a2d8f0af3e"
+}

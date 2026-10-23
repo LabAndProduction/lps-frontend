@@ -1,0 +1,46 @@
+{
+  "author": "lab-production-solutions",
+  "bodyFormat": "html",
+  "category": "laboratornaya-posuda",
+  "coverImage": "/seoagent-blog/dlya-chego-nuzhny-kolba-erlenmeyera/7050cdaa4b9bff7a.webp",
+  "defaultLocale": "ru",
+  "features": [
+    "local-assets"
+  ],
+  "focusKeyword": "для чего нужны колба эрленмейера",
+  "focusKeywords": [
+    "для чего нужны колба эрленмейера",
+    "колба коническая",
+    "колба круглодонная",
+    "колба плоскодонная",
+    "типы лабораторных колб",
+    "колба Эрленмейера применение",
+    "перегонка под вакуумом",
+    "титрование в колбе",
+    "колбонагреватель",
+    "шлифы и горловины колб",
+    "выбор объёма колбы",
+    "нагрев круглодонной колбы",
+    "магнитная мешалка с колбой",
+    "лабораторная посуда Ташкент"
+  ],
+  "locales": {
+    "en": {
+      "body": "body.en.html",
+      "excerpt": "What Erlenmeyer flasks are for: a breakdown of lab flask types, uses, ground joints, volume selection, and a checklist for choosing lab glassware.",
+      "metaTitle": "What Are Erlenmeyer, Round-Bottom, and Flat-Bottom Flasks For?",
+      "title": "What Are Erlenmeyer, Round-Bottom, and Flat-Bottom Flasks For?"
+    },
+    "ru": {
+      "body": "body.ru.html",
+      "excerpt": "Для чего нужны колба Эрленмейера: разбираем типы лабораторных колб, применение, шлифы, выбор объёма и чек-лист подбора посуды для лаборатории.",
+      "metaTitle": "Для чего нужны колба Эрленмейера, круглодонная и плоскодонная",
+      "title": "Для чего нужны колба Эрленмейера, круглодонная и плоскодонная колба"
+    }
+  },
+  "modifiedAt": "2026-10-23T19:07:51.425Z",
+  "publishedAt": "2026-10-23T19:07:51.425Z",
+  "schema": "seoagent.blog/v1",
+  "slug": "dlya-chego-nuzhny-kolba-erlenmeyera",
+  "status": "published"
+}
