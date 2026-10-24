@@ -1,0 +1,47 @@
+{
+  "author": "lab-production-solutions",
+  "bodyFormat": "html",
+  "category": "laboratornaya-posuda",
+  "coverImage": "/seoagent-blog/kak-pravilno-titrovat-s-byuretkoy/767d4608fca3bf51.webp",
+  "defaultLocale": "ru",
+  "features": [
+    "local-assets"
+  ],
+  "focusKeyword": "как правильно титровать с бюреткой",
+  "focusKeywords": [
+    "как правильно титровать с бюреткой",
+    "техника титрования бюреткой",
+    "бюретка с краном",
+    "подготовка бюретки к титрованию",
+    "отсчёт по нижнему мениску",
+    "выбор бюретки",
+    "класс точности бюретки",
+    "стеклянный кран",
+    "PTFE-кран",
+    "прямая и боковая бюретка",
+    "титрование в лаборатории",
+    "мерная посуда для титрования",
+    "калибровка бюретки",
+    "точка эквивалентности",
+    "погрешность титрования"
+  ],
+  "locales": {
+    "en": {
+      "body": "body.en.html",
+      "excerpt": "How to titrate correctly with a burette: preparing the burette for titration, choosing a burette and stopcock, reading the bottom meniscus, calibration, and titration error.",
+      "metaTitle": "How to Titrate Correctly with a Burette - Step by Step",
+      "title": "How to Titrate Correctly with a Burette Without Making Mistakes"
+    },
+    "ru": {
+      "body": "body.ru.html",
+      "excerpt": "Как правильно титровать с бюреткой: подготовка бюретки к титрованию, выбор бюретки и крана, отсчёт по нижнему мениску, калибровка и погрешность титрования.",
+      "metaTitle": "Как правильно титровать с бюреткой - Пошагово",
+      "title": "Как правильно титровать с бюреткой и не ошибаться"
+    }
+  },
+  "modifiedAt": "2026-10-24T19:20:39.924Z",
+  "publishedAt": "2026-10-24T19:20:39.924Z",
+  "schema": "seoagent.blog/v1",
+  "slug": "kak-pravilno-titrovat-s-byuretkoy",
+  "status": "published"
+}

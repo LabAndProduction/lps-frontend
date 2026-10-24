@@ -1,0 +1,19 @@
+{
+  "assets": [
+    "public/seoagent-blog/kak-pravilno-titrovat-s-byuretkoy/767d4608fca3bf51.webp",
+    "public/seoagent-blog/kak-pravilno-titrovat-s-byuretkoy/57aca30284a46de4.webp"
+  ],
+  "contentHash": "sha256:4b1338741a6cac5b943b56dfe5cd9b494d9fc08fd012ee1b20b26aa9217b65e1",
+  "criticScore": 81,
+  "deliveredRef": "kak-pravilno-titrovat-s-byuretkoy",
+  "firstDeliveredAt": "2026-10-24T19:20:39.924Z",
+  "generatedAt": "2026-10-24T19:20:39.924Z",
+  "id": "7eb57347-2acb-4e16-8158-4b515aeb3269",
+  "modifiedAt": "2026-10-24T19:20:39.924Z",
+  "planId": "9ce54d15-66d8-4061-bdbe-97c59a54ac39",
+  "revisionCount": 1,
+  "schema": "seoagent.blog/v1",
+  "serializer": "blogfs@1.0.0",
+  "source": "auto",
+  "textHash": "sha256:c4192ae438064f726000441b698143d6d33a113bc7f98b43aeba593684e53ea1"
+}
