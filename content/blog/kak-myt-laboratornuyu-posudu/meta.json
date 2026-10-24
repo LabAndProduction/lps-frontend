@@ -1,0 +1,47 @@
+{
+  "author": "lab-production-solutions",
+  "bodyFormat": "html",
+  "category": "laboratornaya-posuda",
+  "coverImage": "/seoagent-blog/kak-myt-laboratornuyu-posudu/0a081e8b93f1b09e.webp",
+  "defaultLocale": "ru",
+  "features": [
+    "local-assets"
+  ],
+  "focusKeyword": "как мыть лабораторную посуду",
+  "focusKeywords": [
+    "как мыть лабораторную посуду",
+    "мытьё лабораторной посуды",
+    "очистка лабораторной посуды",
+    "способы мытья лабораторной посуды",
+    "моющее средство для лабораторной посуды",
+    "режим очистки лабораторной посуды",
+    "типичные ошибки при мытье лабораторной посуды",
+    "как мыть мерную посуду",
+    "мытьё стеклянной лабораторной посуды",
+    "мытьё пластиковой лабораторной посуды",
+    "классификация загрязнений лабораторной посуды",
+    "сушка лабораторной посуды",
+    "проверка чистоты лабораторной посуды",
+    "замачивание лабораторной посуды",
+    "влияние чистоты посуды на результаты анализов"
+  ],
+  "locales": {
+    "en": {
+      "body": "body.en.html",
+      "excerpt": "How to wash laboratory glassware: understanding types of contamination, a step-by-step procedure, choosing the right detergent, drying, cleanliness checks, and common mistakes.",
+      "metaTitle": "How to Wash Laboratory Glassware — Methods, Detergents, Mistakes",
+      "title": "How to Wash Laboratory Glassware — Methods and Common Mistakes"
+    },
+    "ru": {
+      "body": "body.ru.html",
+      "excerpt": "Как мыть лабораторную посуду: разбор загрязнений, пошаговый алгоритм, моющее средство для лабораторной посуды, сушка, проверка чистоты и типичные ошибки.",
+      "metaTitle": "Как мыть лабораторную посуду - Способы, средства, ошибки",
+      "title": "Как мыть лабораторную посуду - Способы и типичные ошибки"
+    }
+  },
+  "modifiedAt": "2026-10-24T19:20:56.117Z",
+  "publishedAt": "2026-10-24T19:20:56.117Z",
+  "schema": "seoagent.blog/v1",
+  "slug": "kak-myt-laboratornuyu-posudu",
+  "status": "published"
+}

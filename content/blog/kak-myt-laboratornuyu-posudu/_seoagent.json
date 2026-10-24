@@ -1,0 +1,19 @@
+{
+  "assets": [
+    "public/seoagent-blog/kak-myt-laboratornuyu-posudu/0a081e8b93f1b09e.webp",
+    "public/seoagent-blog/kak-myt-laboratornuyu-posudu/91f2cd508bed8026.webp"
+  ],
+  "contentHash": "sha256:c9756662523de583348a6c8580c23e27bbb8d71e15b6389057f1c6c0bb0ed362",
+  "criticScore": 89,
+  "deliveredRef": "kak-myt-laboratornuyu-posudu",
+  "firstDeliveredAt": "2026-10-24T19:20:56.117Z",
+  "generatedAt": "2026-10-24T19:20:56.117Z",
+  "id": "f68380e5-a98d-468f-90e6-42d83db1563c",
+  "modifiedAt": "2026-10-24T19:20:56.117Z",
+  "planId": "1e82a522-2c79-4ab3-adec-775128595c8e",
+  "revisionCount": 0,
+  "schema": "seoagent.blog/v1",
+  "serializer": "blogfs@1.0.0",
+  "source": "auto",
+  "textHash": "sha256:c7e622a351aeade2dfa21414d12263a715de9d9e5b787ca15e5d9c621fde3406"
+}
