@@ -1,0 +1,19 @@
+{
+  "assets": [
+    "public/seoagent-blog/kak-polzovatsya-delitelnoy-voronkoy/92b1c0dcfcb0b1a1.webp",
+    "public/seoagent-blog/kak-polzovatsya-delitelnoy-voronkoy/a34d897f13c1badf.webp"
+  ],
+  "contentHash": "sha256:bae626f5da25b4c61c7a1bf296c00922e0b7a91ebd50ff4649daef3b7107fffc",
+  "criticScore": 80,
+  "deliveredRef": "kak-polzovatsya-delitelnoy-voronkoy",
+  "firstDeliveredAt": "2026-10-25T19:16:45.172Z",
+  "generatedAt": "2026-10-25T19:16:45.172Z",
+  "id": "1d303c4c-9244-4e11-9d6b-ee3212923737",
+  "modifiedAt": "2026-10-25T19:16:45.172Z",
+  "planId": "c3153e6b-5440-4dbb-a6fd-bd3e9217ef24",
+  "revisionCount": 0,
+  "schema": "seoagent.blog/v1",
+  "serializer": "blogfs@1.0.0",
+  "source": "auto",
+  "textHash": "sha256:2a66135ccbf31db4c97bd6523d4c2646e08363d37062ef62d4e2c453e3f337e9"
+}

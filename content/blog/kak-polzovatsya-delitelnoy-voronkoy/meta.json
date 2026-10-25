@@ -1,0 +1,46 @@
+{
+  "author": "lab-production-solutions",
+  "bodyFormat": "html",
+  "category": "laboratornaya-posuda",
+  "coverImage": "/seoagent-blog/kak-polzovatsya-delitelnoy-voronkoy/92b1c0dcfcb0b1a1.webp",
+  "defaultLocale": "ru",
+  "features": [
+    "local-assets"
+  ],
+  "focusKeyword": "как пользоваться делительной воронкой",
+  "focusKeywords": [
+    "как пользоваться делительной воронкой",
+    "делительная воронка",
+    "экстракция делительной воронкой",
+    "жидкостная экстракция",
+    "разделение фаз",
+    "воронка лабораторная",
+    "проверка герметичности воронки",
+    "смазка крана",
+    "разрушение эмульсии",
+    "воронка делительная лабораторная",
+    "устройство делительной воронки",
+    "ПТФЭ-кран",
+    "боросиликатное стекло",
+    "разделение несмешивающихся жидкостей"
+  ],
+  "locales": {
+    "en": {
+      "body": "body.en.html",
+      "excerpt": "How to use a separatory funnel: assembly, leak check, extraction, phase separation, stopcock lubrication, and dealing with emulsions.",
+      "metaTitle": "How to Use a Separatory Funnel - Instructions",
+      "title": "How to Use a Separatory Funnel for Extraction"
+    },
+    "ru": {
+      "body": "body.ru.html",
+      "excerpt": "Как пользоваться делительной воронкой: сборка, проверка герметичности, экстракция, разделение фаз, смазка крана и борьба с эмульсией.",
+      "metaTitle": "Как пользоваться делительной воронкой - Инструкция",
+      "title": "Как пользоваться делительной воронкой для экстракции"
+    }
+  },
+  "modifiedAt": "2026-10-25T19:16:45.172Z",
+  "publishedAt": "2026-10-25T19:16:45.172Z",
+  "schema": "seoagent.blog/v1",
+  "slug": "kak-polzovatsya-delitelnoy-voronkoy",
+  "status": "published"
+}
