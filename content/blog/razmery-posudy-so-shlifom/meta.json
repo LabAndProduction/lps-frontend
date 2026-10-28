@@ -1,0 +1,52 @@
+{
+  "author": "lab-production-solutions",
+  "bodyFormat": "html",
+  "category": "laboratornaya-posuda",
+  "coverImage": "/seoagent-blog/razmery-posudy-so-shlifom/1d0fd1f2f929ef9d.webp",
+  "defaultLocale": "ru",
+  "features": [
+    "local-assets"
+  ],
+  "focusKeyword": "размеры посуды со шлифом",
+  "focusKeywords": [
+    "размеры посуды со шлифом",
+    "шлифовые соединения",
+    "конусный шлиф КШ",
+    "сферический шлиф СШ",
+    "маркировка шлифа",
+    "стандарты шлифов",
+    "совместимость шлифов",
+    "подбор шлифа",
+    "шлиф лабораторной посуды",
+    "типы шлифов",
+    "переходник для шлифа",
+    "герметичность шлифового соединения",
+    "DIN 12242",
+    "ISO 641",
+    "ISO 383",
+    "номер шлифа",
+    "притёртое соединение",
+    "как измерить шлиф",
+    "взаимозаменяемость шлифов",
+    "стеклянная посуда со шлифом"
+  ],
+  "locales": {
+    "en": {
+      "body": "body.en.html",
+      "excerpt": "Ground glass joint sizes: how to read the markings, tell conical (KSh) from spherical (SSh) joints, and check compatibility and tightness before ordering.",
+      "metaTitle": "Ground Glass Joint Sizes: How to Match Connections",
+      "title": "Ground Glass Joint Sizes: How to Match Connections"
+    },
+    "ru": {
+      "body": "body.ru.html",
+      "excerpt": "Размеры посуды со шлифом: как читать маркировку, различать КШ и СШ, проверять совместимость и герметичность деталей до заказа.",
+      "metaTitle": "Размеры посуды со шлифом - Подбор соединений",
+      "title": "Размеры посуды со шлифом: как подобрать соединения"
+    }
+  },
+  "modifiedAt": "2026-10-28T07:14:00.560Z",
+  "publishedAt": "2026-10-28T07:14:00.560Z",
+  "schema": "seoagent.blog/v1",
+  "slug": "razmery-posudy-so-shlifom",
+  "status": "published"
+}

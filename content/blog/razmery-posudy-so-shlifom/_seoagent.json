@@ -1,0 +1,19 @@
+{
+  "assets": [
+    "public/seoagent-blog/razmery-posudy-so-shlifom/1d0fd1f2f929ef9d.webp",
+    "public/seoagent-blog/razmery-posudy-so-shlifom/7ee2a4839fc13b18.webp"
+  ],
+  "contentHash": "sha256:a8a5d89ddfb397dbae92296c342014bdc98288ec02cbde920b5bab2cd38c5cb8",
+  "criticScore": 80,
+  "deliveredRef": "razmery-posudy-so-shlifom",
+  "firstDeliveredAt": "2026-10-28T07:14:00.560Z",
+  "generatedAt": "2026-10-28T07:14:00.560Z",
+  "id": "0bb1333e-dcf1-4490-83fa-1049994ac7c9",
+  "modifiedAt": "2026-10-28T07:14:00.560Z",
+  "planId": "80f9858d-29e0-48e0-9c23-64ad5433aacb",
+  "revisionCount": 1,
+  "schema": "seoagent.blog/v1",
+  "serializer": "blogfs@1.0.0",
+  "source": "auto",
+  "textHash": "sha256:f57c7e7f059036f6cad81b1ec7ce33dfcfdc0748c4010f0c6af5f9eec88b2fd7"
+}
