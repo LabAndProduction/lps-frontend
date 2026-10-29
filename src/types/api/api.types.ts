@@ -50,6 +50,8 @@ export interface IFetchGetParams {
     tag: Tag;
     token?: string;
     clientLocale?: Locale;
+    // seconds to keep the answer in the Next data cache; without it every request goes to the API
+    revalidate?: number;
 }
 export interface IMeta {
     current_page: number;

@@ -32,7 +32,7 @@ export interface ISectionHeadingProps {
 }
 export interface IProductsSwiperProps {
     label: string;
-    products: IProducts;
+    products: Pick<IProducts, "data">;
     id: string;
 }
 export interface IOvalSpinnerProps {
