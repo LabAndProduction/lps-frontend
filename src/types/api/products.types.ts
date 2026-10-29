@@ -195,6 +195,7 @@ export interface IProductAttributeValue {
 
 export interface IGetProductParams {
     productId: number;
+    revalidate?: number;
 }
 export interface IGetProductAttributesParams {
     productId: number;

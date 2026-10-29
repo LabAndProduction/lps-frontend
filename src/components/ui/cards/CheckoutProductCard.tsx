@@ -27,8 +27,10 @@ export default function CheckoutProductCard({ product, quantity }: ICheckoutTabl
                 <div className="flex items-center justify-between gap-4">
                     <Quantity product={product} productQuantity={quantity} />
 
-                    <p className="text-sm">
-                        {new Intl.NumberFormat("fr-FR").format(product.current_price * quantity)} {text("сум")}
+                    <p className="text-sm whitespace-nowrap">
+                        {product.current_price > 0
+                            ? `${new Intl.NumberFormat("ru-RU").format(product.current_price * quantity)} ${text("сум")}`
+                            : text("Цена по запросу")}
                     </p>
                 </div>
             </div>

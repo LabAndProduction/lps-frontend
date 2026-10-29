@@ -3,7 +3,7 @@ import { REVIEW_PATH, YANDEX_RATING, ratingsWord } from "@/lib/reviews";
 
 /* The rating card in the footer: the map rating with stars, leading to /otzyv, where the
    visitor picks the map to leave a review on. */
-export default function RatingCard({ locale }: { locale: string }) {
+export default function RatingCard({ locale, className }: { locale: string; className?: string }) {
     const { value, count } = YANDEX_RATING;
     const shown = value.toLocaleString(locale === "en" ? "en-US" : "ru-RU", {
         minimumFractionDigits: 1,
@@ -14,7 +14,7 @@ export default function RatingCard({ locale }: { locale: string }) {
         <Link
             href={REVIEW_PATH}
             aria-label={en ? `Rating ${shown} of 5, ${count} ratings - leave a review` : `Рейтинг ${shown} из 5, ${count} ${ratingsWord(locale, count)} - оставить отзыв`}
-            className="group flex flex-col gap-1.5 w-full max-w-[17.5rem] rounded-card bg-gray-milky px-5 py-4 transition-300 hover:bg-main-5">
+            className={`group flex flex-col gap-1.5 w-full max-w-[17.5rem] rounded-card bg-gray-milky px-5 py-4 transition-300 hover:bg-main-5 ${className ?? ""}`}>
             <span className="flex items-center gap-2.5">
                 <span className="text-[1.75rem] font-bold leading-none">{shown}</span>
                 <Stars value={value} />

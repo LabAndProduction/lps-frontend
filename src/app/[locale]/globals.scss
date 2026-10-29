@@ -539,32 +539,20 @@ textarea {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    @media (max-width: 639px) {
-        align-items: center;
-    }
 
     .title {
         font-weight: 600;
         font-size: 1.125rem;
-        @media (max-width: 639px) {
-            text-align: center;
-        }
     }
     .list {
         display: flex;
         flex-direction: column;
-        @media (max-width: 639px) {
-            align-items: center;
-        }
         .link {
             display: flex;
             font-weight: 500;
             padding: 0.5rem 0;
             color: var(--color-secondary2);
 
-            @media (max-width: 639px) {
-                text-align: center;
-            }
             &:hover {
                 color: var(--color-main);
             }
@@ -695,9 +683,6 @@ textarea {
     .thumbs {
         @include minMaxHeight(26.25rem);
 
-        @media (max-width: 1535px) {
-            @include minMaxHeight(18.75rem);
-        }
         @media (max-width: 1279px) {
             @include minMaxHeight(23.75rem);
         }
@@ -763,14 +748,14 @@ textarea {
         .swiper-slide {
             opacity: 1;
             border: 0.0625rem solid transparent;
-            border-radius: 1rem;
+            border-radius: var(--radius-main);
             padding: 0.25rem;
             @include minMaxSize(5rem);
             @media (max-width: 1023px) {
                 min-width: 0;
             }
 
-            &.swiper-slide-thumb-active {
+            &.is-active {
                 border-color: var(--color-main);
             }
         }
@@ -838,7 +823,7 @@ body .sa-blog-wrap {
 .sa-blog-wrap .sa-cats a {
     padding: 0.5rem 1rem;
     border: 2px solid var(--color-white);
-    border-radius: 12px;
+    border-radius: var(--radius-btn);
     background: var(--color-white);
     color: var(--color-primary);
     font-size: 0.875rem;
@@ -858,7 +843,7 @@ body .sa-blog-wrap {
 
 :is(.sa-blog-wrap, .sa-article-wrap) .sa-blog-card {
     border: 0;
-    border-radius: 24px;
+    border-radius: var(--radius-card);
     background: var(--color-white);
     transition: none;
 }

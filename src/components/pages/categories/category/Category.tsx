@@ -13,20 +13,20 @@ export default async function Category({ category, products }: ICategoryProps) {
     const brands = await getCategoryBrands({ categoryId });
 
     return (
-        <SectionWrapper className="section-padding lg:pb-20 sm:pb-10">
+        <SectionWrapper className="pt-[2.5rem] lg:pb-20 sm:pb-10">
             <div className="flex flex-col gap-6">
                 <h1 className="xl:text-[2.25rem] lg:text-[2rem] sm:text-[1.75rem] text-2xl leading-120 font-bold">
                     {category.data.h1_name.length > 0 ? category.data.h1_name : category.data.name}
                 </h1>
 
-                <div className="flex flex-col xl:gap-16 gap-12">
+                <div className="flex flex-col xl:gap-[2.75rem] gap-[1.75rem]">
                     <div className="flex flex-col gap-5">
                         {subCategories.data.length > 0 && <CategoriesSwiper categories={subCategories} />}
                     </div>
 
-                    <div className="products-grid-wrapper">
+                    <div className="catalog-grid-wrapper">
                         <div className="lg:block hidden">
-                            <CategoriesFilters attributes={attributes} price={price} brands={brands} />
+                            <CategoriesFilters attributes={attributes} price={price} brands={brands} isSticky />
                         </div>
 
                         <CategoryProductsWrapper

@@ -2,16 +2,13 @@
 
 import { useCart } from "@/context/cart.context";
 import { useText } from "@/context/text.context";
-import { useCookies } from "next-client-cookies";
 import CheckoutProducts from "./checkoutProducts/CheckoutProducts";
 import { ICheckoutSidebarProps } from "@/types/props/pages.types";
 import OvalSpinner from "@/components/ui/OvalSpinner";
 
 export default function CheckoutSidebar({ isSubmitting }: ICheckoutSidebarProps) {
-    const { isCartEmpty, apiCart, localCartTotal } = useCart();
+    const { isCartEmpty, pricedTotal, onRequestCount } = useCart();
     const { text } = useText();
-    const cookies = useCookies();
-    const token = cookies.get("token");
 
     return (
         <div className="flex flex-col gap-5">
@@ -20,13 +17,22 @@ export default function CheckoutSidebar({ isSubmitting }: ICheckoutSidebarProps)
 
                 <div className="flex flex-col gap-4">
                     {isCartEmpty ? <div></div> : <CheckoutProducts />}
-                    <div className="flex items-center justify-between gap-4 font-bold">
-                        <h4>{text("К оплате")}:</h4>
-
-                        <p className="text-lg text-main">
-                            {token
-                                ? apiCart.total_formatted
-                                : `${new Intl.NumberFormat("fr-FR", {}).format(localCartTotal)} ${text("сум")}`}
+                    <div className="flex flex-col gap-1">
+                        <div className="flex items-center justify-between gap-4 font-bold">
+                            <h4>{text("Итого")}:</h4>
+                            <p className="text-lg text-main">
+                                {pricedTotal > 0
+                                    ? `${new Intl.NumberFormat("ru-RU").format(pricedTotal)} ${text("сум")}`
+                                    : text("Цена по запросу")}
+                            </p>
+                        </div>
+                        {onRequestCount > 0 && pricedTotal > 0 && (
+                            <p className="text-xs text-secondary">
+                                {text("Без учёта товаров с ценой по запросу")} ({onRequestCount})
+                            </p>
+                        )}
+                        <p className="text-xs text-secondary">
+                            {text("Стоимость доставки менеджер уточнит после заказа.")}
                         </p>
                     </div>
                 </div>
@@ -34,7 +40,7 @@ export default function CheckoutSidebar({ isSubmitting }: ICheckoutSidebarProps)
                 <button type="submit" className="main-btn w-full">
                     {isSubmitting && <OvalSpinner size={16} color="var(--color-white)" />}
 
-                    {text("Отправить")}
+                    {text("Оформить заказ")}
                 </button>
             </div>
 

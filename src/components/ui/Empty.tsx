@@ -21,7 +21,7 @@ export default function Empty({ title, text, link, linkText, img }: IEmptyProps)
                     {!!text && <p className="font-medium text-secondary leading-120">{text}</p>}
                 </div>
                 {!!link && !!linkText && (
-                    <Link href={link} className="main-btn min-w-[12.5rem] rounded-full">
+                    <Link href={link} className="main-btn min-w-[12.5rem]">
                         {linkText}
                     </Link>
                 )}

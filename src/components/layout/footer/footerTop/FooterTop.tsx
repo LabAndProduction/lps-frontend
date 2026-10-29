@@ -3,7 +3,7 @@ import FooterMenu from "./footerMenu/FooterMenu";
 import { getSettings } from "@/api/settingsApi";
 import { getTexts } from "@/api/textsApi";
 import Link from "next/link";
-import NextImage from "@/components/ui/NextImage";
+import SiteLogo from "@/components/ui/SiteLogo";
 import Socials from "@/components/ui/Socials";
 import RatingCard from "@/components/reviews/RatingCard";
 import { phoneFormatter } from "@/utils/phoneFormatter";
@@ -20,44 +20,40 @@ export default async function FooterTop() {
 
     return (
         <div className="bg-white py-[3.75rem]">
-            <div className="container flex lg:flex-row flex-col sm:items-start items-center gap-x-30 gap-y-10">
-                <div className="flex flex-col sm:items-start items-center gap-6">
+            <div className="container lg:grid lg:grid-cols-[23.875rem_minmax(0,1fr)] flex flex-col items-start gap-x-[6.25rem] gap-y-10">
+                <div className="flex flex-col items-start gap-6 w-full">
                     <Link href={"/"} className="py-3">
-                        <NextImage
-                            src={"/images/logo.png"}
-                            alt="LPS"
-                            width={120}
-                            height={56}
-                            className="lg:w-50 w-40 h-auto object-contain"
-                            unoptimized
-                        />
+                        <SiteLogo locale={locale} size="footer" />
                     </Link>
 
-                    <Socials settings={settings} />
+                    <p className="max-w-[23.875rem] text-sm leading-150 text-secondary2 text-start">
+                        {locale == "en"
+                            ? "Laboratory and analytical equipment, glassware, reagents and consumables from leading manufacturers. Office in Tashkent, delivery across Uzbekistan."
+                            : "Лабораторное и аналитическое оборудование, посуда, реактивы и расходные материалы ведущих производителей. Офис в Ташкенте, доставка по Узбекистану."}
+                    </p>
 
-                    <RatingCard locale={locale} />
+                    <Link href={`${locale == "ru" ? "" : `/${locale}`}/contacts`} className="main-btn max-sm:!w-full">
+                        {locale == "en" ? "Send a request" : "Оставить заявку"}
+                    </Link>
                 </div>
 
                 {/* <div className="grid grid-cols-5 gap-4"> */}
-                <div className="flex sm:flex-row flex-col sm:items-start items-center flex-wrap justify-between gap-6 w-full">
+                <div className="flex sm:flex-row flex-col items-start flex-wrap justify-between gap-x-12 gap-y-6 w-full">
                     <FooterMenu menu={menu3} extraLinks={[{ href: BLOG_PATH, title: blogLabel(locale) }]} />
                     <FooterMenu menu={menu4} />
                     <FooterMenu menu={menu5} />
-                    <div className="footer-menu">
+                    <div className="footer-menu w-full sm:w-[17.5rem]">
                         <h4 className="title">{text("Контакты")}</h4>
                         <ul className="list">
                             <li>
-                                <div className="flex sm:flex-row flex-col gap-x-2 gap-y-3 text-secondary2 font-medium py-2 sm:text-start text-center">
-                                    {text("Телефон")}:{" "}
-                                    <div className="flex flex-col gap-x-2 gap-y-3">
-                                        <Link href={`tel:${settings.phone}`} className="link !p-0">
-                                            {phoneFormatter(settings.phone)}
-                                        </Link>
-                                        <Link href={`tel:${settings.phone2}`} className="link !p-0">
-                                            {phoneFormatter(settings.phone2)}
-                                        </Link>
-                                    </div>
-                                </div>
+                                <Link href={`tel:${settings.phone}`} className="link">
+                                    {phoneFormatter(settings.phone)}
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href={`tel:${settings.phone2}`} className="link">
+                                    {phoneFormatter(settings.phone2)}
+                                </Link>
                             </li>
                             {/* <li>
                                 <Link href={`mailto:${settings.email}`} className="link">
@@ -65,16 +61,8 @@ export default async function FooterTop() {
                                 </Link>
                             </li> */}
                         </ul>
-                    </div>
-                    <div className="footer-menu">
-                        <h4 className="title">{text("Обратная связь")}</h4>
-                        <div className="list">
-                            <Link
-                                href={`${locale == "ru" ? "" : `/${locale}`}/contacts`}
-                                className="main-transparent-btn rounded-btn">
-                                {text("Оставить сообщение")}
-                            </Link>
-                        </div>
+                        <Socials settings={settings} />
+                        <RatingCard locale={locale} className="!max-w-none" />
                     </div>
                 </div>
             </div>

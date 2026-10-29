@@ -7,8 +7,6 @@ import { useText } from "@/context/text.context";
 import { ICartButtonProps } from "@/types/props/ui.types";
 import OvalSpinner from "../OvalSpinner";
 import Icon from "../Icon";
-import { useCookies } from "next-client-cookies";
-import { useSettings } from "@/context/settings.context";
 
 export default function CartButton({
     className,
@@ -22,10 +20,6 @@ export default function CartButton({
     const { text } = useText();
     const { id, in_stock, stock_info_code } = product;
     const [isExist, setIsExist] = useState<boolean>(false);
-    const { setIsAuthMenuOpen } = useSettings();
-
-    const cookies = useCookies();
-    const token = cookies.get("token");
 
     useEffect(() => {
         setIsExist(checkCartExist(id));
@@ -34,15 +28,9 @@ export default function CartButton({
         <button
             title={text("Добавить в корзину")}
             disabled={isLoading || (stock_info_code == "0" && in_stock === 0)}
-            onClick={() => {
-                if (!token && stock_info_code != "0") {
-                    setIsAuthMenuOpen(true);
-                } else {
-                    toggleCart({ product, quantity, setIsLoading });
-                }
-            }}
+            onClick={() => toggleCart({ product, quantity, setIsLoading })}
             className={classNames(
-                "flex-center size-[var(--btn-height)] rounded-full",
+                "flex-center size-[var(--btn-height)] rounded-main",
                 `${
                     type === "icon"
                         ? `disabled:pointer-events-none disabled:bg-secondary disabled:text-white ${isGray ? "bg-gray hover:bg-gray4 text-primary" : "bg-main hover:bg-main-dark text-white"}`

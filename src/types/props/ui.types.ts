@@ -32,7 +32,7 @@ export interface ISectionHeadingProps {
 }
 export interface IProductsSwiperProps {
     label: string;
-    products: IProducts;
+    products: Pick<IProducts, "data">;
     id: string;
 }
 export interface IOvalSpinnerProps {
@@ -41,6 +41,7 @@ export interface IOvalSpinnerProps {
 }
 export interface IProductCardProps {
     product: IProduct;
+    className?: string;
 }
 export interface IRowProductCardProps {
     product: IProduct;
@@ -55,7 +56,7 @@ export interface ICartButtonProps {
 export interface IWishlistButtonProps {
     product: IProduct;
     className?: string;
-    type?: "icon" | "text";
+    type?: "icon" | "text" | "button";
 }
 export interface ICompareButtonProps {
     product: IProduct;

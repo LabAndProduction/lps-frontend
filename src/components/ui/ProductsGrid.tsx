@@ -20,14 +20,14 @@ export default function ProductsGrid({ products, productsView }: IProductsGridPr
                     className={classNames(
                         productsView == "row"
                             ? "flex flex-col"
-                            : `min-[360px]:grid flex flex-col @[70.5rem]:grid-cols-5 @[53.75rem]:grid-cols-4 @[37.5rem]:grid-cols-3 grid-cols-2`,
+                            : `min-[360px]:grid flex flex-col @[37.5rem]:grid-cols-3 grid-cols-2`,
                         "gap-x-3 gap-y-5",
                     )}>
                     {products.data.map((product) =>
                         productsView == "row" ? (
                             <RowProductCard key={product.id} product={product} />
                         ) : (
-                            <ProductCard key={product.id} product={product} />
+                            <ProductCard key={product.id} product={product} className="!max-w-none" />
                         ),
                     )}
                 </div>

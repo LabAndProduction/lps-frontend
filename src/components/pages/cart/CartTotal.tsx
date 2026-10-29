@@ -10,7 +10,7 @@ import OvalSpinner from "@/components/ui/OvalSpinner";
 export default function CartTotal() {
     const cookies = useCookies();
     const token = cookies.get("token");
-    const { apiCart, localCartQuantity, clearCart, localCartTotal, cart } = useCart();
+    const { apiCart, localCartQuantity, clearCart, pricedTotal, onRequestCount } = useCart();
     const [isClearLoading, setIsClearLoading] = useState<boolean>(false);
     const { text } = useText();
 
@@ -26,14 +26,20 @@ export default function CartTotal() {
                     </p>
                 </div>
 
-                <div className="text-sm font-semibold flex items-center justify-between gap-4 border-t border-gray4 pt-3">
-                    <h4>{text("К оплате")}:</h4>
-
-                    <p>
-                        {token
-                            ? apiCart.total_formatted
-                            : `${new Intl.NumberFormat("fr-FR").format(localCartTotal)} ${text("сум")}`}
-                    </p>
+                <div className="flex flex-col gap-1 border-t border-gray4 pt-3">
+                    <div className="text-sm font-semibold flex items-center justify-between gap-4">
+                        <h4>{text("Итого")}:</h4>
+                        <p>
+                            {pricedTotal > 0
+                                ? `${new Intl.NumberFormat("ru-RU").format(pricedTotal)} ${text("сум")}`
+                                : text("Цена по запросу")}
+                        </p>
+                    </div>
+                    {onRequestCount > 0 && pricedTotal > 0 && (
+                        <p className="text-xs text-secondary">
+                            {text("Без учёта товаров с ценой по запросу")} ({onRequestCount})
+                        </p>
+                    )}
                 </div>
             </div>
 

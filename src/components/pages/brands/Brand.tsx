@@ -16,7 +16,7 @@ export default async function Brand({ products, brand }: IBrandProps) {
     return (
         <>
             <SectionWrapper className="pt-6">
-                <div className="products-grid-wrapper">
+                <div className="catalog-grid-wrapper">
                     <div className="lg:block hidden">
                         <BrandCategories brandCategoriesTree={brandsCategoriesTree} brand={brand} />
                     </div>

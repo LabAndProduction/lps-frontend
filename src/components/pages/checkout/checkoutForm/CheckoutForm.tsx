@@ -45,6 +45,14 @@ export default function CheckoutForm({ isSubmitting }: ICheckoutFormProps) {
                     />
                 </fieldset>
                 <OverlapInput
+                    id="checkout-company"
+                    name="company"
+                    placeholder={text("Компания (необязательно)")}
+                    disabled={isSubmitting || isCartEmpty}
+                    maxLength={100}
+                    className="input-white"
+                />
+                <OverlapInput
                     id="checkout-message"
                     name="message"
                     placeholder={text("Сообщение")}

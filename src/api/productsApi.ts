@@ -57,10 +57,11 @@ export const getProducts = async ({
     });
 };
 
-export const getProduct = async ({ productId }: IGetProductParams) => {
+export const getProduct = async ({ productId, revalidate }: IGetProductParams) => {
     return await fetchGET({
         url: `products/${productId}`,
         tag: "Products",
+        revalidate,
     }).then((data: ISingleProduct) => data);
 };
 

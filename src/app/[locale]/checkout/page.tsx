@@ -7,11 +7,13 @@ import { getFullUrl } from "@/utils/getFullUrl";
 import { getCookies } from "next-client-cookies/server";
 import { getProfile } from "@/api/profileApi";
 import { NOINDEX } from "@/lib/seo";
+import { getSettings } from "@/api/settingsApi";
 
 export default async function CheckoutPage() {
     const { text } = await getTexts();
     const cookies = await getCookies();
     const profile = await getProfile({ token: cookies.get("token") });
+    const settings = await getSettings().catch(() => null);
 
     return (
         <>
@@ -22,7 +24,7 @@ export default async function CheckoutPage() {
                     current: text("Оформление заказа"),
                 }}
             />
-            {typeof profile !== "string" && <Checkout profile={profile} />}
+            <Checkout profile={typeof profile !== "string" ? profile : null} storePhone={settings?.phone} />
         </>
     );
 }

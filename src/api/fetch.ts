@@ -60,12 +60,11 @@ const fetchWithRetry = async (input: string, init: RequestInit, tries = 3): Prom
     }
 };
 
-export const fetchGET = async ({ url, tag, token, clientLocale }: IFetchGetParams) => {
+export const fetchGET = async ({ url, tag, token, clientLocale, revalidate }: IFetchGetParams) => {
     const locale = clientLocale ? clientLocale : await getLocaleTs();
 
     return await fetchWithRetry(`${API_URL}${url}`, {
-        next: { tags: [tag] },
-        cache: "no-cache",
+        ...(revalidate ? { next: { tags: [tag], revalidate } } : { next: { tags: [tag] }, cache: "no-cache" }),
         headers: token
             ? {
                   Authorization: `Bearer ${token}`,

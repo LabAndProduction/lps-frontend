@@ -56,6 +56,8 @@ export interface ICategoriesFiltersProps {
     price: IPrices;
     closeModal?: () => void;
     brands: ICategoryBrands;
+    // stays in view while the product list scrolls (desktop column only)
+    isSticky?: boolean;
 }
 export interface ICategoriesFiltersMenuProps {
     attributes: ICategoryAttributes;
@@ -220,9 +222,6 @@ export interface ICheckoutSidebarProps {
 export interface IContactsProps {
     settings: ISettings;
 }
-export interface IProductSidebarProps {
-    product: ISingleProduct;
-}
 export interface IProductTabsProps {
     product: ISingleProduct;
     attributes: IProductAttributes;
@@ -234,9 +233,6 @@ export interface IProductInfoProps {
     product: ISingleProduct;
     attributes: IProductAttributes;
     productGroup: IProductGroup | "Not exist";
-}
-export interface IProductCartSidebarProps {
-    product: ISingleProduct;
 }
 export interface IProductBannersProps {
     product: ISingleProduct;
