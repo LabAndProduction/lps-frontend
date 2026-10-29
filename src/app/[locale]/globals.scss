@@ -755,7 +755,7 @@ textarea {
                 min-width: 0;
             }
 
-            &.swiper-slide-thumb-active {
+            &.is-active {
                 border-color: var(--color-main);
             }
         }
