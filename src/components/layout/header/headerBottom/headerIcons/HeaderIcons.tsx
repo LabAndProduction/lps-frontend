@@ -15,7 +15,7 @@ export default function HeaderIcons() {
     const { setIsAuthMenuOpen } = useSettings();
 
     return (
-        <div className="lg:flex hidden items-center xl:gap-5 gap-4 py-3">
+        <div className="lg:flex hidden items-center gap-4 py-3">
             {token ? (
                 <Link href="/dashboard/profile" className={`relative flex-center group group`}>
                     <Icon name="user" className={`size-8 text-primary group-hover:text-main`} />

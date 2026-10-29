@@ -26,8 +26,8 @@ export default function HeaderBottom({ settings, categoriesTree }: IHeaderBottom
         <header
             ref={headerRef}
             className="header sticky lg:top-[2.75rem] top-0 relative bg-white z-90">
-            <div className="container flex  justify-between md:gap-10 gap-8">
-                <div className="flex gap-4">
+            <div className="container flex justify-between lg:gap-4 md:gap-10 gap-8">
+                <div className="flex lg:gap-[3.125rem] gap-4">
                     <Link href="/" className="flex items-center py-3">
                         <SiteLogo locale={locale} />
                     </Link>
