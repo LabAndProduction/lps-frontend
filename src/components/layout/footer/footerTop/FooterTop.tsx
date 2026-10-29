@@ -42,7 +42,7 @@ export default async function FooterTop() {
                     <FooterMenu menu={menu3} extraLinks={[{ href: BLOG_PATH, title: blogLabel(locale) }]} />
                     <FooterMenu menu={menu4} />
                     <FooterMenu menu={menu5} />
-                    <div className="footer-menu sm:w-[20.625rem]">
+                    <div className="footer-menu sm:w-[17.5rem]">
                         <h4 className="title">{text("Контакты")}</h4>
                         <ul className="list">
                             <li>
