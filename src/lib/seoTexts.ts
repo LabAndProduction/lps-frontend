@@ -18,8 +18,10 @@ const T = {
             "Лабораторное оборудование, посуда, реактивы и расходные материалы ведущих брендов в Ташкенте. Каталог с ценами, доставка по Узбекистану.",
         homeHeading: "Лабораторное оборудование и расходные материалы в Ташкенте",
         product: (name: string) => `${name} - Цена в Ташкенте`,
-        productDescription: (name: string) =>
-            `${name} - купить в LPS. Цена, характеристики, наличие. Доставка по Ташкенту и Узбекистану.`,
+        productDescription: (name: string, price?: number | null) =>
+            price && price > 0
+                ? `${name} - купить в LPS по цене ${new Intl.NumberFormat("ru-RU").format(price)} сум. Характеристики, наличие, доставка по Ташкенту и Узбекистану.`
+                : `${name} - купить в LPS. Цена, характеристики, наличие. Доставка по Ташкенту и Узбекистану.`,
         category: (name: string) => `${name} - Купить в Ташкенте`,
         categoryDescription: (name: string) => `${name} в Ташкенте - каталог с ценами и характеристиками в LPS.`,
         brand: (name: string) => `${name} - Лабораторное оборудование в Ташкенте`,
@@ -32,8 +34,10 @@ const T = {
             "Laboratory equipment, glassware, reagents and consumables from leading brands in Tashkent. Catalogue with prices, delivery across Uzbekistan.",
         homeHeading: "Laboratory equipment and consumables in Tashkent",
         product: (name: string) => `${name} - Price in Tashkent`,
-        productDescription: (name: string) =>
-            `${name} - buy at LPS. Price, specifications, availability. Delivery in Tashkent and across Uzbekistan.`,
+        productDescription: (name: string, price?: number | null) =>
+            price && price > 0
+                ? `${name} - buy at LPS for ${new Intl.NumberFormat("en-US").format(price)} UZS. Specifications, availability, delivery in Tashkent and across Uzbekistan.`
+                : `${name} - buy at LPS. Price, specifications, availability. Delivery in Tashkent and across Uzbekistan.`,
         category: (name: string) => `${name} - Buy in Tashkent`,
         categoryDescription: (name: string) => `${name} in Tashkent - catalogue with prices and specifications at LPS.`,
         brand: (name: string) => `${name} - Laboratory equipment in Tashkent`,

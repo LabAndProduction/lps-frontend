@@ -26,17 +26,15 @@ export default function CartTotal() {
                     </p>
                 </div>
 
-                {token && token.length > 0 && (
-                    <div className="text-sm font-semibold flex items-center justify-between gap-4 border-t border-gray4 pt-3">
-                        <h4>{text("К оплате")}:</h4>
+                <div className="text-sm font-semibold flex items-center justify-between gap-4 border-t border-gray4 pt-3">
+                    <h4>{text("К оплате")}:</h4>
 
-                        <p>
-                            {token
-                                ? apiCart.total_formatted
-                                : `${new Intl.NumberFormat("fr-FR").format(localCartTotal)} ${text("сум")}`}
-                        </p>
-                    </div>
-                )}
+                    <p>
+                        {token
+                            ? apiCart.total_formatted
+                            : `${new Intl.NumberFormat("fr-FR").format(localCartTotal)} ${text("сум")}`}
+                    </p>
+                </div>
             </div>
 
             <div className="lg:flex sm:grid flex grid-cols-2 flex-col gap-2">
