@@ -8,8 +8,8 @@ export default function FooterBottom() {
     const { text } = useText();
     return (
         <div className="py-4 bg-gray text-sm">
-            <div className="container flex sm:flex-row flex-col items-center justify-between gap-4">
-                <p className="sm:text-start text-center">
+            <div className="container flex sm:flex-row flex-col sm:items-center items-start justify-between gap-4">
+                <p className="text-start">
                     {new Date().getFullYear()} © «{text("copyright")}».
                 </p>
 
