@@ -35,7 +35,7 @@ export default function ProductCard({ product, className }: IProductCardProps) {
                     <ProductBadge text={`-${Number(discount).toFixed(0)}%`} />
                 </div>
             )}
-            <div className={`flex flex-col md:gap-3 gap-2 grow justify-between`}>
+            <div className={`flex flex-col md:gap-3 gap-2 grow justify-between mt-1.5`}>
                 <div className="flex flex-col gap-2 grow">
                     {sku && sku.length > 0 && <ProductArticleNumber articleNumber={sku} />}
                     <div className="flex flex-col gap-2 grow justify-between">
