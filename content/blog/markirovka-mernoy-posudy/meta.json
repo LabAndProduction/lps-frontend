@@ -1,0 +1,47 @@
+{
+  "author": "lab-production-solutions",
+  "bodyFormat": "html",
+  "category": "laboratornaya-posuda",
+  "coverImage": "/seoagent-blog/markirovka-mernoy-posudy/4f63bbba14779caa.webp",
+  "defaultLocale": "ru",
+  "features": [
+    "local-assets"
+  ],
+  "focusKeyword": "маркировка мерной посуды",
+  "focusKeywords": [
+    "маркировка мерной посуды",
+    "надписи на мерной посуде",
+    "класс точности мерной посуды",
+    "номинальный объём колбы",
+    "калибровка мерной посуды",
+    "мерная колба обозначения",
+    "цена деления мерного цилиндра",
+    "класс A и класс B посуда",
+    "способ применения на выливание",
+    "маркировка лабораторной посуды",
+    "температура калибровки посуды",
+    "допуск мерной посуды",
+    "как читать маркировку колбы",
+    "мерный цилиндр шкала",
+    "ГОСТ 1770-74 мерная посуда"
+  ],
+  "locales": {
+    "en": {
+      "body": "body.en.html",
+      "excerpt": "Volumetric glassware markings explained: how to read labels on volumetric ware, accuracy class, nominal flask volume, tolerance, and graduation interval of a graduated cylinder.",
+      "metaTitle": "Volumetric Glassware Markings - Labels on Flasks and Cylinders",
+      "title": "Markings on Volumetric Glassware: What the Labels on Flasks and Cylinders Mean"
+    },
+    "ru": {
+      "body": "body.ru.html",
+      "excerpt": "Маркировка мерной посуды: разбираем надписи на мерной посуде, класс точности, номинальный объём колбы, допуск и цену деления мерного цилиндра.",
+      "metaTitle": "Маркировка мерной посуды - Надписи на колбах и цилиндрах",
+      "title": "Маркировка мерной посуды: что означают надписи на колбах и цилиндрах"
+    }
+  },
+  "modifiedAt": "2026-10-29T19:03:41.819Z",
+  "publishedAt": "2026-10-29T19:03:41.819Z",
+  "schema": "seoagent.blog/v1",
+  "slug": "markirovka-mernoy-posudy",
+  "status": "published"
+}

@@ -1,0 +1,19 @@
+{
+  "assets": [
+    "public/seoagent-blog/markirovka-mernoy-posudy/4f63bbba14779caa.webp",
+    "public/seoagent-blog/markirovka-mernoy-posudy/a6d4899e1de73f75.webp"
+  ],
+  "contentHash": "sha256:4b9c9f82da7ee1f8a5ec02468283cdec92bbf972f4dd3147c90a95eb2138a886",
+  "criticScore": 80,
+  "deliveredRef": "markirovka-mernoy-posudy",
+  "firstDeliveredAt": "2026-10-29T19:03:41.819Z",
+  "generatedAt": "2026-10-29T19:03:41.819Z",
+  "id": "15620b16-d1ed-47e8-ad07-b3c0539b4e41",
+  "modifiedAt": "2026-10-29T19:03:41.819Z",
+  "planId": "b4a56865-9849-4101-a867-65f1d1a669c4",
+  "revisionCount": 1,
+  "schema": "seoagent.blog/v1",
+  "serializer": "blogfs@1.0.0",
+  "source": "auto",
+  "textHash": "sha256:aff16af7040600d9198b5d499dc1ece3494c2877232c98b4233df3d041efb2d1"
+}
