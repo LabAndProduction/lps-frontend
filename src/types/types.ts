@@ -47,6 +47,7 @@ export type SetState<T> = Dispatch<SetStateAction<T>>;
 export type InputNames =
     | "name"
     | "surname"
+    | "company"
     | "email"
     | "phone_number"
     | "password"

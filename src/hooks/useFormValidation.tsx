@@ -88,6 +88,7 @@ export default function useFormValidation() {
         // surname: surnameValidation,
         phone_number: phoneValidation,
         email: emailNotRequiredValidation,
+        company: Yup.string().max(100, text("Нужно ввести не более :number символов").replace(":number", "100")),
         message: messageNotRequiredValidation,
 
         // payment_method: paymentMethodRadioValidation,

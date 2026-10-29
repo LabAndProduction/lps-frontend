@@ -42,6 +42,11 @@ const CartContext = createContext<ICartContextProps>({
     localCartQuantity: 0,
     // checkout: () => null,
     isCartEmpty: true,
+    lines: [],
+    pricedTotal: 0,
+    onRequestCount: 0,
+    isCartDrawerOpen: false,
+    setIsCartDrawerOpen: () => undefined,
 });
 
 export const CartProvider = ({ children }: ICartProvideProps) => {
@@ -70,6 +75,19 @@ export const CartProvider = ({ children }: ICartProvideProps) => {
     const [localCartQuantity, setLocalCartQuantity] = useState<number>(0);
     const { text } = useText();
     const [isCartEmpty, setIsCartEmpty] = useState<boolean>(true);
+    const [isCartDrawerOpen, setIsCartDrawerOpen] = useState<boolean>(false);
+
+    // the guest's cart is read from the browser's storage, so until the page has hydrated the
+    // lines stay empty - the same as on the server
+    const [isHydrated, setIsHydrated] = useState<boolean>(false);
+    useEffect(() => setIsHydrated(true), []);
+    const lines = !isHydrated
+        ? []
+        : token
+          ? apiCart.items.map((el) => ({ product: el.product, quantity: el.quantity }))
+          : cart.map((el) => ({ product: el.item, quantity: el.quantity }));
+    const pricedTotal = lines.reduce((sum, line) => sum + (line.product.current_price || 0) * line.quantity, 0);
+    const onRequestCount = lines.filter((line) => !(line.product.current_price > 0)).length;
 
     useEffect(() => {
         if ((token && apiCart.quantity > 0) || (!token && localCartQuantity > 0)) {
@@ -138,7 +156,10 @@ export const CartProvider = ({ children }: ICartProvideProps) => {
     }, [token]);
 
     const addProduct = ({ product, quantity, setIsLoading }: ICartAddProduct): void => {
-        if (!token) setCart([...cart, { item: product, quantity: quantity }]);
+        if (!token) {
+            setCart([...cart, { item: product, quantity: quantity }]);
+            setIsCartDrawerOpen(true);
+        }
 
         if (token) {
             if (setIsLoading) setIsLoading(true);
@@ -147,7 +168,12 @@ export const CartProvider = ({ children }: ICartProvideProps) => {
                 body: { product_id: product.id, quantity },
                 clientLocale: locale,
             })
-                .then((data) => typeof data !== "string" && setApiCart(data))
+                .then((data) => {
+                    if (typeof data !== "string") {
+                        setApiCart(data);
+                        setIsCartDrawerOpen(true);
+                    }
+                })
                 .finally(() => {
                     if (setIsLoading) setIsLoading(false);
                 });
@@ -238,7 +264,7 @@ export const CartProvider = ({ children }: ICartProvideProps) => {
     }) => {
         if (!token) {
             setCart([]);
-            replace("/");
+            if (isRedirect) replace("/");
         } else if (token) {
             if (setIsLoading) setIsLoading(true);
             cartClear({ token, clientLocale: locale })
@@ -305,6 +331,11 @@ export const CartProvider = ({ children }: ICartProvideProps) => {
         localCartQuantity,
         // checkout,
         isCartEmpty,
+        lines,
+        pricedTotal,
+        onRequestCount,
+        isCartDrawerOpen,
+        setIsCartDrawerOpen,
     };
 
     return <CartContext.Provider value={values}>{children}</CartContext.Provider>;

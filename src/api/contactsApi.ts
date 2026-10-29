@@ -15,3 +15,18 @@ export const sendFeedback = async ({ body, clientLocale }: ISendFeedbackParams) 
         toast.success(data.message);
     });
 };
+
+// The same feedback endpoint, for a guest's order: the caller needs to know whether the
+// request went through (a 422 also comes back with a "message"), so nothing is shown here.
+export const sendOrderRequest = async ({ body, clientLocale }: ISendFeedbackParams) => {
+    return await fetchMutate({
+        url: "feedback",
+        body,
+        method: "POST",
+        tag: "Feedback",
+        clientLocale,
+    }).then((data: { message?: string; errors?: Record<string, string[]> } | undefined) => ({
+        ok: !!data && !data.errors,
+        message: data?.message || "",
+    }));
+};

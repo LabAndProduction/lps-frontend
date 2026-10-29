@@ -40,6 +40,7 @@ export interface ICheckoutForm {
     surname?: string;
     phone_number: string;
     email?: string;
+    company?: string;
     message?: string;
 
     // payment_method: PaymentMethodType;

@@ -26,6 +26,18 @@ export interface ICartContextProps {
     localCartQuantity: number;
     // checkout: ({ body }: ICartCheckout) => void | null;
     isCartEmpty: boolean;
+    // the cart's products whoever owns it (a guest's local cart or the account's API cart)
+    lines: ICartLine[];
+    // sum of the products that have a price; ones priced on request are counted in onRequestCount
+    pricedTotal: number;
+    onRequestCount: number;
+    isCartDrawerOpen: boolean;
+    setIsCartDrawerOpen: SetState<boolean>;
+}
+
+export interface ICartLine {
+    product: IProduct;
+    quantity: number;
 }
 
 export interface ICartAddProduct {
