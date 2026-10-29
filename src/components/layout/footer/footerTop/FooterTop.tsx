@@ -3,7 +3,7 @@ import FooterMenu from "./footerMenu/FooterMenu";
 import { getSettings } from "@/api/settingsApi";
 import { getTexts } from "@/api/textsApi";
 import Link from "next/link";
-import NextImage from "@/components/ui/NextImage";
+import SiteLogo from "@/components/ui/SiteLogo";
 import Socials from "@/components/ui/Socials";
 import RatingCard from "@/components/reviews/RatingCard";
 import { phoneFormatter } from "@/utils/phoneFormatter";
@@ -23,14 +23,7 @@ export default async function FooterTop() {
             <div className="container flex lg:flex-row flex-col sm:items-start items-center gap-x-30 gap-y-10">
                 <div className="flex flex-col sm:items-start items-center gap-6 lg:w-[25rem] lg:shrink-0">
                     <Link href={"/"} className="py-3">
-                        <NextImage
-                            src={"/images/logo.png"}
-                            alt="LPS"
-                            width={120}
-                            height={56}
-                            className="lg:w-50 w-40 h-auto object-contain"
-                            unoptimized
-                        />
+                        <SiteLogo locale={locale} size="footer" />
                     </Link>
 
                     <p className="max-w-[25rem] text-sm leading-150 text-secondary2 sm:text-start text-center">

@@ -2,7 +2,6 @@
 
 import { Link } from "@/i18n/routing";
 import HeaderIcons from "./headerIcons/HeaderIcons";
-import NextImage from "@/components/ui/NextImage";
 import HeaderMobileLinks from "./headerMobileLinks/HeaderMobileLinks";
 import HeaderSearchForm from "../headerSearchForm/HeaderSearchForm";
 import { useRef } from "react";
@@ -11,8 +10,11 @@ import { useText } from "@/context/text.context";
 import { useSettings } from "@/context/settings.context";
 import useElementHeight from "@/hooks/useElementHeight";
 import HeaderCategoriesMenu from "./headerCategoriesMenu/HeaderCategoriesMenu";
+import SiteLogo from "@/components/ui/SiteLogo";
+import { useLocale } from "next-intl";
 
 export default function HeaderBottom({ settings, categoriesTree }: IHeaderBottomProps) {
+    const locale = useLocale();
     const { text } = useText();
     const headerRef = useRef<HTMLDivElement>(null);
 
@@ -26,15 +28,8 @@ export default function HeaderBottom({ settings, categoriesTree }: IHeaderBottom
             className="header sticky lg:top-[2.75rem] top-0 relative bg-white z-90">
             <div className="container flex  justify-between md:gap-10 gap-8">
                 <div className="flex gap-4">
-                    <Link href="/" className="py-3">
-                        <NextImage
-                            src={"/images/logo.png"}
-                            alt="LPS"
-                            width={120}
-                            height={56}
-                            className="lg:w-[7.5rem] sm:w-[6.5rem] w-[5.5rem] h-auto object-contain"
-                            unoptimized
-                        />
+                    <Link href="/" className="flex items-center py-3">
+                        <SiteLogo locale={locale} />
                     </Link>
 
                     <div className="py-2.5 lg:flex-center hidden">

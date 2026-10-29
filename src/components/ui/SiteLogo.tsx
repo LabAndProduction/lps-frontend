@@ -1,0 +1,39 @@
+import NextImage from "./NextImage";
+import classNames from "classnames";
+
+// The logo as a row: the molecule mark on the left, the company name and a short line
+// about what it sells on the right. "footer" is the larger variant.
+export default function SiteLogo({ locale, size = "header" }: { locale: string; size?: "header" | "footer" }) {
+    const isFooter = size == "footer";
+    return (
+        <span className="flex items-center gap-3">
+            <NextImage
+                src="/images/logo-mark.png"
+                alt="LPS"
+                width={64}
+                height={64}
+                className={classNames(
+                    "object-contain shrink-0",
+                    isFooter ? "size-16" : "lg:size-12 sm:size-11 size-10",
+                )}
+                unoptimized
+            />
+            <span className="flex flex-col gap-1 text-[#242c4f]">
+                <span
+                    className={classNames(
+                        "font-semibold leading-110 whitespace-nowrap",
+                        isFooter ? "text-xl" : "lg:text-lg sm:text-base text-sm",
+                    )}>
+                    Lab & Production Solutions
+                </span>
+                <span
+                    className={classNames(
+                        "uppercase tracking-[0.12em] text-secondary leading-110 whitespace-nowrap",
+                        isFooter ? "text-xs" : "sm:text-[0.6875rem] text-[0.625rem]",
+                    )}>
+                    {locale == "en" ? "Laboratory equipment" : "Лабораторное оборудование"}
+                </span>
+            </span>
+        </span>
+    );
+}
