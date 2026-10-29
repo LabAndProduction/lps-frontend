@@ -18,7 +18,7 @@ export default function LogoutModal() {
                 <button
                     type="button"
                     className={
-                        "group flex items-center gap-3 font-medium text-secondary2 hover:bg-white-70 w-full py-2 px-4 rounded-full"
+                        "group flex items-center gap-3 font-medium text-secondary2 hover:bg-white-70 w-full py-2 px-4 rounded-main"
                     }
                     onClick={() => setIsOpen(true)}>
                     <Icon name="exit" className="!size-8" />

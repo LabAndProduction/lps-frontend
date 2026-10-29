@@ -48,7 +48,7 @@ export default function ProductGallery({ product }: IProductGalleryProps) {
                                     <SwiperSlide key={id} className="transition-300 flex-center p-0!">
                                         <Link
                                             href={link || "#"}
-                                            className="transition-300 flex-center relative rounded-[1rem] overflow-hidden bg-placeholder aspect-square"
+                                            className="transition-300 flex-center relative rounded-main overflow-hidden bg-placeholder aspect-square"
                                             target="_blank"
                                             rel="nofollow">
                                             <Icon name="play" className="text-white size-5!" />
@@ -78,7 +78,7 @@ export default function ProductGallery({ product }: IProductGalleryProps) {
                             <Link
                                 data-fancybox="gallery"
                                 href={item.original}
-                                className="flex-center grow lg:p-6  p-2 outline-none">
+                                className="flex-center grow min-h-0 h-full lg:p-6 p-2 outline-none">
                                 <NextImage
                                     width={480}
                                     height={480}

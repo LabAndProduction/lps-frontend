@@ -55,7 +55,7 @@ export interface ICartButtonProps {
 export interface IWishlistButtonProps {
     product: IProduct;
     className?: string;
-    type?: "icon" | "text";
+    type?: "icon" | "text" | "button";
 }
 export interface ICompareButtonProps {
     product: IProduct;

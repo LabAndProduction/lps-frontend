@@ -17,6 +17,29 @@ export default function WishlistButton({ product, className = "", type = "icon" 
         setIsExist(checkWishlistExist(product.id));
     }, [checkWishlistExist]);
 
+    if (type == "button") {
+        return (
+            <button
+                title={text("Добавить в избранное")}
+                disabled={isLoading}
+                onClick={() => toggleWishlist({ product, setIsLoading })}
+                type="button"
+                className={classNames("main-transparent-btn group/wishlist", className)}>
+                <span className="size-5 flex-center">
+                    {isLoading ? (
+                        <OvalSpinner size={16} color="currentColor" />
+                    ) : (
+                        <Icon
+                            name="heart"
+                            className={classNames("size-5", isExist ? "text-red fill-red" : "fill-none")}
+                        />
+                    )}
+                </span>
+                <span>{isExist ? text("В избранном") : text("В избранное")}</span>
+            </button>
+        );
+    }
+
     return (
         <button
             title={text("Добавить в избранное")}

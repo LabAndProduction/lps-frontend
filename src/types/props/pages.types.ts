@@ -220,9 +220,6 @@ export interface ICheckoutSidebarProps {
 export interface IContactsProps {
     settings: ISettings;
 }
-export interface IProductSidebarProps {
-    product: ISingleProduct;
-}
 export interface IProductTabsProps {
     product: ISingleProduct;
     attributes: IProductAttributes;
@@ -234,9 +231,6 @@ export interface IProductInfoProps {
     product: ISingleProduct;
     attributes: IProductAttributes;
     productGroup: IProductGroup | "Not exist";
-}
-export interface IProductCartSidebarProps {
-    product: ISingleProduct;
 }
 export interface IProductBannersProps {
     product: ISingleProduct;

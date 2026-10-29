@@ -23,7 +23,7 @@ export default function HeaderBottom({ settings, categoriesTree }: IHeaderBottom
     return (
         <header
             ref={headerRef}
-            className="header sticky lg:top-[2.75rem] top-0 relative bg-white shadow-[0_0.125rem_0.5rem_0_var(--color-black-5)] z-90">
+            className="header sticky lg:top-[2.75rem] top-0 relative bg-white z-90">
             <div className="container flex  justify-between md:gap-10 gap-8">
                 <div className="flex gap-4">
                     <Link href="/" className="py-3">

@@ -59,10 +59,10 @@
     --leading-200: 200%;
 
     --radius-main: 0.5rem;
-    --radius-card: 1.5rem;
-    --radius-card2: 2rem;
-    --radius-btn: 0.75rem;
-    --radius-round-btn: 6.25rem;
+    --radius-card: var(--radius-main);
+    --radius-card2: var(--radius-main);
+    --radius-btn: var(--radius-main);
+    --radius-round-btn: var(--radius-main);
 }
 
 :root {

@@ -42,7 +42,7 @@ export default function CartButton({
                 }
             }}
             className={classNames(
-                "flex-center size-[var(--btn-height)] rounded-full",
+                "flex-center size-[var(--btn-height)] rounded-main",
                 `${
                     type === "icon"
                         ? `disabled:pointer-events-none disabled:bg-secondary disabled:text-white ${isGray ? "bg-gray hover:bg-gray4 text-primary" : "bg-main hover:bg-main-dark text-white"}`
