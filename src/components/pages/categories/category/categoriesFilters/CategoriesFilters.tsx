@@ -35,16 +35,16 @@ export default function CategoriesFilters({ attributes, price, closeModal, brand
                     closeModal={closeModal}
                 />
             )}
-            {(price && price.max > 0) ||
+            {((price && price.max > 0) ||
                 (attributes && attributes.data && attributes.data.length > 0) ||
-                (brands && brands.data && brands.data.length > 0 && (
-                    <ClearFilters
-                        price={price}
-                        isDisabled={isDisabled}
-                        setIsDisabled={setIsDisabled}
-                        closeModal={closeModal}
-                    />
-                ))}
+                (brands && brands.data && brands.data.length > 0)) && (
+                <ClearFilters
+                    price={price}
+                    isDisabled={isDisabled}
+                    setIsDisabled={setIsDisabled}
+                    closeModal={closeModal}
+                />
+            )}
         </div>
     );
 }

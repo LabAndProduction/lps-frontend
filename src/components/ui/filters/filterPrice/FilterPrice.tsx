@@ -40,6 +40,9 @@ export default function FilterPrice({ price, isDisabled, setIsDisabled, step = 5
         if (priceParams) {
             const priceParamsArr = priceParams.split("-").map(Number);
             setValue([priceParamsArr[0], priceParamsArr[1]]);
+        } else {
+            // filters were reset
+            setValue([MIN, MAX]);
         }
     }, [priceParams]);
 

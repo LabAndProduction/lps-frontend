@@ -17,9 +17,8 @@ export default function ClearFilters({ price, isDisabled, setIsDisabled, closeMo
         const prices = params.get("price");
         const brands = params.get("brands");
         const attributes = params.get("attributes");
-        const page = params.get("page");
 
-        if (prices == `${price.min}-${price.max}` && !brands && !attributes && page == "1") {
+        if ((!prices || prices == `${price.min}-${price.max}`) && !brands && !attributes) {
             setIsDisabled(false);
         }
     }, [params]);
@@ -32,8 +31,8 @@ export default function ClearFilters({ price, isDisabled, setIsDisabled, closeMo
                 setIsDisabled(true);
                 params.delete("brands");
                 params.delete("attributes");
-                params.set("price", `${price.min}-${price.max}`);
-                params.set("page", "1");
+                params.delete("price");
+                params.delete("page");
                 replace(`${pathname}?${params.toString()}`, { scroll: false });
                 if (closeModal) closeModal();
             }}
