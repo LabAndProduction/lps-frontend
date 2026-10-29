@@ -20,13 +20,13 @@ export default async function FooterTop() {
 
     return (
         <div className="bg-white py-[3.75rem]">
-            <div className="container flex lg:flex-row flex-col sm:items-start items-center gap-x-30 gap-y-10">
-                <div className="flex flex-col sm:items-start items-center gap-6 lg:w-[25rem] lg:shrink-0">
+            <div className="container lg:grid lg:grid-cols-[23.875rem_minmax(0,1fr)] flex flex-col sm:items-start items-center gap-x-[6.25rem] gap-y-10">
+                <div className="flex flex-col sm:items-start items-center gap-6 lg:w-full">
                     <Link href={"/"} className="py-3">
                         <SiteLogo locale={locale} size="footer" />
                     </Link>
 
-                    <p className="max-w-[25rem] text-sm leading-150 text-secondary2 sm:text-start text-center">
+                    <p className="max-w-[23.875rem] text-sm leading-150 text-secondary2 sm:text-start text-center">
                         {locale == "en"
                             ? "Laboratory and analytical equipment, glassware, reagents and consumables from leading manufacturers. Office in Tashkent, delivery across Uzbekistan."
                             : "Лабораторное и аналитическое оборудование, посуда, реактивы и расходные материалы ведущих производителей. Офис в Ташкенте, доставка по Узбекистану."}
@@ -38,7 +38,7 @@ export default async function FooterTop() {
                 </div>
 
                 {/* <div className="grid grid-cols-5 gap-4"> */}
-                <div className="flex sm:flex-row flex-col sm:items-start items-center flex-wrap justify-between gap-6 w-full">
+                <div className="flex sm:flex-row flex-col sm:items-start items-center flex-wrap justify-between gap-x-12 gap-y-6 w-full">
                     <FooterMenu menu={menu3} extraLinks={[{ href: BLOG_PATH, title: blogLabel(locale) }]} />
                     <FooterMenu menu={menu4} />
                     <FooterMenu menu={menu5} />
