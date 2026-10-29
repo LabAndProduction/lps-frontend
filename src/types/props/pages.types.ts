@@ -56,6 +56,8 @@ export interface ICategoriesFiltersProps {
     price: IPrices;
     closeModal?: () => void;
     brands: ICategoryBrands;
+    // stays in view while the product list scrolls (desktop column only)
+    isSticky?: boolean;
 }
 export interface ICategoriesFiltersMenuProps {
     attributes: ICategoryAttributes;

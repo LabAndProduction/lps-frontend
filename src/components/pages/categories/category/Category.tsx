@@ -26,7 +26,7 @@ export default async function Category({ category, products }: ICategoryProps) {
 
                     <div className="catalog-grid-wrapper">
                         <div className="lg:block hidden">
-                            <CategoriesFilters attributes={attributes} price={price} brands={brands} />
+                            <CategoriesFilters attributes={attributes} price={price} brands={brands} isSticky />
                         </div>
 
                         <CategoryProductsWrapper

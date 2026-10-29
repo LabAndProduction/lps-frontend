@@ -24,7 +24,7 @@ export default function FilterWrapper({
                             ? "flex"
                             : "hidden"
                         : "flex",
-                    "flex-col gap-3 max-h-[13.75rem] overflow-y-auto",
+                    "flex-col gap-3",
                     contentWrapperClassname,
                 )}>
                 {content}

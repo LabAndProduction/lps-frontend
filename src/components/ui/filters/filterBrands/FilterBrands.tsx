@@ -41,7 +41,7 @@ export default function FilterBrands({ brands, isDisabled, setIsDisabled }: IFil
                         />
                     </label> */}
 
-                    <div className="flex flex-col gap-3 max-h-[13.75rem] overflow-y-auto">
+                    <div className="flex flex-col gap-3">
                         {brands.map((brand) => {
                             return (
                                 <BrandCheckbox
