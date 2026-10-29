@@ -24,7 +24,7 @@ export default async function Category({ category, products }: ICategoryProps) {
                         {subCategories.data.length > 0 && <CategoriesSwiper categories={subCategories} />}
                     </div>
 
-                    <div className="products-grid-wrapper">
+                    <div className="catalog-grid-wrapper">
                         <div className="lg:block hidden">
                             <CategoriesFilters attributes={attributes} price={price} brands={brands} />
                         </div>

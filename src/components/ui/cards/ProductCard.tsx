@@ -8,13 +8,18 @@ import NextImage from "../NextImage";
 import ProductPrice from "../ProductPrice";
 import ProductBadge from "../badges/ProductBadge";
 import ProductArticleNumber from "../ProductArticleNumber";
+import classNames from "classnames";
 
-export default function ProductCard({ product }: IProductCardProps) {
+export default function ProductCard({ product, className }: IProductCardProps) {
     const { text } = useText();
     const { id, slug, img, name, discount, sku } = product;
 
     return (
-        <div className="group flex flex-col gap-3 sm:p-4 p-3 rounded-card relative bg-white h-full min-[360px]:max-w-[18.75rem] max-w-[20.625rem]">
+        <div
+            className={classNames(
+                "group flex flex-col gap-3 sm:p-4 p-3 rounded-card relative bg-white h-full min-[360px]:max-w-[18.75rem] max-w-[20.625rem]",
+                className,
+            )}>
             <Link href={`/product/${id}-${slug}`} className="@container flex-center">
                 <NextImage
                     width={200}

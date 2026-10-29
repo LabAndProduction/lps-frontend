@@ -41,6 +41,7 @@ export interface IOvalSpinnerProps {
 }
 export interface IProductCardProps {
     product: IProduct;
+    className?: string;
 }
 export interface IRowProductCardProps {
     product: IProduct;

@@ -145,6 +145,21 @@
         flex-direction: column;
     }
 }
+// catalogue pages (category, brand, search): a narrower filter column, so the
+// product grid gets more room
+@utility catalog-grid-wrapper {
+    display: grid;
+    grid-template-columns: 16.25rem 1fr;
+    gap: 2.5rem;
+    @media (max-width: 1279px) {
+        grid-template-columns: 15rem 1fr;
+        gap: 2rem;
+    }
+    @media (max-width: 1023px) {
+        display: flex;
+        flex-direction: column;
+    }
+}
 
 @utility cart-wrapper-grid {
     display: grid;

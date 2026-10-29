@@ -17,7 +17,7 @@ export default function Search({ products, price, keyword }: ISearchProps) {
     const [productsView, setProductsView] = useState<ProductsViewType>("column");
     return (
         <SectionWrapper>
-            <div className="products-grid-wrapper">
+            <div className="catalog-grid-wrapper">
                 <div className="lg:block hidden">
                     <SearchFilters price={price} keyword={keyword} />
                 </div>
