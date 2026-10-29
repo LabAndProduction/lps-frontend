@@ -20,17 +20,15 @@ export default function CheckoutSidebar({ isSubmitting }: ICheckoutSidebarProps)
 
                 <div className="flex flex-col gap-4">
                     {isCartEmpty ? <div></div> : <CheckoutProducts />}
-                    {token && token.length > 0 && (
-                        <div className="flex items-center justify-between gap-4 font-bold">
-                            <h4>{text("К оплате")}:</h4>
+                    <div className="flex items-center justify-between gap-4 font-bold">
+                        <h4>{text("К оплате")}:</h4>
 
-                            <p className="text-lg text-main">
-                                {token
-                                    ? apiCart.total_formatted
-                                    : `${new Intl.NumberFormat("fr-FR", {}).format(localCartTotal)} ${text("сум")}`}
-                            </p>
-                        </div>
-                    )}
+                        <p className="text-lg text-main">
+                            {token
+                                ? apiCart.total_formatted
+                                : `${new Intl.NumberFormat("fr-FR", {}).format(localCartTotal)} ${text("сум")}`}
+                        </p>
+                    </div>
                 </div>
 
                 <button type="submit" className="main-btn w-full">

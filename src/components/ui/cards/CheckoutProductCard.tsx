@@ -5,12 +5,9 @@ import NextImage from "../NextImage";
 import Quantity from "../formElements/Quantity";
 import RemoveFromCart from "@/components/pages/cart/RemoveFromCart";
 import { useText } from "@/context/text.context";
-import { useCookies } from "next-client-cookies";
 
 export default function CheckoutProductCard({ product, quantity }: ICheckoutTableItemProps) {
     const { text } = useText();
-    const cookies = useCookies();
-    const token = cookies.get("token");
 
     return (
         <div className="flex gap-2 border-t-2 border-gray pt-4">
@@ -30,11 +27,9 @@ export default function CheckoutProductCard({ product, quantity }: ICheckoutTabl
                 <div className="flex items-center justify-between gap-4">
                     <Quantity product={product} productQuantity={quantity} />
 
-                    {token && token.length > 0 && (
-                        <p className="text-sm">
-                            {new Intl.NumberFormat("fr-FR").format(product.current_price * quantity)} {text("сум")}
-                        </p>
-                    )}
+                    <p className="text-sm">
+                        {new Intl.NumberFormat("fr-FR").format(product.current_price * quantity)} {text("сум")}
+                    </p>
                 </div>
             </div>
         </div>
