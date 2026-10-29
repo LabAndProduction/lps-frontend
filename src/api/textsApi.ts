@@ -5,7 +5,11 @@ import { ITexts, TextKey } from "@/types/api/text.types";
 export const fetchTexts = async (clientLocale?: Locale) => {
     let texts: ITexts = { data: [] };
 
-    await fetchGET({ url: "texts", tag: "Texts", clientLocale: clientLocale }).then((data: ITexts) => (texts = data));
+    // when the API refuses (429 "Too many requests") the keys themselves are shown instead of
+    // failing the whole page
+    await fetchGET({ url: "texts", tag: "Texts", clientLocale: clientLocale }).then((data: ITexts) => {
+        if (data?.data) texts = data;
+    });
     return texts;
 };
 

@@ -15,6 +15,7 @@ export default function FilterPrice({ price, isDisabled, setIsDisabled, step = 5
     const pathname = usePathname();
     const { replace } = useRouter();
     const priceParams = searchParams.get("price");
+    const priceRange = priceParams ? priceParams.split("-").map(Number) : [MIN, MAX];
     const params = new URLSearchParams(searchParams);
     const { text } = useText();
 
@@ -27,11 +28,13 @@ export default function FilterPrice({ price, isDisabled, setIsDisabled, step = 5
         }
     }, [value]);
 
-    useEffect(() => {
-        params.set("price", `${value[0]}-${value[1]}`);
+    // The page is reloaded once the slider is released: doing it on every step of a drag
+    // sent dozens of page renders, each with its own API calls, and the API answered 429.
+    function applyPrice(range: number[]) {
+        params.set("price", `${range[0]}-${range[1]}`);
         params.set("page", `1`);
         replace(`${pathname}?${params.toString()}`, { scroll: false });
-    }, [value]);
+    }
 
     useEffect(() => {
         if (priceParams) {
@@ -53,8 +56,11 @@ export default function FilterPrice({ price, isDisabled, setIsDisabled, step = 5
                         value={value}
                         min={MIN}
                         max={MAX}
-                        onChangeComplete={() => {
+                        onChangeComplete={(value) => {
+                            if (!Array.isArray(value)) return;
+                            if (value[0] == priceRange[0] && value[1] == priceRange[1]) return;
                             setIsDisabled(true);
+                            applyPrice(value);
                         }}
                         onChange={(value) => {
                             if (Array.isArray(value)) {
