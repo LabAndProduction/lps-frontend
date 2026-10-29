@@ -14,7 +14,7 @@ export default function ProductCard({ product }: IProductCardProps) {
     const { id, slug, img, name, discount, sku } = product;
 
     return (
-        <div className="group flex flex-col gap-3 sm:py-6 sm:px-4 px-3 py-[1.125rem] rounded-card relative bg-white rounded-[0.5rem] h-full min-[360px]:max-w-[18.75rem] max-w-[20.625rem]">
+        <div className="group flex flex-col gap-3 sm:p-4 p-3 rounded-card relative bg-white h-full min-[360px]:max-w-[18.75rem] max-w-[20.625rem]">
             <Link href={`/product/${id}-${slug}`} className="@container flex-center">
                 <NextImage
                     width={200}
