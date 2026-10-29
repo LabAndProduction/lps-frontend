@@ -21,7 +21,7 @@ export default async function FooterTop() {
     return (
         <div className="bg-white py-[3.75rem]">
             <div className="container lg:grid lg:grid-cols-[23.875rem_minmax(0,1fr)] flex flex-col items-start gap-x-[6.25rem] gap-y-10">
-                <div className="flex flex-col items-start gap-6 lg:w-full">
+                <div className="flex flex-col items-start gap-6 w-full">
                     <Link href={"/"} className="py-3">
                         <SiteLogo locale={locale} size="footer" />
                     </Link>
@@ -32,7 +32,7 @@ export default async function FooterTop() {
                             : "Лабораторное и аналитическое оборудование, посуда, реактивы и расходные материалы ведущих производителей. Офис в Ташкенте, доставка по Узбекистану."}
                     </p>
 
-                    <Link href={`${locale == "ru" ? "" : `/${locale}`}/contacts`} className="main-btn">
+                    <Link href={`${locale == "ru" ? "" : `/${locale}`}/contacts`} className="main-btn max-sm:!w-full">
                         {locale == "en" ? "Send a request" : "Оставить заявку"}
                     </Link>
                 </div>
@@ -42,7 +42,7 @@ export default async function FooterTop() {
                     <FooterMenu menu={menu3} extraLinks={[{ href: BLOG_PATH, title: blogLabel(locale) }]} />
                     <FooterMenu menu={menu4} />
                     <FooterMenu menu={menu5} />
-                    <div className="footer-menu sm:w-[17.5rem]">
+                    <div className="footer-menu w-full sm:w-[17.5rem]">
                         <h4 className="title">{text("Контакты")}</h4>
                         <ul className="list">
                             <li>

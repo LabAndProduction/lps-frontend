@@ -14,7 +14,7 @@ export default function SiteLogo({ locale, size = "header" }: { locale: string; 
                 height={64}
                 className={classNames(
                     "object-contain shrink-0",
-                    isFooter ? "size-16" : "lg:size-12 sm:size-11 size-10",
+                    isFooter ? "sm:size-16 size-12" : "lg:size-12 sm:size-11 size-10",
                 )}
                 unoptimized
             />
@@ -23,14 +23,14 @@ export default function SiteLogo({ locale, size = "header" }: { locale: string; 
                     className={classNames(
                         "font-semibold leading-110",
                         // in a phone header the name takes two lines, so the icons beside it still fit
-                        isFooter ? "text-xl whitespace-nowrap" : "lg:text-lg sm:text-base text-sm sm:whitespace-nowrap max-sm:max-w-[8.5rem]",
+                        isFooter ? "sm:text-xl text-base whitespace-nowrap" : "lg:text-lg sm:text-base text-sm sm:whitespace-nowrap max-sm:max-w-[8.5rem]",
                     )}>
                     Lab & Production Solutions
                 </span>
                 <span
                     className={classNames(
                         "uppercase tracking-[0.12em] text-secondary leading-110 whitespace-nowrap",
-                        isFooter ? "text-xs" : "text-[0.6875rem] max-sm:hidden",
+                        isFooter ? "sm:text-xs text-[0.625rem]" : "text-[0.6875rem] max-sm:hidden",
                     )}>
                     {locale == "en" ? "Laboratory equipment" : "Лабораторное оборудование"}
                 </span>
