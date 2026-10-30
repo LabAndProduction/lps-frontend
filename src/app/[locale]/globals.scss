@@ -37,6 +37,16 @@ svg,
     *:last-child {
         margin-bottom: 0;
     }
+    // Lists pasted from Word keep the bullet's negative first-line indent (text-indent: -18pt)
+    // but lose the left margin that offsets it, so the bullets stuck out of the card. Give the
+    // margin back; Word paragraphs without a bullet get no indent at all.
+    p[class*="MsoList"] {
+        margin-left: 1.5rem;
+        &:not(:has([style*="mso-list: Ignore"])) {
+            margin-left: 0;
+            text-indent: 0 !important;
+        }
+    }
     h1,
     h2,
     h3,
