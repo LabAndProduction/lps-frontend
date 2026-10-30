@@ -1,0 +1,19 @@
+{
+  "assets": [
+    "public/seoagent-blog/dlya-kakih-analizov-nuzhny-farforovye-tigli/9a749a5426b7e60e.webp",
+    "public/seoagent-blog/dlya-kakih-analizov-nuzhny-farforovye-tigli/d5a4868184964afb.webp"
+  ],
+  "contentHash": "sha256:dbe61b2d55b28b675a46b4b86cfc2a31914a8ea1c10dcdeab778711bd4c08fbc",
+  "criticScore": 80,
+  "deliveredRef": "dlya-kakih-analizov-nuzhny-farforovye-tigli",
+  "firstDeliveredAt": "2026-10-30T19:11:14.696Z",
+  "generatedAt": "2026-10-30T19:11:14.696Z",
+  "id": "f66eba4c-efae-4b0e-8d6d-f4fb75ce68ca",
+  "modifiedAt": "2026-10-30T19:11:14.696Z",
+  "planId": "06db77dd-36f8-4ddd-9cd2-60be1dd7dd53",
+  "revisionCount": 0,
+  "schema": "seoagent.blog/v1",
+  "serializer": "blogfs@1.0.0",
+  "source": "auto",
+  "textHash": "sha256:92977c32e6a32f1634d82ee027d47d16cc40445c1d2eb247d77808eb5a814099"
+}

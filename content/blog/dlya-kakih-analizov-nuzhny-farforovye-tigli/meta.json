@@ -1,0 +1,47 @@
+{
+  "author": "lab-production-solutions",
+  "bodyFormat": "html",
+  "category": "laboratornaya-posuda",
+  "coverImage": "/seoagent-blog/dlya-kakih-analizov-nuzhny-farforovye-tigli/9a749a5426b7e60e.webp",
+  "defaultLocale": "ru",
+  "features": [
+    "local-assets"
+  ],
+  "focusKeyword": "для каких анализов нужны фарфоровые тигли",
+  "focusKeywords": [
+    "для каких анализов нужны фарфоровые тигли",
+    "фарфоровый тигель",
+    "тигель фарфоровый",
+    "чашка выпарительная",
+    "прокаливание пробы",
+    "озоление пробы",
+    "гравиметрический анализ",
+    "потеря массы при прокаливании",
+    "лабораторная посуда из фарфора",
+    "муфельная печь",
+    "доведение тигля до постоянной массы",
+    "выбор типоразмера тигля",
+    "подготовка фарфоровой посуды",
+    "тигли для лаборатории Ташкент",
+    "фарфоровые чашки и тигли"
+  ],
+  "locales": {
+    "en": {
+      "body": "body.en.html",
+      "excerpt": "Which analyses call for porcelain crucibles? Ignition, ashing, gravimetric analysis, evaporating dishes. How to choose the right size and prepare glassware.",
+      "metaTitle": "What Analyses Require Porcelain Crucibles",
+      "title": "What Analyses Require Porcelain Crucibles and Dishes"
+    },
+    "ru": {
+      "body": "body.ru.html",
+      "excerpt": "Для каких анализов нужны фарфоровые тигли: прокаливание пробы, озоление пробы, гравиметрический анализ, чашка выпарительная. Как выбрать типоразмер и подготовить посуду.",
+      "metaTitle": "Для каких анализов нужны фарфоровые тигли",
+      "title": "Для каких анализов нужны фарфоровые тигли и чашки"
+    }
+  },
+  "modifiedAt": "2026-10-30T19:11:14.696Z",
+  "publishedAt": "2026-10-30T19:11:14.696Z",
+  "schema": "seoagent.blog/v1",
+  "slug": "dlya-kakih-analizov-nuzhny-farforovye-tigli",
+  "status": "published"
+}
