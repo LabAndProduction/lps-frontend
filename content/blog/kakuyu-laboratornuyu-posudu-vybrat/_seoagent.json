@@ -1,0 +1,19 @@
+{
+  "assets": [
+    "public/seoagent-blog/kakuyu-laboratornuyu-posudu-vybrat/33bd3c39df17455c.webp",
+    "public/seoagent-blog/kakuyu-laboratornuyu-posudu-vybrat/9db1ee2c8bd0e57f.webp"
+  ],
+  "contentHash": "sha256:745bad6fe48d58637d38d8cee7c5d01e2839ce8e1f0d57a31711e25494517656",
+  "criticScore": 75,
+  "deliveredRef": "kakuyu-laboratornuyu-posudu-vybrat",
+  "firstDeliveredAt": "2026-10-31T19:24:35.080Z",
+  "generatedAt": "2026-10-31T19:24:35.080Z",
+  "id": "ab171510-af92-4fde-86f5-ff6cefe3b2ce",
+  "modifiedAt": "2026-10-31T19:24:35.080Z",
+  "planId": "5c3f4742-5e12-4349-8797-3381ead2dcfc",
+  "revisionCount": 0,
+  "schema": "seoagent.blog/v1",
+  "serializer": "blogfs@1.0.0",
+  "source": "auto",
+  "textHash": "sha256:a14a083bf233929fcaa50f0026108899101bc24aa4caa9f23eec8696982c58e6"
+}

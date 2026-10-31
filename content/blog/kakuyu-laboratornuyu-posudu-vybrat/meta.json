@@ -1,0 +1,47 @@
+{
+  "author": "lab-production-solutions",
+  "bodyFormat": "html",
+  "category": "laboratornaya-posuda",
+  "coverImage": "/seoagent-blog/kakuyu-laboratornuyu-posudu-vybrat/33bd3c39df17455c.webp",
+  "defaultLocale": "ru",
+  "features": [
+    "local-assets"
+  ],
+  "focusKeyword": "какую лабораторную посуду выбрать",
+  "focusKeywords": [
+    "какую лабораторную посуду выбрать",
+    "стеклянная или пластиковая посуда",
+    "лабораторная посуда из стекла",
+    "пластиковая лабораторная посуда",
+    "боросиликатное стекло",
+    "выбор лабораторной посуды",
+    "термостойкость лабораторной посуды",
+    "точность измерений лабораторной посуды",
+    "химическая стойкость посуды",
+    "сравнение стекла и пластика",
+    "критерии выбора лабораторной посуды",
+    "закупка лабораторной посуды",
+    "мерная посуда",
+    "посуда для нагревания",
+    "лабораторная посуда купить"
+  ],
+  "locales": {
+    "en": {
+      "body": "body.en.html",
+      "excerpt": "Glass or plastic labware? A comparison of heat resistance, accuracy, and cost. Selection criteria, a comparison table, and a purchasing checklist.",
+      "metaTitle": "Choosing Laboratory Glassware: Glass or Plastic",
+      "title": "Choosing Laboratory Glassware: Glass or Plastic"
+    },
+    "ru": {
+      "body": "body.ru.html",
+      "excerpt": "Какую лабораторную посуду выбрать? Сравнение стекла и пластика по термостойкости, точности и цене. Критерии, таблица и чек-лист для закупки.",
+      "metaTitle": "Какую лабораторную посуду выбрать - Стеклянную или Пластиков",
+      "title": "Какую лабораторную посуду выбрать - Стеклянную или пластиковую"
+    }
+  },
+  "modifiedAt": "2026-10-31T19:24:35.080Z",
+  "publishedAt": "2026-10-31T19:24:35.080Z",
+  "schema": "seoagent.blog/v1",
+  "slug": "kakuyu-laboratornuyu-posudu-vybrat",
+  "status": "published"
+}
