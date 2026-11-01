@@ -1,0 +1,19 @@
+{
+  "assets": [
+    "public/seoagent-blog/minimalnyy-nabor-laboratornoy-posudy/af7b1f765ba0d116.webp",
+    "public/seoagent-blog/minimalnyy-nabor-laboratornoy-posudy/a1afc586bbde5b9d.webp"
+  ],
+  "contentHash": "sha256:5e3ccfd4190c57c34fbf1496b6678c2e64463b80558276e4f6845778b1f56e94",
+  "criticScore": 80,
+  "deliveredRef": "minimalnyy-nabor-laboratornoy-posudy",
+  "firstDeliveredAt": "2026-11-01T19:36:12.170Z",
+  "generatedAt": "2026-11-01T19:36:12.170Z",
+  "id": "9d0a862a-6394-4c71-8e9e-0523960cc64c",
+  "modifiedAt": "2026-11-01T19:36:12.170Z",
+  "planId": "4b802152-e39f-4492-bbaf-9ae0fa6c8867",
+  "revisionCount": 0,
+  "schema": "seoagent.blog/v1",
+  "serializer": "blogfs@1.0.0",
+  "source": "auto",
+  "textHash": "sha256:b7f8909369a3a6a4b62bd8644ceaf739b2cea10e4926d871b4df606a83a13a8a"
+}

@@ -1,0 +1,47 @@
+{
+  "author": "lab-production-solutions",
+  "bodyFormat": "html",
+  "category": "laboratornaya-posuda",
+  "coverImage": "/seoagent-blog/minimalnyy-nabor-laboratornoy-posudy/af7b1f765ba0d116.webp",
+  "defaultLocale": "ru",
+  "features": [
+    "local-assets"
+  ],
+  "focusKeyword": "минимальный набор лабораторной посуды",
+  "focusKeywords": [
+    "минимальный набор лабораторной посуды",
+    "лабораторная посуда для новой лаборатории",
+    "базовый стеклянный набор",
+    "мерная посуда",
+    "посуда общего назначения",
+    "колбы конические",
+    "стаканы лабораторные",
+    "пробирки лабораторные",
+    "воронки лабораторные",
+    "мерные цилиндры",
+    "класс точности А и Б",
+    "боросиликатное стекло",
+    "пластиковая лабораторная посуда",
+    "расчёт количества посуды",
+    "приёмка и хранение посуды"
+  ],
+  "locales": {
+    "en": {
+      "body": "body.en.html",
+      "excerpt": "The essential lab glassware starter kit for a new lab: which flasks, beakers, and test tubes you need from day one, how to calculate quantities, and where to save without cutting corners.",
+      "metaTitle": "Essential Lab Glassware Kit: What to Buy for a New Lab",
+      "title": "The Essential Lab Glassware Starter Kit for a New Lab"
+    },
+    "ru": {
+      "body": "body.ru.html",
+      "excerpt": "Минимальный набор лабораторной посуды для новой лаборатории: какие колбы, стаканы и пробирки нужны на старте, как рассчитать количество и сэкономить без риска.",
+      "metaTitle": "Минимальный набор лабораторной посуды - Что купить для новой",
+      "title": "Минимальный набор лабораторной посуды для новой лаборатории"
+    }
+  },
+  "modifiedAt": "2026-11-01T19:36:12.170Z",
+  "publishedAt": "2026-11-01T19:36:12.170Z",
+  "schema": "seoagent.blog/v1",
+  "slug": "minimalnyy-nabor-laboratornoy-posudy",
+  "status": "published"
+}
