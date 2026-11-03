@@ -26,21 +26,23 @@ export default function CartTotal() {
                     </p>
                 </div>
 
-                <div className="flex flex-col gap-1 border-t border-gray4 pt-3">
-                    <div className="text-sm font-semibold flex items-center justify-between gap-4">
-                        <h4>{text("Итого")}:</h4>
-                        <p>
-                            {pricedTotal > 0
-                                ? `${new Intl.NumberFormat("ru-RU").format(pricedTotal)} ${text("сум")}`
-                                : text("Цена по запросу")}
-                        </p>
+                {token && (
+                    <div className="flex flex-col gap-1 border-t border-gray4 pt-3">
+                        <div className="text-sm font-semibold flex items-center justify-between gap-4">
+                            <h4>{text("Итого")}:</h4>
+                            <p>
+                                {pricedTotal > 0
+                                    ? `${new Intl.NumberFormat("ru-RU").format(pricedTotal)} ${text("сум")}`
+                                    : text("Цена по запросу")}
+                            </p>
+                        </div>
+                        {onRequestCount > 0 && pricedTotal > 0 && (
+                            <p className="text-xs text-secondary">
+                                {text("Без учёта товаров с ценой по запросу")} ({onRequestCount})
+                            </p>
+                        )}
                     </div>
-                    {onRequestCount > 0 && pricedTotal > 0 && (
-                        <p className="text-xs text-secondary">
-                            {text("Без учёта товаров с ценой по запросу")} ({onRequestCount})
-                        </p>
-                    )}
-                </div>
+                )}
             </div>
 
             <div className="lg:flex sm:grid flex grid-cols-2 flex-col gap-2">

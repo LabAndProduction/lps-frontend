@@ -4,9 +4,11 @@ import { Link } from "@/i18n/routing";
 import { useText } from "@/context/text.context";
 import { IProductCardSmallProps } from "@/types/props/ui.types";
 import NextImage from "../NextImage";
+import useIsLoggedIn from "@/hooks/useIsLoggedIn";
 
 export default function ProductCardSmall({ product }: IProductCardSmallProps) {
     const { text } = useText();
+    const isLoggedIn = useIsLoggedIn();
 
     return (
         <Link
@@ -30,9 +32,11 @@ export default function ProductCardSmall({ product }: IProductCardSmallProps) {
                         style={{ overflowWrap: "anywhere" }}>
                         {product.name}
                     </h4>
-                    <p className="font-bold leading-120 lg:text-base text-sm">
-                        {product.current_price > 0 ? product.current_price_formatted : text("Цена по запросу")}
-                    </p>
+                    {isLoggedIn && (
+                        <p className="font-bold leading-120 lg:text-base text-sm">
+                            {product.current_price > 0 ? product.current_price_formatted : text("Цена по запросу")}
+                        </p>
+                    )}
                 </div>
             </div>
         </Link>

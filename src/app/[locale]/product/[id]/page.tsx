@@ -41,12 +41,12 @@ export default async function CategoryPage({ params }: IProductPageParams) {
     });
 
     const locale = await getLocaleTs();
-    const { name, meta_description, categories, current_price } = product.data;
+    const { name, meta_description, categories } = product.data;
     const structuredData = [
         productJsonLd(
             product.data,
             absoluteUrl(locale, `/product/${productId}-${product.data.slug}`),
-            filled(meta_description) || seoTexts(locale).productDescription(name, current_price),
+            filled(meta_description) || seoTexts(locale).productDescription(name),
         ),
         breadcrumbJsonLd(locale, [
             { name: text("Главная"), path: "/" },
@@ -102,10 +102,10 @@ export async function generateMetadata({ params }: IProductPageParams): Promise<
     if (!product || !product.data || product.data.slug !== slug) notFound();
 
     const pageUrl = await getFullUrl(`/product/${id}`);
-    const { name, seo_title, meta_description, current_price } = product.data;
+    const { name, seo_title, meta_description } = product.data;
     const tx = seoTexts(locale);
     const title = filled(seo_title, name) || tx.product(name);
-    const description = filled(meta_description) || tx.productDescription(name, current_price);
+    const description = filled(meta_description) || tx.productDescription(name);
 
     return seoMeta({
         route: `/product/${(await params).id}`,

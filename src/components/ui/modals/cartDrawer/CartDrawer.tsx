@@ -9,11 +9,13 @@ import NextImage from "@/components/ui/NextImage";
 import Icon from "@/components/ui/Icon";
 import Quantity from "@/components/ui/formElements/Quantity";
 import RemoveFromCart from "@/components/pages/cart/RemoveFromCart";
+import useIsLoggedIn from "@/hooks/useIsLoggedIn";
 
 // The cart that slides in from the right after «В корзину»: the products with their quantities,
 // the sum and the way on to checkout or to the cart page.
 export default function CartDrawer() {
     const { text } = useText();
+    const isLoggedIn = useIsLoggedIn();
     const { lines, pricedTotal, onRequestCount, isCartDrawerOpen, setIsCartDrawerOpen } = useCart();
     const close = () => setIsCartDrawerOpen(false);
     // a guest's cart lives in the browser, so the drawer is drawn only there (the server's
@@ -99,11 +101,13 @@ export default function CartDrawer() {
                                         <div className="flex items-center justify-between gap-3 mt-auto">
                                             <Quantity product={product} productQuantity={quantity} />
                                             <div className="flex items-center gap-1">
-                                                <span className="text-sm font-semibold whitespace-nowrap">
-                                                    {product.current_price > 0
-                                                        ? format(product.current_price * quantity)
-                                                        : text("Цена по запросу")}
-                                                </span>
+                                                {isLoggedIn && (
+                                                    <span className="text-sm font-semibold whitespace-nowrap">
+                                                        {product.current_price > 0
+                                                            ? format(product.current_price * quantity)
+                                                            : text("Цена по запросу")}
+                                                    </span>
+                                                )}
                                                 <RemoveFromCart product={product} />
                                             </div>
                                         </div>
@@ -114,14 +118,16 @@ export default function CartDrawer() {
 
                         <div className="flex flex-col gap-4 px-5 py-5 border-t border-gray4">
                             <div className="flex flex-col gap-1">
-                                <div className="flex items-center justify-between gap-4">
-                                    <span className="font-medium">{text("Итого")}</span>
-                                    <span className="text-xl font-bold">
-                                        {pricedTotal > 0 ? format(pricedTotal) : text("Цена по запросу")}
-                                    </span>
-                                </div>
+                                {isLoggedIn && (
+                                    <div className="flex items-center justify-between gap-4">
+                                        <span className="font-medium">{text("Итого")}</span>
+                                        <span className="text-xl font-bold">
+                                            {pricedTotal > 0 ? format(pricedTotal) : text("Цена по запросу")}
+                                        </span>
+                                    </div>
+                                )}
                                 <p className="text-xs text-secondary">
-                                    {onRequestCount > 0 && pricedTotal > 0
+                                    {isLoggedIn && onRequestCount > 0 && pricedTotal > 0
                                         ? `${text("Без учёта товаров с ценой по запросу")} (${onRequestCount}). `
                                         : ""}
                                     {text("Стоимость доставки менеджер уточнит после заказа.")}
