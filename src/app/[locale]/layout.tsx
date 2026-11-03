@@ -38,6 +38,7 @@ import { SITE_URL } from "@/lib/seo";
 export async function generateMetadata() {
     return seoMeta({
         route: "/",
+        layout: true,
 
         fallback: {
             // relative addresses in metadata (the blog's canonical) resolve against the site
