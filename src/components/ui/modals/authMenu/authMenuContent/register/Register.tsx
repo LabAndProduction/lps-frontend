@@ -24,7 +24,7 @@ export default function Register({ setAuthTab, closeModal }: IRegisterProps) {
     const { registerValidationSchema } = useFormValidation();
     const [isOtpModalOpen, setIsOtpModalOpen] = useState<boolean>(false);
     const [otpData, setOtpData] = useState<IRegisterForm>();
-    const { push, refresh } = useRouter();
+    const { refresh } = useRouter();
     const { text } = useText();
     const locale = useLocaleTS();
     const handleSubmit = ({ values, resetForm }: ISubmitFormFuncParams<IRegisterForm>) => {
@@ -69,7 +69,6 @@ export default function Register({ setAuthTab, closeModal }: IRegisterProps) {
                     },
                 }).then((data) => {
                     if ("token" in data) {
-                        push("/");
                         refresh();
                         setIsOtpModalOpen(false);
                         closeModal();

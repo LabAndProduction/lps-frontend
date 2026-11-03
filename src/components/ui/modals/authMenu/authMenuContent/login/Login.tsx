@@ -16,7 +16,7 @@ const initialValues: ILoginForm = {
 };
 
 export default function Login({ setAuthTab, closeModal }: ILoginProps) {
-    const { push, refresh } = useRouter();
+    const { refresh } = useRouter();
     const { loginValidationSchema } = useFormValidation();
     const { text } = useText();
     const locale = useLocaleTS();
@@ -30,7 +30,6 @@ export default function Login({ setAuthTab, closeModal }: ILoginProps) {
                 clientLocale: locale,
             }).then((data) => {
                 if (data) {
-                    push("/");
                     refresh();
                     closeModal();
                 } else resetForm();
