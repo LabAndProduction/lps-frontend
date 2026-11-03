@@ -7,9 +7,11 @@ import { IProductInfoProps } from "@/types/props/pages.types";
 import ProductGroups from "./productGroups/ProductGroups";
 import { useText } from "@/context/text.context";
 import ProductArticleNumber from "../../../ui/ProductArticleNumber";
+import useIsLoggedIn from "@/hooks/useIsLoggedIn";
 
 export default function ProductInfo({ product, attributes, productGroup }: IProductInfoProps) {
     const { text } = useText();
+    const isLoggedIn = useIsLoggedIn();
     const {
         h1_name,
         brand,
@@ -48,12 +50,14 @@ export default function ProductInfo({ product, attributes, productGroup }: IProd
             {product_group_id && <ProductGroups attributes={attributes} productGroup={productGroup} />}
 
             <div className="flex flex-col gap-4 border-t border-gray4 pt-5">
-                <div className="flex items-center justify-between gap-4">
-                    <p className="font-semibold xl:text-2xl text-xl text-main">
-                        {current_price > 0 ? current_price_formatted : text("Цена по запросу")}
-                    </p>
-                    {Number(discount) > 0 && <ProductBadge text={`-${Number(discount).toFixed(0)}%`} />}
-                </div>
+                {isLoggedIn && (
+                    <div className="flex items-center justify-between gap-4">
+                        <p className="font-semibold xl:text-2xl text-xl text-main">
+                            {current_price > 0 ? current_price_formatted : text("Цена по запросу")}
+                        </p>
+                        {Number(discount) > 0 && <ProductBadge text={`-${Number(discount).toFixed(0)}%`} />}
+                    </div>
+                )}
 
                 <div className="flex flex-col gap-2">
                     <CartButton product={product.data} type="text" className="!w-full" />

@@ -5,9 +5,11 @@ import NextImage from "../NextImage";
 import Quantity from "../formElements/Quantity";
 import RemoveFromCart from "@/components/pages/cart/RemoveFromCart";
 import { useText } from "@/context/text.context";
+import useIsLoggedIn from "@/hooks/useIsLoggedIn";
 
 export default function CheckoutProductCard({ product, quantity }: ICheckoutTableItemProps) {
     const { text } = useText();
+    const isLoggedIn = useIsLoggedIn();
 
     return (
         <div className="flex gap-2 border-t-2 border-gray pt-4">
@@ -27,11 +29,13 @@ export default function CheckoutProductCard({ product, quantity }: ICheckoutTabl
                 <div className="flex items-center justify-between gap-4">
                     <Quantity product={product} productQuantity={quantity} />
 
-                    <p className="text-sm whitespace-nowrap">
-                        {product.current_price > 0
-                            ? `${new Intl.NumberFormat("ru-RU").format(product.current_price * quantity)} ${text("сум")}`
-                            : text("Цена по запросу")}
-                    </p>
+                    {isLoggedIn && (
+                        <p className="text-sm whitespace-nowrap">
+                            {product.current_price > 0
+                                ? `${new Intl.NumberFormat("ru-RU").format(product.current_price * quantity)} ${text("сум")}`
+                                : text("Цена по запросу")}
+                        </p>
+                    )}
                 </div>
             </div>
         </div>

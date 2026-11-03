@@ -4,7 +4,8 @@ import { SITE_NAME } from "@/lib/seoTexts";
 
 /* Structured data (schema.org JSON-LD) for search engines: the organisation, product
    cards and breadcrumbs. Only facts the API gives are used - no ratings (every product
-   carries the same default 5 of 1), no price when it is 0. */
+   carries the same default 5 of 1) and no offer: prices are shown to signed-in visitors
+   only, and markup must not carry what the page does not show. */
 
 type Json = Record<string, unknown>;
 
@@ -68,24 +69,11 @@ export function breadcrumbJsonLd(locale: string, crumbs: ICrumb[]): Json {
     };
 }
 
-// "Под заказ…" is supplied on order, "Нет в наличии" is out of stock; an empty status
-// follows the stock flag
-function availability(inStock: number, status?: string | null): string {
-    const s = (status || "").toLowerCase();
-    if (s.includes("нет в наличии") || s.includes("out of stock")) return "https://schema.org/OutOfStock";
-    if (s.includes("под заказ") || s.includes("order")) return "https://schema.org/BackOrder";
-    if (s.includes("в наличии") || s.includes("in stock") || inStock > 0) return "https://schema.org/InStock";
-    return "https://schema.org/OutOfStock";
-}
-
 interface IProductForLd {
     name: string;
     sku?: string | null;
     description?: string | null;
     brand_name?: string | null;
-    current_price?: number | null;
-    in_stock: number;
-    stock_info?: string | null;
     img?: string | null;
     gallery?: { original: string }[] | null;
     categories?: { name: string }[] | null;
@@ -110,18 +98,5 @@ export function productJsonLd(product: IProductForLd, url: string, fallbackDescr
         ...(images.length ? { image: images } : {}),
         ...(product.brand_name ? { brand: { "@type": "Brand", name: product.brand_name } } : {}),
         ...(product.categories?.[0]?.name ? { category: product.categories[0].name } : {}),
-        ...(product.current_price && product.current_price > 0
-            ? {
-                  offers: {
-                      "@type": "Offer",
-                      url,
-                      price: product.current_price,
-                      priceCurrency: "UZS",
-                      availability: availability(product.in_stock, product.stock_info),
-                      itemCondition: "https://schema.org/NewCondition",
-                      seller: { "@id": `${SITE_URL}/#organization` },
-                  },
-              }
-            : {}),
     };
 }

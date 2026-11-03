@@ -5,10 +5,12 @@ import { useText } from "@/context/text.context";
 import CheckoutProducts from "./checkoutProducts/CheckoutProducts";
 import { ICheckoutSidebarProps } from "@/types/props/pages.types";
 import OvalSpinner from "@/components/ui/OvalSpinner";
+import useIsLoggedIn from "@/hooks/useIsLoggedIn";
 
 export default function CheckoutSidebar({ isSubmitting }: ICheckoutSidebarProps) {
     const { isCartEmpty, pricedTotal, onRequestCount } = useCart();
     const { text } = useText();
+    const isLoggedIn = useIsLoggedIn();
 
     return (
         <div className="flex flex-col gap-5">
@@ -18,15 +20,17 @@ export default function CheckoutSidebar({ isSubmitting }: ICheckoutSidebarProps)
                 <div className="flex flex-col gap-4">
                     {isCartEmpty ? <div></div> : <CheckoutProducts />}
                     <div className="flex flex-col gap-1">
-                        <div className="flex items-center justify-between gap-4 font-bold">
-                            <h4>{text("Итого")}:</h4>
-                            <p className="text-lg text-main">
-                                {pricedTotal > 0
-                                    ? `${new Intl.NumberFormat("ru-RU").format(pricedTotal)} ${text("сум")}`
-                                    : text("Цена по запросу")}
-                            </p>
-                        </div>
-                        {onRequestCount > 0 && pricedTotal > 0 && (
+                        {isLoggedIn && (
+                            <div className="flex items-center justify-between gap-4 font-bold">
+                                <h4>{text("Итого")}:</h4>
+                                <p className="text-lg text-main">
+                                    {pricedTotal > 0
+                                        ? `${new Intl.NumberFormat("ru-RU").format(pricedTotal)} ${text("сум")}`
+                                        : text("Цена по запросу")}
+                                </p>
+                            </div>
+                        )}
+                        {isLoggedIn && onRequestCount > 0 && pricedTotal > 0 && (
                             <p className="text-xs text-secondary">
                                 {text("Без учёта товаров с ценой по запросу")} ({onRequestCount})
                             </p>

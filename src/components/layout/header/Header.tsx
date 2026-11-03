@@ -5,6 +5,7 @@ import { getMenu } from "@/api/menusApi";
 import { ICategoriesTree } from "@/types/api/categories.types";
 import AuthMenu from "@/components/ui/modals/authMenu/AuthMenu";
 import CartDrawer from "@/components/ui/modals/cartDrawer/CartDrawer";
+import PricePrompt from "@/components/ui/modals/pricePrompt/PricePrompt";
 
 export interface IHeaderProps {
     categoriesTree: ICategoriesTree;
@@ -19,6 +20,7 @@ export default async function Header({ categoriesTree }: IHeaderProps) {
             <HeaderTop settings={settings} menu={menu2} />
             <HeaderBottom settings={settings} categoriesTree={categoriesTree} />
             <AuthMenu />
+            <PricePrompt />
             <CartDrawer />
         </>
     );

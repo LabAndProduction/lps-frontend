@@ -7,10 +7,12 @@ import { useText } from "@/context/text.context";
 import { ISortBtn } from "@/types/types";
 import { useEffect, useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import useIsLoggedIn from "@/hooks/useIsLoggedIn";
 
 export default function ProductsSort() {
     const { text } = useText();
-    const options: ISortBtn[] = [
+    const isLoggedIn = useIsLoggedIn();
+    const allOptions: ISortBtn[] = [
         {
             id: 0,
             option: "created_at",
@@ -48,6 +50,8 @@ export default function ProductsSort() {
             direction: "desc",
         },
     ];
+    // sorting by price would hint at the prices, which guests do not see
+    const options = isLoggedIn ? allOptions : allOptions.filter((el) => el.option != "price");
     const [selected, setSelected] = useState<ISortBtn | null>(null);
     const searchParams = useSearchParams();
     const pathname = usePathname();
