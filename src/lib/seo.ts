@@ -16,6 +16,13 @@ export function localePath(locale: string, path: string = "/"): string {
 
 export const absoluteUrl = (locale: string, path: string = "/") => `${SITE_URL}${localePath(locale, path)}`;
 
+// The adapter adds the blog to the sitemap itself, with addresses that end without "/",
+// and each of them answered with a 308. Page addresses (no dot in the last part) get the
+// slash, as everywhere else on the site.
+export const withTrailingSlash = (xml: string) =>
+    xml.replace(/<loc>([^<]*?[^/<])<\/loc>/g, (tag, loc: string) =>
+        loc.split("/").pop()!.includes(".") ? tag : `<loc>${loc}/</loc>`);
+
 export type LocalePaths = Record<Locale, string>;
 
 // The same path in both languages (pages without a translated slug).
