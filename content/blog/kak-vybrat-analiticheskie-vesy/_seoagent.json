@@ -1,0 +1,19 @@
+{
+  "assets": [
+    "public/seoagent-blog/kak-vybrat-analiticheskie-vesy/56fe3eccf54d4d3e.webp",
+    "public/seoagent-blog/kak-vybrat-analiticheskie-vesy/abeb46131379ace9.webp"
+  ],
+  "contentHash": "sha256:d345df26a9577c71001d3bfc278add8f40c3c62fb4bc6639e78f79824f3ec2d2",
+  "criticScore": 79,
+  "deliveredRef": "kak-vybrat-analiticheskie-vesy",
+  "firstDeliveredAt": "2026-11-04T09:13:28.755Z",
+  "generatedAt": "2026-11-04T09:13:28.755Z",
+  "id": "36e3dff2-030c-400d-af3c-e725edda1642",
+  "modifiedAt": "2026-11-04T09:13:28.755Z",
+  "planId": "791b1f53-3076-4c7b-b092-e72c16f065cd",
+  "revisionCount": 0,
+  "schema": "seoagent.blog/v1",
+  "serializer": "blogfs@1.0.0",
+  "source": "auto",
+  "textHash": "sha256:98c8a514ed30b7764c8fb49e70a717431139f50214e85a624064ce0a48d59a89"
+}

@@ -1,0 +1,48 @@
+{
+  "author": "lab-production-solutions",
+  "bodyFormat": "html",
+  "category": "vesy",
+  "coverImage": "/seoagent-blog/kak-vybrat-analiticheskie-vesy/56fe3eccf54d4d3e.webp",
+  "defaultLocale": "ru",
+  "features": [
+    "local-assets"
+  ],
+  "focusKeyword": "как выбрать аналитические весы",
+  "focusKeywords": [
+    "как выбрать аналитические весы",
+    "аналитические весы",
+    "выбор аналитических весов",
+    "дискретность аналитических весов",
+    "максимальная нагрузка весов",
+    "поверочный интервал",
+    "минимальный вес навески",
+    "лабораторные весы",
+    "точность аналитических весов",
+    "класс точности весов",
+    "прецизионные весы",
+    "технические весы",
+    "аналитические весы для лаборатории",
+    "повторяемость взвешивания",
+    "ветрозащитная камера",
+    "как подобрать аналитические весы"
+  ],
+  "locales": {
+    "en": {
+      "body": "body.en.html",
+      "excerpt": "How to choose an analytical balance: we break down readability, maximum capacity, and calibration interval so you can pick a model that matches your sample sizes and methods.",
+      "metaTitle": "How to Choose an Analytical Balance: Readability and Capacity",
+      "title": "How to Choose an Analytical Balance: Readability, Capacity, and Calibration Interval"
+    },
+    "ru": {
+      "body": "body.ru.html",
+      "excerpt": "Как выбрать аналитические весы: разбираем дискретность, максимальную нагрузку и поверочный интервал, чтобы подобрать модель под ваши навески и методики.",
+      "metaTitle": "Как выбрать аналитические весы - По дискретности и нагрузке",
+      "title": "Как выбрать аналитические весы по дискретности, нагрузке и поверочному интервалу"
+    }
+  },
+  "modifiedAt": "2026-11-04T09:13:28.755Z",
+  "publishedAt": "2026-11-04T09:13:28.755Z",
+  "schema": "seoagent.blog/v1",
+  "slug": "kak-vybrat-analiticheskie-vesy",
+  "status": "published"
+}
