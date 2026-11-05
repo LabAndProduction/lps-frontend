@@ -1,0 +1,19 @@
+{
+  "assets": [
+    "public/seoagent-blog/kak-vybrat-mernuyu-kolbu/78d1e40d6fc38b68.webp",
+    "public/seoagent-blog/kak-vybrat-mernuyu-kolbu/a48190db92369524.webp"
+  ],
+  "contentHash": "sha256:475440f249c172361d7970d02e2a42e56655f08c1f20e6e96e3bee5df9a69fbe",
+  "criticScore": 84,
+  "deliveredRef": "kak-vybrat-mernuyu-kolbu",
+  "firstDeliveredAt": "2026-11-05T12:10:49.335Z",
+  "generatedAt": "2026-11-05T12:10:49.335Z",
+  "id": "6e355e5b-a7b6-4394-b7f6-8538d712ed43",
+  "modifiedAt": "2026-11-05T12:10:49.335Z",
+  "planId": "07dbb67e-f14c-4491-b4f4-89931a9bb874",
+  "revisionCount": 1,
+  "schema": "seoagent.blog/v1",
+  "serializer": "blogfs@1.0.0",
+  "source": "auto",
+  "textHash": "sha256:d29c18fecce92018a4073c4eeeb1737a739091b5a5261ac21baf150efaf97f1d"
+}

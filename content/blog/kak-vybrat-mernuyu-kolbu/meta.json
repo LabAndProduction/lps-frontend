@@ -1,0 +1,42 @@
+{
+  "author": "lab-production-solutions",
+  "bodyFormat": "html",
+  "category": "laboratornaya-posuda",
+  "coverImage": "/seoagent-blog/kak-vybrat-mernuyu-kolbu/78d1e40d6fc38b68.webp",
+  "defaultLocale": "ru",
+  "features": [
+    "local-assets"
+  ],
+  "focusKeyword": "как выбрать мерную колбу",
+  "focusKeywords": [
+    "как выбрать мерную колбу",
+    "мерная колба",
+    "класс точности A",
+    "класс точности B",
+    "шлиф",
+    "объём мерной колбы",
+    "калибровка",
+    "боросиликатное стекло",
+    "мерная посуда",
+    "лабораторная посуда"
+  ],
+  "locales": {
+    "en": {
+      "body": "body.en.html",
+      "excerpt": "How to choose a volumetric flask for your task: volumes, accuracy classes A and B, joints, calibration and care. Sample calculation, buying checklist and common mistakes.",
+      "metaTitle": "How to Choose a Volumetric Flask - Volume, Accuracy Class, Joint",
+      "title": "How to Choose a Volumetric Flask: Volume, Accuracy Class, Joint"
+    },
+    "ru": {
+      "body": "body.ru.html",
+      "excerpt": "Как выбрать мерную колбу под задачу: объёмы, классы точности A и B, шлиф, калибровка и уход. Расчёт навески, чек-лист покупки и типичные ошибки.",
+      "metaTitle": "Как выбрать мерную колбу - Объём, класс точности, шлиф",
+      "title": "Как выбрать мерную колбу: объём, класс точности, шлиф"
+    }
+  },
+  "modifiedAt": "2026-11-05T12:10:49.335Z",
+  "publishedAt": "2026-11-05T12:10:49.335Z",
+  "schema": "seoagent.blog/v1",
+  "slug": "kak-vybrat-mernuyu-kolbu",
+  "status": "published"
+}
