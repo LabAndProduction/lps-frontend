@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { routing } from "@/i18n/routing";
 import { ILocalization } from "@/types/api/api.types";
-import { absoluteUrl, entityPaths, LocalePaths, productLanguages, samePaths } from "@/lib/seo";
+import { absoluteUrl, entityPaths, LocalePaths, productLanguages, samePaths, siteImage } from "@/lib/seo";
 import { Locale } from "@/types/api/api.types";
 
 // /sitemap.xml: every public page in Russian and English, each entry naming its twin in
@@ -13,7 +13,14 @@ interface IEntity {
     slug: string;
     localization: ILocalization;
     url?: string;
+    img?: string | null;
+    gallery?: { original?: string | null }[] | null;
 }
+
+// A product's photos at their lps.uz addresses (the API host is closed to search engines).
+const productImages = (p: IEntity): string[] => [
+    ...new Set([p.img, ...(p.gallery ?? []).map((g) => g.original)].map(siteImage).filter((src): src is string => !!src)),
+];
 
 const API = process.env.API;
 
@@ -47,11 +54,12 @@ async function all(path: string): Promise<IEntity[]> {
 }
 
 // `langs`: the indexed versions of the page (products are Russian only for now)
-function entry(paths: LocalePaths, priority: number, langs: readonly Locale[] = routing.locales): MetadataRoute.Sitemap {
+function entry(paths: LocalePaths, priority: number, langs: readonly Locale[] = routing.locales, images: string[] = []): MetadataRoute.Sitemap {
     return langs.map((locale) => ({
         url: absoluteUrl(locale, paths[locale]),
         changeFrequency: "weekly" as const,
         priority,
+        ...(images.length ? { images } : {}),
         alternates: {
             languages: {
                 ...Object.fromEntries(langs.map((l) => [l, absoluteUrl(l, paths[l])])),
@@ -74,7 +82,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         ...entry(samePaths("/"), 1),
         ...["/about", "/contacts", "/brands", "/news"].flatMap((path) => entry(samePaths(path), 0.5)),
         ...categories.flatMap((c) => entry(entityPaths("/categories", c.id, c.localization), 0.9)),
-        ...products.flatMap((p) => entry(entityPaths("/product", p.id, p.localization), 0.8, productLanguages)),
+        ...products.flatMap((p) => entry(entityPaths("/product", p.id, p.localization), 0.8, productLanguages, productImages(p))),
         ...brands.flatMap((b) => entry(entityPaths("/brands", b.id, b.localization), 0.6)),
         ...news.flatMap((n) => entry(entityPaths("/news", n.id, n.localization), 0.4)),
         // the info pages (delivery, payment, warranty…); "О компании" is /about, the

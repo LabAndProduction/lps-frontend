@@ -19,6 +19,12 @@ const nextConfig: NextConfig = {
         API: process.env.API_URL,
     },
     trailingSlash: true,
+    // Photos are stored on the API host, which robots.txt closes to search engines. The site
+    // serves the same files under its own /storage/ path, so image search can index them
+    // (og:image, Product schema and the sitemap point there - siteImage in src/lib/seo.ts).
+    async rewrites() {
+        return [{ source: "/storage/:path*", destination: `https://${process.env.PATTERN || "api.lps.uz"}/storage/:path*` }];
+    },
     async redirects() {
         return [
             {

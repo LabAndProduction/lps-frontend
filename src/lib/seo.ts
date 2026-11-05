@@ -16,6 +16,16 @@ export function localePath(locale: string, path: string = "/"): string {
 
 export const absoluteUrl = (locale: string, path: string = "/") => `${SITE_URL}${localePath(locale, path)}`;
 
+// Photos live on the API host (api.lps.uz/storage/...), whose robots.txt closes it to search
+// engines. next.config rewrites /storage/* on the site to the API, so search engines get the
+// same file at a lps.uz address: og:image, Product schema and the sitemap use that address.
+// The API's "no-image" placeholder is not a photo of anything - undefined for it.
+export function siteImage(src?: string | null): string | undefined {
+    if (!src || src.includes("no-image")) return undefined;
+    const m = src.match(/^https?:\/\/[^/]+(\/storage\/.+)$/);
+    return m ? `${SITE_URL}${m[1]}` : src;
+}
+
 // The adapter adds the blog to the sitemap itself, with addresses that end without "/",
 // and each of them answered with a 308. Page addresses (no dot in the last part) get the
 // slash, as everywhere else on the site.

@@ -11,7 +11,7 @@ import Product from "@/components/pages/product/Product";
 import PageHeader from "@/components/ui/PageHeader";
 import SpecialSwiper from "@/components/ui/swipers/SpecialSwiper";
 import { getFullUrl } from "@/utils/getFullUrl";
-import { pageAlternates, entityPaths, productLanguages, NOINDEX, absoluteUrl } from "@/lib/seo";
+import { pageAlternates, entityPaths, productLanguages, NOINDEX, absoluteUrl, siteImage, SITE_URL } from "@/lib/seo";
 import { Locale } from "@/types/api/api.types";
 import { filled, seoTexts } from "@/lib/seoTexts";
 import { getLocaleTs } from "@/utils/getLocaleTs";
@@ -123,7 +123,7 @@ export async function generateMetadata({ params }: IProductPageParams): Promise<
                 url: pageUrl,
                 images: [
                     {
-                        url: product.data.img,
+                        url: siteImage(product.data.img) ?? `${SITE_URL}/images/logo.png`,
                     },
                 ],
                 type: "website",

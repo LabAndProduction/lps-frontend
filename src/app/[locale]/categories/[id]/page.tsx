@@ -6,7 +6,7 @@ import { notFound } from "next/navigation";
 import { ICategoryPageParams } from "@/types/pageParams.types";
 import CategoryPageWrapper from "@/components/pages/categories/CategoryPageWrapper";
 import { getFullUrl } from "@/utils/getFullUrl";
-import { pageAlternates, entityPaths } from "@/lib/seo";
+import { pageAlternates, entityPaths, siteImage, SITE_URL } from "@/lib/seo";
 import { getLocaleTs } from "@/utils/getLocaleTs";
 import { filled, seoTexts } from "@/lib/seoTexts";
 import { JsonLd, breadcrumbJsonLd } from "@/lib/jsonLd";
@@ -106,7 +106,7 @@ export async function generateMetadata({ params }: ICategoryPageParams): Promise
                 url: pageUrl,
                 images: [
                     {
-                        url: category.data.img,
+                        url: siteImage(category.data.img) ?? `${SITE_URL}/images/logo.png`,
                     },
                 ],
                 type: "website",
