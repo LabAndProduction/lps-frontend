@@ -1,0 +1,19 @@
+{
+  "assets": [
+    "public/seoagent-blog/chem-otlichayutsya-analiticheskie-i-pretsizionnye-vesy/5b8d7129354cc58d.webp",
+    "public/seoagent-blog/chem-otlichayutsya-analiticheskie-i-pretsizionnye-vesy/4db6126d48d569a0.webp"
+  ],
+  "contentHash": "sha256:d47724e0f2f737b555510983d04b929ae36b72b8bf4529304cb1640effaac726",
+  "criticScore": 80,
+  "deliveredRef": "chem-otlichayutsya-analiticheskie-i-pretsizionnye-vesy",
+  "firstDeliveredAt": "2026-11-05T12:54:07.589Z",
+  "generatedAt": "2026-11-05T12:54:07.589Z",
+  "id": "0c06cc9c-6828-42ec-92e0-8bed7acfe45d",
+  "modifiedAt": "2026-11-05T12:54:07.589Z",
+  "planId": "feb3f033-1c38-4c6d-a4ee-8d9e535dd108",
+  "revisionCount": 0,
+  "schema": "seoagent.blog/v1",
+  "serializer": "blogfs@1.0.0",
+  "source": "auto",
+  "textHash": "sha256:1e843f42fc12e7862d967cf167f068837e1328dbe2fd0aa45a61b053528b28a3"
+}

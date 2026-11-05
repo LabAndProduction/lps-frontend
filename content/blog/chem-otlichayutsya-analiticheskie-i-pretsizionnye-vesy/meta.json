@@ -1,0 +1,47 @@
+{
+  "author": "lab-production-solutions",
+  "bodyFormat": "html",
+  "category": "vesy",
+  "coverImage": "/seoagent-blog/chem-otlichayutsya-analiticheskie-i-pretsizionnye-vesy/5b8d7129354cc58d.webp",
+  "defaultLocale": "ru",
+  "features": [
+    "local-assets"
+  ],
+  "focusKeyword": "чем отличаются аналитические и прецизионные весы",
+  "focusKeywords": [
+    "чем отличаются аналитические и прецизионные весы",
+    "аналитические весы",
+    "прецизионные весы",
+    "дискретность весов",
+    "класс точности весов",
+    "лабораторные весы",
+    "погрешность взвешивания",
+    "технические весы",
+    "калибровка весов",
+    "поверка весов",
+    "ГОСТ OIML R 76",
+    "взвешивание стандартных образцов",
+    "защита от внешней среды",
+    "максимальная нагрузка весов",
+    "выбор лабораторных весов"
+  ],
+  "locales": {
+    "en": {
+      "body": "body.en.html",
+      "excerpt": "Analytical vs. precision balances: we break down readability, accuracy class, applications, and how room conditions affect your choice of instrument.",
+      "metaTitle": "Analytical vs. Precision Balances: What's the Difference? - Explained",
+      "title": "Analytical vs. Precision Balances: What's the Difference?"
+    },
+    "ru": {
+      "body": "body.ru.html",
+      "excerpt": "Чем отличаются аналитические и прецизионные весы: разбираем дискретность, класс точности, область применения и влияние условий помещения на выбор прибора.",
+      "metaTitle": "Чем отличаются аналитические и прецизионные весы - Разбор",
+      "title": "Чем отличаются аналитические и прецизионные весы"
+    }
+  },
+  "modifiedAt": "2026-11-05T12:54:07.589Z",
+  "publishedAt": "2026-11-05T12:54:07.589Z",
+  "schema": "seoagent.blog/v1",
+  "slug": "chem-otlichayutsya-analiticheskie-i-pretsizionnye-vesy",
+  "status": "published"
+}
