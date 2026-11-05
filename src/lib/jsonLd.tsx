@@ -1,5 +1,5 @@
 import { ISettings } from "@/types/api/settings.types";
-import { absoluteUrl, SITE_URL } from "@/lib/seo";
+import { absoluteUrl, siteImage, SITE_URL } from "@/lib/seo";
 import { SITE_NAME } from "@/lib/seoTexts";
 
 /* Structured data (schema.org JSON-LD) for search engines: the organisation, product
@@ -82,9 +82,10 @@ interface IProductForLd {
 export function productJsonLd(product: IProductForLd, url: string, fallbackDescription: string): Json {
     const images = [
         ...new Set(
-            [product.img, ...(product.gallery || []).map((g) => g.original)].filter(
-                (src): src is string => typeof src === "string" && isUrl(src) && !src.includes("no-image"),
-            ),
+            [product.img, ...(product.gallery || []).map((g) => g.original)]
+                .filter((src): src is string => typeof src === "string" && isUrl(src))
+                .map(siteImage)
+                .filter((src): src is string => !!src),
         ),
     ];
     const description = plain(product.description).slice(0, 500) || fallbackDescription;
