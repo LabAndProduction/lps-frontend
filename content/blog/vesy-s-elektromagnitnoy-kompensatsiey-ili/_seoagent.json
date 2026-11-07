@@ -1,0 +1,19 @@
+{
+  "assets": [
+    "public/seoagent-blog/vesy-s-elektromagnitnoy-kompensatsiey-ili/645a97ecff4bf68e.webp",
+    "public/seoagent-blog/vesy-s-elektromagnitnoy-kompensatsiey-ili/4e0add73175d90a2.webp"
+  ],
+  "contentHash": "sha256:26d06601a7a42ce537720a36f9938ac7de2a041cdf48eec36bf8d000663dd769",
+  "criticScore": 79,
+  "deliveredRef": "vesy-s-elektromagnitnoy-kompensatsiey-ili",
+  "firstDeliveredAt": "2026-11-07T10:50:22.237Z",
+  "generatedAt": "2026-11-07T10:50:22.237Z",
+  "id": "d88043b8-65e3-4e45-b909-f569c90f84a1",
+  "modifiedAt": "2026-11-07T10:50:22.237Z",
+  "planId": "38946716-4e10-42bb-b90d-07bef31cde92",
+  "revisionCount": 0,
+  "schema": "seoagent.blog/v1",
+  "serializer": "blogfs@1.0.0",
+  "source": "auto",
+  "textHash": "sha256:9db4816c0a6ca68008983a4d1f45cbcbeb33fbd38841afd4f9feaab27bff7557"
+}

@@ -1,0 +1,47 @@
+{
+  "author": "lab-production-solutions",
+  "bodyFormat": "html",
+  "category": "vesy",
+  "coverImage": "/seoagent-blog/vesy-s-elektromagnitnoy-kompensatsiey-ili/645a97ecff4bf68e.webp",
+  "defaultLocale": "ru",
+  "features": [
+    "local-assets"
+  ],
+  "focusKeyword": "весы с электромагнитной компенсацией или тензодатчиком",
+  "focusKeywords": [
+    "весы с электромагнитной компенсацией или тензодатчиком",
+    "весы с электромагнитной компенсацией",
+    "тензодатчик для весов",
+    "принцип измерения весов",
+    "точность лабораторных весов",
+    "аналитические весы",
+    "прецизионные весы",
+    "дрейф нуля весов",
+    "тензодатчиковые весы",
+    "ЭМК весы",
+    "стабильность показаний весов",
+    "выбор лабораторных весов",
+    "весы на тензодатчике",
+    "повторяемость взвешивания",
+    "разрешение весов"
+  ],
+  "locales": {
+    "en": {
+      "body": "body.en.html",
+      "excerpt": "Electromagnetic force compensation vs. strain gauge scales: we break down the weighing principle, laboratory scale accuracy, zero drift, and reading stability.",
+      "metaTitle": "Electromagnetic Force Compensation vs. Strain Gauge Scales: Making the Choice",
+      "title": "Electromagnetic Force Compensation vs. Strain Gauge Scales: Which to Choose?"
+    },
+    "ru": {
+      "body": "body.ru.html",
+      "excerpt": "Весы с электромагнитной компенсацией или тензодатчиком: разбираем принцип измерения весов, точность лабораторных весов, дрейф нуля весов и стабильность показаний весов.",
+      "metaTitle": "Весы с электромагнитной компенсацией или тензодатчиком - Выбор",
+      "title": "Весы с электромагнитной компенсацией или тензодатчиком?"
+    }
+  },
+  "modifiedAt": "2026-11-07T10:50:22.237Z",
+  "publishedAt": "2026-11-07T10:50:22.237Z",
+  "schema": "seoagent.blog/v1",
+  "slug": "vesy-s-elektromagnitnoy-kompensatsiey-ili",
+  "status": "published"
+}
