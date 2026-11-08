@@ -1,0 +1,19 @@
+{
+  "assets": [
+    "public/seoagent-blog/prichiny-rosta-davleniya-v-vezhh/c8e13aab094e3370.webp",
+    "public/seoagent-blog/prichiny-rosta-davleniya-v-vezhh/b9eb6b817e7e8d26.webp"
+  ],
+  "contentHash": "sha256:d35de60b806aa936e187b2fa0c3d3d59f824df9659ef2597ec7a2c5853cdf9f9",
+  "criticScore": 89,
+  "deliveredRef": "prichiny-rosta-davleniya-v-vezhh",
+  "firstDeliveredAt": "2026-11-08T08:02:28.319Z",
+  "generatedAt": "2026-11-08T08:02:28.319Z",
+  "id": "28fbe39a-a96c-4748-8107-8ae460b0b11d",
+  "modifiedAt": "2026-11-08T08:02:28.319Z",
+  "planId": "b7211644-6a3e-478e-bdcd-b254ff4f00ff",
+  "revisionCount": 0,
+  "schema": "seoagent.blog/v1",
+  "serializer": "blogfs@1.0.0",
+  "source": "auto",
+  "textHash": "sha256:a47027a44b4caebeb547f8644958d5a18699cb0d153f1bd0335d329e1375a1fe"
+}

@@ -1,0 +1,47 @@
+{
+  "author": "lab-production-solutions",
+  "bodyFormat": "html",
+  "category": "hromatografiya",
+  "coverImage": "/seoagent-blog/prichiny-rosta-davleniya-v-vezhh/c8e13aab094e3370.webp",
+  "defaultLocale": "ru",
+  "features": [
+    "local-assets"
+  ],
+  "focusKeyword": "причины роста давления в вэжх",
+  "focusKeywords": [
+    "причины роста давления в вэжх",
+    "рост давления в ВЭЖХ",
+    "засорение колонки ВЭЖХ",
+    "забитый фильтр подвижной фазы",
+    "выпадение солей буфера",
+    "неисправность насоса ВЭЖХ",
+    "диагностика хроматографа",
+    "предколонка ВЭЖХ",
+    "засорение сорбента",
+    "уплотнения насоса ВЭЖХ",
+    "скачки давления в системе",
+    "промывка капилляров ВЭЖХ",
+    "дегазатор ВЭЖХ",
+    "профилактика ВЭЖХ",
+    "гидравлическая система хроматографа"
+  ],
+  "locales": {
+    "en": {
+      "body": "body.en.html",
+      "excerpt": "Causes of pressure build-up in HPLC: a clogged mobile phase filter, buffer salt precipitation, worn pump seals, or a blocked HPLC column. Step-by-step troubleshooting.",
+      "metaTitle": "Causes of Pressure Build-Up in HPLC - Component-by-Component Breakdown",
+      "title": "Causes of Pressure Build-Up in HPLC"
+    },
+    "ru": {
+      "body": "body.ru.html",
+      "excerpt": "Причины роста давления в ВЭЖХ: забитый фильтр подвижной фазы, выпадение солей буфера, изношенные уплотнения насоса или засорение колонки ВЭЖХ. Пошаговая диагностика.",
+      "metaTitle": "Причины роста давления в ВЭЖХ - Разбор по узлам",
+      "title": "Причины роста давления в ВЭЖХ"
+    }
+  },
+  "modifiedAt": "2026-11-08T08:02:28.319Z",
+  "publishedAt": "2026-11-08T08:02:28.319Z",
+  "schema": "seoagent.blog/v1",
+  "slug": "prichiny-rosta-davleniya-v-vezhh",
+  "status": "published"
+}
