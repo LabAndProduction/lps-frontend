@@ -1,0 +1,19 @@
+{
+  "assets": [
+    "public/seoagent-blog/kolonki-c18-i-c8/9078f1f979eb1df7.webp",
+    "public/seoagent-blog/kolonki-c18-i-c8/107d70c6e6c5a81b.webp"
+  ],
+  "contentHash": "sha256:b40711b401d77339b069c0135bade7dace443a5639a1d0f474cb9d9fce431215",
+  "criticScore": 81,
+  "deliveredRef": "kolonki-c18-i-c8",
+  "firstDeliveredAt": "2026-11-09T15:39:42.265Z",
+  "generatedAt": "2026-11-09T15:39:42.265Z",
+  "id": "fb6fb68c-9207-4ab3-96f6-28990c5e45a8",
+  "modifiedAt": "2026-11-09T15:39:42.265Z",
+  "planId": "296d60f0-4b82-4664-a530-2e8b1ca4f91c",
+  "revisionCount": 1,
+  "schema": "seoagent.blog/v1",
+  "serializer": "blogfs@1.0.0",
+  "source": "auto",
+  "textHash": "sha256:f1868f51b2f93127187da6f0e3e5adab76ccdd9cc186e8d9fb4f7380cc228771"
+}

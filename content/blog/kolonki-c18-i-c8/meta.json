@@ -1,0 +1,47 @@
+{
+  "author": "lab-production-solutions",
+  "bodyFormat": "html",
+  "category": "hromatografiya",
+  "coverImage": "/seoagent-blog/kolonki-c18-i-c8/9078f1f979eb1df7.webp",
+  "defaultLocale": "ru",
+  "features": [
+    "local-assets"
+  ],
+  "focusKeyword": "колонки C18 и C8",
+  "focusKeywords": [
+    "колонки C18 и C8",
+    "отличия C18 и C8",
+    "выбор колонки C18 или C8",
+    "перенос метода ВЭЖХ",
+    "обращённо-фазная хроматография",
+    "привитый слой сорбента",
+    "удержание и селективность",
+    "C18 октадецил",
+    "C8 октил",
+    "endcapping",
+    "силикагель для ВЭЖХ",
+    "подвижная фаза",
+    "pH-стабильность колонки",
+    "размер частиц и колонки",
+    "чек-лист выбора колонки"
+  ],
+  "locales": {
+    "en": {
+      "body": "body.en.html",
+      "excerpt": "C18 vs C8 columns: differences in the bonded layer, retention and selectivity, phase selection, endcapping, pH stability, and an HPLC method transfer checklist.",
+      "metaTitle": "C18 vs C8 Columns: Differences, Selection, and Method Transfer",
+      "title": "C18 vs C8 Columns: Differences, Selection, and Method Transfer"
+    },
+    "ru": {
+      "body": "body.ru.html",
+      "excerpt": "Колонки C18 и C8: отличия привитого слоя, удержание и селективность, выбор фазы, endcapping, pH-стабильность и чек-лист переноса метода ВЭЖХ.",
+      "metaTitle": "Колонки C18 и C8 - Отличия, выбор и перенос метода",
+      "title": "Колонки C18 и C8: отличия, выбор и перенос метода"
+    }
+  },
+  "modifiedAt": "2026-11-09T15:39:42.265Z",
+  "publishedAt": "2026-11-09T15:39:42.265Z",
+  "schema": "seoagent.blog/v1",
+  "slug": "kolonki-c18-i-c8",
+  "status": "published"
+}
