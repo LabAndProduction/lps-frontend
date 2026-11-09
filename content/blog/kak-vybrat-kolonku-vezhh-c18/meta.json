@@ -1,0 +1,47 @@
+{
+  "author": "lab-production-solutions",
+  "bodyFormat": "html",
+  "category": "hromatografiya",
+  "coverImage": "/seoagent-blog/kak-vybrat-kolonku-vezhh-c18/ff458cf2646262ee.webp",
+  "defaultLocale": "ru",
+  "features": [
+    "local-assets"
+  ],
+  "focusKeyword": "как выбрать колонку вэжх c18",
+  "focusKeywords": [
+    "как выбрать колонку вэжх c18",
+    "колонка c18",
+    "обращённая фаза c18",
+    "параметры колонки вэжх",
+    "зернистость колонки вэжх",
+    "размер пор колонки",
+    "длина и диаметр колонки",
+    "эндкеппинг колонки",
+    "pH-диапазон колонки c18",
+    "подбор колонки под методику",
+    "колонка вэжх для рутинных анализов",
+    "uhplc и суб-2 мкм",
+    "колонка c18 для оснований",
+    "aqueous-stable фаза",
+    "хроматографическая колонка c18"
+  ],
+  "locales": {
+    "en": {
+      "body": "body.en.html",
+      "excerpt": "How to choose a C18 HPLC column for your method: particle size, pore size, length and diameter, endcapping, column pH range, and pressure check — with an ordering checklist.",
+      "metaTitle": "How to Choose a C18 HPLC Column - Parameters and Checklist",
+      "title": "How to Choose a C18 HPLC Column"
+    },
+    "ru": {
+      "body": "body.ru.html",
+      "excerpt": "Как выбрать колонку ВЭЖХ C18 под методику: зернистость, размер пор, длина и диаметр, эндкеппинг, pH-диапазон колонки и проверка давления с чек-листом заказа.",
+      "metaTitle": "Как выбрать колонку ВЭЖХ C18 - Параметры и чек-лист",
+      "title": "Как выбрать колонку ВЭЖХ C18"
+    }
+  },
+  "modifiedAt": "2026-11-09T06:53:34.913Z",
+  "publishedAt": "2026-11-09T06:53:34.913Z",
+  "schema": "seoagent.blog/v1",
+  "slug": "kak-vybrat-kolonku-vezhh-c18",
+  "status": "published"
+}

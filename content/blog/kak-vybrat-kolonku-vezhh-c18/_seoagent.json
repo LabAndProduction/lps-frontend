@@ -1,0 +1,19 @@
+{
+  "assets": [
+    "public/seoagent-blog/kak-vybrat-kolonku-vezhh-c18/ff458cf2646262ee.webp",
+    "public/seoagent-blog/kak-vybrat-kolonku-vezhh-c18/c54ae03bc2f50efe.webp"
+  ],
+  "contentHash": "sha256:a6a8a8ded2c981199371cb1de47c17830a17479d6b1a6f125ce816c938b3c360",
+  "criticScore": 87,
+  "deliveredRef": "kak-vybrat-kolonku-vezhh-c18",
+  "firstDeliveredAt": "2026-11-09T06:53:34.913Z",
+  "generatedAt": "2026-11-09T06:53:34.913Z",
+  "id": "1ff92d71-e00f-49e9-b498-5e276d32413c",
+  "modifiedAt": "2026-11-09T06:53:34.913Z",
+  "planId": "6119cfa1-fd6d-4f67-9f70-a8b4de9eb0c1",
+  "revisionCount": 0,
+  "schema": "seoagent.blog/v1",
+  "serializer": "blogfs@1.0.0",
+  "source": "auto",
+  "textHash": "sha256:7d5fa0d6199d94f7fb7db5082561ac834e188f0ccc4588e1c430ce8b194ec178"
+}
