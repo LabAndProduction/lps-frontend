@@ -1,0 +1,51 @@
+{
+  "author": "lab-production-solutions",
+  "bodyFormat": "html",
+  "category": "hromatografiya",
+  "coverImage": "/seoagent-blog/printsip-raboty-zhidkostnoy-hromatografii-vezhh/26e3738a0753b3a1.webp",
+  "defaultLocale": "ru",
+  "features": [
+    "local-assets"
+  ],
+  "focusKeyword": "принцип работы жидкостной хроматографии вэжх",
+  "focusKeywords": [
+    "принцип работы жидкостной хроматографии вэжх",
+    "высокоэффективная жидкостная хроматография",
+    "жидкостный хроматограф вэжх",
+    "устройство хроматографа вэжх",
+    "разделение в хроматографической колонке",
+    "подвижная фаза",
+    "неподвижная фаза сорбент",
+    "обращённо-фазовый режим",
+    "коэффициент удерживания",
+    "время удерживания",
+    "селективность метода",
+    "подготовка образца",
+    "состав элюента",
+    "скорость потока",
+    "воспроизводимость анализа",
+    "детектор хроматографа",
+    "сорбция и распределение",
+    "метод вэжх в фармацевтике",
+    "контроль качества воды"
+  ],
+  "locales": {
+    "en": {
+      "body": "body.en.html",
+      "excerpt": "How HPLC liquid chromatography works: a breakdown of high-performance liquid chromatography, the components of an HPLC system, mobile and stationary phases, and the parameters that ensure reproducible results.",
+      "metaTitle": "How HPLC Liquid Chromatography Works - System Components and Parameters",
+      "title": "How HPLC Liquid Chromatography Works"
+    },
+    "ru": {
+      "body": "body.ru.html",
+      "excerpt": "Принцип работы жидкостной хроматографии ВЭЖХ: разбираем высокоэффективная жидкостная хроматография, устройство хроматографа, фазы и параметры воспроизводимости.",
+      "metaTitle": "Принцип работы жидкостной хроматографии ВЭЖХ - Устройство и параметры",
+      "title": "Принцип работы жидкостной хроматографии ВЭЖХ"
+    }
+  },
+  "modifiedAt": "2026-11-10T10:50:05.605Z",
+  "publishedAt": "2026-11-10T10:50:05.605Z",
+  "schema": "seoagent.blog/v1",
+  "slug": "printsip-raboty-zhidkostnoy-hromatografii-vezhh",
+  "status": "published"
+}

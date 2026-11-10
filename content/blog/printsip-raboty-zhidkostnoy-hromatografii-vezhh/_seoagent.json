@@ -1,0 +1,19 @@
+{
+  "assets": [
+    "public/seoagent-blog/printsip-raboty-zhidkostnoy-hromatografii-vezhh/26e3738a0753b3a1.webp",
+    "public/seoagent-blog/printsip-raboty-zhidkostnoy-hromatografii-vezhh/2c5fca40bfff33ab.webp"
+  ],
+  "contentHash": "sha256:fa1d700d6460dc218c5e50f18ec341343d366967f42ee6e814944efe7965dc74",
+  "criticScore": 80,
+  "deliveredRef": "printsip-raboty-zhidkostnoy-hromatografii-vezhh",
+  "firstDeliveredAt": "2026-11-10T10:50:05.605Z",
+  "generatedAt": "2026-11-10T10:50:05.605Z",
+  "id": "7705e3f7-e925-4745-b0bc-c8e4a2346af3",
+  "modifiedAt": "2026-11-10T10:50:05.605Z",
+  "planId": "d172dc14-c5a5-44ed-a30b-6be70138f214",
+  "revisionCount": 0,
+  "schema": "seoagent.blog/v1",
+  "serializer": "blogfs@1.0.0",
+  "source": "auto",
+  "textHash": "sha256:3168a1a7e263a0c019440416b01b47c80ccb047acbfb73d114f904b90e4ccfbf"
+}
