@@ -1,0 +1,19 @@
+{
+  "assets": [
+    "public/seoagent-blog/kak-pravilno-ustanovit-analiticheskie-vesy/4ccd8cef3b366626.webp",
+    "public/seoagent-blog/kak-pravilno-ustanovit-analiticheskie-vesy/dbca42f70e7b3f6f.webp"
+  ],
+  "contentHash": "sha256:0a7bb7990bcebf2c0ad5858fd3123ccd3a36e0f93dd6975b133cd411ac3fabcc",
+  "criticScore": 85,
+  "deliveredRef": "kak-pravilno-ustanovit-analiticheskie-vesy",
+  "firstDeliveredAt": "2026-11-11T15:14:37.352Z",
+  "generatedAt": "2026-11-11T15:14:37.352Z",
+  "id": "c47ec4b2-9fb0-4b73-bcb2-1efed8a1b71f",
+  "modifiedAt": "2026-11-11T15:14:37.352Z",
+  "planId": "5287ad06-d157-4963-b0c4-43d52664b021",
+  "revisionCount": 0,
+  "schema": "seoagent.blog/v1",
+  "serializer": "blogfs@1.0.0",
+  "source": "auto",
+  "textHash": "sha256:65718ca390b354d53fa8da0a7f68c42a0de82208ad2341be2ab49878e152559f"
+}

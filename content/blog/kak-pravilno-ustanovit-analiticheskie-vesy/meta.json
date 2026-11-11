@@ -1,0 +1,47 @@
+{
+  "author": "lab-production-solutions",
+  "bodyFormat": "html",
+  "category": "vesy",
+  "coverImage": "/seoagent-blog/kak-pravilno-ustanovit-analiticheskie-vesy/4ccd8cef3b366626.webp",
+  "defaultLocale": "ru",
+  "features": [
+    "local-assets"
+  ],
+  "focusKeyword": "как правильно установить аналитические весы",
+  "focusKeywords": [
+    "как правильно установить аналитические весы",
+    "установка аналитических весов",
+    "требования к помещению для весов",
+    "выбор стола для аналитических весов",
+    "защита весов от вибрации",
+    "защита от сквозняков",
+    "горизонтирование аналитических весов",
+    "прогрев аналитических весов",
+    "калибровка аналитических весов",
+    "поверка лабораторных весов",
+    "точность аналитических весов",
+    "антивибрационная плита для весов",
+    "влияние температуры и влажности на весы",
+    "защита от статики",
+    "правило одного места для весов"
+  ],
+  "locales": {
+    "en": {
+      "body": "body.en.html",
+      "excerpt": "How to install analytical balances correctly: room requirements, choosing the right bench, protection from vibration and drafts, leveling, warm-up, and calibration.",
+      "metaTitle": "How to Set Up Analytical Balances Correctly - Step by Step",
+      "title": "How to Set Up Analytical Balances the Right Way"
+    },
+    "ru": {
+      "body": "body.ru.html",
+      "excerpt": "Как правильно установить аналитические весы: требования к помещению для весов, выбор стола, защита от вибрации и сквозняков, горизонтирование, прогрев и калибровка.",
+      "metaTitle": "Как правильно установить аналитические весы - Пошагово",
+      "title": "Где и как правильно установить аналитические весы"
+    }
+  },
+  "modifiedAt": "2026-11-11T15:14:37.352Z",
+  "publishedAt": "2026-11-11T15:14:37.352Z",
+  "schema": "seoagent.blog/v1",
+  "slug": "kak-pravilno-ustanovit-analiticheskie-vesy",
+  "status": "published"
+}
