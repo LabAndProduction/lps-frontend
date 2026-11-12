@@ -1,0 +1,50 @@
+{
+  "author": "lab-production-solutions",
+  "bodyFormat": "html",
+  "category": "vesy",
+  "coverImage": "/seoagent-blog/pochemu-vesy-pokazyvayut-nestabilno/9515887cd3d08951.webp",
+  "defaultLocale": "ru",
+  "features": [
+    "local-assets"
+  ],
+  "focusKeyword": "почему весы показывают нестабильно",
+  "focusKeywords": [
+    "почему весы показывают нестабильно",
+    "нестабильные показания весов",
+    "дрейф нуля весов",
+    "скачут цифры на весах",
+    "весы долго не стабилизируются",
+    "причины нестабильности весов",
+    "вибрация влияет на весы",
+    "сквозняк и весы",
+    "статическое электричество на весах",
+    "перепад температуры для весов",
+    "юстировка весов",
+    "калибровка лабораторных весов",
+    "износ датчика весов",
+    "антивибрационный стол для весов",
+    "посуда для весов",
+    "устранить нестабильность весов",
+    "сервисный инженер весы",
+    "аналитические весы нестабильность"
+  ],
+  "locales": {
+    "en": {
+      "body": "body.en.html",
+      "excerpt": "Why does your scale give unstable readings? We break down the causes: vibration, drafts, static, sensor wear. How to eliminate instability and when to call for service.",
+      "metaTitle": "Why Your Scale Shows Unstable Readings - Causes and Fixes",
+      "title": "Why Your Scale Readings Are Unstable and How to Fix It"
+    },
+    "ru": {
+      "body": "body.ru.html",
+      "excerpt": "Почему весы показывают нестабильно? Разбираем причины: вибрация, сквозняк, статика, износ датчика. Как устранить нестабильность весов и когда нужен сервис.",
+      "metaTitle": "Почему весы показывают нестабильно - Причины и устранение",
+      "title": "Почему весы показывают нестабильно и как это устранить"
+    }
+  },
+  "modifiedAt": "2026-11-12T07:21:56.288Z",
+  "publishedAt": "2026-11-12T07:21:56.288Z",
+  "schema": "seoagent.blog/v1",
+  "slug": "pochemu-vesy-pokazyvayut-nestabilno",
+  "status": "published"
+}

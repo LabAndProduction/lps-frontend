@@ -1,0 +1,19 @@
+{
+  "assets": [
+    "public/seoagent-blog/pochemu-vesy-pokazyvayut-nestabilno/9515887cd3d08951.webp",
+    "public/seoagent-blog/pochemu-vesy-pokazyvayut-nestabilno/173cf68753588693.webp"
+  ],
+  "contentHash": "sha256:8319a71a13f3ca1504b11e92f34e7174bd0dd022661c675f584e0453c1cc216e",
+  "criticScore": 75,
+  "deliveredRef": "pochemu-vesy-pokazyvayut-nestabilno",
+  "firstDeliveredAt": "2026-11-12T07:21:56.288Z",
+  "generatedAt": "2026-11-12T07:21:56.288Z",
+  "id": "b213ab80-7e54-4d63-a3bc-611b0e721315",
+  "modifiedAt": "2026-11-12T07:21:56.288Z",
+  "planId": "6c57a9c1-bf59-4840-be54-51fda780ef16",
+  "revisionCount": 0,
+  "schema": "seoagent.blog/v1",
+  "serializer": "blogfs@1.0.0",
+  "source": "auto",
+  "textHash": "sha256:5b6abf6eb659f9812a49352b5b928c117d228e06bade598c4dd8f0ebe979f758"
+}
