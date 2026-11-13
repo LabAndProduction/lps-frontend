@@ -1,0 +1,19 @@
+{
+  "assets": [
+    "public/seoagent-blog/izbavitsya-ot-staticheskogo-elektrichestva-pri/47f2cc1cfded5bad.webp",
+    "public/seoagent-blog/izbavitsya-ot-staticheskogo-elektrichestva-pri/98d9961bd668eaba.webp"
+  ],
+  "contentHash": "sha256:219388201646bb2f787ef663ad432b128e03c54ec77bfb4902929f2a9ca4ffb0",
+  "criticScore": 73,
+  "deliveredRef": "izbavitsya-ot-staticheskogo-elektrichestva-pri",
+  "firstDeliveredAt": "2026-11-13T13:24:08.765Z",
+  "generatedAt": "2026-11-13T13:24:08.765Z",
+  "id": "641b60e5-4624-4f54-9df1-4443bae1fbcd",
+  "modifiedAt": "2026-11-13T13:24:08.765Z",
+  "planId": "6bb0b666-037c-4ef2-a8c6-c54c6ba780da",
+  "revisionCount": 0,
+  "schema": "seoagent.blog/v1",
+  "serializer": "blogfs@1.0.0",
+  "source": "auto",
+  "textHash": "sha256:9775809f1d0775797665dd276c73db30eae46c82f86c6c33ab58b67933dd4479"
+}

@@ -1,0 +1,48 @@
+{
+  "author": "lab-production-solutions",
+  "bodyFormat": "html",
+  "category": "vesy",
+  "coverImage": "/seoagent-blog/izbavitsya-ot-staticheskogo-elektrichestva-pri/47f2cc1cfded5bad.webp",
+  "defaultLocale": "ru",
+  "features": [
+    "local-assets"
+  ],
+  "focusKeyword": "избавиться от статического электричества при взвешивании",
+  "focusKeywords": [
+    "избавиться от статического электричества при взвешивании",
+    "статическое электричество на аналитических весах",
+    "заземление лабораторных весов",
+    "антистатическая подложка для весов",
+    "ионизатор воздуха для весов",
+    "дрейф нуля весов",
+    "плавающие показания весов",
+    "статика при взвешивании порошков",
+    "влажность в лаборатории и статика",
+    "борьба со статикой в лаборатории",
+    "почему возникает статическое электричество",
+    "как снять заряд с посуды",
+    "антистатический пистолет-ионизатор",
+    "неисправность или статика весов",
+    "точность взвешивания малых навесок",
+    "чек-лист по устранению статики"
+  ],
+  "locales": {
+    "en": {
+      "body": "body.en.html",
+      "excerpt": "Eliminate static electricity when weighing: grounding laboratory balances, antistatic mat, air ionizer for balances, and humidity control.",
+      "metaTitle": "How to Eliminate Static Electricity When Weighing",
+      "title": "How to Eliminate Static Electricity When Weighing"
+    },
+    "ru": {
+      "body": "body.ru.html",
+      "excerpt": "Избавиться от статического электричества при взвешивании: заземление лабораторных весов, антистатическая подложка, ионизатор воздуха для весов и контроль влажности.",
+      "metaTitle": "Как избавиться от статического электричества при взвешивании",
+      "title": "Как избавиться от статического электричества при взвешивании"
+    }
+  },
+  "modifiedAt": "2026-11-13T13:24:08.765Z",
+  "publishedAt": "2026-11-13T13:24:08.765Z",
+  "schema": "seoagent.blog/v1",
+  "slug": "izbavitsya-ot-staticheskogo-elektrichestva-pri",
+  "status": "published"
+}
