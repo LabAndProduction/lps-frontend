@@ -1,0 +1,19 @@
+{
+  "assets": [
+    "public/seoagent-blog/kalibrovka-vesov-vnutrennim-i-vneshnim-gruzom/1656775bf88ce978.webp",
+    "public/seoagent-blog/kalibrovka-vesov-vnutrennim-i-vneshnim-gruzom/a1ed5d8206399898.webp"
+  ],
+  "contentHash": "sha256:38118b32f24995d1e97e48fc4f4b470ce31787edc3d3c3d485ad774029189894",
+  "criticScore": 80,
+  "deliveredRef": "kalibrovka-vesov-vnutrennim-i-vneshnim-gruzom",
+  "firstDeliveredAt": "2026-11-15T07:55:06.165Z",
+  "generatedAt": "2026-11-15T07:55:06.165Z",
+  "id": "3d084f20-bc6b-49da-b989-bea088f20c97",
+  "modifiedAt": "2026-11-15T07:55:06.165Z",
+  "planId": "6cb525be-54eb-44cd-827e-873513f09a27",
+  "revisionCount": 0,
+  "schema": "seoagent.blog/v1",
+  "serializer": "blogfs@1.0.0",
+  "source": "auto",
+  "textHash": "sha256:bd0fe18c703ace1b895395759d213a330e63a279e0d1b66a0118b3461317fcdc"
+}
