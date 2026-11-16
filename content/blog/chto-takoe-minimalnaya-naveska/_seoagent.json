@@ -1,0 +1,19 @@
+{
+  "assets": [
+    "public/seoagent-blog/chto-takoe-minimalnaya-naveska/3dc85c0c530f2078.webp",
+    "public/seoagent-blog/chto-takoe-minimalnaya-naveska/e1b5d7ba1b17bed6.webp"
+  ],
+  "contentHash": "sha256:2437270d0105047dd8838f9e53ab4454f9e2553017d70d5dafc518022a9bbe03",
+  "criticScore": 84,
+  "deliveredRef": "chto-takoe-minimalnaya-naveska",
+  "firstDeliveredAt": "2026-11-16T08:38:32.313Z",
+  "generatedAt": "2026-11-16T08:38:32.313Z",
+  "id": "b26eebc2-8008-4740-9fb9-157ed1a69935",
+  "modifiedAt": "2026-11-16T08:38:32.313Z",
+  "planId": "62ccc78a-bf3d-45e6-957e-bb5b528cb1e8",
+  "revisionCount": 0,
+  "schema": "seoagent.blog/v1",
+  "serializer": "blogfs@1.0.0",
+  "source": "auto",
+  "textHash": "sha256:f977e3c4f97a89aa5ee5465f669ae543ca68e75603f2e5e4aa995936debb9b6a"
+}

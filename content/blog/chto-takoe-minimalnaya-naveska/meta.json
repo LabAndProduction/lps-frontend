@@ -1,0 +1,47 @@
+{
+  "author": "lab-production-solutions",
+  "bodyFormat": "html",
+  "category": "vesy",
+  "coverImage": "/seoagent-blog/chto-takoe-minimalnaya-naveska/3dc85c0c530f2078.webp",
+  "defaultLocale": "ru",
+  "features": [
+    "local-assets"
+  ],
+  "focusKeyword": "что такое минимальная навеска",
+  "focusKeywords": [
+    "что такое минимальная навеска",
+    "минимальная навеска весов",
+    "минимальная навеска и дискретность",
+    "предел взвешивания",
+    "повторяемость взвешивания",
+    "погрешность взвешивания",
+    "цена деления весов",
+    "точность весов",
+    "расчёт минимальной навески",
+    "допуск методики",
+    "метрологически надёжный результат",
+    "наименьшая масса образца",
+    "взвешивание малых навесок",
+    "лабораторные весы точность",
+    "калибровка и поверка весов"
+  ],
+  "locales": {
+    "en": {
+      "body": "body.en.html",
+      "excerpt": "What minimum sample weight is, how to calculate it, how it differs from readability and error, which balance you need, and how to check your instrument in 15 minutes.",
+      "metaTitle": "What Is Minimum Sample Weight - Calculation and Balance Accuracy",
+      "title": "What Is the Minimum Sample Weight and Why It Matters"
+    },
+    "ru": {
+      "body": "body.ru.html",
+      "excerpt": "Что такое минимальная навеска: как её рассчитать, чем она отличается от дискретности и погрешности, какие весы нужны и как проверить прибор за 15 минут.",
+      "metaTitle": "Что такое минимальная навеска - Расчёт и точность весов",
+      "title": "Что такое минимальная навеска и почему она важна"
+    }
+  },
+  "modifiedAt": "2026-11-16T08:38:32.313Z",
+  "publishedAt": "2026-11-16T08:38:32.313Z",
+  "schema": "seoagent.blog/v1",
+  "slug": "chto-takoe-minimalnaya-naveska",
+  "status": "published"
+}
