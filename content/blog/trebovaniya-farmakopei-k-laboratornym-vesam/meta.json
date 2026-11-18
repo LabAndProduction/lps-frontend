@@ -1,0 +1,47 @@
+{
+  "author": "lab-production-solutions",
+  "bodyFormat": "html",
+  "category": "vesy",
+  "coverImage": "/seoagent-blog/trebovaniya-farmakopei-k-laboratornym-vesam/3e8dc2f2efdb5c4a.webp",
+  "defaultLocale": "ru",
+  "features": [
+    "local-assets"
+  ],
+  "focusKeyword": "требования фармакопеи к лабораторным весам",
+  "focusKeywords": [
+    "требования фармакопеи к лабораторным весам",
+    "фармакопейные нормы для весов",
+    "поверка лабораторных весов",
+    "калибровка лабораторных весов",
+    "квалификация весов IQ OQ PQ",
+    "свидетельство о поверке весов",
+    "журнал ежедневной проверки весов",
+    "поверочные гири",
+    "установка лабораторных весов",
+    "минимальный предел взвешивания",
+    "погрешность взвешивания",
+    "аналитические весы в фармацевтике",
+    "СОП по работе с весами",
+    "аудит лабораторного оборудования",
+    "пригодность весов для испытаний"
+  ],
+  "locales": {
+    "en": {
+      "body": "body.en.html",
+      "excerpt": "Pharmacopoeial requirements for laboratory balances: standards, verification, calibration, IQ OQ PQ qualification, daily check log, and balance installation.",
+      "metaTitle": "Pharmacopoeial Requirements for Laboratory Balances - Standards and Verification",
+      "title": "Pharmacopoeial Requirements for Laboratory Balances"
+    },
+    "ru": {
+      "body": "body.ru.html",
+      "excerpt": "Требования фармакопеи к лабораторным весам: нормы, поверка, калибровка, квалификация IQ OQ PQ, журнал ежедневной проверки и установка весов.",
+      "metaTitle": "Требования фармакопеи к лабораторным весам - Нормы и поверка",
+      "title": "Требования фармакопеи к лабораторным весам"
+    }
+  },
+  "modifiedAt": "2026-11-18T14:45:25.371Z",
+  "publishedAt": "2026-11-18T14:45:25.371Z",
+  "schema": "seoagent.blog/v1",
+  "slug": "trebovaniya-farmakopei-k-laboratornym-vesam",
+  "status": "published"
+}

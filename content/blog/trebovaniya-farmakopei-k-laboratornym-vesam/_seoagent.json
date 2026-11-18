@@ -1,0 +1,19 @@
+{
+  "assets": [
+    "public/seoagent-blog/trebovaniya-farmakopei-k-laboratornym-vesam/3e8dc2f2efdb5c4a.webp",
+    "public/seoagent-blog/trebovaniya-farmakopei-k-laboratornym-vesam/8f85c8b1e367216d.webp"
+  ],
+  "contentHash": "sha256:56717526413e99e3d20a2e6e752b446da79ce38d40e369a674b02631ecd1af1f",
+  "criticScore": 84,
+  "deliveredRef": "trebovaniya-farmakopei-k-laboratornym-vesam",
+  "firstDeliveredAt": "2026-11-18T14:45:25.371Z",
+  "generatedAt": "2026-11-18T14:45:25.371Z",
+  "id": "7fa3c54d-7e64-4cfa-b0da-7ac637149a2f",
+  "modifiedAt": "2026-11-18T14:45:25.371Z",
+  "planId": "eb66f74a-dc19-4228-96cf-e39011caa83e",
+  "revisionCount": 0,
+  "schema": "seoagent.blog/v1",
+  "serializer": "blogfs@1.0.0",
+  "source": "auto",
+  "textHash": "sha256:d6c8e0fd8db5854be3b6bcec3993c7aa0bd171e0c1faca826964acb885d9ffb8"
+}
