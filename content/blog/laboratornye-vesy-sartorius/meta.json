@@ -1,0 +1,47 @@
+{
+  "author": "lab-production-solutions",
+  "bodyFormat": "html",
+  "category": "vesy",
+  "coverImage": "/seoagent-blog/laboratornye-vesy-sartorius/7669e7cfc4769f96.webp",
+  "defaultLocale": "ru",
+  "features": [
+    "local-assets"
+  ],
+  "focusKeyword": "лабораторные весы sartorius",
+  "focusKeywords": [
+    "лабораторные весы sartorius",
+    "аналитические весы sartorius",
+    "прецизионные весы sartorius",
+    "весы sartorius 0,1 мг",
+    "лабораторные весы для лаборатории",
+    "выбор лабораторных весов",
+    "калибровка лабораторных весов",
+    "Sartorius аналитические",
+    "Sartorius прецизионные",
+    "технические весы Sartorius",
+    "взвешивание навески",
+    "ветрозащитная камера весов",
+    "дискретность весов",
+    "весы для фармацевтики",
+    "весы для химической лаборатории"
+  ],
+  "locales": {
+    "en": {
+      "body": "body.en.html",
+      "excerpt": "Sartorius laboratory balances: what sets analytical and precision models apart, 0.1 mg readability, how to choose a lab balance, calibration and setup.",
+      "metaTitle": "Sartorius Laboratory Balances - Selection and Calibration",
+      "title": "Sartorius Laboratory Balances for Every Task"
+    },
+    "ru": {
+      "body": "body.ru.html",
+      "excerpt": "Лабораторные весы Sartorius: чем отличаются аналитические и прецизионные модели, дискретность 0,1 мг, выбор лабораторных весов, калибровка и установка.",
+      "metaTitle": "Лабораторные весы Sartorius - Выбор и калибровка",
+      "title": "Лабораторные весы Sartorius для разных задач"
+    }
+  },
+  "modifiedAt": "2026-11-18T10:43:07.080Z",
+  "publishedAt": "2026-11-18T10:43:07.080Z",
+  "schema": "seoagent.blog/v1",
+  "slug": "laboratornye-vesy-sartorius",
+  "status": "published"
+}

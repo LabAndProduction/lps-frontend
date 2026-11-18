@@ -1,0 +1,19 @@
+{
+  "assets": [
+    "public/seoagent-blog/laboratornye-vesy-sartorius/7669e7cfc4769f96.webp",
+    "public/seoagent-blog/laboratornye-vesy-sartorius/bffcade15d61a7a8.webp"
+  ],
+  "contentHash": "sha256:39fbc81fabe1c84f2abd2316d2c6970032d09710752e72c4ea3c1ddb90494e31",
+  "criticScore": 80,
+  "deliveredRef": "laboratornye-vesy-sartorius",
+  "firstDeliveredAt": "2026-11-18T10:43:07.080Z",
+  "generatedAt": "2026-11-18T10:43:07.080Z",
+  "id": "661d4405-cb3e-436e-9028-3660d2dc1dc1",
+  "modifiedAt": "2026-11-18T10:43:07.080Z",
+  "planId": "e88720fe-2d87-43a5-86e1-81ac37b7eb22",
+  "revisionCount": 1,
+  "schema": "seoagent.blog/v1",
+  "serializer": "blogfs@1.0.0",
+  "source": "auto",
+  "textHash": "sha256:3bfcef5375109072b42ada072cc297d025fbe5bffdfa66dcf892c0b99965552e"
+}
