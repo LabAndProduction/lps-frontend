@@ -1,0 +1,47 @@
+{
+  "author": "lab-production-solutions",
+  "bodyFormat": "html",
+  "category": "vesy",
+  "coverImage": "/seoagent-blog/opredelenie-vlazhnosti-obraztsa-vlagomerom/15ca51f3afae6b89.webp",
+  "defaultLocale": "ru",
+  "features": [
+    "local-assets"
+  ],
+  "focusKeyword": "определение влажности образца влагомером",
+  "focusKeywords": [
+    "определение влажности образца влагомером",
+    "метод высушивания в сушильном шкафу",
+    "термогравиметрический влагомер",
+    "измерение влажности образца",
+    "подготовка пробы для влагомера",
+    "навеска и температура сушки",
+    "сушка до постоянной массы",
+    "влагомер и сушильный шкаф",
+    "экспресс-метод определения влажности",
+    "аналитические весы для взвешивания",
+    "бюксы для высушивания",
+    "сходимость результатов влажности",
+    "входной контроль сырья влажность",
+    "влажность зерна и почвы",
+    "лабораторное оборудование для влажности"
+  ],
+  "locales": {
+    "en": {
+      "body": "body.en.html",
+      "excerpt": "Determining sample moisture with a moisture analyzer: sample preparation, weighing and drying temperature, repeatability, comparison with a drying oven, and choosing the right equipment.",
+      "metaTitle": "Determining Sample Moisture with a Moisture Analyzer - Methods and Procedure",
+      "title": "Determining Sample Moisture with a Moisture Analyzer vs. a Drying Oven"
+    },
+    "ru": {
+      "body": "body.ru.html",
+      "excerpt": "Определение влажности образца влагомером: подготовка пробы, навеска и температура сушки, сходимость результатов, сравнение с сушильным шкафом и выбор оборудования.",
+      "metaTitle": "Определение влажности образца влагомером - Методы и порядок",
+      "title": "Определение влажности образца влагомером и в сушильном шкафу"
+    }
+  },
+  "modifiedAt": "2026-11-20T09:09:29.840Z",
+  "publishedAt": "2026-11-20T09:09:29.840Z",
+  "schema": "seoagent.blog/v1",
+  "slug": "opredelenie-vlazhnosti-obraztsa-vlagomerom",
+  "status": "published"
+}

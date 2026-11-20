@@ -1,0 +1,22 @@
+{
+  "assets": [
+    "public/seoagent-blog/opredelenie-vlazhnosti-obraztsa-vlagomerom/15ca51f3afae6b89.webp",
+    "public/seoagent-blog/opredelenie-vlazhnosti-obraztsa-vlagomerom/a36ad1c2ddf9df1d.webp",
+    "public/seoagent-blog/opredelenie-vlazhnosti-obraztsa-vlagomerom/b08a4b2769aa94d7.webp",
+    "public/seoagent-blog/opredelenie-vlazhnosti-obraztsa-vlagomerom/7e4ecf13701a8e64.webp",
+    "public/seoagent-blog/opredelenie-vlazhnosti-obraztsa-vlagomerom/0a2bb8af65090b31.webp"
+  ],
+  "contentHash": "sha256:30226b75fa5c2225e6eb135c2f2e538164c165f70560d32ac1f5c41c33628350",
+  "criticScore": 80,
+  "deliveredRef": "opredelenie-vlazhnosti-obraztsa-vlagomerom",
+  "firstDeliveredAt": "2026-11-20T09:09:29.840Z",
+  "generatedAt": "2026-11-20T09:09:29.840Z",
+  "id": "200bbd5b-853c-4019-9f64-749082c07479",
+  "modifiedAt": "2026-11-20T09:09:29.840Z",
+  "planId": "a3589fe0-dc9b-4d3d-8760-ed921ef8d0b1",
+  "revisionCount": 0,
+  "schema": "seoagent.blog/v1",
+  "serializer": "blogfs@1.0.0",
+  "source": "auto",
+  "textHash": "sha256:959b6d79d6f2ce72fe01e7df54000f80334cc70f705fb15360ee0498bab9c350"
+}
