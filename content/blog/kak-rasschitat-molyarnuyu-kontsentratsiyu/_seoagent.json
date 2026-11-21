@@ -1,0 +1,17 @@
+{
+  "assets": [
+    "public/seoagent-blog/kak-rasschitat-molyarnuyu-kontsentratsiyu/1d306c97161e109a.webp"
+  ],
+  "contentHash": "sha256:e406d8e65385fa95216fc2d8c5a940c9ae4e2f20d4aea59013ccc99ee1571745",
+  "deliveredRef": "kak-rasschitat-molyarnuyu-kontsentratsiyu",
+  "firstDeliveredAt": "2026-11-21T13:59:20.939Z",
+  "generatedAt": "2026-11-21T13:59:20.939Z",
+  "id": "b42f094f-c2de-4233-95d2-5861b6d088a8",
+  "modifiedAt": "2026-11-21T13:59:20.939Z",
+  "planId": "5717d902-bfc9-4d09-977b-bf031266b07c",
+  "revisionCount": 0,
+  "schema": "seoagent.blog/v1",
+  "serializer": "blogfs@1.0.0",
+  "source": "manual",
+  "textHash": "sha256:36b52ab828fbcbb7c47c9f02d687c522dbe0918e73b08471e8fe11bd42f2e072"
+}

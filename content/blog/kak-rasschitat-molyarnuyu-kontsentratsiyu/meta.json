@@ -1,0 +1,39 @@
+{
+  "author": "lab-production-solutions",
+  "bodyFormat": "html",
+  "category": "rastvory-i-raschety",
+  "coverImage": "/seoagent-blog/kak-rasschitat-molyarnuyu-kontsentratsiyu/1d306c97161e109a.webp",
+  "defaultLocale": "ru",
+  "features": [
+    "local-assets"
+  ],
+  "focusKeyword": "как рассчитать молярную концентрацию",
+  "focusKeywords": [
+    "как рассчитать молярную концентрацию",
+    "молярная концентрация формула",
+    "моль/л как посчитать",
+    "молярная масса и количество вещества",
+    "как найти количество вещества в растворе",
+    "перевод ммоль/л в моль/л и мг/л",
+    "молярность и моляльность разница"
+  ],
+  "locales": {
+    "en": {
+      "body": "body.en.html",
+      "excerpt": "How to calculate molar concentration – C = n/V: n = m/M, volume in liters. Worked problems, converting mmol/L and mg/L, molarity vs molality.",
+      "metaTitle": "How to Calculate Molar Concentration – Formula and Problems",
+      "title": "How to Calculate Molar Concentration – Formula C = n/V with Worked Problems"
+    },
+    "ru": {
+      "body": "body.ru.html",
+      "excerpt": "Как рассчитать молярную концентрацию - C = n/V: n = m/M, объём в литрах. Решённые задачи, перевод ммоль/л и мг/л, молярность и моляльность.",
+      "metaTitle": "Как рассчитать молярную концентрацию - Формула и задачи",
+      "title": "Как рассчитать молярную концентрацию - Формула C = n/V и решённые задачи"
+    }
+  },
+  "modifiedAt": "2026-11-21T13:59:20.939Z",
+  "publishedAt": "2026-11-21T13:59:20.939Z",
+  "schema": "seoagent.blog/v1",
+  "slug": "kak-rasschitat-molyarnuyu-kontsentratsiyu",
+  "status": "published"
+}
