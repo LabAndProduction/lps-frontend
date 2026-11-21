@@ -119,6 +119,30 @@
       "name": "Растворы и расчёты",
       "position": 7,
       "slug": "rastvory-i-raschety"
+    },
+    {
+      "description": "Спектрофотометрия, атомно-абсорбционный и рентгенофлуоресцентный анализ простым языком: как работают методы, какие кюветы выбрать, как рассчитать предел обнаружения и что можно измерить.",
+      "i18n": {
+        "en": {
+          "description": "Spectrophotometry, atomic absorption and X-ray fluorescence explained simply: how the methods work, which cuvettes to choose, how to calculate the detection limit and what can be measured.",
+          "name": "Spectroscopy"
+        }
+      },
+      "name": "Спектроскопия",
+      "position": 8,
+      "slug": "spektroskopiya"
+    },
+    {
+      "description": "Как подготовить пробу к анализу: фильтрация, озоление, минерализация и микроволновое разложение. Порядок действий, режимы и типичные ошибки для пищевых, водных и заводских лабораторий.",
+      "i18n": {
+        "en": {
+          "description": "How to prepare a sample for analysis: filtration, ashing, digestion and microwave decomposition. Step-by-step procedures, settings and common mistakes for food, water and industrial labs.",
+          "name": "Sample preparation"
+        }
+      },
+      "name": "Пробоподготовка",
+      "position": 9,
+      "slug": "probopodgotovka"
     }
   ],
   "defaultLocale": "ru",
@@ -142,6 +166,6 @@
       "ru": "Читайте также"
     }
   },
-  "updatedAt": "2026-11-21T11:52:20.900Z",
+  "updatedAt": "2026-11-21T11:52:45.817Z",
   "urlPrefix": ""
 }
