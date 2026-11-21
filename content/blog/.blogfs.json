@@ -107,6 +107,18 @@
       "name": "Сервис и калибровка",
       "position": 6,
       "slug": "servis"
+    },
+    {
+      "description": "Как приготовить и рассчитать лабораторные растворы: молярная концентрация, массовая доля, разбавление, нормальность. Формулы, решённые примеры, погрешность и градуировочный график для студентов и лаборантов.",
+      "i18n": {
+        "en": {
+          "description": "How to prepare and calculate laboratory solutions: molarity, mass fraction, dilution and normality. Formulas, worked examples, measurement error and calibration curves for students and lab technicians.",
+          "name": "Solutions and calculations"
+        }
+      },
+      "name": "Растворы и расчёты",
+      "position": 7,
+      "slug": "rastvory-i-raschety"
     }
   ],
   "defaultLocale": "ru",
@@ -130,6 +142,6 @@
       "ru": "Читайте также"
     }
   },
-  "updatedAt": "2026-11-16T08:38:32.313Z",
+  "updatedAt": "2026-11-21T11:52:20.900Z",
   "urlPrefix": ""
 }

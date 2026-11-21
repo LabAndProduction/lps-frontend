@@ -29,9 +29,8 @@
   "locales": {
     "en": {
       "body": "body.en.html",
-      "excerpt": "Class A and Class B volumetric glassware differ in allowable tolerance, marking, and verification requirements. How to buy the right volumetric glassware in Tashkent for your specific needs.",
-      "metaTitle": "Class A vs Class B Volumetric Glassware: Tolerances and Selection",
-      "title": "Class A vs Class B Volumetric Glassware: What's the Difference and When Do You Need Each"
+      "excerpt": "Мерная посуда класса А и Б: чем отличаются допускаемая погрешность и маркировка, где нужна поверка, как купить мерную посуду в Ташкенте под свои задачи.",
+      "title": "Мерная посуда класса А и Б - Чем отличается и когда нужна каждая"
     },
     "ru": {
       "body": "body.ru.html",
@@ -40,7 +39,7 @@
       "title": "Мерная посуда класса А и Б - Чем отличается и когда нужна каждая"
     }
   },
-  "modifiedAt": "2026-10-21T07:07:11.549Z",
+  "modifiedAt": "2026-11-21T11:52:20.900Z",
   "publishedAt": "2026-10-21T07:07:11.549Z",
   "schema": "seoagent.blog/v1",
   "slug": "mernaya-posuda-klassa-a-i-b",

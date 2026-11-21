@@ -1,0 +1,576 @@
+{
+  "generatedAt": "2026-11-21T11:52:20.900Z",
+  "posts": [
+    {
+      "contentHash": "sha256:ceaa5eebd54640d7041209e328ab68af05c64f6bd3cf1a54aebf086e77fbe8f5",
+      "id": "e19f43d0-c80d-441a-9ce1-386212c14edb",
+      "locales": {
+        "en": {
+          "excerpt": "Borosilicate glass 3.3: composition, markings, receiving inspection, comparison with soda-lime glass, calculating your glassware inventory, and care rules for laboratory glassware.",
+          "title": "Borosilicate Glass 3.3 – Why Labware Is Made From It"
+        },
+        "ru": {
+          "excerpt": "Боросиликатное стекло 3.3: состав, маркировка, проверка при приёмке, сравнение с натрий-кальциевым, расчёт парка посуды и правила ухода за лабораторной посудой.",
+          "title": "Боросиликатное стекло 3.3 - Почему лабораторная посуда делается из него"
+        }
+      },
+      "path": "borosilikatnoe-steklo-3-3",
+      "publishedAt": "2026-10-22T08:45:35.616Z",
+      "slug": "borosilikatnoe-steklo-3-3",
+      "status": "published",
+      "updatedAt": "2026-10-22T13:23:45.665+00:00"
+    },
+    {
+      "contentHash": "sha256:d47724e0f2f737b555510983d04b929ae36b72b8bf4529304cb1640effaac726",
+      "id": "0c06cc9c-6828-42ec-92e0-8bed7acfe45d",
+      "locales": {
+        "en": {
+          "excerpt": "Analytical vs. precision balances: we break down readability, accuracy class, applications, and how room conditions affect your choice of instrument.",
+          "title": "Analytical vs. Precision Balances: What's the Difference?"
+        },
+        "ru": {
+          "excerpt": "Чем отличаются аналитические и прецизионные весы: разбираем дискретность, класс точности, область применения и влияние условий помещения на выбор прибора.",
+          "title": "Чем отличаются аналитические и прецизионные весы"
+        }
+      },
+      "path": "chem-otlichayutsya-analiticheskie-i-pretsizionnye-vesy",
+      "publishedAt": "2026-11-05T12:54:07.589Z",
+      "slug": "chem-otlichayutsya-analiticheskie-i-pretsizionnye-vesy",
+      "status": "published",
+      "updatedAt": "2026-10-21T15:05:09.594+00:00"
+    },
+    {
+      "contentHash": "sha256:2437270d0105047dd8838f9e53ab4454f9e2553017d70d5dafc518022a9bbe03",
+      "id": "b26eebc2-8008-4740-9fb9-157ed1a69935",
+      "locales": {
+        "en": {
+          "excerpt": "What minimum sample weight is, how to calculate it, how it differs from readability and error, which balance you need, and how to check your instrument in 15 minutes.",
+          "title": "What Is the Minimum Sample Weight and Why It Matters"
+        },
+        "ru": {
+          "excerpt": "Что такое минимальная навеска: как её рассчитать, чем она отличается от дискретности и погрешности, какие весы нужны и как проверить прибор за 15 минут.",
+          "title": "Что такое минимальная навеска и почему она важна"
+        }
+      },
+      "path": "chto-takoe-minimalnaya-naveska",
+      "publishedAt": "2026-11-16T08:38:32.313Z",
+      "slug": "chto-takoe-minimalnaya-naveska",
+      "status": "published",
+      "updatedAt": "2026-10-23T09:46:27.819+00:00"
+    },
+    {
+      "contentHash": "sha256:dda041d1141c6388474b48fe4183ea5a2f64a7ca1c3f26506d8ef2cd3d5d7c5a",
+      "id": "1db277be-7c9a-4b2f-8a94-f5007192c9d8",
+      "locales": {
+        "en": {
+          "excerpt": "What Erlenmeyer flasks are for: a breakdown of lab flask types, uses, ground joints, volume selection, and a checklist for choosing lab glassware.",
+          "title": "What Are Erlenmeyer, Round-Bottom, and Flat-Bottom Flasks For?"
+        },
+        "ru": {
+          "excerpt": "Для чего нужны колба Эрленмейера: разбираем типы лабораторных колб, применение, шлифы, выбор объёма и чек-лист подбора посуды для лаборатории.",
+          "title": "Для чего нужны колба Эрленмейера, круглодонная и плоскодонная колба"
+        }
+      },
+      "path": "dlya-chego-nuzhny-kolba-erlenmeyera",
+      "publishedAt": "2026-10-23T19:07:51.425Z",
+      "slug": "dlya-chego-nuzhny-kolba-erlenmeyera",
+      "status": "published",
+      "updatedAt": "2026-10-21T08:57:22.826+00:00"
+    },
+    {
+      "contentHash": "sha256:dbe61b2d55b28b675a46b4b86cfc2a31914a8ea1c10dcdeab778711bd4c08fbc",
+      "id": "f66eba4c-efae-4b0e-8d6d-f4fb75ce68ca",
+      "locales": {
+        "en": {
+          "excerpt": "Which analyses call for porcelain crucibles? Ignition, ashing, gravimetric analysis, evaporating dishes. How to choose the right size and prepare glassware.",
+          "title": "What Analyses Require Porcelain Crucibles and Dishes"
+        },
+        "ru": {
+          "excerpt": "Для каких анализов нужны фарфоровые тигли: прокаливание пробы, озоление пробы, гравиметрический анализ, чашка выпарительная. Как выбрать типоразмер и подготовить посуду.",
+          "title": "Для каких анализов нужны фарфоровые тигли и чашки"
+        }
+      },
+      "path": "dlya-kakih-analizov-nuzhny-farforovye-tigli",
+      "publishedAt": "2026-10-30T19:11:14.696Z",
+      "slug": "dlya-kakih-analizov-nuzhny-farforovye-tigli",
+      "status": "published",
+      "updatedAt": "2026-10-21T14:29:47.652+00:00"
+    },
+    {
+      "contentHash": "sha256:fd0bc8d398308ff758f79aec8de43c76b7b4e26b16a13403a82ea659b887d2a4",
+      "id": "32606eb7-d4fd-4f5e-9652-1478c3aea1db",
+      "locales": {
+        "en": {
+          "excerpt": "Daily verification of laboratory balances takes 5–10 minutes: checking zero, repeatability, and sensitivity, keeping a balance log, granting work approval, and actions on deviation.",
+          "title": "Daily Verification of Laboratory Balances"
+        },
+        "ru": {
+          "excerpt": "Ежедневная проверка лабораторных весов занимает 5–10 минут: контроль нуля, повторяемости и чувствительности, журнал проверки весов, допуск к работе и действия при отклоне",
+          "title": "Ежедневная проверка лабораторных весов"
+        }
+      },
+      "path": "ezhednevnaya-proverka-laboratornyh-vesov",
+      "publishedAt": "2026-10-23T10:49:13.291Z",
+      "slug": "ezhednevnaya-proverka-laboratornyh-vesov",
+      "status": "published",
+      "updatedAt": "2026-10-23T10:13:43.758+00:00"
+    },
+    {
+      "contentHash": "sha256:0d417763dd289c07bc5358ec15c623df18aef4397867e512aa295b435d046ed8",
+      "id": "746daf1d-4fbf-438c-875e-8ab47406d0ef",
+      "locales": {
+        "en": {
+          "excerpt": "Calibration weights for scales: OIML R 111 and GOST accuracy classes, how to choose a weight for analytical, precision, and industrial scales based on maximum permissible error.",
+          "title": "Calibration Weights for Scales and Their Accuracy Classes"
+        },
+        "ru": {
+          "excerpt": "Гири для поверки весов: классы точности OIML R 111 и ГОСТ, как подобрать гирю под аналитические, прецизионные и технические весы по допускаемой погрешности.",
+          "title": "Гири для поверки весов и их классы точности"
+        }
+      },
+      "path": "giri-dlya-poverki-vesov",
+      "publishedAt": "2026-10-23T11:33:12.975Z",
+      "slug": "giri-dlya-poverki-vesov",
+      "status": "published",
+      "updatedAt": "2026-10-23T11:16:50.14+00:00"
+    },
+    {
+      "contentHash": "sha256:219388201646bb2f787ef663ad432b128e03c54ec77bfb4902929f2a9ca4ffb0",
+      "id": "641b60e5-4624-4f54-9df1-4443bae1fbcd",
+      "locales": {
+        "en": {
+          "excerpt": "Eliminate static electricity when weighing: grounding laboratory balances, antistatic mat, air ionizer for balances, and humidity control.",
+          "title": "How to Eliminate Static Electricity When Weighing"
+        },
+        "ru": {
+          "excerpt": "Избавиться от статического электричества при взвешивании: заземление лабораторных весов, антистатическая подложка, ионизатор воздуха для весов и контроль влажности.",
+          "title": "Как избавиться от статического электричества при взвешивании"
+        }
+      },
+      "path": "izbavitsya-ot-staticheskogo-elektrichestva-pri",
+      "publishedAt": "2026-11-13T13:24:08.765Z",
+      "slug": "izbavitsya-ot-staticheskogo-elektrichestva-pri",
+      "status": "published",
+      "updatedAt": "2026-10-23T09:29:38.867+00:00"
+    },
+    {
+      "contentHash": "sha256:c9756662523de583348a6c8580c23e27bbb8d71e15b6389057f1c6c0bb0ed362",
+      "id": "f68380e5-a98d-468f-90e6-42d83db1563c",
+      "locales": {
+        "en": {
+          "excerpt": "How to wash laboratory glassware: understanding types of contamination, a step-by-step procedure, choosing the right detergent, drying, cleanliness checks, and common mistakes.",
+          "title": "How to Wash Laboratory Glassware — Methods and Common Mistakes"
+        },
+        "ru": {
+          "excerpt": "Как мыть лабораторную посуду: разбор загрязнений, пошаговый алгоритм, моющее средство для лабораторной посуды, сушка, проверка чистоты и типичные ошибки.",
+          "title": "Как мыть лабораторную посуду - Способы и типичные ошибки"
+        }
+      },
+      "path": "kak-myt-laboratornuyu-posudu",
+      "publishedAt": "2026-10-24T19:20:56.117Z",
+      "slug": "kak-myt-laboratornuyu-posudu",
+      "status": "published",
+      "updatedAt": "2026-10-21T11:01:42.538+00:00"
+    },
+    {
+      "contentHash": "sha256:bae626f5da25b4c61c7a1bf296c00922e0b7a91ebd50ff4649daef3b7107fffc",
+      "id": "1d303c4c-9244-4e11-9d6b-ee3212923737",
+      "locales": {
+        "en": {
+          "excerpt": "How to use a separatory funnel: assembly, leak check, extraction, phase separation, stopcock lubrication, and dealing with emulsions.",
+          "title": "How to Use a Separatory Funnel for Extraction"
+        },
+        "ru": {
+          "excerpt": "Как пользоваться делительной воронкой: сборка, проверка герметичности, экстракция, разделение фаз, смазка крана и борьба с эмульсией.",
+          "title": "Как пользоваться делительной воронкой для экстракции"
+        }
+      },
+      "path": "kak-polzovatsya-delitelnoy-voronkoy",
+      "publishedAt": "2026-10-25T19:16:45.172Z",
+      "slug": "kak-polzovatsya-delitelnoy-voronkoy",
+      "status": "published",
+      "updatedAt": "2026-10-21T11:26:59.168+00:00"
+    },
+    {
+      "contentHash": "sha256:4b1338741a6cac5b943b56dfe5cd9b494d9fc08fd012ee1b20b26aa9217b65e1",
+      "id": "7eb57347-2acb-4e16-8158-4b515aeb3269",
+      "locales": {
+        "en": {
+          "excerpt": "How to titrate correctly with a burette: preparing the burette for titration, choosing a burette and stopcock, reading the bottom meniscus, calibration, and titration error.",
+          "title": "How to Titrate Correctly with a Burette Without Making Mistakes"
+        },
+        "ru": {
+          "excerpt": "Как правильно титровать с бюреткой: подготовка бюретки к титрованию, выбор бюретки и крана, отсчёт по нижнему мениску, калибровка и погрешность титрования.",
+          "title": "Как правильно титровать с бюреткой и не ошибаться"
+        }
+      },
+      "path": "kak-pravilno-titrovat-s-byuretkoy",
+      "publishedAt": "2026-10-24T19:20:39.924Z",
+      "slug": "kak-pravilno-titrovat-s-byuretkoy",
+      "status": "published",
+      "updatedAt": "2026-10-21T10:53:37.343+00:00"
+    },
+    {
+      "contentHash": "sha256:0a7bb7990bcebf2c0ad5858fd3123ccd3a36e0f93dd6975b133cd411ac3fabcc",
+      "id": "c47ec4b2-9fb0-4b73-bcb2-1efed8a1b71f",
+      "locales": {
+        "en": {
+          "excerpt": "How to install analytical balances correctly: room requirements, choosing the right bench, protection from vibration and drafts, leveling, warm-up, and calibration.",
+          "title": "How to Set Up Analytical Balances the Right Way"
+        },
+        "ru": {
+          "excerpt": "Как правильно установить аналитические весы: требования к помещению для весов, выбор стола, защита от вибрации и сквозняков, горизонтирование, прогрев и калибровка.",
+          "title": "Где и как правильно установить аналитические весы"
+        }
+      },
+      "path": "kak-pravilno-ustanovit-analiticheskie-vesy",
+      "publishedAt": "2026-11-11T15:14:37.352Z",
+      "slug": "kak-pravilno-ustanovit-analiticheskie-vesy",
+      "status": "published",
+      "updatedAt": "2026-10-23T09:05:15.264+00:00"
+    },
+    {
+      "contentHash": "sha256:d345df26a9577c71001d3bfc278add8f40c3c62fb4bc6639e78f79824f3ec2d2",
+      "id": "36e3dff2-030c-400d-af3c-e725edda1642",
+      "locales": {
+        "en": {
+          "excerpt": "How to choose an analytical balance: we break down readability, maximum capacity, and calibration interval so you can pick a model that matches your sample sizes and methods.",
+          "title": "How to Choose an Analytical Balance: Readability, Capacity, and Calibration Interval"
+        },
+        "ru": {
+          "excerpt": "Как выбрать аналитические весы: разбираем дискретность, максимальную нагрузку и поверочный интервал, чтобы подобрать модель под ваши навески и методики.",
+          "title": "Как выбрать аналитические весы по дискретности, нагрузке и поверочному интервалу"
+        }
+      },
+      "path": "kak-vybrat-analiticheskie-vesy",
+      "publishedAt": "2026-11-04T09:13:28.755Z",
+      "slug": "kak-vybrat-analiticheskie-vesy",
+      "status": "published",
+      "updatedAt": "2026-10-21T14:34:30.053+00:00"
+    },
+    {
+      "contentHash": "sha256:a6a8a8ded2c981199371cb1de47c17830a17479d6b1a6f125ce816c938b3c360",
+      "id": "1ff92d71-e00f-49e9-b498-5e276d32413c",
+      "locales": {
+        "en": {
+          "excerpt": "How to choose a C18 HPLC column for your method: particle size, pore size, length and diameter, endcapping, column pH range, and pressure check — with an ordering checklist.",
+          "title": "How to Choose a C18 HPLC Column"
+        },
+        "ru": {
+          "excerpt": "Как выбрать колонку ВЭЖХ C18 под методику: зернистость, размер пор, длина и диаметр, эндкеппинг, pH-диапазон колонки и проверка давления с чек-листом заказа.",
+          "title": "Как выбрать колонку ВЭЖХ C18"
+        }
+      },
+      "path": "kak-vybrat-kolonku-vezhh-c18",
+      "publishedAt": "2026-11-09T06:53:34.913Z",
+      "slug": "kak-vybrat-kolonku-vezhh-c18",
+      "status": "published",
+      "updatedAt": "2026-10-22T17:44:11.15+00:00"
+    },
+    {
+      "contentHash": "sha256:475440f249c172361d7970d02e2a42e56655f08c1f20e6e96e3bee5df9a69fbe",
+      "id": "6e355e5b-a7b6-4394-b7f6-8538d712ed43",
+      "locales": {
+        "en": {
+          "excerpt": "How to choose a volumetric flask for your task: volumes, accuracy classes A and B, joints, calibration and care. Sample calculation, buying checklist and common mistakes.",
+          "title": "How to Choose a Volumetric Flask: Volume, Accuracy Class, Joint"
+        },
+        "ru": {
+          "excerpt": "Как выбрать мерную колбу под задачу: объёмы, классы точности A и B, шлиф, калибровка и уход. Расчёт навески, чек-лист покупки и типичные ошибки.",
+          "title": "Как выбрать мерную колбу: объём, класс точности, шлиф"
+        }
+      },
+      "path": "kak-vybrat-mernuyu-kolbu",
+      "publishedAt": "2026-11-05T12:10:49.335Z",
+      "slug": "kak-vybrat-mernuyu-kolbu",
+      "status": "published",
+      "updatedAt": "2026-10-21T15:02:29.894+00:00"
+    },
+    {
+      "contentHash": "sha256:8df0ead449b23b4acc134d7da1c23971f41e8e96028046957d2f001fc435e400",
+      "id": "05d8d6f2-0074-4c8a-8ca2-5da6ac77aa94",
+      "locales": {
+        "en": {
+          "excerpt": "How to choose a pipette for your lab: we break down volumetric, graduated, and serological pipettes, accuracy classes, materials, and handling rules for a smart purchase.",
+          "title": "How to Choose a Laboratory Pipette: Volumetric, Graduated, or Serological"
+        },
+        "ru": {
+          "excerpt": "Как выбрать пипетку для лаборатории: разбираем мерные, градуированные и серологические пипетки, классы точности, материал и правила работы для верной закупки.",
+          "title": "Как выбрать пипетку для лаборатории — мерную, градуированную или серологическую"
+        }
+      },
+      "path": "kak-vybrat-pipetku-dlya-laboratorii",
+      "publishedAt": "2026-10-23T19:08:10.123Z",
+      "slug": "kak-vybrat-pipetku-dlya-laboratorii",
+      "status": "published",
+      "updatedAt": "2026-10-21T08:58:06.708+00:00"
+    },
+    {
+      "contentHash": "sha256:745bad6fe48d58637d38d8cee7c5d01e2839ce8e1f0d57a31711e25494517656",
+      "id": "ab171510-af92-4fde-86f5-ff6cefe3b2ce",
+      "locales": {
+        "en": {
+          "excerpt": "Glass or plastic labware? A comparison of heat resistance, accuracy, and cost. Selection criteria, a comparison table, and a purchasing checklist.",
+          "title": "Choosing Laboratory Glassware: Glass or Plastic"
+        },
+        "ru": {
+          "excerpt": "Какую лабораторную посуду выбрать? Сравнение стекла и пластика по термостойкости, точности и цене. Критерии, таблица и чек-лист для закупки.",
+          "title": "Какую лабораторную посуду выбрать - Стеклянную или пластиковую"
+        }
+      },
+      "path": "kakuyu-laboratornuyu-posudu-vybrat",
+      "publishedAt": "2026-10-31T19:24:35.080Z",
+      "slug": "kakuyu-laboratornuyu-posudu-vybrat",
+      "status": "published",
+      "updatedAt": "2026-10-21T14:31:32.619+00:00"
+    },
+    {
+      "contentHash": "sha256:38118b32f24995d1e97e48fc4f4b470ce31787edc3d3c3d485ad774029189894",
+      "id": "3d084f20-bc6b-49da-b989-bea088f20c97",
+      "locales": {
+        "en": {
+          "excerpt": "Internal vs. external calibration of balances: how automatic and manual calibration differ, how often to calibrate, weighing accuracy, and verification of laboratory balances.",
+          "title": "Internal vs. External Calibration of Balances: What's the Difference?"
+        },
+        "ru": {
+          "excerpt": "Калибровка весов внутренним и внешним грузом: чем отличается автоматическая и ручная калибровка, периодичность, точность взвешивания и поверка лабораторных весов.",
+          "title": "Чем отличается калибровка весов внутренним и внешним грузом"
+        }
+      },
+      "path": "kalibrovka-vesov-vnutrennim-i-vneshnim-gruzom",
+      "publishedAt": "2026-11-15T07:55:06.165Z",
+      "slug": "kalibrovka-vesov-vnutrennim-i-vneshnim-gruzom",
+      "status": "published",
+      "updatedAt": "2026-10-23T09:39:07.096+00:00"
+    },
+    {
+      "contentHash": "sha256:b40711b401d77339b069c0135bade7dace443a5639a1d0f474cb9d9fce431215",
+      "id": "fb6fb68c-9207-4ab3-96f6-28990c5e45a8",
+      "locales": {
+        "en": {
+          "excerpt": "C18 vs C8 columns: differences in the bonded layer, retention and selectivity, phase selection, endcapping, pH stability, and an HPLC method transfer checklist.",
+          "title": "C18 vs C8 Columns: Differences, Selection, and Method Transfer"
+        },
+        "ru": {
+          "excerpt": "Колонки C18 и C8: отличия привитого слоя, удержание и селективность, выбор фазы, endcapping, pH-стабильность и чек-лист переноса метода ВЭЖХ.",
+          "title": "Колонки C18 и C8: отличия, выбор и перенос метода"
+        }
+      },
+      "path": "kolonki-c18-i-c8",
+      "publishedAt": "2026-11-09T15:39:42.265Z",
+      "slug": "kolonki-c18-i-c8",
+      "status": "published",
+      "updatedAt": "2026-10-22T17:43:04.48+00:00"
+    },
+    {
+      "contentHash": "sha256:39fbc81fabe1c84f2abd2316d2c6970032d09710752e72c4ea3c1ddb90494e31",
+      "id": "661d4405-cb3e-436e-9028-3660d2dc1dc1",
+      "locales": {
+        "en": {
+          "excerpt": "Sartorius laboratory balances: what sets analytical and precision models apart, 0.1 mg readability, how to choose a lab balance, calibration and setup.",
+          "title": "Sartorius Laboratory Balances for Every Task"
+        },
+        "ru": {
+          "excerpt": "Лабораторные весы Sartorius: чем отличаются аналитические и прецизионные модели, дискретность 0,1 мг, выбор лабораторных весов, калибровка и установка.",
+          "title": "Лабораторные весы Sartorius для разных задач"
+        }
+      },
+      "path": "laboratornye-vesy-sartorius",
+      "publishedAt": "2026-11-18T10:43:07.080Z",
+      "slug": "laboratornye-vesy-sartorius",
+      "status": "published",
+      "updatedAt": "2026-10-23T10:04:35.575+00:00"
+    },
+    {
+      "contentHash": "sha256:4b9c9f82da7ee1f8a5ec02468283cdec92bbf972f4dd3147c90a95eb2138a886",
+      "id": "15620b16-d1ed-47e8-ad07-b3c0539b4e41",
+      "locales": {
+        "en": {
+          "excerpt": "Volumetric glassware markings explained: how to read labels on volumetric ware, accuracy class, nominal flask volume, tolerance, and graduation interval of a graduated cylinder.",
+          "title": "Markings on Volumetric Glassware: What the Labels on Flasks and Cylinders Mean"
+        },
+        "ru": {
+          "excerpt": "Маркировка мерной посуды: разбираем надписи на мерной посуде, класс точности, номинальный объём колбы, допуск и цену деления мерного цилиндра.",
+          "title": "Маркировка мерной посуды: что означают надписи на колбах и цилиндрах"
+        }
+      },
+      "path": "markirovka-mernoy-posudy",
+      "publishedAt": "2026-10-29T19:03:41.819Z",
+      "slug": "markirovka-mernoy-posudy",
+      "status": "published",
+      "updatedAt": "2026-10-21T14:28:33.376+00:00"
+    },
+    {
+      "contentHash": "sha256:cdcfebca01ae99f5feb4b703e2a0821344e3c0587acfb586d833037f79ddc42f",
+      "id": "d92de36e-20db-4804-b407-ba7f71d58705",
+      "locales": {
+        "en": {
+          "excerpt": "Мерная посуда класса А и Б: чем отличаются допускаемая погрешность и маркировка, где нужна поверка, как купить мерную посуду в Ташкенте под свои задачи.",
+          "title": "Мерная посуда класса А и Б - Чем отличается и когда нужна каждая"
+        },
+        "ru": {
+          "excerpt": "Мерная посуда класса А и Б: чем отличаются допускаемая погрешность и маркировка, где нужна поверка, как купить мерную посуду в Ташкенте под свои задачи.",
+          "title": "Мерная посуда класса А и Б - Чем отличается и когда нужна каждая"
+        }
+      },
+      "path": "mernaya-posuda-klassa-a-i-b",
+      "publishedAt": "2026-10-21T07:07:11.549Z",
+      "slug": "mernaya-posuda-klassa-a-i-b",
+      "status": "published",
+      "updatedAt": "2026-10-21T08:09:27.17+00:00"
+    },
+    {
+      "contentHash": "sha256:1e1e12864f1d01b520889bb62ca91187f86530435431771c7c35926be434b956",
+      "id": "9d0a862a-6394-4c71-8e9e-0523960cc64c",
+      "locales": {
+        "en": {
+          "excerpt": "The essential lab glassware starter kit for a new lab: which flasks, beakers, and test tubes you need from day one, how to calculate quantities, and where to save without cutting corners.",
+          "title": "The Essential Lab Glassware Starter Kit for a New Lab"
+        },
+        "ru": {
+          "excerpt": "Минимальный набор лабораторной посуды для новой лаборатории: какие колбы, стаканы и пробирки нужны на старте, как рассчитать количество и сэкономить без риска.",
+          "title": "Минимальный набор лабораторной посуды для новой лаборатории"
+        }
+      },
+      "path": "minimalnyy-nabor-laboratornoy-posudy",
+      "publishedAt": "2026-11-01T19:36:12.170Z",
+      "slug": "minimalnyy-nabor-laboratornoy-posudy",
+      "status": "published",
+      "updatedAt": "2026-10-21T14:33:34.151+00:00"
+    },
+    {
+      "contentHash": "sha256:30226b75fa5c2225e6eb135c2f2e538164c165f70560d32ac1f5c41c33628350",
+      "id": "200bbd5b-853c-4019-9f64-749082c07479",
+      "locales": {
+        "en": {
+          "excerpt": "Determining sample moisture with a moisture analyzer: sample preparation, weighing and drying temperature, repeatability, comparison with a drying oven, and choosing the right equipment.",
+          "title": "Determining Sample Moisture with a Moisture Analyzer vs. a Drying Oven"
+        },
+        "ru": {
+          "excerpt": "Определение влажности образца влагомером: подготовка пробы, навеска и температура сушки, сходимость результатов, сравнение с сушильным шкафом и выбор оборудования.",
+          "title": "Определение влажности образца влагомером и в сушильном шкафу"
+        }
+      },
+      "path": "opredelenie-vlazhnosti-obraztsa-vlagomerom",
+      "publishedAt": "2026-11-20T09:09:29.840Z",
+      "slug": "opredelenie-vlazhnosti-obraztsa-vlagomerom",
+      "status": "published",
+      "updatedAt": "2026-10-28T11:23:28.099+00:00"
+    },
+    {
+      "contentHash": "sha256:8319a71a13f3ca1504b11e92f34e7174bd0dd022661c675f584e0453c1cc216e",
+      "id": "b213ab80-7e54-4d63-a3bc-611b0e721315",
+      "locales": {
+        "en": {
+          "excerpt": "Why does your scale give unstable readings? We break down the causes: vibration, drafts, static, sensor wear. How to eliminate instability and when to call for service.",
+          "title": "Why Your Scale Readings Are Unstable and How to Fix It"
+        },
+        "ru": {
+          "excerpt": "Почему весы показывают нестабильно? Разбираем причины: вибрация, сквозняк, статика, износ датчика. Как устранить нестабильность весов и когда нужен сервис.",
+          "title": "Почему весы показывают нестабильно и как это устранить"
+        }
+      },
+      "path": "pochemu-vesy-pokazyvayut-nestabilno",
+      "publishedAt": "2026-11-12T07:21:56.288Z",
+      "slug": "pochemu-vesy-pokazyvayut-nestabilno",
+      "status": "published",
+      "updatedAt": "2026-10-23T09:04:11.941+00:00"
+    },
+    {
+      "contentHash": "sha256:d35de60b806aa936e187b2fa0c3d3d59f824df9659ef2597ec7a2c5853cdf9f9",
+      "id": "28fbe39a-a96c-4748-8107-8ae460b0b11d",
+      "locales": {
+        "en": {
+          "excerpt": "Causes of pressure build-up in HPLC: a clogged mobile phase filter, buffer salt precipitation, worn pump seals, or a blocked HPLC column. Step-by-step troubleshooting.",
+          "title": "Causes of Pressure Build-Up in HPLC"
+        },
+        "ru": {
+          "excerpt": "Причины роста давления в ВЭЖХ: забитый фильтр подвижной фазы, выпадение солей буфера, изношенные уплотнения насоса или засорение колонки ВЭЖХ. Пошаговая диагностика.",
+          "title": "Причины роста давления в ВЭЖХ"
+        }
+      },
+      "path": "prichiny-rosta-davleniya-v-vezhh",
+      "publishedAt": "2026-11-08T08:02:28.319Z",
+      "slug": "prichiny-rosta-davleniya-v-vezhh",
+      "status": "published",
+      "updatedAt": "2026-10-22T13:53:27.041+00:00"
+    },
+    {
+      "contentHash": "sha256:fa1d700d6460dc218c5e50f18ec341343d366967f42ee6e814944efe7965dc74",
+      "id": "7705e3f7-e925-4745-b0bc-c8e4a2346af3",
+      "locales": {
+        "en": {
+          "excerpt": "How HPLC liquid chromatography works: a breakdown of high-performance liquid chromatography, the components of an HPLC system, mobile and stationary phases, and the parameters that ensure reproducible results.",
+          "title": "How HPLC Liquid Chromatography Works"
+        },
+        "ru": {
+          "excerpt": "Принцип работы жидкостной хроматографии ВЭЖХ: разбираем высокоэффективная жидкостная хроматография, устройство хроматографа, фазы и параметры воспроизводимости.",
+          "title": "Принцип работы жидкостной хроматографии ВЭЖХ"
+        }
+      },
+      "path": "printsip-raboty-zhidkostnoy-hromatografii-vezhh",
+      "publishedAt": "2026-11-10T10:50:05.605Z",
+      "slug": "printsip-raboty-zhidkostnoy-hromatografii-vezhh",
+      "status": "published",
+      "updatedAt": "2026-10-22T17:52:27.819+00:00"
+    },
+    {
+      "contentHash": "sha256:a8a5d89ddfb397dbae92296c342014bdc98288ec02cbde920b5bab2cd38c5cb8",
+      "id": "0bb1333e-dcf1-4490-83fa-1049994ac7c9",
+      "locales": {
+        "en": {
+          "excerpt": "Ground glass joint sizes: how to read the markings, tell conical (KSh) from spherical (SSh) joints, and check compatibility and tightness before ordering.",
+          "title": "Ground Glass Joint Sizes: How to Match Connections"
+        },
+        "ru": {
+          "excerpt": "Размеры посуды со шлифом: как читать маркировку, различать КШ и СШ, проверять совместимость и герметичность деталей до заказа.",
+          "title": "Размеры посуды со шлифом: как подобрать соединения"
+        }
+      },
+      "path": "razmery-posudy-so-shlifom",
+      "publishedAt": "2026-10-28T07:14:00.560Z",
+      "slug": "razmery-posudy-so-shlifom",
+      "status": "published",
+      "updatedAt": "2026-10-21T14:24:53.63+00:00"
+    },
+    {
+      "contentHash": "sha256:56717526413e99e3d20a2e6e752b446da79ce38d40e369a674b02631ecd1af1f",
+      "id": "7fa3c54d-7e64-4cfa-b0da-7ac637149a2f",
+      "locales": {
+        "en": {
+          "excerpt": "Pharmacopoeial requirements for laboratory balances: standards, verification, calibration, IQ OQ PQ qualification, daily check log, and balance installation.",
+          "title": "Pharmacopoeial Requirements for Laboratory Balances"
+        },
+        "ru": {
+          "excerpt": "Требования фармакопеи к лабораторным весам: нормы, поверка, калибровка, квалификация IQ OQ PQ, журнал ежедневной проверки и установка весов.",
+          "title": "Требования фармакопеи к лабораторным весам"
+        }
+      },
+      "path": "trebovaniya-farmakopei-k-laboratornym-vesam",
+      "publishedAt": "2026-11-18T14:45:25.371Z",
+      "slug": "trebovaniya-farmakopei-k-laboratornym-vesam",
+      "status": "published",
+      "updatedAt": "2026-10-23T10:02:32.187+00:00"
+    },
+    {
+      "contentHash": "sha256:26d06601a7a42ce537720a36f9938ac7de2a041cdf48eec36bf8d000663dd769",
+      "id": "d88043b8-65e3-4e45-b909-f569c90f84a1",
+      "locales": {
+        "en": {
+          "excerpt": "Electromagnetic force compensation vs. strain gauge scales: we break down the weighing principle, laboratory scale accuracy, zero drift, and reading stability.",
+          "title": "Electromagnetic Force Compensation vs. Strain Gauge Scales: Which to Choose?"
+        },
+        "ru": {
+          "excerpt": "Весы с электромагнитной компенсацией или тензодатчиком: разбираем принцип измерения весов, точность лабораторных весов, дрейф нуля весов и стабильность показаний весов.",
+          "title": "Весы с электромагнитной компенсацией или тензодатчиком?"
+        }
+      },
+      "path": "vesy-s-elektromagnitnoy-kompensatsiey-ili",
+      "publishedAt": "2026-11-07T10:50:22.237Z",
+      "slug": "vesy-s-elektromagnitnoy-kompensatsiey-ili",
+      "status": "published",
+      "updatedAt": "2026-10-21T15:06:11.503+00:00"
+    }
+  ],
+  "schema": "seoagent.blog/v1"
+}
