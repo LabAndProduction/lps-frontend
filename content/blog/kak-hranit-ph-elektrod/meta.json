@@ -1,0 +1,39 @@
+{
+  "author": "lab-production-solutions",
+  "bodyFormat": "html",
+  "category": "osnashchenie-laboratorii",
+  "coverImage": "/seoagent-blog/kak-hranit-ph-elektrod/d66f7b351d648a5c.webp",
+  "defaultLocale": "ru",
+  "features": [
+    "local-assets"
+  ],
+  "focusKeyword": "как хранить ph-электрод",
+  "focusKeywords": [
+    "как хранить ph-электрод",
+    "раствор для хранения ph-электрода",
+    "можно ли хранить ph-электрод в дистиллированной воде",
+    "ph-электрод высох что делать",
+    "кристаллы kcl на электроде",
+    "как долить электролит в ph-электрод",
+    "регенерация ph-электрода"
+  ],
+  "locales": {
+    "en": {
+      "body": "body.en.html",
+      "excerpt": "How to store a pH electrode: keep it in a moist cap with 3 mol/L KCl, not in water. Buffer as a substitute, KCl crystals, refilling electrolyte, and regeneration.",
+      "metaTitle": "How to Store a pH Electrode: KCl Solution and Regeneration",
+      "title": "How to Store a pH Electrode: KCl Solution, Cap, and What to Do If It Dries Out"
+    },
+    "ru": {
+      "body": "body.ru.html",
+      "excerpt": "Как хранить pH-электрод - во влажном колпачке с 3 моль/л KCl, а не в воде. Буфер как замена, кристаллы KCl, доливка электролита и регенерация.",
+      "metaTitle": "Как хранить pH-электрод - Раствор KCl и регенерация",
+      "title": "Как хранить pH-электрод - Раствор KCl, колпачок и что делать, если он высох"
+    }
+  },
+  "modifiedAt": "2026-11-21T14:53:10.653Z",
+  "publishedAt": "2026-11-21T14:53:10.653Z",
+  "schema": "seoagent.blog/v1",
+  "slug": "kak-hranit-ph-elektrod",
+  "status": "published"
+}

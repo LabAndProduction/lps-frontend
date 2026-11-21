@@ -1,0 +1,17 @@
+{
+  "assets": [
+    "public/seoagent-blog/kak-hranit-ph-elektrod/d66f7b351d648a5c.webp"
+  ],
+  "contentHash": "sha256:d9b7c5c081e4a5602f6423694972acb65c082ec1ac369d06575a31e4bf5521a0",
+  "deliveredRef": "kak-hranit-ph-elektrod",
+  "firstDeliveredAt": "2026-11-21T14:53:10.653Z",
+  "generatedAt": "2026-11-21T14:53:10.653Z",
+  "id": "a333312f-dc08-459d-be26-27d0bc7abc3f",
+  "modifiedAt": "2026-11-21T14:53:10.653Z",
+  "planId": "a8b08c95-78ce-423b-aa3b-7cd8c22f2692",
+  "revisionCount": 0,
+  "schema": "seoagent.blog/v1",
+  "serializer": "blogfs@1.0.0",
+  "source": "manual",
+  "textHash": "sha256:ce11a18b001538935b327ac7e4c9adfd491f76175144a9885710d709cb65c0b7"
+}
