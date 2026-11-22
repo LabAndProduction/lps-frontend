@@ -1,0 +1,39 @@
+{
+  "author": "lab-production-solutions",
+  "bodyFormat": "html",
+  "category": "osnashchenie-laboratorii",
+  "coverImage": "/seoagent-blog/kak-uravnovesit-tsentrifugu/b2008dec0f3a5f36.webp",
+  "defaultLocale": "ru",
+  "features": [
+    "local-assets"
+  ],
+  "focusKeyword": "как уравновесить центрифугу",
+  "focusKeywords": [
+    "как уравновесить центрифугу",
+    "балансировка пробирок в центрифуге",
+    "почему центрифуга вибрирует",
+    "нечётное количество пробирок в центрифуге",
+    "противовес для центрифуги",
+    "дисбаланс ротора центрифуги",
+    "загрузка углового и бакет-ротора"
+  ],
+  "locales": {
+    "en": {
+      "body": "body.en.html",
+      "excerpt": "How to balance a centrifuge: tubes are matched by mass, not volume; pairs go opposite each other; tolerance 0.1 g. Layouts for odd numbers and causes of vibration.",
+      "metaTitle": "How to Balance a Centrifuge – Schemes and Counterweight",
+      "title": "How to Balance a Centrifuge: Odd Number of Tubes, Different Volumes, and Vibration"
+    },
+    "ru": {
+      "body": "body.ru.html",
+      "excerpt": "Как уравновесить центрифугу - пробирки ставят по массе, а не по объёму, пары напротив, допуск 0,1 г. Схемы для нечётного числа и причины вибрации.",
+      "metaTitle": "Как уравновесить центрифугу - Схемы и противовес",
+      "title": "Как уравновесить центрифугу - Нечётное число пробирок, разный объём и вибрация"
+    }
+  },
+  "modifiedAt": "2026-11-22T06:48:15.065Z",
+  "publishedAt": "2026-11-22T06:48:15.065Z",
+  "schema": "seoagent.blog/v1",
+  "slug": "kak-uravnovesit-tsentrifugu",
+  "status": "published"
+}

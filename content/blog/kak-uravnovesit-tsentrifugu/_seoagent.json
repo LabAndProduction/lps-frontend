@@ -1,0 +1,17 @@
+{
+  "assets": [
+    "public/seoagent-blog/kak-uravnovesit-tsentrifugu/b2008dec0f3a5f36.webp"
+  ],
+  "contentHash": "sha256:74ead4fde35c6e2670a09fb0f6da945cfdb528dfa5cdaff4b69952c9dc049439",
+  "deliveredRef": "kak-uravnovesit-tsentrifugu",
+  "firstDeliveredAt": "2026-11-22T06:48:15.065Z",
+  "generatedAt": "2026-11-22T06:48:15.065Z",
+  "id": "bea1ff2b-13c7-4045-b889-874067a81a57",
+  "modifiedAt": "2026-11-22T06:48:15.065Z",
+  "planId": "b86677e9-3589-4356-b992-75b180683546",
+  "revisionCount": 0,
+  "schema": "seoagent.blog/v1",
+  "serializer": "blogfs@1.0.0",
+  "source": "manual",
+  "textHash": "sha256:5632577c99bcb041cd9e06a0e156d480ad87ffd6708f475c729f40b1817f8452"
+}
