@@ -1,0 +1,17 @@
+{
+  "assets": [
+    "public/seoagent-blog/zakon-bugera-lamberta-bera/d749fefeba1c2225.webp"
+  ],
+  "contentHash": "sha256:add09f31409857354100bc4595caccb8acc9d575a8665aabd0540406357bd356",
+  "deliveredRef": "zakon-bugera-lamberta-bera",
+  "firstDeliveredAt": "2026-11-22T06:48:30.581Z",
+  "generatedAt": "2026-11-22T06:48:30.581Z",
+  "id": "0aa13486-dde9-4eab-9c6c-ab7e14e207e2",
+  "modifiedAt": "2026-11-22T06:48:30.581Z",
+  "planId": "413d2c9f-2e36-4c67-9a74-b2dca140c419",
+  "revisionCount": 0,
+  "schema": "seoagent.blog/v1",
+  "serializer": "blogfs@1.0.0",
+  "source": "manual",
+  "textHash": "sha256:da9333a0bf5d2a2f67a71c42d1fe5438f77759a9f6bd0a00e9dfa4952bbc77e4"
+}

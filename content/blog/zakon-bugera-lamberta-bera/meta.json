@@ -1,0 +1,39 @@
+{
+  "author": "lab-production-solutions",
+  "bodyFormat": "html",
+  "category": "spektroskopiya",
+  "coverImage": "/seoagent-blog/zakon-bugera-lamberta-bera/d749fefeba1c2225.webp",
+  "defaultLocale": "ru",
+  "features": [
+    "local-assets"
+  ],
+  "focusKeyword": "закон бугера-ламберта-бера",
+  "focusKeywords": [
+    "закон бугера-ламберта-бера",
+    "оптическая плотность раствора",
+    "молярный коэффициент поглощения",
+    "формула a = εcl",
+    "связь пропускания t и оптической плотности a",
+    "отклонения от закона бера",
+    "единицы молярного коэффициента поглощения"
+  ],
+  "locales": {
+    "en": {
+      "body": "body.en.html",
+      "excerpt": "Beer-Lambert Law – A = εcl: how to convert transmittance T to absorbance, find concentration from ε or a single standard, and why the law breaks down.",
+      "metaTitle": "Beer-Lambert Law – A = εcl Formula and Examples",
+      "title": "Beer-Lambert Law – A = εcl Formula and Molar Absorption Coefficient"
+    },
+    "ru": {
+      "body": "body.ru.html",
+      "excerpt": "Закон Бугера-Ламберта-Бера - A = εcl: как перевести пропускание T в оптическую плотность, найти концентрацию по ε или стандарту и почему закон нарушается.",
+      "metaTitle": "Закон Бугера-Ламберта-Бера - Формула A = εcl и примеры",
+      "title": "Закон Бугера-Ламберта-Бера - Формула A = εcl и молярный коэффициент поглощения"
+    }
+  },
+  "modifiedAt": "2026-11-22T06:48:30.581Z",
+  "publishedAt": "2026-11-22T06:48:30.581Z",
+  "schema": "seoagent.blog/v1",
+  "slug": "zakon-bugera-lamberta-bera",
+  "status": "published"
+}
