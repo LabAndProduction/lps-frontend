@@ -1,0 +1,39 @@
+{
+  "author": "lab-production-solutions",
+  "bodyFormat": "html",
+  "category": "probopodgotovka",
+  "coverImage": "/seoagent-blog/kak-vybrat-shpritsevoy-filtr/432e1a94d6a235ce.webp",
+  "defaultLocale": "ru",
+  "features": [
+    "local-assets"
+  ],
+  "focusKeyword": "как выбрать шприцевой фильтр",
+  "focusKeywords": [
+    "как выбрать шприцевой фильтр",
+    "шприцевой фильтр 0,22 или 0,45 мкм",
+    "нейлоновый или ptfe фильтр",
+    "гидрофильная и гидрофобная мембрана",
+    "совместимость мембраны с растворителем",
+    "шприцевой фильтр 13 или 25 мм",
+    "почему трудно продавить шприцевой фильтр"
+  ],
+  "locales": {
+    "en": {
+      "body": "body.en.html",
+      "excerpt": "How to choose a syringe filter: membrane by solvent (nylon, PTFE, RC), pore size 0.22 or 0.45 µm by application, diameter 4, 13, or 25 mm by sample volume.",
+      "metaTitle": "How to Choose a Syringe Filter: Membrane, Pore, and Diameter",
+      "title": "How to Choose a Syringe Filter: Nylon, PTFE, or RC and 0.22 vs 0.45 µm Pores"
+    },
+    "ru": {
+      "body": "body.ru.html",
+      "excerpt": "Как выбрать шприцевой фильтр: мембрана по растворителю (нейлон, ПТФЭ, РЦ), пора 0,22 или 0,45 мкм по задаче, диаметр 4, 13 или 25 мм по объёму пробы.",
+      "metaTitle": "Как выбрать шприцевой фильтр - Мембрана, пора и диаметр",
+      "title": "Как выбрать шприцевой фильтр - Нейлон, ПТФЭ или РЦ и поры 0,22 или 0,45 мкм"
+    }
+  },
+  "modifiedAt": "2026-11-23T09:48:46.636Z",
+  "publishedAt": "2026-11-23T09:48:46.636Z",
+  "schema": "seoagent.blog/v1",
+  "slug": "kak-vybrat-shpritsevoy-filtr",
+  "status": "published"
+}

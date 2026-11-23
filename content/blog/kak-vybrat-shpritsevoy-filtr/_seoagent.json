@@ -1,0 +1,17 @@
+{
+  "assets": [
+    "public/seoagent-blog/kak-vybrat-shpritsevoy-filtr/432e1a94d6a235ce.webp"
+  ],
+  "contentHash": "sha256:ad763e75b1d02931c517b991e38cd97c4dae4937d622d708bbef497f325444cc",
+  "deliveredRef": "kak-vybrat-shpritsevoy-filtr",
+  "firstDeliveredAt": "2026-11-23T09:48:46.636Z",
+  "generatedAt": "2026-11-23T09:48:46.636Z",
+  "id": "57addd63-0551-4c75-b32c-aa093ddce5ab",
+  "modifiedAt": "2026-11-23T09:48:46.636Z",
+  "planId": "e9f9c3b3-de4a-4cb2-b1a5-81511938453c",
+  "revisionCount": 0,
+  "schema": "seoagent.blog/v1",
+  "serializer": "blogfs@1.0.0",
+  "source": "manual",
+  "textHash": "sha256:50239ab9a8853f783ba37108e3bf94962463d28ca0fc3bf12dbf6077c52cbd89"
+}
