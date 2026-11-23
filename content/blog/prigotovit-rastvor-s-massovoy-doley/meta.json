@@ -1,0 +1,39 @@
+{
+  "author": "lab-production-solutions",
+  "bodyFormat": "html",
+  "category": "rastvory-i-raschety",
+  "coverImage": "/seoagent-blog/prigotovit-rastvor-s-massovoy-doley/4eecad8839c5c8fc.webp",
+  "defaultLocale": "ru",
+  "features": [
+    "local-assets"
+  ],
+  "focusKeyword": "как приготовить раствор с массовой долей",
+  "focusKeywords": [
+    "как приготовить раствор с массовой долей",
+    "массовая доля растворённого вещества формула",
+    "как приготовить 10% раствор",
+    "приготовление раствора из кристаллогидрата",
+    "сколько соли и воды для 5% раствора",
+    "процентная концентрация раствора",
+    "массово-объёмный процент"
+  ],
+  "locales": {
+    "en": {
+      "body": "body.en.html",
+      "excerpt": "How to prepare a solution with a mass fraction: formulas for solute and water, examples for 5% and 10%, hydrate conversion, and the difference from % m/V.",
+      "metaTitle": "How to Make a Solution with a Mass Fraction: Calculation and Examples",
+      "title": "How to Make a Solution with a Given Mass Fraction: Weighing, Water, and Hydrates"
+    },
+    "ru": {
+      "body": "body.ru.html",
+      "excerpt": "Как приготовить раствор с массовой долей - формула навески и воды, примеры на 5% и 10%, пересчёт кристаллогидрата и отличие от % m/V.",
+      "metaTitle": "Как приготовить раствор с массовой долей - Расчёт и примеры",
+      "title": "Как приготовить раствор с массовой долей - Навеска, вода и кристаллогидрат"
+    }
+  },
+  "modifiedAt": "2026-11-23T08:10:29.727Z",
+  "publishedAt": "2026-11-23T08:10:29.727Z",
+  "schema": "seoagent.blog/v1",
+  "slug": "prigotovit-rastvor-s-massovoy-doley",
+  "status": "published"
+}

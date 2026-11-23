@@ -1,0 +1,17 @@
+{
+  "assets": [
+    "public/seoagent-blog/prigotovit-rastvor-s-massovoy-doley/4eecad8839c5c8fc.webp"
+  ],
+  "contentHash": "sha256:00f71de7f8943196c5268360fec56b1ee3d4913ea7bcb9e77cd106ed33895460",
+  "deliveredRef": "prigotovit-rastvor-s-massovoy-doley",
+  "firstDeliveredAt": "2026-11-23T08:10:29.727Z",
+  "generatedAt": "2026-11-23T08:10:29.727Z",
+  "id": "446e611f-25bb-48e5-8829-111636502aaa",
+  "modifiedAt": "2026-11-23T08:10:29.727Z",
+  "planId": "59d08332-a8ba-48e0-9a20-f4ea0a952c30",
+  "revisionCount": 0,
+  "schema": "seoagent.blog/v1",
+  "serializer": "blogfs@1.0.0",
+  "source": "manual",
+  "textHash": "sha256:0de6d99e3ce3a0ea87575a4f88f07b8f08707688dd3a1b0e4f8ace6750f91fea"
+}
