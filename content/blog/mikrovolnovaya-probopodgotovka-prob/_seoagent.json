@@ -1,0 +1,17 @@
+{
+  "assets": [
+    "public/seoagent-blog/mikrovolnovaya-probopodgotovka-prob/c803cb0da5e49e67.webp"
+  ],
+  "contentHash": "sha256:187b577de49b0fbf620d1cffe36e694c0081723b732925ae3b004fa3d21cb10f",
+  "deliveredRef": "mikrovolnovaya-probopodgotovka-prob",
+  "firstDeliveredAt": "2026-11-24T12:38:59.191Z",
+  "generatedAt": "2026-11-24T12:38:59.191Z",
+  "id": "f7e585d0-6b04-455b-9e24-a57fe900a1a2",
+  "modifiedAt": "2026-11-24T12:38:59.191Z",
+  "planId": "c0a46880-153e-4ffa-9b8b-7e05b553028b",
+  "revisionCount": 0,
+  "schema": "seoagent.blog/v1",
+  "serializer": "blogfs@1.0.0",
+  "source": "manual",
+  "textHash": "sha256:58b23d3acfcd564868959519a852060ed73eeab0ab62f39bae9e8b40a0263261"
+}

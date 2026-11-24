@@ -1,0 +1,39 @@
+{
+  "author": "lab-production-solutions",
+  "bodyFormat": "html",
+  "category": "probopodgotovka",
+  "coverImage": "/seoagent-blog/mikrovolnovaya-probopodgotovka-prob/c803cb0da5e49e67.webp",
+  "defaultLocale": "ru",
+  "features": [
+    "local-assets"
+  ],
+  "focusKeyword": "микроволновая пробоподготовка",
+  "focusKeywords": [
+    "микроволновая пробоподготовка",
+    "микроволновая минерализация",
+    "кислотное разложение проб",
+    "мокрое озоление",
+    "закрытые сосуды высокого давления",
+    "потери ртути и мышьяка при разложении",
+    "очистка кислот перегонкой без кипения"
+  ],
+  "locales": {
+    "en": {
+      "body": "body.en.html",
+      "excerpt": "Microwave digestion — 0.2–0.5 g of sample, 8–10 mL HNO₃, 175–220 °C in a sealed vessel. Matching acids to the matrix, programs, calculations, and why mercury is lost.",
+      "metaTitle": "Microwave Digestion — Acids, Programs, Calculations",
+      "title": "Microwave Digestion — How to Digest Samples with Acid Before AAS and ICP"
+    },
+    "ru": {
+      "body": "body.ru.html",
+      "excerpt": "Микроволновая пробоподготовка - 0,2-0,5 г пробы, 8-10 мл HNO₃, 175-220 °C в закрытом сосуде. Кислоты под матрицу, режимы, расчёт и почему теряется ртуть.",
+      "metaTitle": "Микроволновая пробоподготовка - Кислоты, режимы, расчёт",
+      "title": "Микроволновая пробоподготовка - Как разложить пробу кислотой перед ААС и ИСП"
+    }
+  },
+  "modifiedAt": "2026-11-24T12:38:59.191Z",
+  "publishedAt": "2026-11-24T12:38:59.191Z",
+  "schema": "seoagent.blog/v1",
+  "slug": "mikrovolnovaya-probopodgotovka-prob",
+  "status": "published"
+}
