@@ -1,0 +1,39 @@
+{
+  "author": "lab-production-solutions",
+  "bodyFormat": "html",
+  "category": "rastvory-i-raschety",
+  "coverImage": "/seoagent-blog/absolyutnaya-i-otnositelnaya-pogreshnost/5c5d2de0fbac21e3.webp",
+  "defaultLocale": "ru",
+  "features": [
+    "local-assets"
+  ],
+  "focusKeyword": "абсолютная и относительная погрешность",
+  "focusKeywords": [
+    "абсолютная и относительная погрешность",
+    "погрешность в лабораторной работе",
+    "как округлить результат измерения",
+    "значащие цифры в химии",
+    "систематическая и случайная погрешность",
+    "погрешность косвенных измерений",
+    "запись результата x ± δx"
+  ],
+  "locales": {
+    "en": {
+      "body": "body.en.html",
+      "excerpt": "Absolute and relative error in lab work: formulas, tolerances for glassware and balances, worked examples, and rules for rounding your answer.",
+      "metaTitle": "Absolute and Relative Error: Calculation Guide",
+      "title": "Absolute and Relative Error: How to Calculate in a Lab Report"
+    },
+    "ru": {
+      "body": "body.ru.html",
+      "excerpt": "Абсолютная и относительная погрешность в лабораторной работе - формулы, допуски посуды и весов, примеры расчёта и правила округления ответа.",
+      "metaTitle": "Абсолютная и относительная погрешность - Расчёт",
+      "title": "Абсолютная и относительная погрешность - Как рассчитать в лабораторной работе"
+    }
+  },
+  "modifiedAt": "2026-11-25T09:10:37.404Z",
+  "publishedAt": "2026-11-25T09:10:37.404Z",
+  "schema": "seoagent.blog/v1",
+  "slug": "absolyutnaya-i-otnositelnaya-pogreshnost",
+  "status": "published"
+}

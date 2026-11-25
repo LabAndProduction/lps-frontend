@@ -1,0 +1,17 @@
+{
+  "assets": [
+    "public/seoagent-blog/absolyutnaya-i-otnositelnaya-pogreshnost/5c5d2de0fbac21e3.webp"
+  ],
+  "contentHash": "sha256:91e3ccc3fc8f61d4b7701b4e54be9df7b51926027157aa5dbd3c88ad56f37f77",
+  "deliveredRef": "absolyutnaya-i-otnositelnaya-pogreshnost",
+  "firstDeliveredAt": "2026-11-25T09:10:37.404Z",
+  "generatedAt": "2026-11-25T09:10:37.404Z",
+  "id": "6ef4e9be-f3f1-4930-9c1f-c59ab86943a4",
+  "modifiedAt": "2026-11-25T09:10:37.404Z",
+  "planId": "4399d3ef-770f-42f4-9326-4ece33be3249",
+  "revisionCount": 0,
+  "schema": "seoagent.blog/v1",
+  "serializer": "blogfs@1.0.0",
+  "source": "manual",
+  "textHash": "sha256:32a32bfa0515480ada9a06101f21e84a4c61b8500f59190d672515e8fd096e8e"
+}
