@@ -1,0 +1,39 @@
+{
+  "author": "lab-production-solutions",
+  "bodyFormat": "html",
+  "category": "rastvory-i-raschety",
+  "coverImage": "/seoagent-blog/kak-razbavit-rastvor-do-nuzhnoy-kontsentratsii/2b7386fafe80f5f4.webp",
+  "defaultLocale": "ru",
+  "features": [
+    "local-assets"
+  ],
+  "focusKeyword": "как разбавить раствор до нужной концентрации",
+  "focusKeywords": [
+    "как разбавить раствор до нужной концентрации",
+    "формула разбавления растворов",
+    "c1v1 c2v2",
+    "серийное разведение",
+    "разведение 1 к 10 как сделать",
+    "коэффициент разбавления",
+    "как приготовить рабочий раствор из стокового"
+  ],
+  "locales": {
+    "en": {
+      "body": "body.en.html",
+      "excerpt": "How to dilute a solution to the target concentration - take volume V1 = C2·V2 / C1 and bring it to V2 in a volumetric flask. Examples, 1:10 series, choosing glassware.",
+      "metaTitle": "How to Dilute a Solution to the Target Concentration - C1V1 = C2V2",
+      "title": "How to Dilute a Solution to the Target Concentration - C1V1 = C2V2 Formula and Serial Dilutions"
+    },
+    "ru": {
+      "body": "body.ru.html",
+      "excerpt": "Как разбавить раствор до нужной концентрации - берём объём V1 = C2·V2 / C1 и доводим до V2 в мерной колбе. Примеры, серии 1:10, выбор посуды.",
+      "metaTitle": "Как разбавить раствор до нужной концентрации - C1V1 = C2V2",
+      "title": "Как разбавить раствор до нужной концентрации - Формула C1V1 = C2V2 и серийные разведения"
+    }
+  },
+  "modifiedAt": "2026-11-25T06:45:20.468Z",
+  "publishedAt": "2026-11-25T06:45:20.468Z",
+  "schema": "seoagent.blog/v1",
+  "slug": "kak-razbavit-rastvor-do-nuzhnoy-kontsentratsii",
+  "status": "published"
+}

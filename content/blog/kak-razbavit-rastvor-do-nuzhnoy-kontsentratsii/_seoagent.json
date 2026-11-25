@@ -1,0 +1,17 @@
+{
+  "assets": [
+    "public/seoagent-blog/kak-razbavit-rastvor-do-nuzhnoy-kontsentratsii/2b7386fafe80f5f4.webp"
+  ],
+  "contentHash": "sha256:27df0d5b4e1806e7dfcaf032501d1dc35d7b63029d64d70effe9f1dbcf9d10d0",
+  "deliveredRef": "kak-razbavit-rastvor-do-nuzhnoy-kontsentratsii",
+  "firstDeliveredAt": "2026-11-25T06:45:20.468Z",
+  "generatedAt": "2026-11-25T06:45:20.468Z",
+  "id": "fa1affeb-6f53-4eda-83d8-cf0efb6c0050",
+  "modifiedAt": "2026-11-25T06:45:20.468Z",
+  "planId": "4285ae66-d8ba-4805-8afc-7161d7f1af00",
+  "revisionCount": 0,
+  "schema": "seoagent.blog/v1",
+  "serializer": "blogfs@1.0.0",
+  "source": "manual",
+  "textHash": "sha256:3f467563976c89750a1a5fa861fc53fcdf66ade62a9f3021cbf2f133e9e5c37c"
+}
