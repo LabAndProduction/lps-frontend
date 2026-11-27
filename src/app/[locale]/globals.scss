@@ -850,6 +850,7 @@ body .sa-blog-wrap {
 .sa-blog-wrap .sa-blog-grid { gap: 1.25rem; grid-template-columns: 1fr; }
 @media (width >= 40rem) { .sa-blog-wrap .sa-blog-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (width >= 64rem) { .sa-blog-wrap .sa-blog-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (width >= 80rem) { .sa-blog-wrap .sa-blog-grid { grid-template-columns: repeat(4, 1fr); } }
 
 :is(.sa-blog-wrap, .sa-article-wrap) .sa-blog-card {
     border: 0;
