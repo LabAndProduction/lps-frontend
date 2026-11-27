@@ -1,0 +1,17 @@
+{
+  "assets": [
+    "public/seoagent-blog/filtrovanie-pod-vakuumom/a67c8631ae53937d.webp"
+  ],
+  "contentHash": "sha256:0f4b9ce77bc7e905765ff2cef854c3e6cf644b1164838185d1004c962367c08e",
+  "deliveredRef": "filtrovanie-pod-vakuumom",
+  "firstDeliveredAt": "2026-11-27T13:12:34.981Z",
+  "generatedAt": "2026-11-27T13:12:34.981Z",
+  "id": "fbc5be5c-83f6-4cae-b809-ce11605f4a92",
+  "modifiedAt": "2026-11-27T13:12:34.981Z",
+  "planId": "9ba5009b-7af2-4717-ba55-a411397026ac",
+  "revisionCount": 0,
+  "schema": "seoagent.blog/v1",
+  "serializer": "blogfs@1.0.0",
+  "source": "manual",
+  "textHash": "sha256:4f1f458b8311a7487d4fbcaff3b8da04963905031ae628e3e62f79553a433405"
+}

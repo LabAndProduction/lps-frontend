@@ -1,0 +1,39 @@
+{
+  "author": "lab-production-solutions",
+  "bodyFormat": "html",
+  "category": "laboratornaya-posuda",
+  "coverImage": "/seoagent-blog/filtrovanie-pod-vakuumom/a67c8631ae53937d.webp",
+  "defaultLocale": "ru",
+  "features": [
+    "local-assets"
+  ],
+  "focusKeyword": "фильтрование под вакуумом",
+  "focusKeywords": [
+    "фильтрование под вакуумом",
+    "как пользоваться воронкой бюхнера",
+    "колба бунзена для чего",
+    "пористость стеклянного фильтра g1-g4",
+    "ловушка между насосом и колбой",
+    "как подобрать фильтр к воронке бюхнера",
+    "промывка осадка на фильтре"
+  ],
+  "locales": {
+    "en": {
+      "body": "body.en.html",
+      "excerpt": "Vacuum filtration using a Büchner funnel, Büchner flask, trap and pump. The correct order of turning things on, choosing the filter and porosity G1–G4, and washing the precipitate.",
+      "metaTitle": "Vacuum Filtration: Büchner Funnel, Büchner Flask, Pump",
+      "title": "Vacuum Filtration: Büchner Funnel, Büchner Flask and Pump"
+    },
+    "ru": {
+      "body": "body.ru.html",
+      "excerpt": "Фильтрование под вакуумом - воронка Бюхнера, колба Бунзена, ловушка и насос. Порядок включения, выбор фильтра и пористости G1-G4, промывка осадка.",
+      "metaTitle": "Фильтрование под вакуумом - Бюхнер, колба Бунзена, насос",
+      "title": "Фильтрование под вакуумом - Воронка Бюхнера, колба Бунзена и насос"
+    }
+  },
+  "modifiedAt": "2026-11-27T13:12:34.981Z",
+  "publishedAt": "2026-11-27T13:12:34.981Z",
+  "schema": "seoagent.blog/v1",
+  "slug": "filtrovanie-pod-vakuumom",
+  "status": "published"
+}
